@@ -33,25 +33,18 @@ if(PATH_SEPARATOR==':'){
 }
 function down($file,$subfolder=''){
 	global $plugin_lang,$program_ver,$plugin_dir,$plugin_id;
-	$temp=file_get_contents("http://dsu.googlecode.com/svn/trunk/Plugin Updater/{$plugin_id}/{$file}");
+	$temp=dfsockopen("http://dsu.googlecode.com/svn/trunk/PluginUpdater/{$plugin_id}/{$file}");
 	if (!$temp) cpmsg("&#19979;&#36733;&#25991;&#20214; {$file} &#22833;&#36133;&#65292;&#35831;&#31245;&#20505;&#20877;&#35797;",'','error');
 	@unlink($plugin_dir.'/'.($subfolder?$subfolder.'/':'').$file);
 	file_put_contents($plugin_dir.'/'.($subfolder?$subfolder.'/':'').$file,$temp);
 }
-if (get_cfg_var('allow_url_fopen')<>1){
-	cpmsg('&#26381;&#21153;&#22120;&#19981;&#25903;&#25345;&#65292;<br>&#35831;&#21040;DSU&#35770;&#22363;&#23448;&#26041;&#65288;www.dsu.cc&#65289;&#19979;&#36733;&#26368;&#26032;&#29256;&#25554;&#20214;&#65281;','','error');
-}
 if(!$_GET['doupdate']){
 	$time_out = stream_context_create(array('http' => array('timeout' => 3)));
-	try{
-		$sever_return=file_get_contents("http://dsu.googlecode.com/svn/trunk/Plugin Updater/{$plugin_id}/status");
-	}catch(Exception $e){
-		cpmsg('&#26381;&#21153;&#22120;&#26410;&#21709;&#24212;&#65292;&#35831;&#31245;&#21518;&#20877;&#35797;<br>&#65288;&#21487;&#33021;&#34987;&#24744;&#30340;&#26381;&#21153;&#22120;&#25318;&#25130;&#20102;&#65289;','','error');
-	}
-	if ($sever_return!='ok') cpmsg('&#36830;&#25509;&#21040;&#26381;&#21153;&#22120;&#22833;&#36133;&#65292;&#35831;&#31245;&#20505;&#20877;&#35797;&#65281;','','error');
+	$sever_return=dfsockopen("http://dsu.googlecode.com/svn/trunk/PluginUpdater/{$plugin_id}/status");
+	if ($sever_return!='ok') cpmsg('&#36830;&#25509;&#21040;&#26381;&#21153;&#22120;&#22833;&#36133;&#65292;&#35831;&#31245;&#20505;&#20877;&#35797;&#65281;'.$sever_return,'','error');
 	cpmsg('&#27491;&#22312;&#20934;&#22791;&#21319;&#32423;...',"{$baselink}&doupdate=yes",'loading');
 }
-$program_newver=file_get_contents("http://dsu.googlecode.com/svn/trunk/Plugin Updater/{$plugin_id}/version");
+$program_newver=file_get_contents("http://dsu.googlecode.com/svn/trunk/PluginUpdater/{$plugin_id}/version");
 if ($program_newver==$program_ver && $_G['gp_updater']){
 	cpmsg('&#25554;&#20214;&#31243;&#24207;&#26159;&#26368;&#26032;&#29256;&#26412;&#12290;','','succeed');
 }
