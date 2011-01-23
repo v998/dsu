@@ -45,7 +45,7 @@ if(!$_GET['doupdate']){
 	cpmsg('&#27491;&#22312;&#20934;&#22791;&#21319;&#32423;...',"{$baselink}&doupdate=yes",'loading');
 }
 $program_newver=file_get_contents("http://dsu.googlecode.com/svn/trunk/PluginUpdater/{$plugin_id}/version");
-if ($program_newver==$program_ver && $_G['gp_updater']){
+if ($program_newver==$program_ver && !$_G['gp_updater']){
 	cpmsg('&#25554;&#20214;&#31243;&#24207;&#26159;&#26368;&#26032;&#29256;&#26412;&#12290;','','succeed');
 }
 $baselink.='&doupdate=yes&updater=new';
