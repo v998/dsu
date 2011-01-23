@@ -69,7 +69,6 @@
 		<item id="version"><![CDATA[X1.5]]></item>
 		<item id="language">
 			<item id="scriptlang">
-				<item id="xml_file_name"><![CDATA[discuz_plugin_dsu_updater.xml]]></item>
 				<item id="write_error"><![CDATA[写入setting.inc.php失败，请检查文件权限！]]></item>
 				<item id="lost_key"><![CDATA[安全密钥(Key)丢失，请登录 http://update.dsu.cc 绑定.]]></item>
 				<item id="accept_succeed"><![CDATA[授权成功！]]></item>
@@ -83,7 +82,7 @@
 				<item id="update_status"><![CDATA[升级进度 - ]]></item>
 				<item id="news"><![CDATA[最新公告]]></item>
 				<item id="new_plugin"><![CDATA[最近更新插件]]></item>
-				<item id="xml_file_name"><![CDATA[discuz_plugin_dsu_updater.xml]]></item>
+				<item id="xml_file_name"><![CDATA[discuz_plugin_dsu_updater_SC_GBK.xml]]></item>
 			</item>
 			<item id="templatelang">
 				<item id="oauth_title"><![CDATA[确认授权 - 【DSU】插件更新助手]]></item>
