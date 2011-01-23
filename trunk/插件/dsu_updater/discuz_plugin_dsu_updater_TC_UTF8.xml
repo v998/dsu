@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+ï»¿<?xml version="1.0" encoding="ISO-8859-1"?>
 <root>
 	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
 	<item id="Version"><![CDATA[X1.5]]></item>
@@ -8,9 +8,9 @@
 		<item id="plugin">
 			<item id="available"><![CDATA[1]]></item>
 			<item id="adminid"><![CDATA[1]]></item>
-			<item id="name"><![CDATA[¡¾DSU¡¿²å¼þ¸üÐÂÖúÊÖ]]></item>
+			<item id="name"><![CDATA[ã€DSUã€‘æ’ä»¶æ›´æ–°åŠ©æ‰‹]]></item>
 			<item id="identifier"><![CDATA[dsu_updater]]></item>
-			<item id="description"><![CDATA[Ìá¹©¡¾DSU¡¿²å¼þµÄÉý¼¶·þÎñ.]]></item>
+			<item id="description"><![CDATA[æä¾›ã€DSUã€‘æ’ä»¶çš„å‡ç´šæœå‹™.]]></item>
 			<item id="datatables"><![CDATA[]]></item>
 			<item id="directory"><![CDATA[dsu_updater/]]></item>
 			<item id="copyright"><![CDATA[kookxiang @ DSU Team.]]></item>
@@ -18,7 +18,7 @@
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[news]]></item>
-					<item id="menu"><![CDATA[ÐÂÎÅ¹«¸æ]]></item>
+					<item id="menu"><![CDATA[æ–°èžå…¬å‘Š]]></item>
 					<item id="url"><![CDATA[]]></item>
 					<item id="type"><![CDATA[3]]></item>
 					<item id="adminid"><![CDATA[0]]></item>
@@ -42,7 +42,7 @@
 				</item>
 				<item id="2">
 					<item id="name"><![CDATA[main]]></item>
-					<item id="menu"><![CDATA[²å¼þ¹ÜÀí]]></item>
+					<item id="menu"><![CDATA[æ’ä»¶ç®¡ç†]]></item>
 					<item id="url"><![CDATA[]]></item>
 					<item id="type"><![CDATA[3]]></item>
 					<item id="adminid"><![CDATA[0]]></item>
@@ -54,7 +54,7 @@
 				</item>
 				<item id="3">
 					<item id="name"><![CDATA[updater]]></item>
-					<item id="menu"><![CDATA[¼ì²â¸üÐÂ]]></item>
+					<item id="menu"><![CDATA[æª¢æ¸¬æ›´æ–°]]></item>
 					<item id="url"><![CDATA[]]></item>
 					<item id="type"><![CDATA[3]]></item>
 					<item id="adminid"><![CDATA[0]]></item>
@@ -69,31 +69,30 @@
 		<item id="version"><![CDATA[X1.5]]></item>
 		<item id="language">
 			<item id="scriptlang">
-				<item id="xml_file_name"><![CDATA[discuz_plugin_dsu_updater.xml]]></item>
-				<item id="write_error"><![CDATA[Ð´Èësetting.inc.phpÊ§°Ü£¬Çë¼ì²éÎÄ¼þÈ¨ÏÞ£¡]]></item>
-				<item id="lost_key"><![CDATA[°²È«ÃÜÔ¿(Key)¶ªÊ§£¬ÇëµÇÂ¼ http://update.dsu.cc °ó¶¨.]]></item>
-				<item id="accept_succeed"><![CDATA[ÊÚÈ¨³É¹¦£¡]]></item>
-				<item id="installed_plugin"><![CDATA[ÒÑ°²×°²å¼þ]]></item>
-				<item id="plugin_name"><![CDATA[²å¼þÃû³Æ]]></item>
-				<item id="ver_installed"><![CDATA[µ±Ç°°æ±¾]]></item>
-				<item id="ver_new"><![CDATA[×îÐÂ°æ±¾]]></item>
-				<item id="action"><![CDATA[²Ù×÷]]></item>
-				<item id="update_ing"><![CDATA[¸üÐÂÖÐ]]></item>
-				<item id="update_do"><![CDATA[µ¥»÷¿ªÊ¼¸üÐÂ]]></item>
-				<item id="update_status"><![CDATA[Éý¼¶½ø¶È - ]]></item>
-				<item id="news"><![CDATA[×îÐÂ¹«¸æ]]></item>
-				<item id="new_plugin"><![CDATA[×î½ü¸üÐÂ²å¼þ]]></item>
-				<item id="xml_file_name"><![CDATA[discuz_plugin_dsu_updater.xml]]></item>
+				<item id="write_error"><![CDATA[å¯«å…¥setting.inc.phpå¤±æ•—ï¼Œè«‹æª¢æŸ¥æ–‡ä»¶æ¬Šé™ï¼]]></item>
+				<item id="lost_key"><![CDATA[å®‰å…¨å¯†é‘°(Key)ä¸Ÿå¤±ï¼Œè«‹ç™»éŒ„ http://update.dsu.cc ç¶å®š.]]></item>
+				<item id="accept_succeed"><![CDATA[æŽˆæ¬ŠæˆåŠŸï¼]]></item>
+				<item id="installed_plugin"><![CDATA[å·²å®‰è£æ’ä»¶]]></item>
+				<item id="plugin_name"><![CDATA[æ’ä»¶åç¨±]]></item>
+				<item id="ver_installed"><![CDATA[ç•¶å‰ç‰ˆæœ¬]]></item>
+				<item id="ver_new"><![CDATA[æœ€æ–°ç‰ˆæœ¬]]></item>
+				<item id="action"><![CDATA[æ“ä½œ]]></item>
+				<item id="update_ing"><![CDATA[æ›´æ–°ä¸­]]></item>
+				<item id="update_do"><![CDATA[å–®æ“Šé–‹å§‹æ›´æ–°]]></item>
+				<item id="update_status"><![CDATA[å‡ç´šé€²åº¦ - ]]></item>
+				<item id="news"><![CDATA[æœ€æ–°å…¬å‘Š]]></item>
+				<item id="new_plugin"><![CDATA[æœ€è¿‘æ›´æ–°æ’ä»¶]]></item>
+				<item id="xml_file_name"><![CDATA[discuz_plugin_dsu_updater_TC_UTF8.xml]]></item>
 			</item>
 			<item id="templatelang">
-				<item id="oauth_title"><![CDATA[È·ÈÏÊÚÈ¨ - ¡¾DSU¡¿²å¼þ¸üÐÂÖúÊÖ]]></item>
-				<item id="oauth_alert"><![CDATA[ÇëÈ·ÈÏÄúÊÇÍ¨¹ý<b>www.dsu.cc</b>½øÈë´ËÒ³Ãæ£¬·ñÔòÇëÎðµã»÷¡°ÔÊÐí¡±]]></item>
-				<item id="oauth_header"><![CDATA[¡¾DSU¡¿²å¼þ¸üÐÂÖúÊÖ - È·ÈÏÊÚÈ¨]]></item>
-				<item id="oauth_readme"><![CDATA[ÄúÕýÒªÊÚÈ¨Ê¹ÓÃÒÔÏÂÐÅÏ¢ÅäÖÃ ¡¾DSU¡¿²å¼þ¸üÐÂÖúÊÖ£¬Çë×ÐÏ¸È·ÈÏÀ´Ô´ºóµã»÷¡°ÔÊÐí¡±¡£]]></item>
-				<item id="site_id"><![CDATA[Õ¾µãID]]></item>
-				<item id="key"><![CDATA[°²È«ÃÜÔ¿]]></item>
-				<item id="accept"><![CDATA[ÔÊÐí]]></item>
-				<item id="cancel"><![CDATA[¾Ü¾ø]]></item>
+				<item id="oauth_title"><![CDATA[ç¢ºèªæŽˆæ¬Š - ã€DSUã€‘æ’ä»¶æ›´æ–°åŠ©æ‰‹]]></item>
+				<item id="oauth_alert"><![CDATA[è«‹ç¢ºèªæ‚¨æ˜¯é€šéŽ<b>www.dsu.cc</b>é€²å…¥æ­¤é é¢ï¼Œå¦å‰‡è«‹å‹¿é»žæ“Šã€Œå…è¨±ã€]]></item>
+				<item id="oauth_header"><![CDATA[ã€DSUã€‘æ’ä»¶æ›´æ–°åŠ©æ‰‹ - ç¢ºèªæŽˆæ¬Š]]></item>
+				<item id="oauth_readme"><![CDATA[æ‚¨æ­£è¦æŽˆæ¬Šä½¿ç”¨ä»¥ä¸‹ä¿¡æ¯é…ç½® ã€DSUã€‘æ’ä»¶æ›´æ–°åŠ©æ‰‹ï¼Œè«‹ä»”ç´°ç¢ºèªä¾†æºå¾Œé»žæ“Šã€Œå…è¨±ã€ã€‚]]></item>
+				<item id="site_id"><![CDATA[ç«™é»žID]]></item>
+				<item id="key"><![CDATA[å®‰å…¨å¯†é‘°]]></item>
+				<item id="accept"><![CDATA[å…è¨±]]></item>
+				<item id="cancel"><![CDATA[æ‹’çµ•]]></item>
 			</item>
 		</item>
 	</item>
