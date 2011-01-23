@@ -16,7 +16,7 @@ switch($_G['gp_do']){
 			$_G['dsu_updater']['site_id']=$site_id;
 			$_G['dsu_updater']['key']=$key;
 			save_setting();
-			showmessage('ÊÚÈ¨³É¹¦£¡','admin.php?frames=yes&action=plugins&operation=config&identifier=dsu_updater&pmod=news');
+			showmessage($du_lang['accept_succeed'],'admin.php?frames=yes&action=plugins&operation=config&identifier=dsu_updater&pmod=news');
 		}else{
 			include template('dsu_updater:oauth');
 		}

@@ -1,5 +1,7 @@
 <?php
 if(!defined('IN_DISCUZ')) exit('Access Denied');
+include DISCUZ_ROOT.'./data/plugindata/dsu_updater.lang.php';
+$du_lang=$scriptlang['dsu_updater'];
 @touch(DISCUZ_ROOT.'./source/plugin/dsu_updater/setting.inc.php');
 function returnmsg($p1,$p2,$p3){
 	if(defined('IN_ADMINCP')){
@@ -12,7 +14,7 @@ function returnmsg($p1,$p2,$p3){
 function save_setting(){
 	global $_G;
 	@touch(DISCUZ_ROOT.'./source/plugin/dsu_updater/setting.inc.php');
-	if(!is_writeable(DISCUZ_ROOT.'./source/plugin/dsu_updater/setting.inc.php')) returnmsg('写入setting.inc.php失败，请检查文件权限！');
+	if(!is_writeable(DISCUZ_ROOT.'./source/plugin/dsu_updater/setting.inc.php')) returnmsg($du_lang['write_error']);
 	$output='<?php
 /*
  * KK Plugin Setting File
@@ -43,5 +45,5 @@ function callback($data,$hidding=false,$extra){
 }
 
 if(!$_G['dsu_updater']) get_setting();
-if((!$_G['dsu_updater']['key'] || !$_G['dsu_updater']['site_id']) && !$not_jump) returnmsg('安全密钥(Key)丢失，请登录DSU论坛绑定.','http://update.dsu.cc/');
+if((!$_G['dsu_updater']['key'] || !$_G['dsu_updater']['site_id']) && !$not_jump) returnmsg($du_lang['lost_key'],'http://update.dsu.cc/');
 ?>
