@@ -37,11 +37,11 @@ function check_key($site_id,$key){
 
 function callback($data,$hidding=false,$extra){
 	global $_G;
-	$return="<img title=\"CallBack\" align=\"right\" src=\"http://update.dsu.cc/server/api.php?type={$data}&site_id={$_G[dsu_updater][site_id]}&keyhash=".md5($_G['dsu_updater']['key']).$extra.'" />';
+	$return="<img title=\"CallBack\" align=\"right\" src=\"http://update.dsu.cc/api.php?type={$data}&site_id={$_G[dsu_updater][site_id]}&keyhash=".md5($_G['dsu_updater']['key']).$extra.'" />';
 	if($hidding) $return='<div style="display:none">'.$return.'</div>';
 	echo $return;
 }
 
 if(!$_G['dsu_updater']) get_setting();
-if((!$_G['dsu_updater']['key'] || !$_G['dsu_updater']['site_id']) && !$not_jump) returnmsg('°²È«ÃÜÔ¿(Key)¶ªÊ§£¬ÇëµÇÂ¼DSUÂÛÌ³°ó¶¨.','http://update.dsu.cc/server/');
+if((!$_G['dsu_updater']['key'] || !$_G['dsu_updater']['site_id']) && !$not_jump) returnmsg('°²È«ÃÜÔ¿(Key)¶ªÊ§£¬ÇëµÇÂ¼DSUÂÛÌ³°ó¶¨.','http://update.dsu.cc/');
 ?>
