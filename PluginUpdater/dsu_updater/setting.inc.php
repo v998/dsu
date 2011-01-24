@@ -4,9 +4,7 @@
  */
 if(!defined("IN_DISCUZ")) exit("Access Denied");
 $_G["dsu_updater"]=array (
-  'site_id' => 8,
-  'key' => '8M4S30G8LsGpsMSKgkKcsF3lmZv0GB7g',
-  'all' => 'Array<li><a target="_blank" href="http://www.dsu.cc/thread-41940-1-1.html">【DSU】蝦米-合并连续回帖 1.2</a></li>
+  'all' => '<li><a target="_blank" href="http://www.dsu.cc/thread-41940-1-1.html">【DSU】蝦米-合并连续回帖 1.2</a></li>
 <li><a target="_blank" href="http://www.dsu.cc">【DSU】登录提示 1.42</a></li>
 <li><a target="_blank" href="http://www.dsu.cc/thread-27298-1-1.html">每日签到 3.0 Encore</a></li>
 <li><a target="_blank" href="http://www.dsu.cc/thread-42222-1-1.html">【DSU】防注册机 1.48</a></li>
