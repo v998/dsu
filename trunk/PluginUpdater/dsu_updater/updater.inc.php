@@ -13,7 +13,6 @@ $plugin_files=array(
 	array('callback.inc.php',''),
 	array('main.inc.php',''),
 	array('news.inc.php',''),
-	array('setting.inc.php',''),
 	array('core.func.php',''),
 	array('discuz_plugin_dsu_updater.xml',''),
 	array('template/oauth.htm',''),
