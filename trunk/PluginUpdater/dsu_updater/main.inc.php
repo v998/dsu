@@ -22,6 +22,10 @@ while($result=DB::fetch($query)){
 showtablefooter();
 if(submitcheck('plugin',1)){
 	showtableheader($du_lang['update_status'].$plugin[$_G['gp_plugin']]);
+	echo '<tr><td class="tipsblock"><ul id="update_status"><li>&#27491;&#22312;&#35831;&#27714; Callback &#31995;&#32479;, &#35831;&#31245;&#20505;...</li></ul></td></tr>';
+	showtablefooter();
+	@include_once DISCUZ_ROOT.'./source/discuz_version.php';
+	echo '<script src="http://update.dsu.cc/plugin.php?id='.$_G['gp_plugin'].'&site_id='.$_G['dsu_updater']['site_id'].'&keyhash='.md5($_G['dsu_updater']['key']).'&dv='.DISCUZ_VERSION.'"></script>';
 }
 @include_once DISCUZ_ROOT.'./source/discuz_version.php';
 callback('plugin',0,'&dv='.DISCUZ_VERSION);
