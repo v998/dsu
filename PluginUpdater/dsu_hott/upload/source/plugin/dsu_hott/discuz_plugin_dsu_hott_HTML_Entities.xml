@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X1.5]]></item>
+	<item id="Time"><![CDATA[2010-09-12 15:10]]></item>
+	<item id="From"><![CDATA[KK &#25554;&#20214;&#28436;&#31034;&#31449; (http://demo.kookxiang.com/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[[DSU] &#27004;&#20027;&#28909;&#24086;]]></item>
+			<item id="identifier"><![CDATA[dsu_hott]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[dsu_hott/]]></item>
+			<item id="copyright"><![CDATA[kookxiang @ DSU.Team]]></item>
+			<item id="version"><![CDATA[1.62]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[hott]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[setting1]]></item>
+					<item id="menu"><![CDATA[&#31532;&#19968;&#26639;&#35774;&#23450;]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[setting2]]></item>
+					<item id="menu"><![CDATA[&#31532;&#20108;&#26639;&#35774;&#23450;]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[style]]></item>
+					<item id="menu"><![CDATA[&#20027;&#39064;&#35774;&#23450;]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[3]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X1.5]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[&#24086;&#23376;&#25968;&#30446;&#38480;&#21046;]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[show_limit]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[6]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[&#26174;&#31034;&ldquo;&#32676;&#32452;&rdquo;&#20013;&#30340;&#24086;&#23376;]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[show_group]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[99]]></item>
+				<item id="title"><![CDATA[&#19981;&#35843;&#29992;&#19979;&#21015;&#26495;&#22359;&#30340;&#24086;&#23376;]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[disallow_fid]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[&#26174;&#31034;&#20197;&#19979;&#22825;&#25968;&#20869;&#30340;&#26032;&#24086;&#23376;]]></item>
+				<item id="description"><![CDATA[0&#20026;&#19981;&#38480;&#21046;]]></item>
+				<item id="variable"><![CDATA[date_limit]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[&#26032;&#31383;&#21475;&#25171;&#24320;&#24086;&#23376;]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[new_window]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[&#26368;&#22823;&#23383;&#25968;&#38480;&#21046;]]></item>
+				<item id="description"><![CDATA[&#40664;&#35748;&#20540;&#65306;80&#65292;&#22914;&#26524;&#20986;&#29616;&#29190;&#26684;&#29616;&#35937;&#35831;&#36866;&#24403;&#35843;&#23567;]]></item>
+				<item id="variable"><![CDATA[max_text]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[80]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="saved"><![CDATA[&#20445;&#23384;&#25104;&#21151;&#65281;]]></item>
+				<item id="cannot_write"><![CDATA[&#26080;&#27861;&#20889;&#20837;&#25991;&#20214;&#65292;&#35831;&#30830;&#20445;&#25554;&#20214;&#30446;&#24405;&#19979;&#30340;config.inc.php&#21487;&#20889;(777)&#65281;]]></item>
+				<item id="style_tips"><![CDATA[<li>&#20027;&#39064;&#25991;&#20214;&#35831;&#25918;&#22312;&ldquo;source/plugin/dsu_hott/template&rdquo;&#30446;&#24405;&#20013;</li>
+<li><b>&#35831;&#21247;&#38543;&#24847;&#21024;&#38500;&#20351;&#29992;&#20013;&#30340;&#20027;&#39064;&#25991;&#20214;&#65281;</b></li>]]></item>
+				<item id="style_header"><![CDATA[&#27004;&#20027;&#28909;&#24086; - &#20027;&#39064;&#35774;&#23450;]]></item>
+				<item id="style_setting"><![CDATA[&#35831;&#36873;&#25321;&#19968;&#20010;&#20027;&#39064;]]></item>
+				<item id="style_info"><![CDATA[&#24403;&#21069;&#20027;&#39064;&#20449;&#24687;]]></item>
+				<item id="style_name"><![CDATA[&#20027;&#39064;&#21517;&#31216;&#65306;]]></item>
+				<item id="style_author"><![CDATA[&#20027;&#39064;&#20316;&#32773;&#65306;]]></item>
+				<item id="style_readme"><![CDATA[&#20027;&#39064;&#20171;&#32461;&#65306;]]></item>
+				<item id="title"><![CDATA[&#27169;&#22359;&#26631;&#39064;]]></item>
+				<item id="only_lz"><![CDATA[&#21482;&#26174;&#31034;&#27004;&#20027;&#30340;&#24086;&#23376;]]></item>
+				<item id="orderby"><![CDATA[&#24086;&#23376;&#25490;&#24207;&#26041;&#24335;]]></item>
+				<item id="orderby_1"><![CDATA[[&#28909;&#24086;] &#25353; &#26597;&#30475;&#25968; &#25490;&#21015;]]></item>
+				<item id="orderby_2"><![CDATA[[&#28909;&#24086;] &#25353; &#22238;&#22797;&#25968; &#25490;&#21015;]]></item>
+				<item id="orderby_3"><![CDATA[[&#26032;&#24086;] &#25353; &#21457;&#34920;&#26102;&#38388; &#25490;&#21015;]]></item>
+				<item id="orderby_4"><![CDATA[[&#25490;&#34892;] &#25353; &ldquo;&#39030;&rdquo; &#30340;&#27425;&#25968; &#25490;&#21015;]]></item>
+				<item id="orderby_5"><![CDATA[[&#25490;&#34892;] &#25353; &#29992;&#25143;&#35780;&#20998; &#25490;&#21015;]]></item>
+				<item id="orderby_rand"><![CDATA[[&#38543;&#26426;] &#38543;&#26426;&#25490;&#21015;]]></item>
+				<item id="orderby_99"><![CDATA[[&#29305;&#27530;] &#26368;&#26032;&#22238;&#22797;]]></item>
+				<item id="setting_header1"><![CDATA[&#27004;&#20027;&#28909;&#24086; - &#31532;&#19968;&#26639;&#35774;&#23450;]]></item>
+				<item id="setting_header2"><![CDATA[&#27004;&#20027;&#28909;&#24086; - &#31532;&#20108;&#26639;&#35774;&#23450;]]></item>
+				<item id="xml_file_name"><![CDATA[discuz_plugin_dsu_hott_HTML_Entities.xml]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[stat.php]]></item>
+		<item id="uninstallfile"><![CDATA[stat.php]]></item>
+		<item id="upgradefile"><![CDATA[stat.php]]></item>
+		<item id="license"><![CDATA[[list]
+[*]&#26412;&#25554;&#20214;&#29256;&#26435;&#24402;&#23646;&#25554;&#20214;&#20316;&#32773;,&#21450;&#20854;&#19979;&#23646;Discuz! Student Union&#22242;&#38431;&#25152;&#26377;.
+[*]&#26410;&#32463;&#25554;&#20214;&#20316;&#32773;&#35768;&#21487;,&#20219;&#20309;&#20154;&#19981;&#24471;&#20197;&#20219;&#20309;&#24418;&#24335;&#22312;&#20219;&#20309;&#22320;&#26041;&#21457;&#24067;/&#36716;&#21457;&#21407;&#29256;&#20197;&#21450;&#20854;&#34893;&#29983;&#30340;&#20462;&#25913;&#29256;.
+[*][b]&#25554;&#20214;&#20316;&#32773;:[/b]kookxiang
+[*][b]&#20316;&#21697;&#31616;&#20171;:[/b]&#22312;&#27004;&#20027;&#36148;&#19979;&#26041;&#26174;&#31034;&#20854;&#20182;&#24086;&#23376;
+[*][b]&#21457;&#24067;&#22320;&#22336;:[/b][url]http://www.dsu.cc/thread-303-1-1.html[/url]
+[*]&#22914;&#26377;&#20219;&#20309;&#20851;&#20110;&#20351;&#29992;&#19978;&#30340;&#30097;&#38382;,&#35831;&#33267;[url]http://www.dsu.cc/forum-44-1.html[/url]&#25552;&#20986;.
+[*][color=Red]&#22914;&#26524;&#24744;&#24895;&#24847;&#36164;&#21161;&#25105;&#20204;,&#35831;&#33267;[url]http://www.dsu.cc/donate.php[/url]&#23545;&#25105;&#20204;&#36827;&#34892;&#36190;&#21161;.[/color]
+[*]&#26368;&#21518;,&#24863;&#35874;&#24744;&#20351;&#29992;&#25105;&#20204;&#30340;&#25554;&#20214;,&#20063;&#24076;&#26395;&#24744;&#33021;&#22815;&#32473;&#25105;&#20204;DSU&#22242;&#38431;&#25552;&#20379;&#26356;&#22909;&#30340;&#24847;&#35265;([url=http://www.dsu.cc/]&#35831;&#28857;&#20987;&#36825;&#37324;&#36827;&#20837;DSU&#22242;&#38431;&#23448;&#26041;&#31449;&#28857;[/url]).
+[/list]
+]]></item>
+	</item>
+</root>

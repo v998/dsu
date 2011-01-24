@@ -1,0 +1,50 @@
+{block style_name} &#40664;&#35748;&#39118;&#26684; {/block}
+{block style_author} Kookxiang @ DSU Team {/block}
+{block style_readme} &ldquo;&#27004;&#20027;&#28909;&#24086;&rdquo;&#25554;&#20214;&#40664;&#35748;&#39118;&#26684;&#65292;&#25903;&#25345;&#21333;&#21452;&#26639;&#33258;&#21160;&#20999;&#25442;&#65281; {/block}
+<!--{block return}-->
+<style type="text/css"> 
+.dsu_hott {
+	padding:5px 0 0 2px;
+	line-height:23px;
+}
+.dsu_hott p{
+	background:url(static/image/common/folder_s.gif) no-repeat 0 50%;
+	padding:0 0 0 20px;
+	overflow:hidden;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+}
+.dsu_hott_line {
+	background: #005DC3 url(static/image/common/mu.png) repeat-x 0px 0px;
+	height: 4px;
+}
+.dsu_hott_item {
+}
+</style>
+<div style="padding:5px 0 5px 10px;line-height:20px;"> 
+<table><tr width="100%">
+{if $hott_block1}
+<td width="50%"><h3><center>$hott[1][title]</center></h3></td>
+<td width="8px"></td>
+{/if}
+{if $hott_block2}
+<td width="50%"><h3><center>$hott[2][title]</center></h3></td>
+{/if}
+</tr>
+<tr height="4px">
+{if $hott_block1}<td class="dsu_hott_line"></td><td></td>{/if}
+{if $hott_block2}<td class="dsu_hott_line"></td></tr>{/if}
+<tr>{if $hott_block1}
+<td valign="top" align="left" class="dsu_hott">
+{loop $hott_block1 $item}
+<p><a href="$item[link]" $item[link_info] class="dsu_hott_item" title="$item[subject]">$item[subject]</a></p>
+{/loop}
+</td><td></td>{/if}{if $hott_block2}
+<td valign="top" align="left" class="dsu_hott">
+{loop $hott_block2 $item}
+<p><a href="$item[link]" $item[link_info] class="dsu_hott_item" title="$item[subject]">$item[subject]</a></p>
+{/loop}
+</td>{/if}
+</tr>
+</table>
+<!--{/block}-->

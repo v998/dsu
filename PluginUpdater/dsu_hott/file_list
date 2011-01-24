@@ -1,0 +1,13 @@
+source/plugin/dsu_hott/hott.class.php
+source/plugin/dsu_hott/setting1.inc.php
+source/plugin/dsu_hott/setting2.inc.php
+source/plugin/dsu_hott/stat.php
+source/plugin/dsu_hott/style.inc.php
+source/plugin/dsu_hott/discuz_plugin_dsu_hott.xml
+source/plugin/dsu_hott/discuz_plugin_dsu_hott_HTML_Entities.xml
+source/plugin/dsu_hott/discuz_plugin_dsu_hott_SC_GBK.xml
+source/plugin/dsu_hott/discuz_plugin_dsu_hott_SC_UTF8.xml
+source/plugin/dsu_hott/discuz_plugin_dsu_hott_TC_BIG5.xml
+source/plugin/dsu_hott/discuz_plugin_dsu_hott_TC_UTF8.xml
+source/plugin/dsu_hott/template/default.htm
+source/plugin/dsu_hott/template/orange-x1.5.htm
