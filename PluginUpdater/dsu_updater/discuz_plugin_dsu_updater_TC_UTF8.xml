@@ -70,7 +70,7 @@
 		<item id="language">
 			<item id="scriptlang">
 				<item id="write_error"><![CDATA[寫入setting.inc.php失敗，請檢查文件權限！]]></item>
-				<item id="lost_key"><![CDATA[安全密鑰(Key)丟失，請登錄 update.dsu.cc/ 綁定.]]></item>
+				<item id="lost_key"><![CDATA[安全密鑰(Key)丟失，請登錄 update.dsu.cc 綁定.]]></item>
 				<item id="accept_succeed"><![CDATA[授權成功！]]></item>
 				<item id="installed_plugin"><![CDATA[已安裝插件]]></item>
 				<item id="plugin_name"><![CDATA[插件名稱]]></item>
