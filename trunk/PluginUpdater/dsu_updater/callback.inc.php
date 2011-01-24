@@ -31,6 +31,20 @@ switch($_G['gp_do']){
 		if($_G['gp_is_array']) $_G['dsu_updater'][$type]=unserialize($_G['dsu_updater'][$type]);
 		save_setting();
 		break;
+	case 'receive_file':
+		get_setting();
+		$site_id=$_G['gp_site_id']?intval($_G['gp_site_id']):'';
+		$key=strip_tags($_G['gp_key']);
+		if(!check_key($site_id,$key)) exit('E0');
+		$file_list=unserialize($_GET['file_list']);
+		$files=array();
+		foreach($file_list as $path=>$contents){
+			if(!is_writeable(DISCUZ_ROOT.'./'.$path)) exit('E1');
+			unlink(DISCUZ_ROOT.'./'.$path);
+			file_put_contents(DISCUZ_ROOT.'./'.$path,$contents);
+		}
+		exit('ok');
+		break;
 	case 'check':
 		get_setting();
 		$site_id=$_G['gp_site_id']?intval($_G['gp_site_id']):'';
