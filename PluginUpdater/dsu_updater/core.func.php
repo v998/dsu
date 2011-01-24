@@ -39,7 +39,7 @@ function check_key($site_id,$key){
 
 function callback($data,$hidding=false,$extra){
 	global $_G;
-	$return="<img title=\"CallBack\" align=\"right\" src=\"http://update.dsu.cc/api.php?type={$data}&site_id={$_G[dsu_updater][site_id]}&keyhash=".md5($_G['dsu_updater']['key']).$extra.'" />';
+	$return="<img title=\"CallBack\" align=\"right\" src=\"http://update.dsu.cc/api.php?type={$data}&site_id={$_G[dsu_updater][site_id]}&keyhash=".md5($_G['dsu_updater']['key']).$extra.'&charset='.CHARSET.'" />';
 	if($hidding) $return='<div style="display:none">'.$return.'</div>';
 	echo $return;
 }

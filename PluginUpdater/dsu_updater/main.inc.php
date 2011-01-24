@@ -3,7 +3,7 @@ if(!defined('IN_ADMINCP')) exit('Access Denied');
 include_once DISCUZ_ROOT.'./source/plugin/dsu_updater/core.func.php';
 showtableheader($du_lang['installed_plugin']);
 showsubtitle(array($du_lang['plugin_name'],$du_lang['ver_installed'],$du_lang['ver_new'],$du_lang['action']));
-$query=DB::query('SELECT name,identifier,version FROM '.DB::table('common_plugin')." WHERE identifier LIKE 'dsu_%'");
+$query=DB::query('SELECT name,identifier,version FROM '.DB::table('common_plugin')." WHERE identifier LIKE 'dsu_%' AND identifier<>'dsu_updater'");
 while($result=DB::fetch($query)){
 	$output=array();
 	$output[]=$result['name'];
