@@ -1,0 +1,91 @@
+{subtemplate common/header}
+<style> 
+.datalist { zoom: 1; }
+.datalist table { margin-bottom: 30px; width: 100%; border: 1px solid #E6E7E1; }
+.datalist th, .datalist td { padding: 4px 5px; border: 1px solid #E6E7E1; font-weight: 400; }
+.datalist th img { vertical-align: top; }
+.datalist table .stat_subject { border-right: none; }
+.datalist table .stat_num { padding-right: 15px; text-align: right; border-left: none; }
+.datalist .datatable { margin-bottom: 10px; }
+.datalist .datatable, .datalist .datatable th, .datalist .datatable td { border-width: 1px 0; text-align: left; }
+.datalist .fixtable { table-layout: fixed; }
+.colplural, .colplural th, .colplural td, th.highlight, td.highlight { background-color: #F5F5F5; }
+.qdsmile{padding:3px;margin:auto;float:left;list-style:none;float:left}
+.qdsmile li{float: left;padding:5px .4em;border:2px #fff solid;}
+.qdsmile li img{margin-bottom:5px;}
+.qdsmile li:hover{cursor:pointer;background:#F7FAFF;border:2px dashed #D1D8D8;}
+</style>
+<div id="pt" class="bm cl"><div class="z">
+<a href="./" class="nvhm" title="{lang home}">$_G[setting][bbname]</a><em>&rsaquo;</em><a href="plugin.php?id=dsu_paulsign:sign">{lang dsu_paulsign:name}</a></div> 
+</div>
+<div id="ct" class="ct2 wp cl">
+<div class="mn">
+<!--{if $qiandaodb['time'] < $tdtime}-->
+	<h3>{lang dsu_paulsign:mb_xz}<!--{if $var['ftopen']}--><br><font color="red">[{lang dsu_paulsign:mb_xz1}]</font><!--{/if}--></h3>
+        <div class="t">
+          <form name="qiandao" method="post" action="plugin.php?id=dsu_paulsign:sign&operation=qiandao&infloat=0&inajax=0">
+		  <input type="hidden" name="formhash" value="{FORMHASH}">
+          <table width="100%" cellpadding="0" cellspacing="0" align="center">
+            <tr>
+              <td class="tr3 tac">
+                <ul class="qdsmile">
+                  <li id="kx" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/kx.gif" /><br /><input type="radio" name="qdxq" value="kx"></center></li>
+                  <li id="ng" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/ng.gif" /><br /><input type="radio" name="qdxq" value="ng"></center></li>
+                  <li id="ym" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/ym.gif" /><br /><input type="radio" name="qdxq" value="ym"></center></li>
+                  <li id="wl" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/wl.gif" /><br /><input type="radio" name="qdxq" value="wl"></center></li>
+                  <li id="nu" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/nu.gif" /><br /><input type="radio" name="qdxq" value="nu"></center></li>
+                  <li id="ch" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/ch.gif" /><br /><input type="radio" name="qdxq" value="ch"></center></li>
+                  <li id="fd" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/fd.gif" /><br /><input type="radio" name="qdxq" value="fd"></center></li>
+                  <li id="yl" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/yl.gif" /><br /><input type="radio" name="qdxq" value="yl"></center></li>
+                  <li id="shuai" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/shuai.gif" /><br /><input type="radio" name="qdxq" value="shuai"></center></li>
+                </ul>
+                <div style="padding:20px 0;"><input type="submit" class=btn value="" style="border:none;background:url(source/plugin/dsu_paulsign/img/qdtb.gif) left top no-repeat;width:100px; height:35px;"></div>
+              </td>
+            </tr>
+<div id="kx_menu" class="g_up" style="display:none"><div class="crly"><center>{lang dsu_paulsign:mb_qb1}</center></div><div class="mncr"></div></div>
+<div id="ng_menu" class="g_up" style="display:none"><div class="crly"><center>{lang dsu_paulsign:mb_qb2}</center></div><div class="mncr"></div></div>
+<div id="ym_menu" class="g_up" style="display:none"><div class="crly"><center>{lang dsu_paulsign:mb_qb3}</center></div><div class="mncr"></div></div>
+<div id="wl_menu" class="g_up" style="display:none"><div class="crly"><center>{lang dsu_paulsign:mb_qb4}</center></div><div class="mncr"></div></div>
+<div id="nu_menu" class="g_up" style="display:none"><div class="crly"><center>{lang dsu_paulsign:mb_qb5}</center></div><div class="mncr"></div></div>
+<div id="ch_menu" class="g_up" style="display:none"><div class="crly"><center>{lang dsu_paulsign:mb_qb6}</center></div><div class="mncr"></div></div>
+<div id="fd_menu" class="g_up" style="display:none"><div class="crly"><center>{lang dsu_paulsign:mb_qb7}</center></div><div class="mncr"></div></div>
+<div id="yl_menu" class="g_up" style="display:none"><div class="crly"><center>{lang dsu_paulsign:mb_qb8}</center></div><div class="mncr"></div></div>
+<div id="shuai_menu" class="g_up" style="display:none"><div class="crly"><center>{lang dsu_paulsign:mb_qb9}</center></div><div class="mncr"></div></div>
+<table summary="Qd" cellspacing="0" cellpadding="0" class="tfm">
+<tr>
+<th>{lang dsu_paulsign:mb_mode1}</th>
+<td>
+<label><input type="radio" name="qdmode" value="1" checked="checked" onclick="if(checked == true){document.getElementById('mode1').style.display='';document.getElementById('mode2').style.display='none';}">&nbsp;{lang dsu_paulsign:mb_mode2}</label>&nbsp;&nbsp;
+<!--{if $var['ksopen']}--><label><input type="radio" name="qdmode" value="2" onclick="if(checked == true){document.getElementById('mode1').style.display='none';document.getElementById('mode2').style.display='';}">&nbsp;{lang dsu_paulsign:mb_mode3}</label>&nbsp;&nbsp;<!--{/if}-->
+<!--{if $var['todaysayxt']}--><label><input type="radio" name="qdmode" value="3" onclick="if(checked){document.getElementById('mode1').style.display='none';document.getElementById('mode1').style.display='none';document.getElementById('mode2').style.display='none';}">&nbsp;{lang dsu_paulsign:noq}</label><!--{/if}-->
+</td>
+</tr>
+<tr id="mode1" style="display:;">
+<th><label for="todaysay">{lang dsu_paulsign:mb_zxs}</label></th>
+<td><input type="text" name="todaysay" id="todaysay" size="25" class="px" /></td>
+<td>{lang dsu_paulsign:mb_xzzs}</td>
+</tr>
+<tr id="mode2" style="display:none;">
+<th>{lang dsu_paulsign:mb_fastreply}</th>
+<td>
+<select name="fastreply">
+<option value="1" style="color:red">{$var['fastreply1']}</option>
+<option value="2" style="color:orange">{$var['fastreply2']}</option>
+<option value="3" style="color:purple">{$var['fastreply3']}</option>
+<option value="4" style="color:green">{$var['fastreply4']}</option>
+<option value="5" style="color:blue">{$var['fastreply5']}</option>
+<option value="6" style="color:pink">{$var['fastreply6']}</option>
+<option value="7" style="color:red">{$var['fastreply7']}</option>
+<option value="8" style="color:orange">{$var['fastreply8']}</option>
+</select>
+</td>
+</tr>
+</table>
+          </table></form>
+        </div>
+<!--{else}-->
+<h1 class="mt">{lang dsu_paulsign:mb_jryqe}</h1>
+<!--{/if}-->
+</div>
+</div>
+{subtemplate common/footer}
