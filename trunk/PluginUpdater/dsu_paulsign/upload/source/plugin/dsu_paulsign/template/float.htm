@@ -1,0 +1,53 @@
+{template common/header}
+
+<!--{if !defined('IN_MOBILE')}-->
+<!--{if !empty($_G['gp_infloat'])}-->
+<!--{if !empty($treferer)}-->
+<!--{if $treferer == "plugin.php?id=dsu_paulsign:sign" && $_G['gp_sign_as']}-->
+<script type="text/javascript" reload="1">
+setTimeout("window.location.reload()", 3000);
+</script>
+<!--{else}-->
+<script type="text/javascript" reload="1">
+setTimeout("window.location.href='{$treferer}'", 3000);
+</script>
+<!--{/if}-->
+<!--{else}-->
+<script type="text/javascript" reload="1">
+setTimeout("hideWindow('qwindow')", 3000);
+</script>
+<!--{/if}-->
+<!--{else}-->
+<!--{if !empty($treferer)}-->
+<script type="text/javascript" reload="1">
+setTimeout("window.location.href='{$treferer}'", 3000);
+</script>
+<!--{else}-->
+<script type="text/javascript" reload="1">
+setTimeout("window.location.href='{$_G[siteurl]}plugin.php?id=dsu_paulsign:sign'", 3000);
+</script>
+<!--{/if}-->
+<!--{/if}-->
+<!--{/if}-->
+<!--{if empty($_G['gp_infloat'])}-->
+<div id="pt" class="wp"><a href="index.php" class="nvhm">$_G[setting][bbname]</a> &rsaquo; {lang dsu_paulsign:ajax_01}</div>
+<div id="ct" class="wp cl">
+	<div class="mn">
+<!--{/if}-->
+<div class="f_c">
+	<h3 class="flb">
+		<em id="return_win">{lang dsu_paulsign:ajax_02}</em>
+		<span>
+			<!--{if !empty($_G['gp_infloat'])}--><a href="javascript:;" class="flbc" onclick="hideWindow('qwindow')" title="{lang dsu_paulsign:ajax_03}">{lang dsu_paulsign:ajax_03}</a><!--{/if}-->
+		</span>
+	</h3>
+	<div class="c">
+		$msg <!--{if empty($_G['gp_infloat'])}--><a href="plugin.php?id=dsu_paulsign:sign" title="{lang dsu_paulsign:encore_03}">[{lang dsu_paulsign:encore_03}]</a><!--{/if}-->
+	</div>
+</div>
+
+<!--{if empty($_G['gp_infloat'])}-->
+	</div>
+</div>
+<!--{/if}-->
+{template common/footer}
