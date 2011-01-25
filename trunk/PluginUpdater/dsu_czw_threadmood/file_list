@@ -1,0 +1,10 @@
+source\plugin\dsu_czw_threadmood\discuz_plugin_dsu_czw_threadmood.xml
+source\plugin\dsu_czw_threadmood\admin.inc.php
+source\plugin\dsu_czw_threadmood\hook.class.php
+source\plugin\dsu_czw_threadmood\install.php
+source\plugin\dsu_czw_threadmood\main.inc.php
+source\plugin\dsu_czw_threadmood\stat.inc.php
+source\plugin\dsu_czw_threadmood\uninstall.php
+source\plugin\dsu_czw_threadmood\index.htm
+source\plugin\dsu_czw_threadmood\template\show.htm
+source\plugin\dsu_czw_threadmood\template\index.htm
