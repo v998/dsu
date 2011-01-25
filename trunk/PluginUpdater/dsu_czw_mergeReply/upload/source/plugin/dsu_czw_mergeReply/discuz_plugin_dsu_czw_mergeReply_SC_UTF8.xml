@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X1.5]]></item>
+	<item id="Time"><![CDATA[2011-01-18 23:29]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://a.dev.jhdxr.com/dx15/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[【DSU】蝦米-合并连续回帖]]></item>
+			<item id="identifier"><![CDATA[dsu_czw_mergeReply]]></item>
+			<item id="description"><![CDATA[本插件实现了连续回帖自动合并，以避免用户通过此刷分，并有效控制了帖子的楼层数，减轻阅读的负担。
+
+本插件与其他类似功能的插件或修改相比，具有无需修改、合并条件控制自由的优点。]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[dsu_czw_mergeReply/]]></item>
+			<item id="copyright"><![CDATA[江湖大虾仁@DSU   www.dsu.cc  www.jhdxr.com]]></item>
+			<item id="version"><![CDATA[1.2]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[hook]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X1.5]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[启用板块]]></item>
+				<item id="description"><![CDATA[在选中的板块启用合并连续回帖]]></item>
+				<item id="variable"><![CDATA[fids]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[2]]></item>
+					<item id="1"><![CDATA[36]]></item>
+				</item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[启用用户组]]></item>
+				<item id="description"><![CDATA[对于选中的用户组启用合并连续回帖]]></item>
+				<item id="variable"><![CDATA[gids]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[9]]></item>
+					<item id="1"><![CDATA[10]]></item>
+					<item id="2"><![CDATA[11]]></item>
+					<item id="3"><![CDATA[12]]></item>
+					<item id="4"><![CDATA[13]]></item>
+					<item id="5"><![CDATA[14]]></item>
+					<item id="6"><![CDATA[15]]></item>
+					<item id="7"><![CDATA[20]]></item>
+					<item id="8"><![CDATA[16]]></item>
+					<item id="9"><![CDATA[17]]></item>
+					<item id="10"><![CDATA[18]]></item>
+					<item id="11"><![CDATA[19]]></item>
+					<item id="12"><![CDATA[1]]></item>
+					<item id="13"><![CDATA[2]]></item>
+					<item id="14"><![CDATA[3]]></item>
+					<item id="15"><![CDATA[4]]></item>
+					<item id="16"><![CDATA[5]]></item>
+					<item id="17"><![CDATA[6]]></item>
+					<item id="18"><![CDATA[7]]></item>
+					<item id="19"><![CDATA[8]]></item>
+				</item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[字数限定]]></item>
+				<item id="description"><![CDATA[字数大于此值则一律不合并，0代表不对字数进行限制。]]></item>
+				<item id="variable"><![CDATA[limit_count]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[65]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="title"><![CDATA[字符数计算规则]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[limit_rule]]></item>
+				<item id="type"><![CDATA[selects]]></item>
+				<item id="extra"><![CDATA[smile=除去表情计算
+quote=除去引用计算
+space=去除空白计算]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[smile]]></item>
+					<item id="1"><![CDATA[quote]]></item>
+					<item id="2"><![CDATA[space]]></item>
+				</item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[合并显示格式]]></item>
+				<item id="description"><![CDATA[{{user}}代表作者，{{time}}代表时间，{{message}}代表帖子内容，\n代表换行。（每次合并时，系统会自动在最前面加上2行空行）]]></item>
+				<item id="variable"><![CDATA[showmsg]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[{{user}}于{{time}}补充以下内容：\n{{message}}]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[21]]></item>
+				<item id="title"><![CDATA[时间间隔限定]]></item>
+				<item id="description"><![CDATA[上次回帖距本次回帖时间大于此值则一律不合并，0代表不对时间间隔进行限制。（单位：秒）]]></item>
+				<item id="variable"><![CDATA[limit_time]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1000]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[单帖最大字数]]></item>
+				<item id="description"><![CDATA[若合并后的帖子字数超过此字数，则不会进行合并。注意此处统计的字数包含提示信息的字数。
+0为不对最大字数进行限制，若满足条件则始终合并。]]></item>
+				<item id="variable"><![CDATA[maxlen]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[8888]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[不进行合并的情况]]></item>
+				<item id="description"><![CDATA[当用户的回帖满足这些条件时不会进行合并。。注意：如果选择合并，那回复、引用等系统自动添加的信息将不会被添加。]]></item>
+				<item id="variable"><![CDATA[except_rule]]></item>
+				<item id="type"><![CDATA[selects]]></item>
+				<item id="extra"><![CDATA[reppost=针对具体楼层的回复
+repquote=引用具体楼层的回复
+comment=点评]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[reppost]]></item>
+					<item id="1"><![CDATA[repquote]]></item>
+					<item id="2"><![CDATA[comment]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[setup.php]]></item>
+		<item id="uninstallfile"><![CDATA[setup.php]]></item>
+		<item id="upgradefile"><![CDATA[setup.php]]></item>
+	</item>
+</root>
