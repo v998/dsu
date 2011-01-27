@@ -10,7 +10,7 @@ while($result=DB::fetch($query)){
 	$output[]=$result['version'];
 	$plugin[$result['identifier']]=$result['name'];
 	$output[]=$_G['dsu_updater']['plugin'][$result['identifier']];
-	if($result['version']==$_G['dsu_updater']['plugin'][$result['identifier']] || $_G['dsu_updater']['plugin'][$result['identifier']]==''){
+	if($result['version']>=$_G['dsu_updater']['plugin'][$result['identifier']] || $_G['dsu_updater']['plugin'][$result['identifier']]==''){
 		$output[]='';
 	}else{
 		$output[]='<a href="admin.php?action=plugins&operation=config&identifier=dsu_updater&pmod=main&plugin='.$result['identifier'].'&formhash='.FORMHASH."\">{$du_lang[update_do]}</a>";
@@ -23,7 +23,7 @@ if(submitcheck('plugin',1)){
 	echo '<tr><td class="tipsblock"><ul id="update_status"><li>&#27491;&#22312;&#35831;&#27714; Callback &#31995;&#32479;, &#35831;&#31245;&#20505;...</li></ul></td></tr>';
 	showtablefooter();
 	@include_once DISCUZ_ROOT.'./source/discuz_version.php';
-	echo '<script src="http://update.dsu.cc/plugin.php?id='.$_G['gp_plugin'].'&site_id='.$_G['dsu_updater']['site_id'].'&keyhash='.md5($_G['dsu_updater']['key']).'&dv='.DISCUZ_VERSION.'"></script>';
+	echo '<script onerror="document.getElementById(\'update_status\').innerHTML+=\'<li><font color=red>&#21457;&#36865; CallBack &#25968;&#25454;&#22833;&#36133;.</font></li>\'" src="http://update.dsu.cc/plugin.php?id='.$_G['gp_plugin'].'&site_id='.$_G['dsu_updater']['site_id'].'&keyhash='.md5($_G['dsu_updater']['key']).'&dv='.DISCUZ_VERSION.'"></script>';
 }
 @include_once DISCUZ_ROOT.'./source/discuz_version.php';
 callback('plugin',0,'&dv='.DISCUZ_VERSION);

@@ -27,7 +27,7 @@ switch($_G['gp_do']){
 		$site_id=$_G['gp_site_id']?intval($_G['gp_site_id']):'';
 		$key=strip_tags($_G['gp_key']);
 		if(!check_key($site_id,$key)) exit();
-		$_G['dsu_updater'][$type]=stripslashes(stripslashes($_POST['data']));
+		$_G['dsu_updater'][$type]=stripslashes(stripslashes($_G['gp_data']));
 		if($_G['gp_is_array']) $_G['dsu_updater'][$type]=unserialize($_G['dsu_updater'][$type]);
 		save_setting();
 		break;
@@ -36,12 +36,13 @@ switch($_G['gp_do']){
 		$site_id=$_G['gp_site_id']?intval($_G['gp_site_id']):'';
 		$key=strip_tags($_G['gp_key']);
 		if(!check_key($site_id,$key)) exit('E0');
-		$file_list=unserialize($_POST['file_list']);
-		$files=array();
+		$file_list=unserialize(authcode($_G['gp_file_list'],'DECODE',$_G['dsu_updater']['key']));
 		foreach($file_list as $path=>$contents){
-			if(!is_writeable(DISCUZ_ROOT.'./'.$path)) exit('E1');
-			unlink(DISCUZ_ROOT.'./'.$path);
-			file_put_contents(DISCUZ_ROOT.'./'.$path,$contents);
+			if($contents && $path){
+				@touch(DISCUZ_ROOT.'./'.$path);
+				if(!is_writeable(DISCUZ_ROOT.'./'.$path)) exit('E1');
+				file_put_contents(DISCUZ_ROOT.'./'.$path,$contents);
+			}
 		}
 		$pluginid=DB::result_first('SELECT pluginid FROM '.DB::table('common_plugin')." WHERE identifier='{$_G[gp_plugin]}'");
 		exit("ok|$pluginid");
