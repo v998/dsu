@@ -21,7 +21,13 @@ $plugin_files=array(
 	array('discuz_plugin_dsu_updater_TC_UTF8.xml',''),
 	array('template/oauth.htm',''),
 	array('template/tips.htm',''),
-	array('btn.png',''),
+	array('images/btn.png',''),
+	array('images/error.png',''),
+	array('images/fwin_bg.png',''),
+	array('images/fwin_closer.png',''),
+	array('images/update_now.png',''),
+	array('images/v_bg.png',''),
+	array('images/style.css',''),
 );
 $baselink="action=plugins&operation=config&identifier={$plugin_id}&pmod=updater".($_G['gp_frame']?'&frame=no':'');
 function kk_updater_copyright(){

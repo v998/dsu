@@ -1,0 +1,79 @@
+<!--{block style_name} X1.5 Style {/block}-->
+<!--{block style_author} Orange {/block}-->
+<!--{block style_readme} &#33258;&#21160;&#36866;&#24212;&#39118;&#26684;&#65292;&#24102;&#25968;&#23383;&#22270;&#26631;&#65292;&#25903;&#25345;&#21333;&#21452;&#26639;&#20999;&#25442; {/block}-->
+<!--{block return}-->
+<style>
+<!--
+	#hott { padding:0; width:700px; }
+	.bm2 .bm2_b { border:1px solid {COMMONBORDER}; float:left; width:49%; }
+		.bm_h { background:#f2f2f2; border-bottom:1px solid {COMMONBORDER}; border-top:1px solid #fff; height:31px; line-height:31px; padding:0 10px; }
+			.bm_h h2 { font-size:1em; margin:0; }
+		.bm_c { padding:10px; }
+	.bm2 .bm2_b_y { float:right; }
+-->
+</style>
+<div class="bm bm2 bw0 cl">
+	{if $hott_block1 && $hott_block2}
+	<div class="bm2_b">
+		<div class="bm_h cl">
+			<h2>$hott[1][title]</h2>
+		</div>
+		<div class="bm_c">
+			<ol class="xl xl1">
+				{loop $hott_block1 $item}
+				<li>
+					<a href="$item[link]" $item[link_info] title="$item[subject]">$item[subject]</a>
+				</li>
+				{/loop}
+			</ol>
+		</div>
+	</div>
+	<div class="bm2_b bm2_b_y">
+		<div class="bm_h cl">
+			<h2>$hott[2][title]</h2>
+		</div>
+		<div class="bm_c">
+			<ol class="xl xl1">
+				{loop $hott_block2 $item}
+				<li>
+					<a href="$item[link]" $item[link_info] title="$item[subject]">$item[subject]</a>
+				</li>
+				{/loop}
+			</ol>
+		</div>
+	</div>
+	{else}
+		{if $hott_block1}
+		<div class="bm2_b" style="width:100%">
+			<div class="bm_h cl">
+				<h2>$hott[1][title]</h2>
+			</div>
+			<div class="bm_c">
+				<ol class="xl xl1">
+					{loop $hott_block1 $item}
+					<li>
+						<a href="$item[link]" $item[link_info] title="$item[subject]">$item[subject]</a>
+					</li>
+					{/loop}
+				</ol>
+			</div>
+		</div>
+		{else}
+		<div class="bm2_b" style="width:100%">
+			<div class="bm_h cl">
+				<h2>$hott[2][title]</h2>
+			</div>
+			<div class="bm_c">
+				<ol class="xl xl1">
+					{loop $hott_block2 $item}
+					<li>
+						<a href="$item[link]" $item[link_info] title="$item[subject]">$item[subject]</a>
+					</li>
+					{/loop}
+				</ol>
+			</div>
+		</div>
+		{/if}
+	{/if}
+</div>
+<!--{/block}-->
