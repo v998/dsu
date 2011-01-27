@@ -15,7 +15,12 @@ $plugin_files=array(
 	array('news.inc.php',''),
 	array('core.func.php',''),
 	array('discuz_plugin_dsu_updater.xml',''),
+	array('discuz_plugin_dsu_updater_SC_GBK.xml',''),
+	array('discuz_plugin_dsu_updater_SC_UTF8.xml',''),
+	array('discuz_plugin_dsu_updater_TC_BIG5.xml',''),
+	array('discuz_plugin_dsu_updater_TC_UTF8.xml',''),
 	array('template/oauth.htm',''),
+	array('template/tips.htm',''),
 	array('btn.png',''),
 );
 $baselink="action=plugins&operation=config&identifier={$plugin_id}&pmod=updater".($_G['gp_frame']?'&frame=no':'');
