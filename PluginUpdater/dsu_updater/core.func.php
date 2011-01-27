@@ -14,20 +14,14 @@ function save_setting(){
 	global $_G;
 	@touch(DISCUZ_ROOT.'./data/dsu_updater.inc.php');
 	if(!is_writeable(DISCUZ_ROOT.'./data/dsu_updater.inc.php')) returnmsg($du_lang['write_error']);
-	$output='<?php
-/*
- * KK Plugin Setting File
- */
-if(!defined("IN_DISCUZ")) exit("Access Denied");
-$_G["dsu_updater"]='.var_export($_G['dsu_updater'], true).'
-?>';
+	$output='<?php if(!defined("IN_DISCUZ")) exit("Access Denied"); $_G["dsu_updater"]='.var_export($_G['dsu_updater'], true).'?>';
 	file_put_contents(DISCUZ_ROOT.'./data/dsu_updater.inc.php',$output);
 }
 
 function get_setting(){
 	global $_G;
 	if($_G['dsu_updater']) return;
-	@include DISCUZ_ROOT.'./data/dsu_updater.inc.php';
+	if(file_exists(DISCUZ_ROOT.'./data/dsu_updater.inc.php')) include DISCUZ_ROOT.'./data/dsu_updater.inc.php';
 }
 
 function check_key($site_id,$key){
