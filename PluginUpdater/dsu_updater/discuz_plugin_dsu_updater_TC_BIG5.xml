@@ -2,7 +2,7 @@
 <root>
 	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
 	<item id="Version"><![CDATA[X1.5]]></item>
-	<item id="Time"><![CDATA[2011-01-23 23:53]]></item>
+	<item id="Time"><![CDATA[2011-01-27 18:37]]></item>
 	<item id="From"><![CDATA[Discuz! Board (http://i.ikk.me/x1.5/)]]></item>
 	<item id="Data">
 		<item id="plugin">
@@ -14,27 +14,27 @@
 			<item id="datatables"><![CDATA[]]></item>
 			<item id="directory"><![CDATA[dsu_updater/]]></item>
 			<item id="copyright"><![CDATA[kookxiang @ DSU Team.]]></item>
-			<item id="version"><![CDATA[0.3 Beta]]></item>
+			<item id="version"><![CDATA[0.4 Beta]]></item>
 			<item id="__modules">
 				<item id="0">
-					<item id="name"><![CDATA[news]]></item>
-					<item id="menu"><![CDATA[新聞公告]]></item>
+					<item id="name"><![CDATA[checker]]></item>
+					<item id="menu"><![CDATA[]]></item>
 					<item id="url"><![CDATA[]]></item>
-					<item id="type"><![CDATA[3]]></item>
-					<item id="adminid"><![CDATA[0]]></item>
-					<item id="displayorder"><![CDATA[-1]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[1]]></item>
+					<item id="displayorder"><![CDATA[-2]]></item>
 					<item id="navtitle"><![CDATA[]]></item>
 					<item id="navicon"><![CDATA[]]></item>
 					<item id="navsubname"><![CDATA[]]></item>
 					<item id="navsuburl"><![CDATA[]]></item>
 				</item>
 				<item id="1">
-					<item id="name"><![CDATA[checker]]></item>
-					<item id="menu"><![CDATA[]]></item>
+					<item id="name"><![CDATA[news]]></item>
+					<item id="menu"><![CDATA[新聞公告]]></item>
 					<item id="url"><![CDATA[]]></item>
-					<item id="type"><![CDATA[11]]></item>
-					<item id="adminid"><![CDATA[1]]></item>
-					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[-1]]></item>
 					<item id="navtitle"><![CDATA[]]></item>
 					<item id="navicon"><![CDATA[]]></item>
 					<item id="navsubname"><![CDATA[]]></item>
@@ -69,6 +69,7 @@
 		<item id="version"><![CDATA[X1.5]]></item>
 		<item id="language">
 			<item id="scriptlang">
+				<item id="xml_file_name"><![CDATA[discuz_plugin_dsu_updater_TC_BIG5.xml]]></item>
 				<item id="write_error"><![CDATA[寫入setting.inc.php失敗，請檢查文件權限！]]></item>
 				<item id="lost_key"><![CDATA[安全密鑰(Key)丟失，請登錄 update.dsu.cc 綁定.]]></item>
 				<item id="accept_succeed"><![CDATA[授權成功！]]></item>
@@ -82,7 +83,6 @@
 				<item id="update_status"><![CDATA[升級進度 - ]]></item>
 				<item id="news"><![CDATA[最新公告]]></item>
 				<item id="new_plugin"><![CDATA[最近更新插件]]></item>
-				<item id="xml_file_name"><![CDATA[discuz_plugin_dsu_updater_TC_BIG5.xml]]></item>
 			</item>
 			<item id="templatelang">
 				<item id="oauth_title"><![CDATA[確認授權 - 【DSU】插件更新助手]]></item>
