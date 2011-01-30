@@ -1,6 +1,6 @@
 <?php
 
-if(!defined('IN_ADMINCP')) dexit('Access Denied');
+if(!defined('IN_ADMINCP')) exit('Access Denied');
 
 include DISCUZ_ROOT.'./source/plugin/dsu_updater/core.func.php';
 
