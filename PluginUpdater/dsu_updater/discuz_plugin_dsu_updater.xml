@@ -8,13 +8,13 @@
 		<item id="plugin">
 			<item id="available"><![CDATA[1]]></item>
 			<item id="adminid"><![CDATA[1]]></item>
-			<item id="name"><![CDATA[【DSU】插件更新助手]]></item>
+			<item id="name"><![CDATA[&#12304;DSU&#12305;&#25554;&#20214;&#26356;&#26032;&#21161;&#25163;]]></item>
 			<item id="identifier"><![CDATA[dsu_updater]]></item>
-			<item id="description"><![CDATA[提供【DSU】插件的升级服务.]]></item>
+			<item id="description"><![CDATA[&#25552;&#20379;&#12304;DSU&#12305;&#25554;&#20214;&#30340;&#21319;&#32423;&#26381;&#21153;.]]></item>
 			<item id="datatables"><![CDATA[]]></item>
 			<item id="directory"><![CDATA[dsu_updater/]]></item>
 			<item id="copyright"><![CDATA[kookxiang @ DSU Team.]]></item>
-			<item id="version"><![CDATA[0.6]]></item>
+			<item id="version"><![CDATA[0.7]]></item>
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[checker]]></item>
@@ -30,7 +30,7 @@
 				</item>
 				<item id="1">
 					<item id="name"><![CDATA[news]]></item>
-					<item id="menu"><![CDATA[新闻公告]]></item>
+					<item id="menu"><![CDATA[&#26032;&#38395;&#20844;&#21578;]]></item>
 					<item id="url"><![CDATA[]]></item>
 					<item id="type"><![CDATA[3]]></item>
 					<item id="adminid"><![CDATA[0]]></item>
@@ -42,7 +42,7 @@
 				</item>
 				<item id="2">
 					<item id="name"><![CDATA[main]]></item>
-					<item id="menu"><![CDATA[插件管理]]></item>
+					<item id="menu"><![CDATA[&#25554;&#20214;&#31649;&#29702;]]></item>
 					<item id="url"><![CDATA[]]></item>
 					<item id="type"><![CDATA[3]]></item>
 					<item id="adminid"><![CDATA[0]]></item>
@@ -54,7 +54,7 @@
 				</item>
 				<item id="3">
 					<item id="name"><![CDATA[updater]]></item>
-					<item id="menu"><![CDATA[检测更新]]></item>
+					<item id="menu"><![CDATA[&#26816;&#27979;&#26356;&#26032;]]></item>
 					<item id="url"><![CDATA[]]></item>
 					<item id="type"><![CDATA[3]]></item>
 					<item id="adminid"><![CDATA[0]]></item>
@@ -70,29 +70,35 @@
 		<item id="language">
 			<item id="scriptlang">
 				<item id="xml_file_name"><![CDATA[discuz_plugin_dsu_updater.xml]]></item>
-				<item id="write_error"><![CDATA[写入setting.inc.php失败，请检查文件权限！]]></item>
-				<item id="lost_key"><![CDATA[安全密钥(Key)丢失，请登录 update.dsu.cc 绑定.]]></item>
-				<item id="accept_succeed"><![CDATA[授权成功！]]></item>
-				<item id="installed_plugin"><![CDATA[已安装插件]]></item>
-				<item id="plugin_name"><![CDATA[插件名称]]></item>
-				<item id="ver_installed"><![CDATA[当前版本]]></item>
-				<item id="ver_new"><![CDATA[最新版本]]></item>
-				<item id="action"><![CDATA[操作]]></item>
-				<item id="update_ing"><![CDATA[更新中]]></item>
-				<item id="update_do"><![CDATA[单击开始更新]]></item>
-				<item id="update_status"><![CDATA[升级进度 - ]]></item>
-				<item id="news"><![CDATA[最新公告]]></item>
-				<item id="new_plugin"><![CDATA[最近更新插件]]></item>
+				<item id="write_error"><![CDATA[&#20889;&#20837;setting.inc.php&#22833;&#36133;&#65292;&#35831;&#26816;&#26597;&#25991;&#20214;&#26435;&#38480;&#65281;]]></item>
+				<item id="lost_key"><![CDATA[&#23433;&#20840;&#23494;&#38053;(Key)&#20002;&#22833;&#65292;&#35831;&#30331;&#24405; update.dsu.cc &#32465;&#23450;.]]></item>
+				<item id="accept_succeed"><![CDATA[&#25480;&#26435;&#25104;&#21151;&#65281;]]></item>
+				<item id="installed_plugin"><![CDATA[&#24050;&#23433;&#35013;&#25554;&#20214;]]></item>
+				<item id="plugin_name"><![CDATA[&#25554;&#20214;&#21517;&#31216;]]></item>
+				<item id="ver_installed"><![CDATA[&#24403;&#21069;&#29256;&#26412;]]></item>
+				<item id="ver_new"><![CDATA[&#26368;&#26032;&#29256;&#26412;]]></item>
+				<item id="action"><![CDATA[&#25805;&#20316;]]></item>
+				<item id="update_ing"><![CDATA[&#26356;&#26032;&#20013;]]></item>
+				<item id="update_do"><![CDATA[&#21333;&#20987;&#27492;&#22788;&#24320;&#22987;&#26356;&#26032;]]></item>
+				<item id="update_status"><![CDATA[&#21319;&#32423;&#36827;&#24230; - ]]></item>
+				<item id="news"><![CDATA[&#26368;&#26032;&#20844;&#21578;]]></item>
+				<item id="new_plugin"><![CDATA[&#26368;&#36817;&#26356;&#26032;&#25554;&#20214;]]></item>
 			</item>
 			<item id="templatelang">
-				<item id="oauth_title"><![CDATA[确认授权 - 【DSU】插件更新助手]]></item>
-				<item id="oauth_alert"><![CDATA[请确认您是通过<b>www.dsu.cc</b>进入此页面，否则请勿点击“允许”]]></item>
-				<item id="oauth_header"><![CDATA[【DSU】插件更新助手 - 确认授权]]></item>
-				<item id="oauth_readme"><![CDATA[您正要授权使用以下信息配置 【DSU】插件更新助手，请仔细确认来源后点击“允许”。]]></item>
-				<item id="site_id"><![CDATA[站点ID]]></item>
-				<item id="key"><![CDATA[安全密钥]]></item>
-				<item id="accept"><![CDATA[允许]]></item>
-				<item id="cancel"><![CDATA[拒绝]]></item>
+				<item id="oauth_title"><![CDATA[&#30830;&#35748;&#25480;&#26435; - &#12304;DSU&#12305;&#25554;&#20214;&#26356;&#26032;&#21161;&#25163;]]></item>
+				<item id="oauth_alert"><![CDATA[&#35831;&#30830;&#35748;&#24744;&#26159;&#36890;&#36807;<b>www.dsu.cc</b>&#36827;&#20837;&#27492;&#39029;&#38754;&#65292;&#21542;&#21017;&#35831;&#21247;&#28857;&#20987;&ldquo;&#20801;&#35768;&rdquo;]]></item>
+				<item id="oauth_header"><![CDATA[&#12304;DSU&#12305;&#25554;&#20214;&#26356;&#26032;&#21161;&#25163; - &#30830;&#35748;&#25480;&#26435;]]></item>
+				<item id="oauth_readme"><![CDATA[&#24744;&#27491;&#35201;&#25480;&#26435;&#20351;&#29992;&#20197;&#19979;&#20449;&#24687;&#37197;&#32622; &#12304;DSU&#12305;&#25554;&#20214;&#26356;&#26032;&#21161;&#25163;&#65292;&#35831;&#20180;&#32454;&#30830;&#35748;&#26469;&#28304;&#21518;&#28857;&#20987;&ldquo;&#20801;&#35768;&rdquo;&#12290;]]></item>
+				<item id="site_id"><![CDATA[&#31449;&#28857;ID]]></item>
+				<item id="key"><![CDATA[&#23433;&#20840;&#23494;&#38053;]]></item>
+				<item id="accept"><![CDATA[&#20801;&#35768;]]></item>
+				<item id="cancel"><![CDATA[&#25298;&#32477;]]></item>
+				<item id="tips_title"><![CDATA[&#12304;DSU&#12305;&#25554;&#20214;&#26356;&#26032;&#25552;&#31034; (&#20165;&#21019;&#22987;&#20154;&#21487;&#35265;)]]></item>
+				<item id="tips_1"><![CDATA[&#24744;&#22909;&#65292;<a href="http://update.dsu.cc" target="_blank">&#25554;&#20214;&#21319;&#32423;&#21161;&#25163;</a>&#26816;&#27979;&#21040;&#24744;&#26377;]]></item>
+				<item id="tips_2"><![CDATA[&#27454;&#25554;&#20214;&#38656;&#35201;&#26356;&#26032;&#65306;]]></item>
+				<item id="ver_installed"><![CDATA[&#24403;&#21069;&#29256;&#26412;&#65306;]]></item>
+				<item id="ver_new"><![CDATA[&#26368;&#26032;&#29256;&#26412;&#65306;]]></item>
+				<item id="do_update"><![CDATA[&#24320;&#22987;&#26356;&#26032;]]></item>
 			</item>
 		</item>
 	</item>
