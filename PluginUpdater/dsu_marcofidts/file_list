@@ -1,0 +1,13 @@
+source/plugin/dsu_marcofidts/admincp.inc.php
+source/plugin/dsu_marcofidts/discuz_plugin_dsu_marcofidts_SC_GBK.xml
+source/plugin/dsu_marcofidts/discuz_plugin_dsu_marcofidts_SC_UTF8.xml
+source/plugin/dsu_marcofidts/discuz_plugin_dsu_marcofidts_TC_BIG5.xml
+source/plugin/dsu_marcofidts/discuz_plugin_dsu_marcofidts_TC_UTF8.xml
+source/plugin/dsu_marcofidts/dsu_marcofidts.class.php
+source/plugin/dsu_marcofidts/dsu_marcofidts.inc.php
+source/plugin/dsu_marcofidts/index.htm
+source/plugin/dsu_marcofidts/install.php
+source/plugin/dsu_marcofidts/uninstall.php
+source/plugin/dsu_marcofidts/upgrade.php
+source/plugin/dsu_marcofidts/template/dsu_marcofidts.htm
+source/plugin/dsu_marcofidts/template/index.htm

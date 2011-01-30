@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X1.5]]></item>
+	<item id="From"><![CDATA[My 3Talk 讨论区 (http://my3talk.com)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[【DSU】版块用户条款]]></item>
+			<item id="identifier"><![CDATA[dsu_marcofidts]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="datatables"><![CDATA[dsu_marcofidts]]></item>
+			<item id="directory"><![CDATA[dsu_marcofidts/]]></item>
+			<item id="copyright"><![CDATA[Marco129 @ DSU Team]]></item>
+			<item id="version"><![CDATA[[X1.5]V0.21]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[dsu_marcofidts]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[admincp]]></item>
+					<item id="menu"><![CDATA[条款管理平台]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X1.5]]></item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="license"><![CDATA[[list]
+[*]本插件版权归属插件作者,及其下属Discuz! Student Union团队所有.
+[*]未经插件作者许可,任何人不得以任何形式在任何地方发布/转发原版以及其衍生的修改版.
+[*][b]插件作者:[/b]Marco129
+[*][b]作品简介:[/b]为各版块实现用户条款功能。会员进入相应版块时使用cookie作进入记录，不增加数据库负担
+[*]如有任何关于使用上的疑问,请至[url]http://www.dsu.cc/forum-44-1.html[/url]提出.
+[*][color=Red]如果您愿意资助我们,请至[url]http://www.dsu.cc/donate.php[/url]对我们进行赞助.[/color]
+[*]最后,感谢您使用我们的插件,也希望您能够给我们DSU团队提供更好的意见([url=http://www.dsu.cc/]请点击这里进入DSU团队官方站点[/url]).
+[/list]]]></item>
+                <item id="intro"><![CDATA[[b][color=Blue]【DSU】版块用户条款[/color][/b]
+为各版块实现用户条款功能。会员进入相应版块时使用cookie作进入记录，不增加数据库负担
+使用问题/BUG反馈可到[url=http://www.dsu.cc/forum-44-1.html]DSU团队官方站点[/url]提出]]></item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="ts_list"><![CDATA[版块用户条款列表]]></item>
+				<item id="add_ts"><![CDATA[新增版块用户条款]]></item>
+				<item id="edit_ts"><![CDATA[编辑版块用户条款]]></item>
+				<item id="fid"><![CDATA[版块fid]]></item>
+				<item id="ts_content"><![CDATA[条款内容]]></item>
+				<item id="keep"><![CDATA[保持时间(秒)]]></item>
+				<item id="groups"><![CDATA[使用用户组]]></item>
+				<item id="setting_intro_fid"><![CDATA[请输入您希望新增用户条款的版块fid]]></item>
+				<item id="setting_intro_content"><![CDATA[请使用HTML输入条款内容]]></item>
+				<item id="setting_intro_keep"><![CDATA[当用户按同意条款后，多少秒后再次进入时要再次按同意条款]]></item>
+				<item id="setting_intro_groups"><![CDATA[设置那些用户组进入版块时显示用户条款<br />请输入用户组id，多用户组请以“,”间隔<br /><a href="?action=plugins&operation=config&identifier=dsu_marcofidts&pmod=admincp&mod=groups&frame=no" target="_blank">查看用户组id</a>]]></item>
+				<item id="groups_id"><![CDATA[用户组id]]></item>
+				<item id="error_1"><![CDATA[请输入内容，请返回]]></item>
+				<item id="error_2"><![CDATA[此版块fid已经新增过了，请返回]]></item>
+				<item id="error_3"><![CDATA[无效操作]]></item>
+				<item id="action_1"><![CDATA[确认删除此用户条款？]]></item>
+				<item id="succeed_1"><![CDATA[新增版块用户条款成功]]></item>
+				<item id="succeed_2"><![CDATA[编辑版块用户条款成功]]></item>
+				<item id="succeed_3"><![CDATA[删除版块用户条款成功]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="ts"><![CDATA[用户条款]]></item>
+				<item id="update_time"><![CDATA[最后修改]]></item>
+				<item id="agree"><![CDATA[同意]]></item>
+				<item id="disagree"><![CDATA[不同意]]></item>
+			</item>
+		</item>
+	</item>
+</root>
