@@ -91,7 +91,7 @@
 				<item id="oauth_readme"><![CDATA[您正要授權使用以下信息配置 【DSU】插件更新助手，請仔細確認來源後點擊「允許」。]]></item>
 				<item id="site_id"><![CDATA[站點ID]]></item>
 				<item id="key"><![CDATA[安全密鑰]]></item>
-				<item id="accept"><![CDATA[允許]]></item>
+				<item id="accept"><![CDATA[允許\]]></item>
 				<item id="cancel"><![CDATA[拒絕]]></item>
 				<item id="tips_title"><![CDATA[【DSU】插件更新提示 (僅創始人可見)]]></item>
 				<item id="tips_1"><![CDATA[您好，<a href="http://update.dsu.cc" target="_blank">插件升級助手</a>檢測到您有]]></item>
