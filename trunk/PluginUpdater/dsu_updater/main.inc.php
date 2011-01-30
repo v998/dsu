@@ -1,5 +1,5 @@
 <?php
-if(!defined('IN_ADMINCP')) exit('Access Denied');
+if(!defined('IN_ADMINCP')) dexit('Access Denied');
 include_once DISCUZ_ROOT.'./source/plugin/dsu_updater/core.func.php';
 showtableheader($du_lang['installed_plugin']);
 showsubtitle(array($du_lang['plugin_name'],$du_lang['ver_installed'],$du_lang['ver_new'],$du_lang['action']));

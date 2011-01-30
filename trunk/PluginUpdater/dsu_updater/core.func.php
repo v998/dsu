@@ -1,5 +1,5 @@
 <?php
-if(!defined('IN_DISCUZ')) exit('Access Denied');
+if(!defined('IN_DISCUZ')) dexit('Access Denied');
 include DISCUZ_ROOT.'./data/plugindata/dsu_updater.lang.php';
 $du_lang=$scriptlang['dsu_updater'];
 function returnmsg($p1,$p2,$p3){
@@ -14,7 +14,7 @@ function save_setting(){
 	global $_G;
 	@touch(DISCUZ_ROOT.'./data/dsu_updater.inc.php');
 	if(!is_writeable(DISCUZ_ROOT.'./data/dsu_updater.inc.php')) returnmsg($du_lang['write_error']);
-	$output='<?php if(!defined("IN_DISCUZ")) exit("Access Denied");$_G["dsu_updater"]='.var_export($_G['dsu_updater'], true).'?>';
+	$output='<?php if(!defined("IN_DISCUZ")) dexit("Access Denied");$_G["dsu_updater"]='.var_export($_G['dsu_updater'], true).'?>';
 	file_put_contents(DISCUZ_ROOT.'./data/dsu_updater.inc.php',$output);
 }
 
