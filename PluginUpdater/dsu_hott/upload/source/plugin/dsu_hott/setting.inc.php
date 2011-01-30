@@ -35,6 +35,7 @@ $hott='.var_export($hott, true).'
 	file_put_contents(DISCUZ_ROOT.'./data/dsu_hott.inc.php',$output);
 	cpmsg($hott_lang['saved'],'action=plugins&operation=config&identifier=dsu_hott&pmod=setting','succeed');
 }
+showtips($hott_lang['block_tips']);
 showformheader('plugins&operation=config&identifier=dsu_hott&pmod=setting');
 showtableheader($hott_lang['setting_header1']);
 showsetting($hott_lang['title'], 'title_1', $hott[1]['title'], 'text');

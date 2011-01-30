@@ -14,7 +14,7 @@
 			<item id="datatables"><![CDATA[]]></item>
 			<item id="directory"><![CDATA[dsu_hott/]]></item>
 			<item id="copyright"><![CDATA[kookxiang @ DSU.Team]]></item>
-			<item id="version"><![CDATA[2.0]]></item>
+			<item id="version"><![CDATA[2.1]]></item>
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[setting]]></item>
@@ -116,15 +116,21 @@
 		<item id="language">
 			<item id="scriptlang">
 				<item id="saved"><![CDATA[保存成功！]]></item>
-				<item id="cannot_write"><![CDATA[無法寫入文件，請確保插件目錄下的config.inc.php可寫(777)！]]></item>
-				<item id="style_tips"><![CDATA[<li>主題文件請放在「source/plugin/dsu_hott/template」目錄中</li>
-<li><b>請勿隨意刪除使用中的主題文件！</b></li>]]></item>
+				<item id="cannot_write"><![CDATA[無法寫入文件，請檢查文件權限！]]></item>
+				<item id="style_tips"><![CDATA[
+<li>主題文件請放在「source/plugin/dsu_hott/template」目錄中</li>
+<li><b>請勿隨意刪除使用中的主題文件！</b></li>
+]]></item>
+				<item id="block_tips"><![CDATA[
+<li>模塊文件請放在「source/plugin/dsu_hott/script」目錄中</li>
+<li>您可以到【DSU】論壇下載模塊 或 聯繫其他開發者為您開發模塊</li>
+<li>如果您是開發者，可以登錄DSU官方網站下載開發示例文件</li>
+]]></item>
 				<item id="block_header"><![CDATA[樓主熱帖 - 模塊設定 - ]]></item>
-				<item id="block_random"><![CDATA[隨機主題]]></item>
-				<item id="block_new_post"><![CDATA[最新主題]]></item>
 				<item id="block_hot_post_1"><![CDATA[熱門主題 (按查看數排序)]]></item>
 				<item id="block_hot_post_2"><![CDATA[熱門主題 (按回複數排序)]]></item>
 				<item id="block_digest"><![CDATA[精華主題]]></item>
+				<item id="block_lastpost"><![CDATA[最後回復]]></item>
 				<item id="block_recommend"><![CDATA[高評分主題]]></item>
 				<item id="only_lz"><![CDATA[<span class="spectitle">只顯示樓主的帖子</span>]]></item>
 				<item id="choose_block"><![CDATA[模塊類別]]></item>
@@ -140,7 +146,6 @@
 				<item id="title"><![CDATA[模塊標題]]></item>
 				<item id="setting_header1"><![CDATA[樓主熱帖 - 第一欄設定]]></item>
 				<item id="setting_header2"><![CDATA[樓主熱帖 - 第二欄設定]]></item>
-				<item id="xml_file_name"><![CDATA[discuz_plugin_dsu_hott_TC_BIG5.xml]]></item>
 			</item>
 		</item>
 		<item id="installfile"><![CDATA[stat.php]]></item>
