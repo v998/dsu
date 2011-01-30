@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X1]]></item>
+	<item id="From"><![CDATA[My 3Talk 讨论区 (http://my3talk.com)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[【DSU】帖子浏览人次]]></item>
+			<item id="identifier"><![CDATA[dsu_marcopostview]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="datatables"><![CDATA[dsu_marcopostview]]></item>
+			<item id="directory"><![CDATA[dsu_marcopostview/]]></item>
+			<item id="copyright"><![CDATA[Marco129 @ DSU Team]]></item>
+			<item id="version"><![CDATA[[X1.5]V1.3]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[postview]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X1]]></item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="license"><![CDATA[[list]
+[*]本插件版权归属插件作者,及其下属Discuz! Student Union团队所有.
+[*]未经插件作者许可,任何人不得以任何形式在任何地方发布/转发原版以及其衍生的修改版.
+[*][b]插件作者:[/b]Marco129
+[*][b]作品简介:[/b]帖子浏览人次可以让论坛帖内实现帖子浏览统计功能，本插件特设自定义模版，方便站长跟据论坛不同的风格而作出个性化的修改
+[*]如有任何关于使用上的疑问,请至[url]http://www.dsu.cc/forum-44-1.html[/url]提出.
+[*][color=Red]如果您愿意资助我们,请至[url]http://www.dsu.cc/donate.php[/url]对我们进行赞助.[/color]
+[*]最后,感谢您使用我们的插件,也希望您能够给我们DSU团队提供更好的意见([url=http://www.dsu.cc/]请点击这里进入 DSU团队官方站点[/url]).
+[/list]]]></item>
+                <item id="intro"><![CDATA[[b][color=Blue]【DSU】帖子浏览人次[/color][/b]
+帖子浏览人次可以让论坛帖内实现帖子浏览统计功能，本插件特设自定义模版，方便站长跟据论坛不同的风格而作出个性化的修改
+使用问题/BUG反馈可到[url=http://www.dsu.cc/forum-44-1.html]DSU团队官方站点[/url]提出
+
+插件版权声明：严禁修改任何版权说明、进行任何二次开发、转载、分发、进行出租/出售/抵押或发放许可证]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[不开启帖子浏览人次的版块]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[forums]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[自定义模版]]></item>
+				<item id="description"><![CDATA[只支援HTML，不支援Discuz!代码、双引号(&quot;&quot;)
+请用{view_info}代替帖子浏览人次]]></item>
+				<item id="variable"><![CDATA[your_template]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[<p><font size='2'>您是本帖的第{view_info}个浏览者</font></p>]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[是否开启帖子浏览人次]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[open]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[浏览人次数字颜色]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[view_color]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#FF0000]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="class_php_1"><![CDATA[游客浏览：]]></item>
+				<item id="class_php_2"><![CDATA[次]]></item>
+				<item id="class_php_3"><![CDATA[会员浏览：]]></item>
+				<item id="class_php_4"><![CDATA[最后会员浏览：]]></item>
+				<item id="class_php_5"><![CDATA[今日浏览本帖统计]]></item>
+				<item id="class_php_6"><![CDATA[隐身会员]]></item>
+			</item>
+			<item id="installlang">
+				<item id="install_php_1"><![CDATA[[DSU]每日浏览帖子统计清空]]></item>
+			</item>
+		</item>
+	</item>
+</root>

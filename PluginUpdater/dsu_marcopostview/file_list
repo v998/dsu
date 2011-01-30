@@ -1,0 +1,9 @@
+source/plugin/dsu_marcopostview/discuz_plugin_dsu_marcopostview_SC_GBK.xml
+source/plugin/dsu_marcopostview/discuz_plugin_dsu_marcopostview_SC_UTF8.xml
+source/plugin/dsu_marcopostview/discuz_plugin_dsu_marcopostview_TC_BIG5.xml
+source/plugin/dsu_marcopostview/discuz_plugin_dsu_marcopostview_TC_UTF8.xml
+source/plugin/dsu_marcopostview/index.htm
+source/plugin/dsu_marcopostview/install.php
+source/plugin/dsu_marcopostview/postview.class.php
+source/plugin/dsu_marcopostview/uninstall.php
+source/plugin/dsu_marcopostview/upgrade.php
