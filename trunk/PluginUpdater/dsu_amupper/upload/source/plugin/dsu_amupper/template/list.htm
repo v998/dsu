@@ -1,0 +1,30 @@
+{subtemplate common/header}
+<style>
+.dsu_amupper_list li{ float:left; padding:8px; width:215px; overflow:hidden;}
+.dsu_amupper_list .avt { margin:0 5px 0 0}
+.dsu_amupper_list .index { font-size:15px; font-family:'Georgia'; width:50px; color:#FF0000}
+</style>
+<div id="pt" class="bm cl">
+	<!--{subtemplate common/simplesearchform}-->
+	<div class="z">
+		<a href="./" id="fjump"{if $_G['setting']['forumjump'] == 1} onmouseover="showMenu({'ctrlid':this.id})"{/if} class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>{lang dsu_amupper:titl1}
+	</div>
+</div>
+
+<div class="bm">
+	<div class="bm_h cl">
+		<span class="y">
+			<!--{if $order == 'addup'}--><a class="xi1 xw1" href="plugin.php?id=dsu_amupper:list&order=continuous&page={$mypospage}">{lang dsu_amupper:titl2}</a><!--{elseif $order == 'continuous'}--><a class="xi1 xw1" href="plugin.php?id=dsu_amupper:list&order=addup&page={$mypospage}">{lang dsu_amupper:titl1}</a><!--{/if}-->&nbsp;|&nbsp;<a class="xi1 xw1" href="plugin.php?id=dsu_amupper:list{if $order == 'continuous'}&order=continuous{/if}&page={$mypospage}">{lang dsu_amupper:title}</a>
+		</span>
+		<h2><!--{if $order == 'addup'}-->{lang dsu_amupper:titl1}<!--{elseif $order == 'continuous'}-->{lang dsu_amupper:titl2}<!--{/if}--></h2>
+	</div>
+	<div class="bm_c dsu_amupper_list cl">
+		<ul class="cl">
+			{loop $ggprint $key $value}
+			<li {if $value['uid'] == $_G['uid']}style=" background:#FFF6D4"{/if}><span class="z index">{$value['index']}</span><div class="avt z"><a href="home.php?mod=space&uid=$value['uid']" target="_blank" c="34"><!--{avatar($value['uid'],small)}--></a></div><a href="home.php?mod=space&uid=$value['uid']" target="_blank" c="34">{$value['username']}</a><br>{lang dsu_amupper:list1}{$value['continuous']}{lang dsu_amupper:list3}<br>{lang dsu_amupper:list2}{$value['addup']}{lang dsu_amupper:list3}</li>
+			{/loop}
+		</ul>
+		{$multipage}
+	</div>
+</div>
+{subtemplate common/footer}
