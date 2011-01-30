@@ -1,6 +1,6 @@
 <?php
 
-if(!defined('IN_DISCUZ') || !defined('IN_ADMINCP')) exit('Access Denied');
+if(!defined('IN_DISCUZ') || !defined('IN_ADMINCP')) dexit('Access Denied');
 
 $plugin_id='dsu_updater';
 @include DISCUZ_ROOT."./data/plugindata/{$plugin_id}.lang.php";
