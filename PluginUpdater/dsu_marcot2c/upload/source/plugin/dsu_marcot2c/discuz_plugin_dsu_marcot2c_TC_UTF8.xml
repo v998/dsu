@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X1.5]]></item>
+	<item id="From"><![CDATA[My 3Talk 討論區 (http://my3talk.com)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[【DSU】在線時間兌換]]></item>
+			<item id="identifier"><![CDATA[dsu_marcot2c]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[dsu_marcot2c/]]></item>
+			<item id="copyright"><![CDATA[Marco129 @ DSU Team]]></item>
+			<item id="version"><![CDATA[[X1.5]V0.32]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[dsu_marcot2c]]></item>
+					<item id="menu"><![CDATA[在線時間兌換]]></item>
+					<item id="url"><![CDATA[plugin.php?id=dsu_marcot2c]]></item>
+					<item id="type"><![CDATA[5]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X1.5]]></item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="license"><![CDATA[[list]
+[*]本插件版權歸屬插件作者,及其下屬Discuz! Student Union團隊所有.
+[*]未經插件作者許可,任何人不得以任何形式在任何地方發佈/轉發原版以及其衍生的修改版.
+[*][b]插件作者:[/b]Marco129
+[*][b]作品簡介:[/b]在線時間兌換，鼓勵會員多上線，賺取積分新途徑
+[*]如有任何關於使用上的疑問,請至[url]http://www.dsu.cc/forum-44-1.html[/url]提出.
+[*][color=Red]如果您願意資助我們,請至[url]http://www.dsu.cc/donate.php[/url]對我們進行贊助.[/color]
+[*]最後,感謝您使用我們的插件,也希望您能夠給我們DSU團隊提供更好的意見([url=http://www.dsu.cc/]請點擊這裡進入 DSU團隊官方站點[/url]).
+[/list]]]></item>
+                <item id="intro"><![CDATA[[b][color=Blue]【DSU】在線時間兌換[/color][/b]
+在線時間兌換，鼓勵會員多上線，賺取積分新途徑
+使用問題/BUG反饋可到[url=http://www.dsu.cc/forum-44-1.html]DSU團隊官方站點[/url]提出]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[兌換積分]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[credit]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[最少兌換分鐘數]]></item>
+				<item id="description"><![CDATA[以下為在線時間兌換積分相關設置]]></item>
+				<item id="variable"><![CDATA[min_mins]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[60]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[[兌換比率] 每 N 分鐘]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[mins]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[60]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[[兌換比率] = N 金錢]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[money]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[當輸入分鐘大於在線時間]]></item>
+				<item id="description"><![CDATA[錯誤信息設置]]></item>
+				<item id="variable"><![CDATA[msg_1]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[您的在線時間小於您輸入的兌換分鐘數]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[當輸入分鐘小於最少兌換數]]></item>
+				<item id="description"><![CDATA[錯誤信息設置，請用{mins}代替最少兌換分鐘數]]></item>
+				<item id="variable"><![CDATA[msg_2]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[兌換分鐘數必須為 {mins} 或以上]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[當輸入分鐘為空或零]]></item>
+				<item id="description"><![CDATA[錯誤信息設置]]></item>
+				<item id="variable"><![CDATA[msg_3]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[兌換分鐘數不能為空]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[當輸入分鐘不能取得積分]]></item>
+				<item id="description"><![CDATA[錯誤信息設置]]></item>
+				<item id="variable"><![CDATA[msg_4]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[您輸入的兌換分鐘數不能換取有關積分]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[最少兌換金錢數]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[min_ol]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[25]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[[兌換比率] 每 N 金錢]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[money_2]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[25]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[[兌換比率] = N 分鐘]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[mins_2]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[當輸入積分大於當前所擁有]]></item>
+				<item id="description"><![CDATA[錯誤信息設置]]></item>
+				<item id="variable"><![CDATA[msg_5]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[您的積分小於您輸入的兌換積分數]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[當輸入積分小於最少兌換數]]></item>
+				<item id="description"><![CDATA[錯誤信息設置，請用{money}代替最少兌換金錢數]]></item>
+				<item id="variable"><![CDATA[msg_6]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[兌換積分數必須為 {money} 或以上]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[當輸入積分為空或零]]></item>
+				<item id="description"><![CDATA[錯誤信息設置]]></item>
+				<item id="variable"><![CDATA[msg_7]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[兌換積分數不能為空]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[當輸入積分不能取得分鐘]]></item>
+				<item id="description"><![CDATA[錯誤信息設置]]></item>
+				<item id="variable"><![CDATA[msg_8]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[您輸入的兌換積分數不能換取在線時間]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[是否開啟積分兌換在線時間]]></item>
+				<item id="description"><![CDATA[以下為積分兌換在線時間相關設置]]></item>
+				<item id="variable"><![CDATA[money_open]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="name"><![CDATA[在線時間兌換]]></item>
+				<item id="msg_1"><![CDATA[兌換積分成功！]]></item>
+				<item id="msg_2"><![CDATA[兌換在線時間成功！]]></item>
+				<item id="error_1"><![CDATA[[兌換比率]每N分鐘 / [兌換比率]每N金錢 不能為 0，請到後台修改]]></item>
+				<item id="error_2"><![CDATA[系統設置出錯，請通知管理員]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="name"><![CDATA[在線時間兌換積分]]></item>
+				<item id="name_2"><![CDATA[積分兌換在線時間]]></item>
+				<item id="total_ol"><![CDATA[您的總在線時間為]]></item>
+				<item id="update_ol"><![CDATA[數據最後更新為]]></item>
+				<item id="unit_min"><![CDATA[分鐘]]></item>
+				<item id="rate"><![CDATA[兌換比率]]></item>
+				<item id="every"><![CDATA[每]]></item>
+				<item id="change"><![CDATA[我要兌換]]></item>
+				<item id="get"><![CDATA[並取得]]></item>
+				<item id="credit_got"><![CDATA[您現有]]></item>
+				<item id="exchange"><![CDATA[兌換]]></item>
+				<item id="error"><![CDATA[錯誤信息]]></item>
+				<item id="error_int"><![CDATA[請輸入整數]]></item>
+				<item id="get_faq"><![CDATA[兌換結果會向下取整<br>例：原本能取得3.55，但系統只會取得3整數]]></item>
+			</item>
+		</item>
+	</item>
+</root>

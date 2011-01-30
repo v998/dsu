@@ -1,0 +1,14 @@
+source/plugin/dsu_marcot2c/discuz_plugin_dsu_marcot2c_SC_GBK.xml
+source/plugin/dsu_marcot2c/discuz_plugin_dsu_marcot2c_SC_UTF8.xml
+source/plugin/dsu_marcot2c/discuz_plugin_dsu_marcot2c_TC_BIG5.xml
+source/plugin/dsu_marcot2c/discuz_plugin_dsu_marcot2c_TC_UTF8.xml
+source/plugin/dsu_marcot2c/dsu_marcot2c.inc.php
+source/plugin/dsu_marcot2c/index.htm
+source/plugin/dsu_marcot2c/install.php
+source/plugin/dsu_marcot2c/uninstall.php
+source/plugin/dsu_marcot2c/upgrade.php
+source/plugin/dsu_marcot2c/template/dsu_marcot2c.htm
+source/plugin/dsu_marcot2c/template/index.htm
+source/plugin/dsu_marcot2c/template/images/bg.jpg
+source/plugin/dsu_marcot2c/template/images/bg_money.png
+source/plugin/dsu_marcot2c/template/images/index.htm
