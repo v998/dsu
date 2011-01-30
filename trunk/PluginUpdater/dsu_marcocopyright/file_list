@@ -1,0 +1,15 @@
+source/plugin/dsu_marcocopyright/copyright.class.php
+source/plugin/dsu_marcocopyright/discuz_plugin_dsu_marcocopyright_SC_GBK.xml
+source/plugin/dsu_marcocopyright/discuz_plugin_dsu_marcocopyright_SC_UTF8.xml
+source/plugin/dsu_marcocopyright/discuz_plugin_dsu_marcocopyright_TC_BIG5.xml
+source/plugin/dsu_marcocopyright/discuz_plugin_dsu_marcocopyright_TC_UTF8.xml
+source/plugin/dsu_marcocopyright/index.htm
+source/plugin/dsu_marcocopyright/install.php
+source/plugin/dsu_marcocopyright/uninstall.php
+source/plugin/dsu_marcocopyright/upgrade.php
+source/plugin/dsu_marcocopyright/images/copyright.png
+source/plugin/dsu_marcocopyright/images/defaultpic.png
+source/plugin/dsu_marcocopyright/images/defaultpic_black.png
+source/plugin/dsu_marcocopyright/images/index.htm
+source/plugin/dsu_marcocopyright/images/share_sc.gif
+source/plugin/dsu_marcocopyright/images/share_tc.gif
