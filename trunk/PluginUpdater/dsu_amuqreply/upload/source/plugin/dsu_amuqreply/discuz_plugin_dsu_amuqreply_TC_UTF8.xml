@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X1.5]]></item>
+	<item id="Time"><![CDATA[2011-01-30 19:25]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://localhost/dx/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[【DSU】快捷回復]]></item>
+			<item id="identifier"><![CDATA[dsu_amuqreply]]></item>
+			<item id="description"><![CDATA[快捷回復，常用回復簡單一點！]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[dsu_amuqreply/]]></item>
+			<item id="copyright"><![CDATA[阿牧 @ DSU Team]]></item>
+			<item id="version"><![CDATA[1.5]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[qreply]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X1.5]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[提示信息]]></item>
+				<item id="description"><![CDATA[支持HTML代碼]]></item>
+				<item id="variable"><![CDATA[qrt]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[<img src="./source/plugin/dsu_amuqreply/img/1.gif">做人要厚道,看帖要頂！謝絕無意義字符回復，懶人請選擇回復語句：]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[在群組中使用]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[qrzq]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[對發佈內容進行檢查]]></item>
+				<item id="description"><![CDATA[開啟後，會對發佈內容進行檢查。]]></item>
+				<item id="variable"><![CDATA[nrzz]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[漢字最大重複數]]></item>
+				<item id="description"><![CDATA[包括漢字標點符號]]></item>
+				<item id="variable"><![CDATA[hzcfs]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[字符最大重複數]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[zfcfs]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[7]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[對高級模式進行檢查]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[tidzz]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[內容檢查排除用戶組]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[spgid]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[啟用本插件]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[qrradio]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[尾部提示]]></item>
+				<item id="description"><![CDATA[也支持HTML代碼；
+空格請使用「&amp;nbsp;」表示；]]></item>
+				<item id="variable"><![CDATA[qrwt]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[&nbsp;&nbsp;&nbsp;XX社區]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[可使用的用戶組]]></item>
+				<item id="description"><![CDATA[被選用戶組才有使用本插件的權利！]]></item>
+				<item id="variable"><![CDATA[qrgid]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[10]]></item>
+					<item id="1"><![CDATA[11]]></item>
+					<item id="2"><![CDATA[12]]></item>
+					<item id="3"><![CDATA[13]]></item>
+					<item id="4"><![CDATA[14]]></item>
+					<item id="5"><![CDATA[15]]></item>
+					<item id="6"><![CDATA[16]]></item>
+					<item id="7"><![CDATA[17]]></item>
+					<item id="8"><![CDATA[18]]></item>
+					<item id="9"><![CDATA[19]]></item>
+					<item id="10"><![CDATA[1]]></item>
+				</item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[快捷回復內容設定]]></item>
+				<item id="description"><![CDATA[格式：板塊號（fid）(=)內容
+一條一行；不同板塊號之間使用半角逗號（,）分割；
+舉例：2,38(=)我看好樓主哦！
+在內容中絕對不能出現「(=)」！
+0表示所有板塊都可用，舉例：
+0(=)樓主好厲害啊！（不要在加其他板塊號）]]></item>
+				<item id="variable"><![CDATA[qrtxt]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[2,38(=)[color=Red]樓主發歌辛苦了，謝謝樓主分享！[/color]
+2(=)樓主太厲害了！樓主，I*老*虎*U！
+2(=)這個帖子不回對不起自己！
+2(=)這歌我收了！謝謝樓主！
+2,38(=)我看不錯噢 謝謝樓主 > _ <
+10(=)既然你誠信誠意的推薦了，那我就勉為其難的聽聽吧！
+10(=)其實我一直覺得樓主的品味不錯！呵呵！
+]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[結尾固定用語]]></item>
+				<item id="description"><![CDATA[這裡的語句將加在會員選擇的語句後，一般是網站的宣傳語。有利於SEO。
+可以有多個；
+一行一句。]]></item>
+				<item id="variable"><![CDATA[qrwtxt]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[XX社區太棒了！
+XX社區分享快樂！
+我覺得XX社區是註冊對了！
+XX社區，我的最愛！
+我一天不來XX社區就不爽~~~~
+我是不是太肉麻了！XX社區我來了！
+我想我是一天也不能離開XX社區。
+XX社區就是我的家！
+要想XX社區好 就靠你我他
+XX社區越來越好！
+XX社區好 才是真的好
+XX社區 一切皆有可能
+XX社區 不走平凡路]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[可使用的論壇板塊]]></item>
+				<item id="description"><![CDATA[選擇可是有的論壇板塊]]></item>
+				<item id="variable"><![CDATA[qrbfid]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[2]]></item>
+					<item id="1"><![CDATA[38]]></item>
+					<item id="2"><![CDATA[39]]></item>
+				</item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[最少漢字數]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[zshzs]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[管理組]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[admingid]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[1]]></item>
+					<item id="1"><![CDATA[2]]></item>
+				</item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[管理組用語]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[adgtxt]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[0(=)恭喜您，審核通過！
+0(=)您的問題描述的不夠清楚，建議您整理好思路後，再發言，DSU期待您的跟進！
+0(=)您的建議已被採納！感謝您對DSU的支持。
+0(=)您的想法很不錯，可是有一定的局限性，我們不方便採納！但仍感謝您對DSU的支持。
+0(=)謝謝您的提議，我們會認真考慮，稍後給您答覆。]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[選擇後自動回復的用戶組]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[autogid]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[1]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="1"><![CDATA[<FONT COLOR="#FF6600"><B>提示</B>：您的內容所含有中文字符小於{zshzs}個，請重新編輯！</FONT>]]></item>
+				<item id="2"><![CDATA[<FONT COLOR="#FF6600"><B>提示</B>：您的內容含有{hzcfs}個(含)以上連續相同的漢字，重複的漢字是「{cfwenzi}」，請重新編輯！</FONT>]]></item>
+				<item id="3"><![CDATA[<FONT COLOR="#FF6600"><B>提示</B>：您的內容含有{zfcfs}個(含)以上連續相同的字符，重複的字符是「{cfwenzi}」，請重新編輯！</FONT>]]></item>
+				<item id="10"><![CDATA[<FONT COLOR="#FF6600"><B>提示</B>：您的內容所含有中文字符小於{zshzs}個，請重新編輯！<BR>返回後，您可以點擊「<img src="./source/plugin/dsu_amuqreply/img/2.gif" style="margin-bottom:-3px">恢復數據」圖標，恢復剛才的帖子數據！</FONT>]]></item>
+				<item id="20"><![CDATA[<FONT COLOR="#FF6600"><B>提示</B>：您的內容含有{hzcfs}個(含)以上連續相同的漢字，重複的漢字是「{cfwenzi}」，請重新編輯！<BR>返回後，您可以點擊「<img src="./source/plugin/dsu_amuqreply/img/2.gif" style="margin-bottom:-3px">恢復數據」圖標，恢復剛才的帖子數據！</FONT>]]></item>
+				<item id="30"><![CDATA[<FONT COLOR="#FF6600"><B>提示</B>：您的內容含有{zfcfs}個(含)以上連續相同的字符，重複的字符是「{cfwenzi}」，請重新編輯！<BR>返回後，您可以點擊「<img src="./source/plugin/dsu_amuqreply/img/2.gif" style="margin-bottom:-3px">恢復數據」圖標，恢復剛才的帖子數據！</FONT>]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="license"><![CDATA[  [*]本插件版權歸屬插件作者,及其下屬Discuz! Student Union團隊所有.
+[*]未經插件作者許可,任何人不得以任何形式在任何地方發佈/轉發原版以及其衍生的修改版.
+[*][b]插件作者:[/b]阿牧
+[*][b]作品簡介:[/b]讓回復變得簡單一點
+[*][b]發佈地址:[/b][url]http://www.dsu.cc/thread-167-1-1.html[/url]
+[*]如有任何關於使用上的疑問,請至[url]http://www.dsu.cc/forum-44-1.html[/url]提出.
+[*]最後,感謝您使用我們的插件,也希望您能夠給我們DSU團隊提供更好的意見([url=http://www.dsu.cc/]請點擊這裡進入DSU團隊官方站點[/url]).]]></item>
+		<item id="intro"><![CDATA[
+			[color=DeepSkyBlue][b]關於本插件的相關信息:[/b][/color]
+				名稱: [b]快捷回復[/b]
+				版本: [b]1.5[/b](內部版本號:[X1]V1.43)
+				作者: 阿牧
+				DSU榮譽出品 http://www.dsu.cc
+				鳴謝：飛吧|好Q燜|wellknow|dogdog074|82076322|mwtee
+				紀念離開了DX的蝦米！
+				[b]發佈地址:[/b][url]http://www.dsu.cc/thread-167-1-1.html[/url](這裡是最新版哦！)
+				本版本更新內容：
+				1.新增管理用語；
+				-------------------------------------------
+				本插件僅供個人非商業用途使用!
+				禁止任何形式的封裝再發佈行為.
+				特此聲明.
+
+				2010年7月22日
+			]]></item>
+	</item>
+</root>

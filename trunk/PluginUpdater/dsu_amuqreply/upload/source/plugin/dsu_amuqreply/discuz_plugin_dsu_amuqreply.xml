@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X1.5]]></item>
+	<item id="Time"><![CDATA[2011-01-30 19:25]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://localhost/dx/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[&amp;#12304;DSU&amp;#12305;&amp;#24555;&amp;#25463;&amp;#22238;&amp;#22797;]]></item>
+			<item id="identifier"><![CDATA[dsu_amuqreply]]></item>
+			<item id="description"><![CDATA[&amp;#24555;&amp;#25463;&amp;#22238;&amp;#22797;&amp;#65292;&amp;#24120;&amp;#29992;&amp;#22238;&amp;#22797;&amp;#31616;&amp;#21333;&amp;#19968;&amp;#28857;&amp;#65281;]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[dsu_amuqreply/]]></item>
+			<item id="copyright"><![CDATA[&amp;#38463;&amp;#29287; @ DSU Team]]></item>
+			<item id="version"><![CDATA[1.5]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[qreply]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X1.5]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[&amp;#25552;&amp;#31034;&amp;#20449;&amp;#24687;]]></item>
+				<item id="description"><![CDATA[&amp;#25903;&amp;#25345;HTML&amp;#20195;&amp;#30721;]]></item>
+				<item id="variable"><![CDATA[qrt]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[<img src="./source/plugin/dsu_amuqreply/img/1.gif">&amp;#20570;&amp;#20154;&amp;#35201;&amp;#21402;&amp;#36947;,&amp;#30475;&amp;#24086;&amp;#35201;&amp;#39030;&amp;#65281;&amp;#35874;&amp;#32477;&amp;#26080;&amp;#24847;&amp;#20041;&amp;#23383;&amp;#31526;&amp;#22238;&amp;#22797;&amp;#65292;&amp;#25042;&amp;#20154;&amp;#35831;&amp;#36873;&amp;#25321;&amp;#22238;&amp;#22797;&amp;#35821;&amp;#21477;&amp;#65306;]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[&amp;#22312;&amp;#32676;&amp;#32452;&amp;#20013;&amp;#20351;&amp;#29992;]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[qrzq]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[&amp;#23545;&amp;#21457;&amp;#24067;&amp;#20869;&amp;#23481;&amp;#36827;&amp;#34892;&amp;#26816;&amp;#26597;]]></item>
+				<item id="description"><![CDATA[&amp;#24320;&amp;#21551;&amp;#21518;&amp;#65292;&amp;#20250;&amp;#23545;&amp;#21457;&amp;#24067;&amp;#20869;&amp;#23481;&amp;#36827;&amp;#34892;&amp;#26816;&amp;#26597;&amp;#12290;]]></item>
+				<item id="variable"><![CDATA[nrzz]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[&amp;#27721;&amp;#23383;&amp;#26368;&amp;#22823;&amp;#37325;&amp;#22797;&amp;#25968;]]></item>
+				<item id="description"><![CDATA[&amp;#21253;&amp;#25324;&amp;#27721;&amp;#23383;&amp;#26631;&amp;#28857;&amp;#31526;&amp;#21495;]]></item>
+				<item id="variable"><![CDATA[hzcfs]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[&amp;#23383;&amp;#31526;&amp;#26368;&amp;#22823;&amp;#37325;&amp;#22797;&amp;#25968;]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[zfcfs]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[7]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[&amp;#23545;&amp;#39640;&amp;#32423;&amp;#27169;&amp;#24335;&amp;#36827;&amp;#34892;&amp;#26816;&amp;#26597;]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[tidzz]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[&amp;#20869;&amp;#23481;&amp;#26816;&amp;#26597;&amp;#25490;&amp;#38500;&amp;#29992;&amp;#25143;&amp;#32452;]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[spgid]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[&amp;#21551;&amp;#29992;&amp;#26412;&amp;#25554;&amp;#20214;]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[qrradio]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[&amp;#23614;&amp;#37096;&amp;#25552;&amp;#31034;]]></item>
+				<item id="description"><![CDATA[&amp;#20063;&amp;#25903;&amp;#25345;HTML&amp;#20195;&amp;#30721;&amp;#65307;
+&amp;#31354;&amp;#26684;&amp;#35831;&amp;#20351;&amp;#29992;&amp;ldquo;&amp;amp;nbsp;&amp;rdquo;&amp;#34920;&amp;#31034;&amp;#65307;]]></item>
+				<item id="variable"><![CDATA[qrwt]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[&amp;nbsp;&amp;nbsp;&amp;nbsp;XX&amp;#31038;&amp;#21306;]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[&amp;#21487;&amp;#20351;&amp;#29992;&amp;#30340;&amp;#29992;&amp;#25143;&amp;#32452;]]></item>
+				<item id="description"><![CDATA[&amp;#34987;&amp;#36873;&amp;#29992;&amp;#25143;&amp;#32452;&amp;#25165;&amp;#26377;&amp;#20351;&amp;#29992;&amp;#26412;&amp;#25554;&amp;#20214;&amp;#30340;&amp;#26435;&amp;#21033;&amp;#65281;]]></item>
+				<item id="variable"><![CDATA[qrgid]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[10]]></item>
+					<item id="1"><![CDATA[11]]></item>
+					<item id="2"><![CDATA[12]]></item>
+					<item id="3"><![CDATA[13]]></item>
+					<item id="4"><![CDATA[14]]></item>
+					<item id="5"><![CDATA[15]]></item>
+					<item id="6"><![CDATA[16]]></item>
+					<item id="7"><![CDATA[17]]></item>
+					<item id="8"><![CDATA[18]]></item>
+					<item id="9"><![CDATA[19]]></item>
+					<item id="10"><![CDATA[1]]></item>
+				</item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[&amp;#24555;&amp;#25463;&amp;#22238;&amp;#22797;&amp;#20869;&amp;#23481;&amp;#35774;&amp;#23450;]]></item>
+				<item id="description"><![CDATA[&amp;#26684;&amp;#24335;&amp;#65306;&amp;#26495;&amp;#22359;&amp;#21495;&amp;#65288;fid&amp;#65289;(=)&amp;#20869;&amp;#23481;
+&amp;#19968;&amp;#26465;&amp;#19968;&amp;#34892;&amp;#65307;&amp;#19981;&amp;#21516;&amp;#26495;&amp;#22359;&amp;#21495;&amp;#20043;&amp;#38388;&amp;#20351;&amp;#29992;&amp;#21322;&amp;#35282;&amp;#36887;&amp;#21495;&amp;#65288;,&amp;#65289;&amp;#20998;&amp;#21106;&amp;#65307;
+&amp;#20030;&amp;#20363;&amp;#65306;2,38(=)&amp;#25105;&amp;#30475;&amp;#22909;&amp;#27004;&amp;#20027;&amp;#21734;&amp;#65281;
+&amp;#22312;&amp;#20869;&amp;#23481;&amp;#20013;&amp;#32477;&amp;#23545;&amp;#19981;&amp;#33021;&amp;#20986;&amp;#29616;&amp;ldquo;(=)&amp;rdquo;&amp;#65281;
+0&amp;#34920;&amp;#31034;&amp;#25152;&amp;#26377;&amp;#26495;&amp;#22359;&amp;#37117;&amp;#21487;&amp;#29992;&amp;#65292;&amp;#20030;&amp;#20363;&amp;#65306;
+0(=)&amp;#27004;&amp;#20027;&amp;#22909;&amp;#21385;&amp;#23475;&amp;#21834;&amp;#65281;&amp;#65288;&amp;#19981;&amp;#35201;&amp;#22312;&amp;#21152;&amp;#20854;&amp;#20182;&amp;#26495;&amp;#22359;&amp;#21495;&amp;#65289;]]></item>
+				<item id="variable"><![CDATA[qrtxt]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[2,38(=)[color=Red]&amp;#27004;&amp;#20027;&amp;#21457;&amp;#27468;&amp;#36763;&amp;#33510;&amp;#20102;&amp;#65292;&amp;#35874;&amp;#35874;&amp;#27004;&amp;#20027;&amp;#20998;&amp;#20139;&amp;#65281;[/color]
+2(=)&amp;#27004;&amp;#20027;&amp;#22826;&amp;#21385;&amp;#23475;&amp;#20102;&amp;#65281;&amp;#27004;&amp;#20027;&amp;#65292;I*&amp;#32769;*&amp;#34382;*U&amp;#65281;
+2(=)&amp;#36825;&amp;#20010;&amp;#24086;&amp;#23376;&amp;#19981;&amp;#22238;&amp;#23545;&amp;#19981;&amp;#36215;&amp;#33258;&amp;#24049;&amp;#65281;
+2(=)&amp;#36825;&amp;#27468;&amp;#25105;&amp;#25910;&amp;#20102;&amp;#65281;&amp;#35874;&amp;#35874;&amp;#27004;&amp;#20027;&amp;#65281;
+2,38(=)&amp;#25105;&amp;#30475;&amp;#19981;&amp;#38169;&amp;#22114; &amp;#35874;&amp;#35874;&amp;#27004;&amp;#20027; > _ <
+10(=)&amp;#26082;&amp;#28982;&amp;#20320;&amp;#35802;&amp;#20449;&amp;#35802;&amp;#24847;&amp;#30340;&amp;#25512;&amp;#33616;&amp;#20102;&amp;#65292;&amp;#37027;&amp;#25105;&amp;#23601;&amp;#21193;&amp;#20026;&amp;#20854;&amp;#38590;&amp;#30340;&amp;#21548;&amp;#21548;&amp;#21543;&amp;#65281;
+10(=)&amp;#20854;&amp;#23454;&amp;#25105;&amp;#19968;&amp;#30452;&amp;#35273;&amp;#24471;&amp;#27004;&amp;#20027;&amp;#30340;&amp;#21697;&amp;#21619;&amp;#19981;&amp;#38169;&amp;#65281;&amp;#21621;&amp;#21621;&amp;#65281;
+]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[&amp;#32467;&amp;#23614;&amp;#22266;&amp;#23450;&amp;#29992;&amp;#35821;]]></item>
+				<item id="description"><![CDATA[&amp;#36825;&amp;#37324;&amp;#30340;&amp;#35821;&amp;#21477;&amp;#23558;&amp;#21152;&amp;#22312;&amp;#20250;&amp;#21592;&amp;#36873;&amp;#25321;&amp;#30340;&amp;#35821;&amp;#21477;&amp;#21518;&amp;#65292;&amp;#19968;&amp;#33324;&amp;#26159;&amp;#32593;&amp;#31449;&amp;#30340;&amp;#23459;&amp;#20256;&amp;#35821;&amp;#12290;&amp;#26377;&amp;#21033;&amp;#20110;SEO&amp;#12290;
+&amp;#21487;&amp;#20197;&amp;#26377;&amp;#22810;&amp;#20010;&amp;#65307;
+&amp;#19968;&amp;#34892;&amp;#19968;&amp;#21477;&amp;#12290;]]></item>
+				<item id="variable"><![CDATA[qrwtxt]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[XX&amp;#31038;&amp;#21306;&amp;#22826;&amp;#26834;&amp;#20102;&amp;#65281;
+XX&amp;#31038;&amp;#21306;&amp;#20998;&amp;#20139;&amp;#24555;&amp;#20048;&amp;#65281;
+&amp;#25105;&amp;#35273;&amp;#24471;XX&amp;#31038;&amp;#21306;&amp;#26159;&amp;#27880;&amp;#20876;&amp;#23545;&amp;#20102;&amp;#65281;
+XX&amp;#31038;&amp;#21306;&amp;#65292;&amp;#25105;&amp;#30340;&amp;#26368;&amp;#29233;&amp;#65281;
+&amp;#25105;&amp;#19968;&amp;#22825;&amp;#19981;&amp;#26469;XX&amp;#31038;&amp;#21306;&amp;#23601;&amp;#19981;&amp;#29245;~~~~
+&amp;#25105;&amp;#26159;&amp;#19981;&amp;#26159;&amp;#22826;&amp;#32905;&amp;#40635;&amp;#20102;&amp;#65281;XX&amp;#31038;&amp;#21306;&amp;#25105;&amp;#26469;&amp;#20102;&amp;#65281;
+&amp;#25105;&amp;#24819;&amp;#25105;&amp;#26159;&amp;#19968;&amp;#22825;&amp;#20063;&amp;#19981;&amp;#33021;&amp;#31163;&amp;#24320;XX&amp;#31038;&amp;#21306;&amp;#12290;
+XX&amp;#31038;&amp;#21306;&amp;#23601;&amp;#26159;&amp;#25105;&amp;#30340;&amp;#23478;&amp;#65281;
+&amp;#35201;&amp;#24819;XX&amp;#31038;&amp;#21306;&amp;#22909; &amp;#23601;&amp;#38752;&amp;#20320;&amp;#25105;&amp;#20182;
+XX&amp;#31038;&amp;#21306;&amp;#36234;&amp;#26469;&amp;#36234;&amp;#22909;&amp;#65281;
+XX&amp;#31038;&amp;#21306;&amp;#22909; &amp;#25165;&amp;#26159;&amp;#30495;&amp;#30340;&amp;#22909;
+XX&amp;#31038;&amp;#21306; &amp;#19968;&amp;#20999;&amp;#30342;&amp;#26377;&amp;#21487;&amp;#33021;
+XX&amp;#31038;&amp;#21306; &amp;#19981;&amp;#36208;&amp;#24179;&amp;#20961;&amp;#36335;]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[&amp;#21487;&amp;#20351;&amp;#29992;&amp;#30340;&amp;#35770;&amp;#22363;&amp;#26495;&amp;#22359;]]></item>
+				<item id="description"><![CDATA[&amp;#36873;&amp;#25321;&amp;#21487;&amp;#26159;&amp;#26377;&amp;#30340;&amp;#35770;&amp;#22363;&amp;#26495;&amp;#22359;]]></item>
+				<item id="variable"><![CDATA[qrbfid]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[2]]></item>
+					<item id="1"><![CDATA[38]]></item>
+					<item id="2"><![CDATA[39]]></item>
+				</item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[&amp;#26368;&amp;#23569;&amp;#27721;&amp;#23383;&amp;#25968;]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[zshzs]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[&amp;#31649;&amp;#29702;&amp;#32452;]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[admingid]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[1]]></item>
+					<item id="1"><![CDATA[2]]></item>
+				</item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[&amp;#31649;&amp;#29702;&amp;#32452;&amp;#29992;&amp;#35821;]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[adgtxt]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[0(=)&amp;#24685;&amp;#21916;&amp;#24744;&amp;#65292;&amp;#23457;&amp;#26680;&amp;#36890;&amp;#36807;&amp;#65281;
+0(=)&amp;#24744;&amp;#30340;&amp;#38382;&amp;#39064;&amp;#25551;&amp;#36848;&amp;#30340;&amp;#19981;&amp;#22815;&amp;#28165;&amp;#26970;&amp;#65292;&amp;#24314;&amp;#35758;&amp;#24744;&amp;#25972;&amp;#29702;&amp;#22909;&amp;#24605;&amp;#36335;&amp;#21518;&amp;#65292;&amp;#20877;&amp;#21457;&amp;#35328;&amp;#65292;DSU&amp;#26399;&amp;#24453;&amp;#24744;&amp;#30340;&amp;#36319;&amp;#36827;&amp;#65281;
+0(=)&amp;#24744;&amp;#30340;&amp;#24314;&amp;#35758;&amp;#24050;&amp;#34987;&amp;#37319;&amp;#32435;&amp;#65281;&amp;#24863;&amp;#35874;&amp;#24744;&amp;#23545;DSU&amp;#30340;&amp;#25903;&amp;#25345;&amp;#12290;
+0(=)&amp;#24744;&amp;#30340;&amp;#24819;&amp;#27861;&amp;#24456;&amp;#19981;&amp;#38169;&amp;#65292;&amp;#21487;&amp;#26159;&amp;#26377;&amp;#19968;&amp;#23450;&amp;#30340;&amp;#23616;&amp;#38480;&amp;#24615;&amp;#65292;&amp;#25105;&amp;#20204;&amp;#19981;&amp;#26041;&amp;#20415;&amp;#37319;&amp;#32435;&amp;#65281;&amp;#20294;&amp;#20173;&amp;#24863;&amp;#35874;&amp;#24744;&amp;#23545;DSU&amp;#30340;&amp;#25903;&amp;#25345;&amp;#12290;
+0(=)&amp;#35874;&amp;#35874;&amp;#24744;&amp;#30340;&amp;#25552;&amp;#35758;&amp;#65292;&amp;#25105;&amp;#20204;&amp;#20250;&amp;#35748;&amp;#30495;&amp;#32771;&amp;#34385;&amp;#65292;&amp;#31245;&amp;#21518;&amp;#32473;&amp;#24744;&amp;#31572;&amp;#22797;&amp;#12290;]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[&amp;#36873;&amp;#25321;&amp;#21518;&amp;#33258;&amp;#21160;&amp;#22238;&amp;#22797;&amp;#30340;&amp;#29992;&amp;#25143;&amp;#32452;]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[autogid]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[1]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="1"><![CDATA[<FONT COLOR="#FF6600"><B>&amp;#25552;&amp;#31034;</B>&amp;#65306;&amp;#24744;&amp;#30340;&amp;#20869;&amp;#23481;&amp;#25152;&amp;#21547;&amp;#26377;&amp;#20013;&amp;#25991;&amp;#23383;&amp;#31526;&amp;#23567;&amp;#20110;{zshzs}&amp;#20010;&amp;#65292;&amp;#35831;&amp;#37325;&amp;#26032;&amp;#32534;&amp;#36753;&amp;#65281;</FONT>]]></item>
+				<item id="2"><![CDATA[<FONT COLOR="#FF6600"><B>&amp;#25552;&amp;#31034;</B>&amp;#65306;&amp;#24744;&amp;#30340;&amp;#20869;&amp;#23481;&amp;#21547;&amp;#26377;{hzcfs}&amp;#20010;(&amp;#21547;)&amp;#20197;&amp;#19978;&amp;#36830;&amp;#32493;&amp;#30456;&amp;#21516;&amp;#30340;&amp;#27721;&amp;#23383;&amp;#65292;&amp;#37325;&amp;#22797;&amp;#30340;&amp;#27721;&amp;#23383;&amp;#26159;&amp;ldquo;{cfwenzi}&amp;rdquo;&amp;#65292;&amp;#35831;&amp;#37325;&amp;#26032;&amp;#32534;&amp;#36753;&amp;#65281;</FONT>]]></item>
+				<item id="3"><![CDATA[<FONT COLOR="#FF6600"><B>&amp;#25552;&amp;#31034;</B>&amp;#65306;&amp;#24744;&amp;#30340;&amp;#20869;&amp;#23481;&amp;#21547;&amp;#26377;{zfcfs}&amp;#20010;(&amp;#21547;)&amp;#20197;&amp;#19978;&amp;#36830;&amp;#32493;&amp;#30456;&amp;#21516;&amp;#30340;&amp;#23383;&amp;#31526;&amp;#65292;&amp;#37325;&amp;#22797;&amp;#30340;&amp;#23383;&amp;#31526;&amp;#26159;&amp;ldquo;{cfwenzi}&amp;rdquo;&amp;#65292;&amp;#35831;&amp;#37325;&amp;#26032;&amp;#32534;&amp;#36753;&amp;#65281;</FONT>]]></item>
+				<item id="10"><![CDATA[<FONT COLOR="#FF6600"><B>&amp;#25552;&amp;#31034;</B>&amp;#65306;&amp;#24744;&amp;#30340;&amp;#20869;&amp;#23481;&amp;#25152;&amp;#21547;&amp;#26377;&amp;#20013;&amp;#25991;&amp;#23383;&amp;#31526;&amp;#23567;&amp;#20110;{zshzs}&amp;#20010;&amp;#65292;&amp;#35831;&amp;#37325;&amp;#26032;&amp;#32534;&amp;#36753;&amp;#65281;<BR>&amp;#36820;&amp;#22238;&amp;#21518;&amp;#65292;&amp;#24744;&amp;#21487;&amp;#20197;&amp;#28857;&amp;#20987;&amp;ldquo;<img src="./source/plugin/dsu_amuqreply/img/2.gif" style="margin-bottom:-3px">&amp;#24674;&amp;#22797;&amp;#25968;&amp;#25454;&amp;rdquo;&amp;#22270;&amp;#26631;&amp;#65292;&amp;#24674;&amp;#22797;&amp;#21018;&amp;#25165;&amp;#30340;&amp;#24086;&amp;#23376;&amp;#25968;&amp;#25454;&amp;#65281;</FONT>]]></item>
+				<item id="20"><![CDATA[<FONT COLOR="#FF6600"><B>&amp;#25552;&amp;#31034;</B>&amp;#65306;&amp;#24744;&amp;#30340;&amp;#20869;&amp;#23481;&amp;#21547;&amp;#26377;{hzcfs}&amp;#20010;(&amp;#21547;)&amp;#20197;&amp;#19978;&amp;#36830;&amp;#32493;&amp;#30456;&amp;#21516;&amp;#30340;&amp;#27721;&amp;#23383;&amp;#65292;&amp;#37325;&amp;#22797;&amp;#30340;&amp;#27721;&amp;#23383;&amp;#26159;&amp;ldquo;{cfwenzi}&amp;rdquo;&amp;#65292;&amp;#35831;&amp;#37325;&amp;#26032;&amp;#32534;&amp;#36753;&amp;#65281;<BR>&amp;#36820;&amp;#22238;&amp;#21518;&amp;#65292;&amp;#24744;&amp;#21487;&amp;#20197;&amp;#28857;&amp;#20987;&amp;ldquo;<img src="./source/plugin/dsu_amuqreply/img/2.gif" style="margin-bottom:-3px">&amp;#24674;&amp;#22797;&amp;#25968;&amp;#25454;&amp;rdquo;&amp;#22270;&amp;#26631;&amp;#65292;&amp;#24674;&amp;#22797;&amp;#21018;&amp;#25165;&amp;#30340;&amp;#24086;&amp;#23376;&amp;#25968;&amp;#25454;&amp;#65281;</FONT>]]></item>
+				<item id="30"><![CDATA[<FONT COLOR="#FF6600"><B>&amp;#25552;&amp;#31034;</B>&amp;#65306;&amp;#24744;&amp;#30340;&amp;#20869;&amp;#23481;&amp;#21547;&amp;#26377;{zfcfs}&amp;#20010;(&amp;#21547;)&amp;#20197;&amp;#19978;&amp;#36830;&amp;#32493;&amp;#30456;&amp;#21516;&amp;#30340;&amp;#23383;&amp;#31526;&amp;#65292;&amp;#37325;&amp;#22797;&amp;#30340;&amp;#23383;&amp;#31526;&amp;#26159;&amp;ldquo;{cfwenzi}&amp;rdquo;&amp;#65292;&amp;#35831;&amp;#37325;&amp;#26032;&amp;#32534;&amp;#36753;&amp;#65281;<BR>&amp;#36820;&amp;#22238;&amp;#21518;&amp;#65292;&amp;#24744;&amp;#21487;&amp;#20197;&amp;#28857;&amp;#20987;&amp;ldquo;<img src="./source/plugin/dsu_amuqreply/img/2.gif" style="margin-bottom:-3px">&amp;#24674;&amp;#22797;&amp;#25968;&amp;#25454;&amp;rdquo;&amp;#22270;&amp;#26631;&amp;#65292;&amp;#24674;&amp;#22797;&amp;#21018;&amp;#25165;&amp;#30340;&amp;#24086;&amp;#23376;&amp;#25968;&amp;#25454;&amp;#65281;</FONT>]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="license"><![CDATA[  [*]&amp;#26412;&amp;#25554;&amp;#20214;&amp;#29256;&amp;#26435;&amp;#24402;&amp;#23646;&amp;#25554;&amp;#20214;&amp;#20316;&amp;#32773;,&amp;#21450;&amp;#20854;&amp;#19979;&amp;#23646;Discuz! Student Union&amp;#22242;&amp;#38431;&amp;#25152;&amp;#26377;.
+[*]&amp;#26410;&amp;#32463;&amp;#25554;&amp;#20214;&amp;#20316;&amp;#32773;&amp;#35768;&amp;#21487;,&amp;#20219;&amp;#20309;&amp;#20154;&amp;#19981;&amp;#24471;&amp;#20197;&amp;#20219;&amp;#20309;&amp;#24418;&amp;#24335;&amp;#22312;&amp;#20219;&amp;#20309;&amp;#22320;&amp;#26041;&amp;#21457;&amp;#24067;/&amp;#36716;&amp;#21457;&amp;#21407;&amp;#29256;&amp;#20197;&amp;#21450;&amp;#20854;&amp;#34893;&amp;#29983;&amp;#30340;&amp;#20462;&amp;#25913;&amp;#29256;.
+[*][b]&amp;#25554;&amp;#20214;&amp;#20316;&amp;#32773;:[/b]&amp;#38463;&amp;#29287;
+[*][b]&amp;#20316;&amp;#21697;&amp;#31616;&amp;#20171;:[/b]&amp;#35753;&amp;#22238;&amp;#22797;&amp;#21464;&amp;#24471;&amp;#31616;&amp;#21333;&amp;#19968;&amp;#28857;
+[*][b]&amp;#21457;&amp;#24067;&amp;#22320;&amp;#22336;:[/b][url]http://www.dsu.cc/thread-167-1-1.html[/url]
+[*]&amp;#22914;&amp;#26377;&amp;#20219;&amp;#20309;&amp;#20851;&amp;#20110;&amp;#20351;&amp;#29992;&amp;#19978;&amp;#30340;&amp;#30097;&amp;#38382;,&amp;#35831;&amp;#33267;[url]http://www.dsu.cc/forum-44-1.html[/url]&amp;#25552;&amp;#20986;.
+[*]&amp;#26368;&amp;#21518;,&amp;#24863;&amp;#35874;&amp;#24744;&amp;#20351;&amp;#29992;&amp;#25105;&amp;#20204;&amp;#30340;&amp;#25554;&amp;#20214;,&amp;#20063;&amp;#24076;&amp;#26395;&amp;#24744;&amp;#33021;&amp;#22815;&amp;#32473;&amp;#25105;&amp;#20204;DSU&amp;#22242;&amp;#38431;&amp;#25552;&amp;#20379;&amp;#26356;&amp;#22909;&amp;#30340;&amp;#24847;&amp;#35265;([url=http://www.dsu.cc/]&amp;#35831;&amp;#28857;&amp;#20987;&amp;#36825;&amp;#37324;&amp;#36827;&amp;#20837;DSU&amp;#22242;&amp;#38431;&amp;#23448;&amp;#26041;&amp;#31449;&amp;#28857;[/url]).]]></item>
+		<item id="intro"><![CDATA[
+			[color=DeepSkyBlue][b]&amp;#20851;&amp;#20110;&amp;#26412;&amp;#25554;&amp;#20214;&amp;#30340;&amp;#30456;&amp;#20851;&amp;#20449;&amp;#24687;:[/b][/color]
+				&amp;#21517;&amp;#31216;: [b]&amp;#24555;&amp;#25463;&amp;#22238;&amp;#22797;[/b]
+				&amp;#29256;&amp;#26412;: [b]1.5[/b](&amp;#20869;&amp;#37096;&amp;#29256;&amp;#26412;&amp;#21495;:[X1]V1.43)
+				&amp;#20316;&amp;#32773;: &amp;#38463;&amp;#29287;
+				DSU&amp;#33635;&amp;#35465;&amp;#20986;&amp;#21697; http://www.dsu.cc
+				&amp;#40483;&amp;#35874;&amp;#65306;&amp;#39134;&amp;#21543;|&amp;#22909;Q&amp;#28950;|wellknow|dogdog074|82076322|mwtee
+				&amp;#32426;&amp;#24565;&amp;#31163;&amp;#24320;&amp;#20102;DX&amp;#30340;&amp;#34662;&amp;#31859;&amp;#65281;
+				[b]&amp;#21457;&amp;#24067;&amp;#22320;&amp;#22336;:[/b][url]http://www.dsu.cc/thread-167-1-1.html[/url](&amp;#36825;&amp;#37324;&amp;#26159;&amp;#26368;&amp;#26032;&amp;#29256;&amp;#21734;&amp;#65281;)
+				&amp;#26412;&amp;#29256;&amp;#26412;&amp;#26356;&amp;#26032;&amp;#20869;&amp;#23481;&amp;#65306;
+				1.&amp;#26032;&amp;#22686;&amp;#31649;&amp;#29702;&amp;#29992;&amp;#35821;&amp;#65307;
+				-------------------------------------------
+				&amp;#26412;&amp;#25554;&amp;#20214;&amp;#20165;&amp;#20379;&amp;#20010;&amp;#20154;&amp;#38750;&amp;#21830;&amp;#19994;&amp;#29992;&amp;#36884;&amp;#20351;&amp;#29992;!
+				&amp;#31105;&amp;#27490;&amp;#20219;&amp;#20309;&amp;#24418;&amp;#24335;&amp;#30340;&amp;#23553;&amp;#35013;&amp;#20877;&amp;#21457;&amp;#24067;&amp;#34892;&amp;#20026;.
+				&amp;#29305;&amp;#27492;&amp;#22768;&amp;#26126;.
+
+				2010&amp;#24180;7&amp;#26376;22&amp;#26085;
+			]]></item>
+	</item>
+</root>
