@@ -14,7 +14,7 @@
 			<item id="datatables"><![CDATA[]]></item>
 			<item id="directory"><![CDATA[dsu_updater/]]></item>
 			<item id="copyright"><![CDATA[kookxiang @ DSU Team.]]></item>
-			<item id="version"><![CDATA[0.7]]></item>
+			<item id="version"><![CDATA[0.8]]></item>
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[checker]]></item>

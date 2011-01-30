@@ -40,6 +40,8 @@ switch($_G['gp_do']){
 		foreach($file_list as $id=>$path){
 			$contents=gzuncompress(base64_decode($_POST["file_{$id}"]));
 			if($contents && $path){
+				$dir=dirname($path);
+				!file_exists($dir) && mkdir($dir,0777);
 				@touch(DISCUZ_ROOT.'./'.$path);
 				if(!is_writeable(DISCUZ_ROOT.'./'.$path)) exit("E1|{$path}");
 				file_put_contents(DISCUZ_ROOT.'./'.$path,$contents);
