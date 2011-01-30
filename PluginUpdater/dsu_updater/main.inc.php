@@ -10,7 +10,7 @@ while($result=DB::fetch($query)){
 	$output[]=$result['version'];
 	$plugin[$result['identifier']]=$result['name'];
 	$output[]=$_G['dsu_updater']['plugin'][$result['identifier']];
-	if($result['version']<$_G['dsu_updater']['plugin'][$result['identifier']] || $_G['dsu_updater']['plugin'][$result['identifier']]==''){
+	if($result['version']>=$_G['dsu_updater']['plugin'][$result['identifier']] || $_G['dsu_updater']['plugin'][$result['identifier']]==''){
 		$output[]='';
 	}else{
 		$output[]='<a href="admin.php?action=plugins&operation=config&identifier=dsu_updater&pmod=main&plugin='.$result['identifier'].'&formhash='.FORMHASH."\">{$du_lang[update_do]}</a>";

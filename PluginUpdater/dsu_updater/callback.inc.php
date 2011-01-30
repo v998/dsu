@@ -36,11 +36,12 @@ switch($_G['gp_do']){
 		$site_id=$_G['gp_site_id']?intval($_G['gp_site_id']):'';
 		$key=strip_tags($_G['gp_key']);
 		if(!check_key($site_id,$key)) exit('E0');
-		$file_list=unserialize(authcode($_G['gp_file_list'],'DECODE',$_G['dsu_updater']['key']));
-		foreach($file_list as $path=>$contents){
+		$file_list=unserialize(quot_fix($_POST['file_list']));
+		foreach($file_list as $id=>$path){
+			$contents=gzuncompress(base64_decode($_POST["file_{$id}"]));
 			if($contents && $path){
 				@touch(DISCUZ_ROOT.'./'.$path);
-				if(!is_writeable(DISCUZ_ROOT.'./'.$path)) exit('E1');
+				if(!is_writeable(DISCUZ_ROOT.'./'.$path)) exit("E1|{$path}");
 				file_put_contents(DISCUZ_ROOT.'./'.$path,$contents);
 			}
 		}
@@ -54,6 +55,10 @@ switch($_G['gp_do']){
 		if(check_key($site_id,$key)) exit('ok');
 		exit();
 		break;
+}
+
+function quot_fix($str){
+	return stripslashes(stripslashes($str));
 }
 
 ?>
