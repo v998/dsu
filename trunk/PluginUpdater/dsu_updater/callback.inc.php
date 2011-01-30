@@ -1,5 +1,5 @@
 <?php
-if(!defined('IN_DISCUZ')) dexit('Access Denied');
+if(!defined('IN_DISCUZ')) exit('Access Denied');
 $not_jump=true;
 include DISCUZ_ROOT.'./source/plugin/dsu_updater/core.func.php';
 switch($_G['gp_do']){

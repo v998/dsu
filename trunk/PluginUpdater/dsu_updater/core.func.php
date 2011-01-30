@@ -1,5 +1,5 @@
 <?php
-if(!defined('IN_DISCUZ')) dexit('Access Denied');
+if(!defined('IN_DISCUZ')) exit('Access Denied');
 include DISCUZ_ROOT.'./data/plugindata/dsu_updater.lang.php';
 $du_lang=$scriptlang['dsu_updater'];
 function returnmsg($p1,$p2,$p3){
