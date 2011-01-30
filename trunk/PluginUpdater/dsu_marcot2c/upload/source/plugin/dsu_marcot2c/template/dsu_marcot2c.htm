@@ -1,0 +1,132 @@
+{subtemplate common/header}
+<div id="pt" class="bm cl">
+<div class="z"><a href="./" class="nvhm">$_G[setting][bbname]</a><em>&rsaquo;</em>$navtitle</div>
+</div>
+<style type="text/css">
+    .mn { background:#E3F2F9; border:1px solid #B6D2E7; padding:3px; }
+        <!--{if empty($mod)}-->
+        .mn .bm { padding:10px; margin-bottom:0; border:0; background:#fff url(./source/plugin/dsu_marcot2c/template/images/bg.jpg) no-repeat 100% 100%; }
+        <!--{else}-->
+        .mn .bm { padding:10px; margin-bottom:0; border:0; background:#fff url(./source/plugin/dsu_marcot2c/template/images/bg_money.png) no-repeat 85% 70%; }
+        <!--{/if}-->
+    .tips { background:#FFF5C5; border:1px solid #F8E2AD; padding:5px; margin-top:20px; width:535px; }
+        .tips p { color:#666; padding:5px 10px; }
+            .tips p strong { padding:0 5px; }
+    #convert { margin:15px 0; }
+        #convert li { padding:10px 0; font-size:14px; }
+            #convert li label { float:left; width:150px; text-align:right; padding-right:20px; }
+            #convert li .px { margin-right:10px; }
+            #convert .pn { margin-left:170px; }
+</style>
+<div id="ct" class="wp cl">
+    <div class="mn">
+           <div class="bm">
+              <!--{if $config[money_open] == 1}-->
+              <ul class="tb cl">
+                   <li><a href="plugin.php?id=dsu_marcot2c">{lang dsu_marcot2c:name}</a></li>
+                   <li><a href="plugin.php?id=dsu_marcot2c&mod=money">{lang dsu_marcot2c:name_2}</a></li>
+              </ul>
+              <!--{/if}-->
+
+<!--{if (empty($mod))}-->
+<script type="text/javascript">
+function credits_get() {
+    var time = document.getElementById('time');
+    var credit = document.getElementById('credit');
+    if(isNaN(time.value) == true){
+        showDialog('{lang dsu_marcot2c:error_int}', 'alert', '{lang dsu_marcot2c:error}');
+        time.value = 0;
+        credit.value = 0;
+    }else if(time.value > $ol_db['total']){
+        showDialog('$config[msg_1]', 'alert', '{lang dsu_marcot2c:error}');
+        time = 0;
+        credit.value = 0;
+    }else if(time.value < $config['min_mins']){
+        showDialog('$config[msg_2]', 'alert', '{lang dsu_marcot2c:error}');
+        time.value = 0;
+        credit.value = 0;
+    }else{
+        credit.value = Math.floor((time.value/$config['mins'])*$config['money']);
+    }
+}
+function checkform(form) {
+  if(form.time.value == 0 || form.time.value == '') {
+    showDialog('$config[msg_3]', 'alert', '{lang dsu_marcot2c:error}');
+    form.time.focus();
+    return false;
+  }
+  if(form.credit.value == 0) {
+    showDialog('$config[msg_4]', 'alert', '{lang dsu_marcot2c:error}');
+    form.credit.focus();
+    return false;
+  }
+  return true;
+}
+</script>
+<h1 class="mt"><strong>{lang dsu_marcot2c:name}</strong></h1>
+<div class="tips">
+    <p>{lang dsu_marcot2c:total_ol}<strong><!--{if !$ol_db[total]}-->0<!--{else}-->$ol_db[total]<!--{/if}--></strong>{lang dsu_marcot2c:unit_min}</p>
+    <!--{if $ol_db[total]}--><p>{lang dsu_marcot2c:update_ol}<strong>$ol_db[lastupdate]</strong></p><!--{/if}-->
+</div>
+<form action="plugin.php?id=dsu_marcot2c" method="post" onsubmit="return checkform(this);">
+<input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+    <ul id="convert">
+        <li><label>{lang dsu_marcot2c:rate}</label><b>{lang dsu_marcot2c:every} <font color="#FF0000">$config[mins]</font> {lang dsu_marcot2c:unit_min} = <font color="#FF0000">$config[money]</font> $_G[setting][extcredits][$config[credit]][title]</b></li>
+        <li><label>{lang dsu_marcot2c:change}</label> <input name="time" type="text" class="px" id="time" onchange="javascript:credits_get();" value="0" size="20" maxlength="20" />{lang dsu_marcot2c:unit_min}</li>
+        <li><label>{lang dsu_marcot2c:get}</label> <input id="credit" name="credit" class="px" type="text" size="20" disabled="disabled" />$_G[setting][extcredits][$config[credit]][title] <span id="faq" onmouseover="showPrompt(this.id, 'mouseover', '{lang dsu_marcot2c:get_faq}', 3000)"><img src="./static/image/common/faq.gif" /></span>
+</li>
+        <li><button type="submit" class="pn" value="true" id="submit" name="submit" tabindex="1"><span>{lang dsu_marcot2c:exchange}</span></button></li>
+    </ul>
+</form>
+<!--{else}-->
+<script type="text/javascript">
+function credits_get() {
+    var credit = document.getElementById('credit');
+    var time = document.getElementById('time');
+    if(isNaN(credit.value) == true){
+        showDialog('{lang dsu_marcot2c:error_int}', 'alert', '{lang dsu_marcot2c:error}');
+        time.value = 0;
+        credit.value = 0;
+    }else if(credit.value > $credit_got){
+        showDialog('$config[msg_5]', 'alert', '{lang dsu_marcot2c:error}');
+        time.value = 0;
+        credit.value = 0;
+    }else if(credit.value < $config['min_ol']){
+        showDialog('$config[msg_6]', 'alert', '{lang dsu_marcot2c:error}');
+        time.value = 0;
+        credit.value = 0;
+    }else{
+        time.value = Math.floor((credit.value/$config['money_2'])*$config['mins_2']);
+    }
+}
+function checkform(form) {
+  if(form.credit.value == 0 || form.credit.value == '') {
+    showDialog('$config[msg_7]', 'alert', '{lang dsu_marcot2c:error}');
+    form.credit.focus();
+    return false;
+  }
+  if(form.time.value == 0) {
+    showDialog('$config[msg_8]', 'alert', '{lang dsu_marcot2c:error}');
+    form.credit.focus();
+    return false;
+  }
+  return true;
+}
+</script>
+<h1 class="mt"><strong>{lang dsu_marcot2c:name_2}</strong></h1>
+<div class="tips">
+    <p>{lang dsu_marcot2c:credit_got}$_G[setting][extcredits][$config[credit]][title]<strong>$credit_got</strong>$_G[setting][extcredits][$config[credit]][unit]</p>
+</div>
+<form action="plugin.php?id=dsu_marcot2c&mod=money" method="post" onsubmit="return checkform(this);">
+<input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+    <ul id="convert">
+        <li><label>{lang dsu_marcot2c:rate}</label>{lang dsu_marcot2c:every} $config[money_2] $_G[setting][extcredits][$config[credit]][title] = $config[mins_2] {lang dsu_marcot2c:unit_min}</li>
+        <li><label>{lang dsu_marcot2c:change}</label> <input name="credit" type="text" class="px" id="credit" onchange="javascript:credits_get();" value="0" size="20" maxlength="20" />$_G[setting][extcredits][$config[credit]][title]</li>
+        <li><label>{lang dsu_marcot2c:get}</label> <input id="time" name="time" class="px" type="text" size="20" disabled="disabled" />{lang dsu_marcot2c:unit_min} <span id="faq" onmouseover="showPrompt(this.id, 'mouseover', '{lang dsu_marcot2c:get_faq}', 3000)"><img src="./static/image/common/faq.gif" /></span></li>
+        <li><button type="submit" class="pn" value="true" id="submit" name="submit" tabindex="1"><span>{lang dsu_marcot2c:exchange}</span></button></li>
+    </ul>
+</form>
+<!--{/if}-->
+{$update_notice}
+</div></div></div>
+{subtemplate common/footer}
