@@ -2,22 +2,22 @@
 <link rel="stylesheet" type="text/css" href="source/plugin/dsu_updater/images/style.css" />	
 <div id="dsu_updater_notice" class="focus">
 	<h3 class="flb">
-		<em>【DSU】插件更新提示 (仅创始人可见)</em>
-		<span><a class="flbc" onclick="$('dsu_updater_notice').style.display='none'" href="javascript:;">&nbsp;</a></span>
+		<em>{lang dsu_updater:tips_title}</em>
+		<span><a class="flbc" onclick="setcookie('dsu_updater_skip', 1, 1800);$('dsu_updater_notice').style.display='none'" href="javascript:;">&nbsp;</a></span>
 	</h3>
 	<div class="detail">
-		<h4>您好，<a href="http://update.dsu.cc" target="_blank">插件升级助手</a>检测到您有<strong>{$count}</strong>款插件需要更新：</h4>
+		<h4>{lang dsu_updater:tips_1}<strong>{$count}</strong>{lang dsu_updater:tips_2}</h4>
 		<ul>
 		{loop $update_plugins $plugin}
 			<li>
 				<h5>{$plugin[name]}</h5>
-				<p class="v_now">当前版本：{$plugin[ver]}</p>
-				<p class="v_new">最新版本：<strong>{$plugin[new_ver]}</strong></p>
+				<p class="v_now">{lang dsu_updater:ver_installed} {$plugin[ver]}</p>
+				<p class="v_new">{lang dsu_updater:ver_new}<strong>{$plugin[new_ver]}</strong></p>
 			</li>
 		{/loop}
 		</ul>
 		<div class="dsu_link">
-			<a class="dsu_start_update" target="_blank" href="admin.php?frames=yes&action=plugins&operation=config&identifier=dsu_updater&pmod=main">开始更新</a>
+			<a class="dsu_start_update" target="_blank" href="admin.php?frames=yes&action=plugins&operation=config&identifier=dsu_updater&pmod=main">{lang dsu_updater:do_update}</a>
 		</div>
 	</div>
 </div>
