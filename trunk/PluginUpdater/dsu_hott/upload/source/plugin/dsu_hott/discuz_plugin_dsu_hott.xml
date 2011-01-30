@@ -14,7 +14,7 @@
 			<item id="datatables"><![CDATA[]]></item>
 			<item id="directory"><![CDATA[dsu_hott/]]></item>
 			<item id="copyright"><![CDATA[kookxiang @ DSU.Team]]></item>
-			<item id="version"><![CDATA[2.0]]></item>
+			<item id="version"><![CDATA[2.1]]></item>
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[setting]]></item>
@@ -116,15 +116,21 @@
 		<item id="language">
 			<item id="scriptlang">
 				<item id="saved"><![CDATA[保存成功！]]></item>
-				<item id="cannot_write"><![CDATA[无法写入文件，请确保插件目录下的config.inc.php可写(777)！]]></item>
-				<item id="style_tips"><![CDATA[<li>主题文件请放在“source/plugin/dsu_hott/template”目录中</li>
-<li><b>请勿随意删除使用中的主题文件！</b></li>]]></item>
+				<item id="cannot_write"><![CDATA[无法写入文件，请检查文件权限！]]></item>
+				<item id="style_tips"><![CDATA[
+<li>主题文件请放在“source/plugin/dsu_hott/template”目录中</li>
+<li><b>请勿随意删除使用中的主题文件！</b></li>
+]]></item>
+				<item id="block_tips"><![CDATA[
+<li>模块文件请放在“source/plugin/dsu_hott/script”目录中</li>
+<li>您可以到【DSU】论坛下载模块 或 联系其他开发者为您开发模块</li>
+<li>如果您是开发者，可以登录DSU官方网站下载开发示例文件</li>
+]]></item>
 				<item id="block_header"><![CDATA[楼主热帖 - 模块设定 - ]]></item>
-				<item id="block_random"><![CDATA[随机主题]]></item>
-				<item id="block_new_post"><![CDATA[最新主题]]></item>
 				<item id="block_hot_post_1"><![CDATA[热门主题 (按查看数排序)]]></item>
 				<item id="block_hot_post_2"><![CDATA[热门主题 (按回复数排序)]]></item>
 				<item id="block_digest"><![CDATA[精华主题]]></item>
+				<item id="block_lastpost"><![CDATA[最后回复]]></item>
 				<item id="block_recommend"><![CDATA[高评分主题]]></item>
 				<item id="only_lz"><![CDATA[<span class="spectitle">只显示楼主的帖子</span>]]></item>
 				<item id="choose_block"><![CDATA[模块类别]]></item>
@@ -140,7 +146,6 @@
 				<item id="title"><![CDATA[模块标题]]></item>
 				<item id="setting_header1"><![CDATA[楼主热帖 - 第一栏设定]]></item>
 				<item id="setting_header2"><![CDATA[楼主热帖 - 第二栏设定]]></item>
-				<item id="xml_file_name"><![CDATA[discuz_plugin_dsu_hott.xml]]></item>
 			</item>
 		</item>
 		<item id="installfile"><![CDATA[stat.php]]></item>

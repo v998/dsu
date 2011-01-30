@@ -2,32 +2,30 @@
 
 if(!defined('IN_DISCUZ')) exit('Access Denied');
 
-if(!class_exists('hott_script_digest')){
-	class hott_script_digest{
-		var $name = '&#31934;&#21326;&#20027;&#39064;';
+if(!class_exists('hott_script_new_blog')){
+	class hott_script_new_blog{
+		var $name = '&#26368;&#26032;&#26085;&#24535;';
 		function _fetch_data($block_id) {
 			global $_G,$postlist,$config,$authorid,$new_window,$tid,$hott;
 			$db=DB::object();
 			$tablepre=$db->tablepre;
-			$limitforum=$config['disallow_fid']?' AND fid NOT IN ('.dimplode(unserialize($config['disallow_fid'])).')':'';
 			$limit=$config['show_limit']>0?$config['show_limit']:'6';
-			$only_lz=$hott[$block_id]['only_lz']?' AND authorid='.$authorid:'';
-			$show_group=$config['show_group']?'':' AND isgroup=0';
+			$only_lz=$hott[$block_id]['only_lz']?' AND uid='.$authorid:'';
 			$date_limit=$config['date_limit']==0?'':' AND dateline>'.($_G['timestamp']-$config['date_limit']*86400);
-			$query=DB::query("SELECT tid,highlight,subject FROM {$tablepre}forum_thread WHERE displayorder>-1 {$only_lz}{$limitforum}{$date_limit}{$show_group} AND digest>0 ORDER BY digest DESC LIMIT 0,{$limit}");
+			$query=DB::query("SELECT blogid,subject FROM {$tablepre}home_blog WHERE blogid>0 {$only_lz}{$date_limit} ORDER BY dateline DESC LIMIT 0,{$limit}");
 			while ($thread=DB::fetch($query)){
-				$hott_block[]=array('tid'=>$thread['tid'],'link'=>"forum.php?mod=viewthread&tid={$thread[tid]}",'link_info'=>$new_window.$this->_sethighlight($thread['highlight']),'subject'=>$thread['subject']);
+				$hott_block[]=array('link'=>"home.php?mod=space&do=blog&id={$thread[blogid]}",'link_info'=>$new_window,'subject'=>$thread['subject']);
 			}
 			return (array)$hott_block;
 		}
 		function output($block_id){
 			global $_G,$hott,$threadid,$config,$authorid,$hott;
 			loadcache('dsu_hott');
-			$cache=$_G['cache']['dsu_hott']['hott_script_digest'];
+			$cache=$_G['cache']['dsu_hott']['hott_script_new_blog'];
 			if(TIMESTAMP-$cache['updatetime']>$hott[$block_id]['cache_time'] || $hott[$block_id]['only_lz']){
 				$data=$this->_fetch_data($block_id);
 				$data['updatetime']=TIMESTAMP;
-				$_G['cache']['dsu_hott']['hott_script_digest']=$cache=$data;
+				$_G['cache']['dsu_hott']['hott_script_new_blog']=$cache=$data;
 				!$hott[$block_id]['only_lz'] && save_syscache('dsu_hott',$_G['cache']['dsu_hott']);
 			}
 			foreach($cache as $id=>$thread){
@@ -46,21 +44,9 @@ if(!class_exists('hott_script_digest')){
 			$hott[$block_id]['only_lz']=$_G['gp_only_lz_'.$block_id];
 			$hott[$block_id]['cache_time']=$_G['gp_cache_time_'.$block_id];
 		}
-		function _sethighlight($string) {
-			$colorarray = array('', '#EE1B2E', '#EE5023', '#996600', '#3C9D40', '#2897C5', '#2B65B7', '#8F2A90', '#EC1282');
-			$string = sprintf('%02d', $string);
-			$stylestr = sprintf('%03b', $string[0]);
-			$highlight = ' style="';
-			$highlight .= $stylestr[0] ? 'font-weight: bold;' : '';
-			$highlight .= $stylestr[1] ? 'font-style: italic;' : '';
-			$highlight .= $stylestr[2] ? 'text-decoration: underline;' : '';
-			$highlight .= $string[1] ? 'color: '.$colorarray[$string[1]].';' : '';
-			$highlight .= '"';
-			return $highlight;
-		}
 	}
 }
 
-$hott_script=new hott_script_digest;
+$hott_script=new hott_script_new_blog;
 
 ?>

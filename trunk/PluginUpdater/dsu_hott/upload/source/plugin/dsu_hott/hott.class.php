@@ -1,12 +1,13 @@
 <?php
 class plugin_dsu_hott{
 	function viewthread_useraction_output(){
-		global $_G,$postlist,$tid,$authorid,$hott;
+		global $_G,$postlist,$tid,$authorid,$hott,$config,$new_window;
 		if (!$_G['fid'] || !$_G['tid'] || !$postlist[$_G['forum_firstpid']]['authorid'] || $postlist[$_G['forum_firstpid']]['anonymous']) return;
 		loadcache('plugin');
 		$config=$_G['cache']['plugin']['dsu_hott'];
 		@include DISCUZ_ROOT.'./data/dsu_hott.inc.php';
 		$authorid=$postlist[$_G['forum_firstpid']]['authorid'];
+		$new_window=$config['new_window']?' target="_blank" ':'';
 		$tid=$_G['tid'];
 		$hott_block1=$hott_block2='';
 		if($hott[1]['script'] && file_exists(DISCUZ_ROOT.'./source/plugin/dsu_hott/script/'.$hott[1]['script'])){
