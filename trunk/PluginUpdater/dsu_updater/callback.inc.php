@@ -16,7 +16,8 @@ switch($_G['gp_do']){
 			$_G['dsu_updater']['site_id']=$site_id;
 			$_G['dsu_updater']['key']=$key;
 			save_setting();
-			exit("<a href=\"\" onclick=\"window.close();\" onload=\"window.close();\">{$du_lang[accept_succeed]}</a>");
+			@include_once DISCUZ_ROOT.'./source/discuz_version.php';
+			exit("<a href=\"\" onclick=\"window.close();\" onload=\"window.close();\">{$du_lang[accept_succeed]}</a><br><span class=\"pipe\">|</span><img title=\"[DSU] Updater CallBack\" src=\"http://update.dsu.cc/api.php?type=all&site_id={$site_id}&keyhash=".md5($key).'&dv='.DISCUZ_VERSION.'&charset='.CHARSET."\" />");
 		}else{
 			include template('dsu_updater:oauth');
 		}
