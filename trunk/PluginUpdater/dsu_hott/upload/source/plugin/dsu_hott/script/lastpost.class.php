@@ -30,9 +30,6 @@ if(!class_exists('hott_script_lastpost')){
 				!$hott[$block_id]['only_lz'] && save_syscache('dsu_hott',$_G['cache']['dsu_hott']);
 			}
 			unset($cache['updatetime']);
-			foreach($cache as $id=>$thread){
-				if($thread['tid']==$_G['tid']) unset($cache[$id]);
-			}
 			return $cache;
 		}
 		function show_setting($block_id){
