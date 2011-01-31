@@ -28,9 +28,6 @@ if(!class_exists('hott_script_new_blog')){
 				$_G['cache']['dsu_hott']['hott_script_new_blog']=$cache=$data;
 				!$hott[$block_id]['only_lz'] && save_syscache('dsu_hott',$_G['cache']['dsu_hott']);
 			}
-			foreach($cache as $id=>$thread){
-				if($thread['tid']==$_G['tid']) unset($cache[$id]);
-			}
 			unset($cache['updatetime']);
 			return $cache;
 		}
