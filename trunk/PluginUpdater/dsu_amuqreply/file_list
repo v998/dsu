@@ -6,8 +6,10 @@ source/plugin/dsu_amuqreply/discuz_plugin_dsu_amuqreply_TC_UTF8.xml
 source/plugin/dsu_amuqreply/index.htm
 source/plugin/dsu_amuqreply/install.php
 source/plugin/dsu_amuqreply/qreply.class.php
+source/plugin/dsu_amuqreply/qreply.class.php.bak
 source/plugin/dsu_amuqreply/uninstall.php
 source/plugin/dsu_amuqreply/upgrade.php
 source/plugin/dsu_amuqreply/img/1.gif
 source/plugin/dsu_amuqreply/img/2.gif
 source/plugin/dsu_amuqreply/img/index.htm
+source/plugin/dsu_amuqreply/img/Thumbs.db

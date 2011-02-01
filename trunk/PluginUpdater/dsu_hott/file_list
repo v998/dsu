@@ -14,6 +14,5 @@ source/plugin/dsu_hott/script/lastpost.class.php
 source/plugin/dsu_hott/script/new_blog.class.php
 source/plugin/dsu_hott/script/new_post.class.php
 source/plugin/dsu_hott/script/rand.class.php
-source/plugin/dsu_hott/script/recommend.class.php
 source/plugin/dsu_hott/template/default.htm
 source/plugin/dsu_hott/template/orange-x1.5.htm
