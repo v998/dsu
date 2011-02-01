@@ -3,7 +3,7 @@ source/plugin/dsu_czw_mergeReply/discuz_plugin_dsu_czw_mergeReply_SC_UTF8.xml
 source/plugin/dsu_czw_mergeReply/discuz_plugin_dsu_czw_mergeReply_TC_BIG5.xml
 source/plugin/dsu_czw_mergeReply/discuz_plugin_dsu_czw_mergeReply_TC_UTF8.xml
 source/plugin/dsu_czw_mergeReply/hook.class.php
+source/plugin/dsu_czw_mergeReply/index.htm
 source/plugin/dsu_czw_mergeReply/setup.php
 source/plugin/dsu_czw_mergeReply/stat.inc.php
-source/plugin/dsu_czw_mergeReply/index.htm
 source/plugin/dsu_czw_mergeReply/template/index.htm
