@@ -14,6 +14,7 @@ source/plugin/dsu_amupper/uninstall.php
 source/plugin/dsu_amupper/upgrade.php
 source/plugin/dsu_amupper/images/dk.gif
 source/plugin/dsu_amupper/images/index.htm
+source/plugin/dsu_amupper/images/Thumbs.db
 source/plugin/dsu_amupper/images/wb.gif
 source/plugin/dsu_amupper/template/ajax.htm
 source/plugin/dsu_amupper/template/index.htm
