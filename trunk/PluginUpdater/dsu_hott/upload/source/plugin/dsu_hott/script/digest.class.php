@@ -16,7 +16,7 @@ if(!class_exists('hott_script_digest')){
 			$date_limit=$config['date_limit']==0?'':' AND dateline>'.($_G['timestamp']-$config['date_limit']*86400);
 			$query=DB::query("SELECT tid,highlight,subject FROM {$tablepre}forum_thread WHERE displayorder>-1 {$only_lz}{$limitforum}{$date_limit}{$show_group} AND digest>0 ORDER BY digest DESC LIMIT 0,{$limit}");
 			while ($thread=DB::fetch($query)){
-				$hott_block[]=array('tid'=>$thread['tid'],'link'=>"forum.php?mod=viewthread&tid={$thread[tid]}",'link_info'=>$new_window.$this->_sethighlight($thread['highlight']),'subject'=>$thread['subject']);
+				$hott_block[]=array('tid'=>$thread['tid'],'link'=>"forum.php?mod=viewthread&tid={$thread[tid]}",'link_info'=>$new_window.$this->_sethighlight($thread['highlight']),'subject'=>cutstr($thread['subject'],$config['max_text']));
 			}
 			return (array)$hott_block;
 		}

@@ -8,6 +8,7 @@ class plugin_dsu_hott{
 		@include DISCUZ_ROOT.'./data/dsu_hott.inc.php';
 		$authorid=$postlist[$_G['forum_firstpid']]['authorid'];
 		$new_window=$config['new_window']?' target="_blank" ':'';
+		$config['max_text']=$config['max_text']>0?$config['max_text']:80;
 		$tid=$_G['tid'];
 		$hott_block1=$hott_block2='';
 		if($hott[1]['script'] && file_exists(DISCUZ_ROOT.'./source/plugin/dsu_hott/script/'.$hott[1]['script'])){

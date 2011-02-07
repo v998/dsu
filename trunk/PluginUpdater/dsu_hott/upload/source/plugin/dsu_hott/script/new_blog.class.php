@@ -14,7 +14,7 @@ if(!class_exists('hott_script_new_blog')){
 			$date_limit=$config['date_limit']==0?'':' AND dateline>'.($_G['timestamp']-$config['date_limit']*86400);
 			$query=DB::query("SELECT blogid,subject FROM {$tablepre}home_blog WHERE blogid>0 {$only_lz}{$date_limit} ORDER BY dateline DESC LIMIT 0,{$limit}");
 			while ($thread=DB::fetch($query)){
-				$hott_block[]=array('link'=>"home.php?mod=space&do=blog&id={$thread[blogid]}",'link_info'=>$new_window,'subject'=>$thread['subject']);
+				$hott_block[]=array('link'=>"home.php?mod=space&do=blog&id={$thread[blogid]}",'link_info'=>$new_window,'subject'=>cutstr($thread['subject'],$config['max_text']));
 			}
 			return (array)$hott_block;
 		}
