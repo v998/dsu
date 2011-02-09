@@ -14,7 +14,7 @@
 			<item id="datatables"><![CDATA[]]></item>
 			<item id="directory"><![CDATA[dsu_updater/]]></item>
 			<item id="copyright"><![CDATA[kookxiang @ DSU Team.]]></item>
-			<item id="version"><![CDATA[0.8]]></item>
+			<item id="version"><![CDATA[1.0]]></item>
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[checker]]></item>
@@ -72,7 +72,7 @@
 				<item id="xml_file_name"><![CDATA[discuz_plugin_dsu_updater_TC_BIG5.xml]]></item>
 				<item id="write_error"><![CDATA[寫入setting.inc.php失敗，請檢查文件權限！]]></item>
 				<item id="lost_key"><![CDATA[安全密鑰(Key)丟失，請登錄 update.dsu.cc 綁定.]]></item>
-				<item id="accept_succeed"><![CDATA[授權成功！]]></item>
+				<item id="accept_succeed"><![CDATA[授權完成！]]></item>
 				<item id="installed_plugin"><![CDATA[已安裝插件]]></item>
 				<item id="plugin_name"><![CDATA[插件名稱]]></item>
 				<item id="ver_installed"><![CDATA[當前版本]]></item>
@@ -86,12 +86,12 @@
 			</item>
 			<item id="templatelang">
 				<item id="oauth_title"><![CDATA[確認授權 - 【DSU】插件更新助手]]></item>
-				<item id="oauth_alert"><![CDATA[請確認您是通過<b>www.dsu.cc</b>進入此頁面，否則請勿點擊「允許」]]></item>
+				<item id="oauth_alert"><![CDATA[請確認您是通過<b>www.dsu.cc</b>進入此頁面，否則請勿點擊「同意」]]></item>
 				<item id="oauth_header"><![CDATA[【DSU】插件更新助手 - 確認授權]]></item>
-				<item id="oauth_readme"><![CDATA[您正要授權使用以下信息配置 【DSU】插件更新助手，請仔細確認來源後點擊「允許」。]]></item>
+				<item id="oauth_readme"><![CDATA[您正要授權使用以下信息配置 【DSU】插件更新助手，請仔細確認來源後點擊「同意」。]]></item>
 				<item id="site_id"><![CDATA[站點ID]]></item>
 				<item id="key"><![CDATA[安全密鑰]]></item>
-				<item id="accept"><![CDATA[允許\]]></item>
+				<item id="accept"><![CDATA[同意]]></item>
 				<item id="cancel"><![CDATA[拒絕]]></item>
 				<item id="tips_title"><![CDATA[【DSU】插件更新提示 (僅創始人可見)]]></item>
 				<item id="tips_1"><![CDATA[您好，<a href="http://update.dsu.cc" target="_blank">插件升級助手</a>檢測到您有]]></item>
@@ -101,5 +101,18 @@
 				<item id="do_update"><![CDATA[開始更新]]></item>
 			</item>
 		</item>
+		<item id="installfile"><![CDATA[stat.php]]></item>
+		<item id="uninstallfile"><![CDATA[stat.php]]></item>
+		<item id="upgradefile"><![CDATA[stat.php]]></item>
+		<item id="license"><![CDATA[[list]
+[*]本插件版權歸屬插件作者,及其下屬Discuz! Student Union團隊所有.
+[*]未經插件作者同意,任何人不得以任何形式在任何地方發佈/轉發原版以及其衍生的修改版.
+[*][b]插件作者:[/b]kookxiang
+[*][b]作品簡介:[/b]快速更新 DSU 系列所有插件
+[*][b]發佈地址:[/b][url]http://update.dsu.cc[/url]
+[*]如有任何關於使用上的疑問,請至[url]http://www.dsu.cc/forum-44-1.html[/url]提出.
+[*][color=Red]如果您願意資助我們,請至[url]http://www.dsu.cc/donate.php[/url]對我們進行贊助.[/color]
+[*]最後,感謝您使用我們的插件,也希望您能夠給我們DSU團隊提供更好的意見([url=http://www.dsu.cc/]請點擊這裡進入DSU團隊官方站點[/url]).
+[/list]]]></item>
 	</item>
 </root>
