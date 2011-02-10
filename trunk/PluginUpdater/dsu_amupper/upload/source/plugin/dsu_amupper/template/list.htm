@@ -7,7 +7,7 @@
 <div id="pt" class="bm cl">
 	<!--{subtemplate common/simplesearchform}-->
 	<div class="z">
-		<a href="./" id="fjump"{if $_G['setting']['forumjump'] == 1} onmouseover="showMenu({'ctrlid':this.id})"{/if} class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>{lang dsu_amupper:titl1}
+		<a href="./" id="fjump"{if $_G['setting']['forumjump'] == 1} onmouseover="showMenu({'ctrlid':this.id})"{/if} class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em><!--{if $order == 'addup'}-->{lang dsu_amupper:titl1}<!--{elseif $order == 'continuous'}-->{lang dsu_amupper:titl2}<!--{/if}-->
 	</div>
 </div>
 

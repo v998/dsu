@@ -2,7 +2,7 @@
 <root>
 	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
 	<item id="Version"><![CDATA[X1.5]]></item>
-	<item id="Time"><![CDATA[2011-01-30 17:24]]></item>
+	<item id="Time"><![CDATA[2011-02-10 15:28]]></item>
 	<item id="From"><![CDATA[Discuz! Board (http://localhost/dx/)]]></item>
 	<item id="Data">
 		<item id="plugin">
@@ -14,7 +14,7 @@
 			<item id="datatables"><![CDATA[]]></item>
 			<item id="directory"><![CDATA[dsu_amupper/]]></item>
 			<item id="copyright"><![CDATA[阿牧 @ DSU Team]]></item>
-			<item id="version"><![CDATA[2.3]]></item>
+			<item id="version"><![CDATA[2.32]]></item>
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[pper]]></item>
@@ -222,7 +222,7 @@
 		<item id="intro"><![CDATA[
 			[color=DeepSkyBlue][b]關於本插件的相關信息:[/b][/color]
 				名稱: [b]打卡機[/b]
-				版本: [b]2.3[/b]
+				版本: [b]2.32[/b]
 				作者: 阿牧
 				DSU榮譽出品 http://www.dsu.cc
 				
