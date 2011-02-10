@@ -1,0 +1,24 @@
+{block return}
+<link rel="stylesheet" type="text/css" href="source/plugin/dsu_updater/images/style.css" />	
+<div id="dsu_updater_notice" class="focus">
+	<h3 class="flb">
+		<em>{lang dsu_updater:tips_title}</em>
+		<span><a class="flbc" onclick="setcookie('dsu_updater_skip', 1, 1800);$('dsu_updater_notice').style.display='none'" href="javascript:;">&nbsp;</a></span>
+	</h3>
+	<div class="detail">
+		<h4>{lang dsu_updater:tips_1}<strong>{$count}</strong>{lang dsu_updater:tips_2}</h4>
+		<ul>
+		{loop $update_plugins $plugin}
+			<li>
+				<h5>{$plugin[name]}</h5>
+				<p class="v_now">{lang dsu_updater:ver_installed} {$plugin[ver]}</p>
+				<p class="v_new">{lang dsu_updater:ver_new}<strong>{$plugin[new_ver]}</strong></p>
+			</li>
+		{/loop}
+		</ul>
+		<div class="dsu_link">
+			<a class="dsu_start_update" target="_blank" href="admin.php?frames=yes&action=plugins&operation=config&identifier=dsu_updater&pmod=main">{lang dsu_updater:do_update}</a>
+		</div>
+	</div>
+</div>
+{/block}
