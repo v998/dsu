@@ -43,7 +43,7 @@ if(PATH_SEPARATOR==':'){
 }
 function down($file,$subfolder=''){
 	global $plugin_lang,$program_ver,$plugin_dir,$plugin_id;
-	$temp=dfsockopen("http://dsu.googlecode.com/svn/trunk/PluginUpdater/{$plugin_id}/upload/source/plugin/dsu_updater/{$file}");
+	$temp=dfsockopen("http://dsu.googlecode.com/svn/trunk/PluginUpdater/{$plugin_id}/{$file}");
 	if (!$temp) cpmsg("&#19979;&#36733;&#25991;&#20214; {$file} &#22833;&#36133;&#65292;&#35831;&#31245;&#20505;&#20877;&#35797;",'','error');
 	@unlink($plugin_dir.'/'.($subfolder?$subfolder.'/':'').$file);
 	file_put_contents($plugin_dir.'/'.($subfolder?$subfolder.'/':'').$file,$temp);
