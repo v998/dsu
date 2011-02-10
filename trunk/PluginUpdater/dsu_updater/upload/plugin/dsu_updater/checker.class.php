@@ -13,10 +13,10 @@ class plugin_dsu_updater{
 		}
 		if(!$_G['cookie']['dsu_updater_skip']){
 			$count=0;
-			$query=DB::query('SELECT name,identifier,version FROM '.DB::table('common_plugin')." WHERE identifier LIKE 'dsu_%' AND identifier<>'dsu_updater'");
+			$query=DB::query('SELECT name,identifier,version FROM '.DB::table('common_plugin')." WHERE identifier LIKE 'dsu_%'");
 			while($result=DB::fetch($query)){
 				$new_ver=$_G['dsu_updater']['plugin'][$result['identifier']];
-				if($new_ver && $new_ver>$result['version']){
+				if($new_ver && $new_ver!=$result['version']){
 					$plugin=array();
 					$plugin['name']=$result['name'];
 					$plugin['ver']=$result['version'];
