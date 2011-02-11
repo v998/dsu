@@ -1,0 +1,15 @@
+source/plugin/dsu_amufzc/admin.inc.php
+source/plugin/dsu_amufzc/discuz_plugin_dsu_amufzc.xml
+source/plugin/dsu_amufzc/discuz_plugin_dsu_amufzc_HTML_Entities.xml
+source/plugin/dsu_amufzc/discuz_plugin_dsu_amufzc_SC_GBK.xml
+source/plugin/dsu_amufzc/discuz_plugin_dsu_amufzc_SC_UTF8.xml
+source/plugin/dsu_amufzc/discuz_plugin_dsu_amufzc_TC_BIG5.xml
+source/plugin/dsu_amufzc/discuz_plugin_dsu_amufzc_TC_UTF8.xml
+source/plugin/dsu_amufzc/fzc.class.php
+source/plugin/dsu_amufzc/getzcm.inc.php
+source/plugin/dsu_amufzc/index.htm
+source/plugin/dsu_amufzc/install.php
+source/plugin/dsu_amufzc/loading.gif
+source/plugin/dsu_amufzc/uninstall.php
+source/plugin/dsu_amufzc/updater.inc.php
+source/plugin/dsu_amufzc/upgrade.php

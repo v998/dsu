@@ -1,0 +1,11 @@
+{template common/header}
+{lang dsu_paulplayer:dsu_paulplayer_htm_1}: <b>{$_G[gp_keywords]}</b><br />
+{lang dsu_paulplayer:dsu_paulplayer_htm_2}:<br />
+<!--{if $songs}-->
+<!--{loop $songs $key $value}-->
+	<a href="javascript:;" title="{$value['name']}-{$value['singer']}#playID:{$value['id']}" style="color:#5689C1;TEXT-DECORATION:underline" <!--{if $_G[gp_adds] == 'e_iframe'}-->onclick="insertText('$value[code]', <!--{echo strlen($value[code])}-->, 0);hideWindow('dsu_paulplayer_add');"<!--{else}-->onclick="$('fastpostmessage').value += '$value[code]';hideWindow('dsu_paulplayer_add');"<!--{/if}-->>{$value['name']} - {$value['singer']}</a><br />
+<!--{/loop}-->
+<!--{else}-->
+{lang dsu_paulplayer:dsu_paulplayer_htm_3}
+<!--{/if}-->
+{template common/footer}

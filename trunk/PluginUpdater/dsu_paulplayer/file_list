@@ -1,0 +1,13 @@
+source/plugin/dsu_paulplayer/discuz_plugin_dsu_paulplayer_SC_GBK.xml
+source/plugin/dsu_paulplayer/discuz_plugin_dsu_paulplayer_SC_UTF8.xml
+source/plugin/dsu_paulplayer/discuz_plugin_dsu_paulplayer_TC_BIG5.xml
+source/plugin/dsu_paulplayer/discuz_plugin_dsu_paulplayer_TC_UTF8.xml
+source/plugin/dsu_paulplayer/dsu_paulplayer.class.php
+source/plugin/dsu_paulplayer/dsu_paulplayer.inc.php
+source/plugin/dsu_paulplayer/install.php
+source/plugin/dsu_paulplayer/uninstall.php
+source/plugin/dsu_paulplayer/upgrade.php
+source/plugin/dsu_paulplayer/images/icon_s.png
+source/plugin/dsu_paulplayer/template/dsu_paulplayer.htm
+source/plugin/dsu_paulplayer/template/dsu_paulplayer_f.htm
+source/plugin/dsu_paulplayer/template/dsu_paulplayer_window.htm

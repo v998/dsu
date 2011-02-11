@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X1.5]]></item>
+	<item id="Time"><![CDATA[2010-10-23 20:19]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://localhost/dx/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[【DSU】亦歌MP3]]></item>
+			<item id="identifier"><![CDATA[dsu_paulplayer]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[dsu_paulplayer/]]></item>
+			<item id="copyright"><![CDATA[Shy9000 @ DSU Team]]></item>
+			<item id="version"><![CDATA[1.3]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[dsu_paulplayer]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X1.5]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[圓角大小]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[roundConner]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[按鈕顏色]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[btnColor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#0160e6]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[按鈕光暈色]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[btnGlowColor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#2da0fd]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[按鈕大小]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[btnSize]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[14]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[是否自動開始播放]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[isAutoPlay]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[邊框透明度]]></item>
+				<item id="description"><![CDATA[可以設置0-1的數字，0是全部透明]]></item>
+				<item id="variable"><![CDATA[borderAlpha]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[邊框顏色]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[borderColor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#999999]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[背景透明度]]></item>
+				<item id="description"><![CDATA[可以設置0-1的數字，0是全部透明]]></item>
+				<item id="variable"><![CDATA[bgAlpha]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[背景漸變色2]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[bgColor2]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#dddddd]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[背景漸變色1]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[bgColor1]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#eeeeee]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[寬度]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[width]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[200]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[高度]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[height]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[25]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[文字顏色]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[textColor]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#000000]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="dsu_paulplayer_class_php_1"><![CDATA[插入亦歌音樂]]></item>
+				<item id="dsu_paulplayer_class_php_2"><![CDATA[亦歌音樂]]></item>
+				<item id="dsu_paulplayer_class_php_3"><![CDATA[亦歌]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="dsu_paulplayer_htm_1"><![CDATA[搜索關鍵詞]]></item>
+				<item id="dsu_paulplayer_htm_2"><![CDATA[搜索結果如下]]></item>
+				<item id="dsu_paulplayer_htm_3"><![CDATA[無結果]]></item>
+				<item id="dsu_paulplayer_htm_4"><![CDATA[服務器連接超時,請稍後再試.]]></item>
+				<item id="dsu_paulplayer_window_htm_1"><![CDATA[插入亦歌音樂]]></item>
+				<item id="dsu_paulplayer_window_htm_2"><![CDATA[請輸入歌名,歌手名,專輯名進行搜索]]></item>
+				<item id="dsu_paulplayer_window_htm_3"><![CDATA[搜索]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="intro"><![CDATA[能夠快速的生成對應歌曲的播放器,播放器能夠滾動播放歌詞. ]]></item>
+		<item id="license"><![CDATA[[list]
+	[*]本插件版權歸屬插件作者,及其下屬Discuz! Student Union團隊所有.
+	[*]未經插件作者許可,任何人不得以任何形式在任何地方發佈/轉發原版以及其衍生的修改版.
+	[*][b]插件作者:[/b]shy9000
+	[*][b]作品簡介:[/b]能夠快速的生成對應歌曲的播放器,播放器能夠滾動播放歌詞. 
+	[*][b]發佈地址:[/b][url]http://www.dsu.cc/thread-35607-1-1.html[/url]
+	[*]如有任何關於使用上的疑問,請至[url]http://www.dsu.cc/forum-44-1.html[/url]提出.
+	[*][color=Red]如果您願意資助我們,請至[url]http://www.dsu.cc/donate.php[/url]對我們進行贊助.[/color]
+	[*]最後,感謝您使用我們的插件,也希望您能夠給我們DSU團隊提供更好的意見([url=http://www.dsu.cc/]請點擊這裡進入DSU團隊官方站點[/url]).
+	[/list]]]></item>
+	</item>
+</root>
