@@ -38,7 +38,12 @@ class plugin_dsu_amupper {
 			if($this -> cookiefooter && $this -> cookies){
 				return $return_cj.base64_decode($this -> cookiefooter);
 			}
-			$this -> cdbtoday = dgmdate($this -> query['lasttime'],'Ymd',8);
+
+			if(!$this -> query){
+				$cdb_pper['uid'] = intval($_G['uid']);
+				$this -> query = DB::fetch_first("SELECT * FROM ".DB::table("plugin_dsuampper")." WHERE uid= '{$cdb_pper['uid']}'");
+				$this -> cdbtoday = dgmdate($this -> query['lasttime'],'Ymd',8); 
+			}
 			if($this -> query && $this -> cdbtoday == $this -> today){
 				$returnfooter = '<div id="ppered_menu" style="display:none;width:240px;">
 					<p class="crly">
