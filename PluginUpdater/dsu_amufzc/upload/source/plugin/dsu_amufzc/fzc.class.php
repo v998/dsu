@@ -83,8 +83,11 @@ class plugin_dsu_amufzc_member extends plugin_dsu_amufzc {
 			$activationinfo = authcode($_G['gp_activationauth'], $operation = 'DECODE');
 			$activationinfoname = preg_replace("/\s.+/i","",$activationinfo);
 			if($activationinfoname){
-				$query = DB::fetch_first("SELECT * FROM ".DB::table("ucenter_members")." WHERE username = '".$activationinfoname."'");
-				$_G['gp_email'] = getEmail(strip_tags($query['email']));
+				loaducenter();
+				if($data = uc_get_user($activationinfoname)) {
+					list($uid, $username, $email) = $data;
+				}
+				$_G['gp_email'] = getEmail(strip_tags($email));
 			}else{
 				$_G['gp_email'] = getEmail(strip_tags($_G['gp_email']));
 			}
