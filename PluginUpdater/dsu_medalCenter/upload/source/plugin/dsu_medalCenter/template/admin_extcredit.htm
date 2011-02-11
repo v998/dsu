@@ -1,0 +1,9 @@
+
+<tr class=""><th>{lang dsu_medalCenter:ae1}</th><th>{lang dsu_medalCenter:ae2}</th><th>{lang dsu_medalCenter:ae3}</th></tr> 
+<!--{loop $_G['setting'][extcredits] $i $value}-->
+<tr class="hover">
+	<td>extcredits{$i}</td>
+	<td>$value[title]</td>
+	<td><input type="text" class="px" name="newcredit[{$i}]" value="$creditset[$i]"></td>
+<!--{/loop}-->
+
