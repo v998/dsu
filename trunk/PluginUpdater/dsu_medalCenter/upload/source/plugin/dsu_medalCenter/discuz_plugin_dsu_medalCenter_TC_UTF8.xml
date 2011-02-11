@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X1.5]]></item>
+	<item id="Time"><![CDATA[2011-01-30 14:08]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://localhost/dx/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[0]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[【DSU】勳章中心]]></item>
+			<item id="identifier"><![CDATA[dsu_medalCenter]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[dsu_medalCenter/]]></item>
+			<item id="copyright"><![CDATA[Discuz Student Union  www.dsu.cc]]></item>
+			<item id="version"><![CDATA[1.0]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[hook]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[memcp]]></item>
+					<item id="menu"><![CDATA[勳章中心]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[25]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[../../../static/image/feed/medal.gif]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[admin_manage]]></item>
+					<item id="menu"><![CDATA[管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[11]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[admin_type]]></item>
+					<item id="menu"><![CDATA[分類]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[12]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="4">
+					<item id="name"><![CDATA[admin_confer]]></item>
+					<item id="menu"><![CDATA[頒發]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[13]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="5">
+					<item id="name"><![CDATA[admin_mod]]></item>
+					<item id="menu"><![CDATA[審核]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[14]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="6">
+					<item id="name"><![CDATA[admin_extend]]></item>
+					<item id="menu"><![CDATA[擴展管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[128]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X1.5]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[擴展配置信息]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[modlist]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="script_dzperm"><![CDATA[1.0]]></item>
+					<item id="script_usergroup"><![CDATA[1.0]]></item>
+					<item id="script_example"><![CDATA[1.0]]></item>
+					<item id="script_czw_limit"><![CDATA[1.1]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="1"><![CDATA[勳章中心]]></item>
+				<item id="2"><![CDATA[對不起，不存在對應勳章的數據，請返回。]]></item>
+				<item id="3"><![CDATA[對不起，由於您尚未滿足申請條件，申請失敗！請返回。]]></item>
+				<item id="4"><![CDATA[分類更新成功！]]></item>
+				<item id="5"><![CDATA[勳章分類]]></item>
+				<item id="6"><![CDATA[顯示順序]]></item>
+				<item id="7"><![CDATA[分類名稱]]></item>
+				<item id="8"><![CDATA[添加新分類]]></item>
+				<item id="9"><![CDATA[<li>如果您覺得現有的領取條件太少，可以在本插件的擴展管理中安裝更多模塊，以便增加領取條件設置。</li><li>如果您想實現一個勳章的多種領取方式，您可以採用複製功能來方便您的操作。</li>]]></item>
+				<item id="10"><![CDATA[詳情]]></item>
+				<item id="11"><![CDATA[複製]]></item>
+				<item id="12"><![CDATA[未分類]]></item>
+				<item id="13"><![CDATA[積分購買]]></item>
+				<item id="14"><![CDATA[勳章成功複製。]]></item>
+				<item id="15"><![CDATA[系統模塊，禁止操作！]]></item>
+				<item id="16"><![CDATA[擴展文件已經損壞！]]></item>
+				<item id="17"><![CDATA[指定擴展安裝成功！]]></item>
+				<item id="18"><![CDATA[指定擴展卸載成功！]]></item>
+				<item id="19"><![CDATA[指定擴展升級成功！]]></item>
+				<item id="20"><![CDATA[<li>安裝新的擴展，需將擴展腳本程序上傳到 source/plugin/dsu_medalCenter/include/script/ 目錄，然後即可在以下列表中安裝並使用了</li><li>積分購買模塊為勳章中心運行必要模塊，無法移除</li>]]></item>
+				<item id="21"><![CDATA[名稱]]></item>
+				<item id="22"><![CDATA[版本號]]></item>
+				<item id="23"><![CDATA[版權信息]]></item>
+				<item id="24"><![CDATA[當前安裝版本：]]></item>
+				<item id="25"><![CDATA[升級]]></item>
+				<item id="26"><![CDATA[卸載]]></item>
+				<item id="27"><![CDATA[安裝]]></item>
+				<item id="28"><![CDATA[]]></item>
+				<item id="29"><![CDATA[]]></item>
+				<item id="30"><![CDATA[]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="ae1"><![CDATA[積分代號]]></item>
+				<item id="ae2"><![CDATA[積分名稱]]></item>
+				<item id="ae3"><![CDATA[價格]]></item>
+				<item id="cp1"><![CDATA[勳章中心]]></item>
+				<item id="cp2"><![CDATA[勳章列表]]></item>
+				<item id="cp3"><![CDATA[我的勳章]]></item>
+				<item id="cp4"><![CDATA[&nbsp;隱藏我已經獲得的勳章]]></item>
+				<item id="cp5"><![CDATA[共]]></item>
+				<item id="cp6"><![CDATA[個]]></item>
+				<item id="cp7"><![CDATA[全部]]></item>
+				<item id="cp8"><![CDATA[已經擁有]]></item>
+				<item id="cp9"><![CDATA[人工授予]]></item>
+				<item id="cp10"><![CDATA[自主申請]]></item>
+				<item id="cp11"><![CDATA[人工審核]]></item>
+				<item id="cp12"><![CDATA[積分購買]]></item>
+				<item id="cp13"><![CDATA[購買]]></item>
+				<item id="cp14"><![CDATA[申請]]></item>
+				<item id="cp15"><![CDATA[領取]]></item>
+				<item id="cp16"><![CDATA[有效期：]]></item>
+				<item id="cp17"><![CDATA[天]]></item>
+				<item id="cp18"><![CDATA[領取要求：]]></item>
+				<item id="cp19"><![CDATA[你已經獲得所有勳章了，恭喜你！]]></item>
+				<item id="cp20"><![CDATA[沒有可用的勳章。]]></item>
+				<item id="cp21"><![CDATA[勳章]]></item>
+				<item id="cp22"><![CDATA[擁有勳章]]></item>
+				<item id="cp23"><![CDATA[枚]]></item>
+				<item id="cp24"><![CDATA[(點擊勳章可以設置在帖子中是否顯示相應勳章，勳章名黑色代表顯示，灰色代表隱藏)]]></item>
+				<item id="cp25"><![CDATA[保存]]></item>
+				<item id="cp26"><![CDATA[勳章記錄]]></item>
+				<item id="cp27"><![CDATA[我在]]></item>
+				<item id="cp28"><![CDATA[申請了]]></item>
+				<item id="cp29"><![CDATA[勳章,]]></item>
+				<item id="cp30"><![CDATA[等待審核]]></item>
+				<item id="cp31"><![CDATA[未通過審核]]></item>
+				<item id="cp32"><![CDATA[被授予了]]></item>
+				<item id="cp33"><![CDATA[到期時間:]]></item>
+				<item id="cp34"><![CDATA[永久有效]]></item>
+				<item id="cp35"><![CDATA[你還沒有獲得過勳章。]]></item>
+			</item>
+			<item id="installlang">
+				<item id="1"><![CDATA[插件文件處理]]></item>
+				<item id="2"><![CDATA[數據庫升級]]></item>
+				<item id="3"><![CDATA[載入默認設置]]></item>
+				<item id="4"><![CDATA[【DSU】勳章中心安裝程序]]></item>
+				<item id="5"><![CDATA[操作執行中，請稍後……]]></item>
+				<item id="6"><![CDATA[文件處理完成！進入下一步操作。]]></item>
+				<item id="7"><![CDATA[數據庫升級完成！進入下一步操作。]]></item>
+				<item id="8"><![CDATA[載入默認設置完成！進入下一步操作。]]></item>
+				<item id="9"><![CDATA[【DSU】勳章中心卸載程序]]></item>
+				<item id="10"><![CDATA[完成！進入下一步操作。]]></item>
+				<item id="11"><![CDATA[操作完成！進入下一步操作。]]></item>
+				<item id="12"><![CDATA[數據處理]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="license"><![CDATA[  [*]本插件版權歸屬插件作者,及其下屬Discuz! Student Union團隊所有.
+[*]未經插件作者許可,任何人不得以任何形式在任何地方發佈/轉發原版以及其衍生的修改版.
+[*][b]插件作者:[/b]蝦米
+[*][b]作品簡介:[/b]這是對DX已有勳章功能的擴展，讓勳章變得更加強大。
+[*][b]發佈地址:[/b][url]http://www.dsu.cc/thread-42877-1-1.html[/url]
+[*]如有任何關於使用上的疑問,請至[url]http://www.dsu.cc/forum-44-1.html[/url]提出.
+[*]最後,感謝您使用我們的插件,也希望您能夠給我們DSU團隊提供更好的意見([url=http://www.dsu.cc/]請點擊這裡進入DSU團隊官方站點[/url]).]]></item>
+		<item id="intro"><![CDATA[
+			[color=DeepSkyBlue][b]關於本插件的相關信息:[/b][/color]
+				名稱: [b]勳章中心[/b]
+				版本: [b]1.0[/b]
+				作者: 蝦米
+				DSU榮譽出品 http://www.dsu.cc
+				該作品是蝦米同學在DSU的封筆之作，一句話「哀莫大於心死」！一些站長的所作所為確實讓開發者很心寒，蝦米的離開不僅僅是DSU的損失，是廣大免插使用者的損失，如果DZ的插件氛圍不再改善，離開的不僅僅是蝦米，而是更多插件開發者。
+				所以我希望，如果您在DSU下載了收費擴展（收取25碎片/擴展），請勿外傳，也不要說DSU沒有了公益性，因為那些積分只要你付出很小很小的成本。但是插件站長卻需要付出很多很多的心血。
+				[b]尊重開發者權益 從我做起 從小事做起 一起創造良好的DZ插件氛圍[/b]
+				                                                                                                                         ----阿牧 留
+				-------------------------------------------
+				本插件僅供個人非商業用途使用!
+				禁止任何形式的封裝再發佈行為.
+				特此聲明.
+
+				2011年01月30日
+			]]></item>
+	</item>
+</root>
