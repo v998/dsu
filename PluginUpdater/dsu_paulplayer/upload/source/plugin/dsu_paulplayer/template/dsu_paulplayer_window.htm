@@ -1,0 +1,13 @@
+{subtemplate common/header}
+		<div class="blr" id="main_messaqge" style="width: 280px">
+			<div id="layer_login">
+				<h3 class="flb">
+					<em id="returnmessage">{lang dsu_paulplayer:dsu_paulplayer_window_htm_1}</em>
+					<span><a href="javascript:;" class="flbc" onclick="hideWindow('dsu_paulplayer_add')" title="{lang close}">{lang close}</a></span>
+				</h3>
+				<div class="p_opt mpx pns cl">
+					<form id="sform" action="plugin.php?id=dsu_paulplayer:dsu_paulplayer&sreach=1&ajax=1&inajax=1{if !empty($_G['gp_adds'])}&adds={$_G[gp_adds]}{/if}" autocomplete="off" method="post" onsubmit="ajaxpost('sform', 'gets');"><div>{lang dsu_paulplayer:dsu_paulplayer_window_htm_2}:<br><input type="text" name="keywords" id="keywords" style="width: 80%" value="" class="px" /></div><div id="gets" class="p_opt mpx pns cl"></div><div class="pns mtn"><button type="submit" id="sform_submit" class="pn pnc y"><strong>{lang dsu_paulplayer:dsu_paulplayer_window_htm_3}</strong></button></div></form>
+				</div>
+			</div>
+		</div>
+{subtemplate common/footer}

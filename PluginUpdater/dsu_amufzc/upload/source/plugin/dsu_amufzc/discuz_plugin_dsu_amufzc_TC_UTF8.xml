@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X1.5]]></item>
+	<item id="Time"><![CDATA[2010-12-26 15:36]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://localhost/dx/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[【DSU】防注冊機]]></item>
+			<item id="identifier"><![CDATA[dsu_amufzc]]></item>
+			<item id="description"><![CDATA[看標題應該就懂了吧？]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[dsu_amufzc/]]></item>
+			<item id="copyright"><![CDATA[阿牧 @ DSU Team]]></item>
+			<item id="version"><![CDATA[1.51]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[updater]]></item>
+					<item id="menu"><![CDATA[升級管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[fzc]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[admin]]></item>
+					<item id="menu"><![CDATA[數據處理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X1.5]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[生成間期]]></item>
+				<item id="description"><![CDATA[單位︰秒（在設置的時間內，相同的email不可以再次生成注冊碼）]]></item>
+				<item id="variable"><![CDATA[maxtime]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[一個郵箱只準申請一次]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[onlyone]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[開啟郵箱驗證]]></item>
+				<item id="description"><![CDATA[將注冊地址發送到郵箱中，而不是直接顯示。]]></item>
+				<item id="variable"><![CDATA[email]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="1"><![CDATA[<B>提示</B>︰缺少注冊碼，請點擊下面的“獲取注冊碼”鏈接獲取。]]></item>
+				<item id="2"><![CDATA[<B>提示</B>︰注冊碼錯誤或過期，請點擊下面的“獲取注冊碼”鏈接重新獲取。]]></item>
+				<item id="3"><![CDATA[注冊碼]]></item>
+				<item id="4"><![CDATA[<B>提示</B>︰注冊碼已經發送到您剛才填寫的郵箱（{email}）中了。]]></item>
+				<item id="5"><![CDATA[<B>提示</B>︰請填寫&nbsp;Email/郵箱&nbsp;項！]]></item>
+				<item id="6"><![CDATA[<B>提示</B>︰請填寫好&nbsp;Email/郵箱&nbsp;項目後，點擊提交，以獲取注冊碼。]]></item>
+				<item id="7"><![CDATA[<B><FONT COLOR="#FF0000">點擊獲取注冊碼</FONT></B>]]></item>
+				<item id="8"><![CDATA[(請先填寫好Email項)]]></item>
+				<item id="9"><![CDATA[<H3>您未填寫Email或者您填寫的Email格式有誤。</H3>]]></item>
+				<item id="91"><![CDATA[<H3>請{maxtime}秒後再申請注冊碼。</H3>]]></item>
+				<item id="92"><![CDATA[<H3>該郵箱/Email已經申請過注冊碼了，請更換郵箱/Email。</H3>]]></item>
+				<item id="93"><![CDATA[<H3>如果沒有收到注冊碼，請在垃圾郵件中找一找。</H3>]]></item>
+				<item id="931"><![CDATA[<H3>郵件發送失敗,為不影響您注冊，免去郵件審核！</H3>]]></item>
+				<item id="94"><![CDATA[正在生成注冊碼，請稍候...]]></item>
+				<item id="10"><![CDATA[已經發送到您的郵箱中]]></item>
+				<item id="11"><![CDATA[您填寫的Email與注冊碼不匹配]]></item>
+				<item id="12"><![CDATA[您的激活信息有誤，無法獲得注冊碼（或者重試）。]]></item>
+				<item id="13"><![CDATA[您的郵箱信息有誤，無法獲得注冊碼。您提供的郵箱為:]]></item>
+				<item id="email_subject"><![CDATA[Email 地址驗證]]></item>
+				<item id="email_message"><![CDATA[
+<p>您好，這封信是由 {bbname}發送的。</p>
+<p>您的注冊碼為︰<strong>{code}</strong>，或者直接點擊鏈接︰<a href="{url}" target="_blank">{url}</a></p>
+<p>如果你並沒有訪問過我們的論壇，或沒有進行上述操作，請忽略這封郵件。你不需要退訂或進行其他進一步的操作。</p>
+<br />
+<p>
+此致<br />
+{bbname} 管理團隊.<br />
+{siteurl}</p>]]></item>
+				<item id="a1"><![CDATA[【DSU】防注冊機]]></item>
+				<item id="a2"><![CDATA[數據清理]]></item>
+				<item id="a3"><![CDATA[時間]]></item>
+				<item id="a4"><![CDATA[刪除指定時間以前的沒有使用的注冊碼，單位︰天。]]></item>
+				<item id="a5"><![CDATA[提交]]></item>
+				<item id="a6"><![CDATA[恭喜您，清理完畢（刪除{del}條/剩余{sy}條）！]]></item>
+				<item id="a7"><![CDATA[沒有符合條件的記錄！]]></item>
+				<item id="a8"><![CDATA[數據表不存在 / 您填寫的時間太小或者不正確！]]></item>
+				<item id="discuz_message"><![CDATA[DSU! 提示]]></item>
+				<item id="message_redirect"><![CDATA[如果你的瀏覽器沒有自動跳轉，請點擊這里]]></item>
+				<item id="xml_file_name"><![CDATA[discuz_plugin_dsu_amufzc_TC_UTF8.xml]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="license"><![CDATA[  [*]本插件版權歸屬插件作者,及其下屬Discuz! Student Union團隊所有.
+[*]未經插件作者許\可,任何人不得以任何形式在任何地方發布/轉發原版以及其衍生的修改版.
+[*][b]插件作者:[/b]阿牧
+[*][b]作品簡介:[/b]防注冊機
+[*][b]發布地址:[/b][url]http://www.dsu.cc[/url]
+[*]如有任何關于使用上的疑問,請至[url]http://www.dsu.cc/forum-44-1.html[/url]提出.
+[*]最後,感謝您使用我們的插件,也希望您能夠給我們DSU團隊提供更好的意見([url=http://www.dsu.cc/]請點擊這里進入DSU團隊官方站點[/url]).]]></item>
+		<item id="intro"><![CDATA[
+			[color=DeepSkyBlue][b]關于本插件的相關信息:[/b][/color]
+				名稱: [b]防注冊機[/b]
+				版本: [b][X1.5]V 1.51[/b]
+				(更新內容︰解決了郵箱生成注冊碼後未使用，再次使用該郵箱時提示被使用的問題！)
+				作者: 阿牧
+				DSU榮譽出品 http://www.dsu.cc
+				鳴謝︰[url=http://www.feiba.net/] 飛吧資源站（ Www.FeiBa.Net）[/url]站長︰Beien；[url=http://www.skyts.net/]澄色香味[/url]
+				-------------------------------------------
+				本插件僅供個人非商業用途使用!
+				禁止任何形式的封裝再發布行為.
+				特此聲明.
+
+				2011年01月12日
+			]]></item>
+	</item>
+</root>
