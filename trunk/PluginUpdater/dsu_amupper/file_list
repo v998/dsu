@@ -1,6 +1,5 @@
 source/plugin/dsu_amupper/admin.inc.php
 source/plugin/dsu_amupper/admin2.inc.php
-source/plugin/dsu_amupper/discuz_plugin_dsu_amupper_HTML.xml
 source/plugin/dsu_amupper/discuz_plugin_dsu_amupper_SC_GBK.xml
 source/plugin/dsu_amupper/discuz_plugin_dsu_amupper_SC_UTF8.xml
 source/plugin/dsu_amupper/discuz_plugin_dsu_amupper_TC_BIG5.xml
@@ -14,7 +13,6 @@ source/plugin/dsu_amupper/uninstall.php
 source/plugin/dsu_amupper/upgrade.php
 source/plugin/dsu_amupper/images/dk.gif
 source/plugin/dsu_amupper/images/index.htm
-source/plugin/dsu_amupper/images/Thumbs.db
 source/plugin/dsu_amupper/images/wb.gif
 source/plugin/dsu_amupper/template/ajax.htm
 source/plugin/dsu_amupper/template/index.htm
