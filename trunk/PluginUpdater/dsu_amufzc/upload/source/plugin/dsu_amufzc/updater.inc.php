@@ -5,7 +5,7 @@ if(!defined('IN_DISCUZ') || !defined('IN_ADMINCP')) exit('Access Denied');
 $plugin_id='dsu_amufzc';
 @include DISCUZ_ROOT."./data/plugindata/{$plugin_id}.lang.php";
 $xml_name=$scriptlang['dsu_amufzc']['xml_file_name'];
-$program_ver='1.51';
+$program_ver='1.52';
 $updater_ver='1.3';
 $plugin_dir=DISCUZ_ROOT."./source/plugin/{$plugin_id}";
 $plugin_subfolders=array('template');

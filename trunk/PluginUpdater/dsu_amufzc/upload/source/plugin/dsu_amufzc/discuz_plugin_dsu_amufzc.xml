@@ -2,7 +2,7 @@
 <root>
 	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
 	<item id="Version"><![CDATA[X1.5]]></item>
-	<item id="Time"><![CDATA[2010-12-26 15:36]]></item>
+	<item id="Time"><![CDATA[2011-02-11 20:15]]></item>
 	<item id="From"><![CDATA[Discuz! Board (http://localhost/dx/)]]></item>
 	<item id="Data">
 		<item id="plugin">
@@ -13,8 +13,8 @@
 			<item id="description"><![CDATA[看标题应该就懂了吧？]]></item>
 			<item id="datatables"><![CDATA[]]></item>
 			<item id="directory"><![CDATA[dsu_amufzc/]]></item>
-			<item id="copyright"><![CDATA[阿牧 @ DSU Team]]></item>
-			<item id="version"><![CDATA[1.51]]></item>
+			<item id="copyright"><![CDATA[【DSU】阿牧]]></item>
+			<item id="version"><![CDATA[1.53]]></item>
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[updater]]></item>
@@ -62,7 +62,7 @@
 				<item id="description"><![CDATA[单位：秒（在设置的时间内，相同的email不可以再次生成注册码）]]></item>
 				<item id="variable"><![CDATA[maxtime]]></item>
 				<item id="type"><![CDATA[number]]></item>
-				<item id="value"><![CDATA[0]]></item>
+				<item id="value"><![CDATA[10]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="1">
@@ -71,7 +71,7 @@
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[onlyone]]></item>
 				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[1]]></item>
+				<item id="value"><![CDATA[0]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="2">
@@ -104,6 +104,7 @@
 				<item id="11"><![CDATA[您填写的Email与注册码不匹配]]></item>
 				<item id="12"><![CDATA[您的激活信息有误，无法获得注册码（或者重试）。]]></item>
 				<item id="13"><![CDATA[您的邮箱信息有误，无法获得注册码。您提供的邮箱为:]]></item>
+				<item id="14"><![CDATA[如果您邮箱填写有误，请修改邮箱后重新]]></item>
 				<item id="email_subject"><![CDATA[Email 地址验证]]></item>
 				<item id="email_message"><![CDATA[
 <p>您好，这封信是由 {bbname}发送的。</p>
@@ -124,7 +125,7 @@
 				<item id="a8"><![CDATA[数据表不存在 / 您填写的时间太小或者不正确！]]></item>
 				<item id="discuz_message"><![CDATA[DSU! 提示]]></item>
 				<item id="message_redirect"><![CDATA[如果你的浏览器没有自动跳转，请点击这里]]></item>
-				<item id="xml_file_name"><![CDATA[discuz_plugin_dsu_amufzc.xml]]></item>
+				<item id="xml_file_name"><![CDATA[discuz_plugin_dsu_amufzc_SC_GBK.xml]]></item>
 			</item>
 		</item>
 		<item id="installfile"><![CDATA[install.php]]></item>
@@ -140,8 +141,8 @@
 		<item id="intro"><![CDATA[
 			[color=DeepSkyBlue][b]关于本插件的相关信息:[/b][/color]
 				名称: [b]防注册机[/b]
-				版本: [b][X1.5]V 1.51[/b]
-				(更新内容：解决了邮箱生成注册码后未使用，再次使用该邮箱时提示被使用的问题！)
+				版本: [b]1.53[/b]
+				(更新内容：优化了应邮箱填写错误的用户体验)
 				作者: 阿牧
 				DSU荣誉出品 http://www.dsu.cc
 				鸣谢：[url=http://www.feiba.net/] 飞吧资源站（ Www.FeiBa.Net）[/url]站长：Beien；[url=http://www.skyts.net/]澄色香味[/url]
@@ -150,7 +151,7 @@
 				禁止任何形式的封装再发布行为.
 				特此声明.
 
-				2011年01月12日
+				2011年02月10日
 			]]></item>
 	</item>
 </root>

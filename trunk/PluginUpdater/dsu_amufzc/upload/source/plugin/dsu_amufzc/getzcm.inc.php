@@ -82,7 +82,7 @@ if(!$_G['gp_email']){
 						echo '<FONT COLOR="#FF0000"><B>'.$thislang['931'].'</B>('.$insert['email'].')</FONT><BR>';
 					}
 				}
-				echo '<label class="xs2"><em>'.$thislang['3'].':</em><input type="text" id="rid" name="rid" autocomplete="off" size="25" maxlength="15" value="'.$randid.'" class="txt"> *</label>';
+				echo '<label class="xs2"><em>'.$thislang['3'].':</em><input type="text" id="rid" name="rid" autocomplete="off" size="25" maxlength="15" value="'.$randid.'" class="txt"> *</label>('.$thislang['14'].'<A HREF="javascript:;" onClick="getzcm();return false;">'.$thislang['7'].'</A>)';
 			}
 		}else{
 			$maxtime = TIMESTAMP - $thismaxtime;
@@ -111,7 +111,7 @@ if(!$_G['gp_email']){
 						echo '<FONT COLOR="#FF0000"><B>'.$thislang['931'].'</B>('.$insert['email'].')</FONT><BR>';
 					}
 				}
-				echo '<label class="xs2"><em>'.$thislang['3'].':</em><input type="text" id="rid" name="rid" autocomplete="off" size="25" maxlength="15" value="'.$randid.'" class="txt"> *</label>';
+				echo '<label class="xs2"><em>'.$thislang['3'].':</em><input type="text" id="rid" name="rid" autocomplete="off" size="25" maxlength="15" value="'.$randid.'" class="txt"> *</label>('.$thislang['14'].'<A HREF="javascript:;" onClick="getzcm();return false;">'.$thislang['7'].'</A>)';
 			}
 		}
 	}
