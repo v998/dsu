@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X1.5]]></item>
+	<item id="Time"><![CDATA[2011-02-26 16:41]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://localhost/dx/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[【DSU】楼主文采]]></item>
+			<item id="identifier"><![CDATA[dsu_amuassess]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[dsu_amuassess/]]></item>
+			<item id="copyright"><![CDATA[阿牧 @ DSU Team]]></item>
+			<item id="version"><![CDATA[1.02]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[hook]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X1.5]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[标题文字]]></item>
+				<item id="description"><![CDATA[设置等级前的文字]]></item>
+				<item id="variable"><![CDATA[txt]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[文采 ]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[显示模式]]></item>
+				<item id="description"><![CDATA[简单模式：只显示好评率
+完整模式：显示等级与好评率]]></item>
+				<item id="variable"><![CDATA[showmod]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[1=简单模式
+2=完整模式]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[文采等级设置]]></item>
+				<item id="description"><![CDATA[X=Y,Z;
+X-等级名称
+Y-起始积分
+Z-终止积分（无限用0表示）]]></item>
+				<item id="variable"><![CDATA[rank]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[Lv.1=0,11;
+Lv.2=12,28;
+Lv.3=29,57;
+Lv.4=58,104;
+Lv.5=105,175;
+Lv.6=176,276;
+Lv.7=277,413;
+Lv.8=414,592;
+Lv.9=593,0;]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[提示图标]]></item>
+				<item id="description"><![CDATA[人品栏后的图标设置]]></item>
+				<item id="variable"><![CDATA[icon]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[1=搜索图标
+2=more图标]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[标题文字2]]></item>
+				<item id="description"><![CDATA[设置好评前面的文字]]></item>
+				<item id="variable"><![CDATA[txt2]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[人品 ]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="license"><![CDATA[  [*]本插件版权归属插件作者,及其下属Discuz! Student Union团队所有.
+[*]未经插件作者许可,任何人不得以任何形式在任何地方发布/转发原版以及其衍生的修改版.
+[*][b]插件作者:[/b]阿牧
+[*][b]作品简介:[/b]楼主文采
+[*][b]发布地址:[/b][url]http://www.dsu.cc[/url]
+[*]如有任何关于使用上的疑问,请至[url]http://www.dsu.cc/forum-44-1.html[/url]提出.
+[*]最后,感谢您使用我们的插件,也希望您能够给我们DSU团队提供更好的意见([url=http://www.dsu.cc/]请点击这里进入DSU团队官方站点[/url]).]]></item>
+		<item id="intro"><![CDATA[
+			[color=DeepSkyBlue][b]关于本插件的相关信息:[/b][/color]
+				名称: [b]楼主文采[/b]
+				版本: [b]1.02[/b]
+				(更新内容：修改了式样，使其与其他信息更匹配，添加了一些设置。)
+				作者: 阿牧
+				DSU荣誉出品 http://www.dsu.cc
+				鸣谢：[url=http://www.feiba.net/] 飞吧资源站（ Www.FeiBa.Net）[/url]站长：Beien；选峰；湖中沉
+				-------------------------------------------
+				本插件仅供个人非商业用途使用!
+				禁止任何形式的封装再发布行为.
+				特此声明.
+
+				2011年02月26日
+			]]></item>
+	</item>
+</root>

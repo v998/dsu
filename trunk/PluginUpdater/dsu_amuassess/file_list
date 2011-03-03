@@ -1,0 +1,14 @@
+source/plugin/dsu_amuassess/discuz_plugin_dsu_amuassess.xml
+source/plugin/dsu_amuassess/discuz_plugin_dsu_amuassess_SC_GBK.xml
+source/plugin/dsu_amuassess/discuz_plugin_dsu_amuassess_SC_UTF8.xml
+source/plugin/dsu_amuassess/discuz_plugin_dsu_amuassess_TC_BIG5.xml
+source/plugin/dsu_amuassess/discuz_plugin_dsu_amuassess_TC_UTF8.xml
+source/plugin/dsu_amuassess/hook.class.php
+source/plugin/dsu_amuassess/index.htm
+source/plugin/dsu_amuassess/install.php
+source/plugin/dsu_amuassess/uninstall.php
+source/plugin/dsu_amuassess/upgrade.php
+source/plugin/dsu_amuassess/默认等级设置.txt
+source/plugin/dsu_amuassess/images/index.htm
+source/plugin/dsu_amuassess/images/more_1.png
+source/plugin/dsu_amuassess/images/more_2.png
