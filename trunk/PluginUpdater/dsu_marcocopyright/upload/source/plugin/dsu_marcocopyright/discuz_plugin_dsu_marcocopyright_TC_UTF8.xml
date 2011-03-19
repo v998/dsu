@@ -2,7 +2,7 @@
 <root>
 	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
 	<item id="Version"><![CDATA[X1.5]]></item>
-	<item id="From"><![CDATA[My 3Talk 討論區 (http://my3talk.com)]]></item>
+	<item id="From"><![CDATA[My 3Talk 討論區 (http://www.my3talk.com)]]></item>
 	<item id="Data">
 		<item id="plugin">
 			<item id="available"><![CDATA[1]]></item>
@@ -13,7 +13,7 @@
 			<item id="datatables"><![CDATA[]]></item>
 			<item id="directory"><![CDATA[dsu_marcocopyright/]]></item>
 			<item id="copyright"><![CDATA[Marco129 @ DSU Team]]></item>
-			<item id="version"><![CDATA[[X1.5]V3.26]]></item>
+			<item id="version"><![CDATA[3.5]]></item>
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[copyright]]></item>
@@ -26,23 +26,23 @@
 			</item>
 		</item>
 		<item id="version"><![CDATA[X1.5]]></item>
-		<item id="installfile"><![CDATA[install.php]]></item>
-		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
-		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="installfile"><![CDATA[stat.php]]></item>
+		<item id="uninstallfile"><![CDATA[stat.php]]></item>
+		<item id="upgradefile"><![CDATA[stat.php]]></item>
 		<item id="license"><![CDATA[[list]
 [*]本插件版權歸屬插件作者,及其下屬Discuz! Student Union團隊所有.
 [*]未經插件作者許可,任何人不得以任何形式在任何地方發佈/轉發原版以及其衍生的修改版.
 [*][b]插件作者:[/b]Marco129
-[*][b]作品簡介:[/b]論壇版權讓論壇不同位置實現版權提示及文字防複製功能，而且版權內容可在後台自由修改
+[*][b]作品簡介:[/b]本插件能於站點不同位置實現版權提示及文字防複製等功能，以避免遊客或會員胡亂轉載內容
 [*]如有任何關於使用上的疑問,請至[url]http://www.dsu.cc/forum-44-1.html[/url]提出.
 [*][color=Red]如果您願意資助我們,請至[url]http://www.dsu.cc/donate.php[/url]對我們進行贊助.[/color]
 [*]最後,感謝您使用我們的插件,也希望您能夠給我們DSU團隊提供更好的意見([url=http://www.dsu.cc/]請點擊這裡進入 DSU團隊官方站點[/url]).
 [/list]]]></item>
-                <item id="intro"><![CDATA[[b][color=Blue]【DSU】論壇版權[/color][/b]
-論壇版權讓論壇不同位置實現版權提示及文字防複製功能，而且版權內容可在後台自由修改
-使用問題/BUG反饋可到[url=http://www.dsu.cc/forum-44-1.html]DSU團隊官方站點[/url]提出
-
-插件版權聲明：嚴禁修改任何版權說明、進行任何二次開發、轉載、分發、進行出租/出售/抵押或發放許可證]]></item>
+                <item id="intro"><![CDATA[[size=3][color=Sienna][b]【DSU】論壇版權[/b][/color][/size]
+作者: Marco129 @ DSU Team
+本插件能於站點不同位置實現版權提示及文字防複製等功能，以避免遊客或會員胡亂轉載內容
+[hr]使用問題/BUG反饋可到[url=http://www.dsu.cc/]DSU團隊官方站點[/url]提出
+插件聲明：嚴禁修改任何版權說明、進行任何二次開發、轉載、分發、進行出租/出售/抵押或發放許可證]]></item>
 		<item id="var">
 			<item id="0">
 				<item id="displayorder"><![CDATA[6]]></item>
@@ -54,7 +54,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="1">
-				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="displayorder"><![CDATA[14]]></item>
 				<item id="title"><![CDATA[是否開啟自動彈出版權]]></item>
 				<item id="description"><![CDATA[選擇是則開啟自動彈出版權，當用戶按右鍵時，會自動彈出版權提示(迷你版論壇版權)]]></item>
 				<item id="variable"><![CDATA[popup]]></item>
@@ -83,7 +83,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="4">
-				<item id="displayorder"><![CDATA[19]]></item>
+				<item id="displayorder"><![CDATA[20]]></item>
 				<item id="title"><![CDATA[是否顯示帖子分享按鈕]]></item>
 				<item id="description"><![CDATA[於1樓帖子中顯示帖子分享按鈕
 可解決如開啟了文字防複製後會員複製帖子地址分享的不便]]></item>
@@ -93,7 +93,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="5">
-				<item id="displayorder"><![CDATA[20]]></item>
+				<item id="displayorder"><![CDATA[21]]></item>
 				<item id="title"><![CDATA[帖子分享按鈕樣式]]></item>
 				<item id="description"><![CDATA[填{default}則使用文字版，填{tc}則使用繁體預設圖片，填{sc}則使用簡體預設圖片，其他樣式請使用圖片(圖片地址必需以「http://」開頭)]]></item>
 				<item id="variable"><![CDATA[copy_link_style]]></item>
@@ -102,9 +102,9 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="6">
-				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="displayorder"><![CDATA[15]]></item>
 				<item id="title"><![CDATA[是否開啟文字防複製]]></item>
-				<item id="description"><![CDATA[選擇是則開啟文字防複製，除開啟「反複製」的頁面外，以下所有設置將會無效
+				<item id="description"><![CDATA[選擇是則開啟文字防複製，文字複製加版權的相關設置將會無效
 如開啟了，整個瀏覽帖子頁面將不能複製文字，可能會給會員帶來不便]]></item>
 				<item id="variable"><![CDATA[ban_copy]]></item>
 				<item id="type"><![CDATA[radio]]></item>
@@ -122,7 +122,7 @@
 2 = 樓主簽名之上，帖子評分之下]]></item>
 			</item>
 			<item id="8">
-				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="displayorder"><![CDATA[18]]></item>
 				<item id="title"><![CDATA[開啟「反複製」的頁面]]></item>
 				<item id="description"><![CDATA[瀏覽版塊頁面及瀏覽帖子頁面會自動兼容URL靜態化
 按住 CTRL 多選]]></item>
@@ -161,8 +161,7 @@
 				<item id="displayorder"><![CDATA[9]]></item>
 				<item id="title"><![CDATA[完整版論壇版權邊框標題]]></item>
 				<item id="description"><![CDATA[只支持HTML，不支持Discuz!代碼
-此設置必需以&lt;/legend&gt;作結尾
-請用{bbname}代替論壇名稱]]></item>
+此設置必需以&lt;/legend&gt;作結尾，請用{bbname}代替論壇名稱]]></item>
 				<item id="variable"><![CDATA[legend_css]]></item>
 				<item id="type"><![CDATA[textarea]]></item>
 				<item id="value"><![CDATA[<legend align="center" style="color:white;width:200px;text-align:center;background-color:red;">{bbname} - 論壇版權</legend>]]></item>
@@ -179,9 +178,9 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="13">
-				<item id="displayorder"><![CDATA[18]]></item>
+				<item id="displayorder"><![CDATA[19]]></item>
 				<item id="title"><![CDATA[開啟「反複製」的用戶組]]></item>
-				<item id="description"><![CDATA[設置使用防複製/自動加版權/自動彈出版權的用戶組]]></item>
+				<item id="description"><![CDATA[設置使用自動彈出版權/文字防複製/文字複製加版權的用戶組]]></item>
 				<item id="variable"><![CDATA[copy_group]]></item>
 				<item id="type"><![CDATA[groups]]></item>
 				<item id="extra"><![CDATA[]]></item>
@@ -195,15 +194,13 @@
 				</item>
 			</item>
 			<item id="14">
-				<item id="displayorder"><![CDATA[11]]></item>
-				<item id="title"><![CDATA[是否使用預設版權圖片]]></item>
-				<item id="description"><![CDATA[選擇是則使用預設版權圖片，以下所有設置將會無效]]></item>
-				<item id="variable"><![CDATA[defaultpic]]></item>
-				<item id="type"><![CDATA[select]]></item>
-				<item id="value"><![CDATA[1]]></item>
-				<item id="extra"><![CDATA[1 = 是，並使用彩色版圖片
-2 = 是，並使用黑白版圖片
-3 = 否]]></item>
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="title"><![CDATA[自動加版權內容]]></item>
+				<item id="description"><![CDATA[請用{bbname}代替論壇名稱、{boardurl}代替論壇URL、{url}代替當前URL]]></item>
+				<item id="variable"><![CDATA[add_copy_content]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[ - 本文出自{bbname}，原文地址：{url}]]></item>
+				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="15">
 				<item id="displayorder"><![CDATA[2]]></item>
@@ -217,21 +214,21 @@
 				</item>
 			</item>
 			<item id="16">
-				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="displayorder"><![CDATA[11]]></item>
 				<item id="title"><![CDATA[是否使用圖片顯示版權]]></item>
-				<item id="description"><![CDATA[選擇是則使用圖片顯示版權，除版權圖片地址外，以下所有設置將會無效]]></item>
+				<item id="description"><![CDATA[選擇是則使用圖片顯示版權，「完整版論壇版權內容」設置將會無效]]></item>
 				<item id="variable"><![CDATA[pictureopen]]></item>
 				<item id="type"><![CDATA[radio]]></item>
 				<item id="value"><![CDATA[0]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="17">
-				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="displayorder"><![CDATA[12]]></item>
 				<item id="title"><![CDATA[版權圖片地址]]></item>
 				<item id="description"><![CDATA[在「是否使用圖片顯示版權」開啟後本設置項目才有效
-版權圖片地址必需以「http://」開頭
-如圖片不存在時，將自動使用預設版權圖片]]></item>
-				<item id="variable"><![CDATA[link]]></item>
+填{default_color}則使用彩色預設圖片，填{default_black}則使用黑白預設圖片，自定義版權圖片地址必需以「http://」開頭
+如自定義版權圖片不存在時，將自動使用彩色預設圖片]]></item>
+				<item id="variable"><![CDATA[pic_copyright]]></item>
 				<item id="type"><![CDATA[text]]></item>
 				<item id="value"><![CDATA[]]></item>
 				<item id="extra"><![CDATA[]]></item>
@@ -246,7 +243,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="19">
-				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="displayorder"><![CDATA[13]]></item>
 				<item id="title"><![CDATA[完整版論壇版權內容]]></item>
 				<item id="description"><![CDATA[只支持HTML，不支持Discuz!代碼
 請用{bbname}代替論壇名稱、{boardurl}代替論壇URL、{author}代替帖子作者]]></item>
@@ -259,6 +256,16 @@
 5、本帖部分內容轉載自其它媒體，但並不代表本站贊同其觀點和對其真實性負責<br />
 6、如本帖侵犯到任何版權問題，請立即告知本站，本站將及時予與刪除並致以最深的歉意<br />
 7、<a href={boardurl}><font color="#ff6600">{bbname}</font></a>管理員和版主有權不事先通知發貼者而刪除本文]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="20">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[是否開啟文字複製加版權]]></item>
+				<item id="description"><![CDATA[文字複製加版權只支持Internet Explorer
+如要啟用此功能，您必需關閉「文字防複製」功能]]></item>
+				<item id="variable"><![CDATA[add_copy]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 		</item>

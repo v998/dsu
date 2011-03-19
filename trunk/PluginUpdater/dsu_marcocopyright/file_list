@@ -4,9 +4,7 @@ source/plugin/dsu_marcocopyright/discuz_plugin_dsu_marcocopyright_SC_UTF8.xml
 source/plugin/dsu_marcocopyright/discuz_plugin_dsu_marcocopyright_TC_BIG5.xml
 source/plugin/dsu_marcocopyright/discuz_plugin_dsu_marcocopyright_TC_UTF8.xml
 source/plugin/dsu_marcocopyright/index.htm
-source/plugin/dsu_marcocopyright/install.php
-source/plugin/dsu_marcocopyright/uninstall.php
-source/plugin/dsu_marcocopyright/upgrade.php
+source/plugin/dsu_marcocopyright/stat.php
 source/plugin/dsu_marcocopyright/images/copyright.png
 source/plugin/dsu_marcocopyright/images/defaultpic.png
 source/plugin/dsu_marcocopyright/images/defaultpic_black.png
