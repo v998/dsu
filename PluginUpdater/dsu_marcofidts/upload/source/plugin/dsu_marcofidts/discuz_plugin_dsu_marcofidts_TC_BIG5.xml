@@ -2,7 +2,7 @@
 <root>
 	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
 	<item id="Version"><![CDATA[X1.5]]></item>
-	<item id="From"><![CDATA[My 3Talk 討論區 (http://my3talk.com)]]></item>
+	<item id="From"><![CDATA[My 3Talk 討論區 (http://www.my3talk.com)]]></item>
 	<item id="Data">
 		<item id="plugin">
 			<item id="available"><![CDATA[1]]></item>
@@ -13,7 +13,7 @@
 			<item id="datatables"><![CDATA[dsu_marcofidts]]></item>
 			<item id="directory"><![CDATA[dsu_marcofidts/]]></item>
 			<item id="copyright"><![CDATA[Marco129 @ DSU Team]]></item>
-			<item id="version"><![CDATA[[X1.5]V0.21]]></item>
+			<item id="version"><![CDATA[1.0]]></item>
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[dsu_marcofidts]]></item>
@@ -44,11 +44,13 @@
 [*][b]作品簡介:[/b]為各版塊實現用戶條款功能。會員進入相應版塊時使用cookie作進入記錄，不增加數據庫負擔
 [*]如有任何關於使用上的疑問,請至[url]http://www.dsu.cc/forum-44-1.html[/url]提出.
 [*][color=Red]如果您願意資助我們,請至[url]http://www.dsu.cc/donate.php[/url]對我們進行贊助.[/color]
-[*]最後,感謝您使用我們的插件,也希望您能夠給我們DSU團隊提供更好的意見([url=http://www.dsu.cc/]請點擊這裡進入DSU團隊官方站點[/url]).
+[*]最後,感謝您使用我們的插件,也希望您能夠給我們DSU團隊提供更好的意見([url=http://www.dsu.cc/]請點擊這裡進入 DSU團隊官方站點[/url]).
 [/list]]]></item>
-                <item id="intro"><![CDATA[[b][color=Blue]【DSU】版塊用戶條款[/color][/b]
+                <item id="intro"><![CDATA[[size=3][color=Sienna][b]【DSU】版塊用戶條款[/b][/color][/size]
+作者: Marco129 @ DSU Team
 為各版塊實現用戶條款功能。會員進入相應版塊時使用cookie作進入記錄，不增加數據庫負擔
-使用問題/BUG反饋可到[url=http://www.dsu.cc/forum-44-1.html]DSU團隊官方站點[/url]提出]]></item>
+[hr]使用問題/BUG反饋可到[url=http://www.dsu.cc/]DSU團隊官方站點[/url]提出
+插件聲明：嚴禁修改任何版權說明、進行任何二次開發、轉載、分發、進行出租/出售/抵押或發放許可證]]></item>
 		<item id="language">
 			<item id="scriptlang">
 				<item id="ts_list"><![CDATA[版塊用戶條款列表]]></item>

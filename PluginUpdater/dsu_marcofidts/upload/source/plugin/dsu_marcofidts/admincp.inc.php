@@ -1,7 +1,7 @@
 <?php
 /*
 	[DSU] Fid Terms
-	Author: Marco129[http://my3talk.com]
+	Author: Marco129[http://www.my3talk.com]
 	Please respect the author, do not delete the copyright!
 */
 if(!defined('IN_DISCUZ') || !defined('IN_ADMINCP')) {
