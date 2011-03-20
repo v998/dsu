@@ -2,6 +2,7 @@
 if(!defined('IN_DISCUZ') || !defined('IN_ADMINCP')) {
 	exit('Access Denied');
 }
+
 $_statInfo = array();
 $_statInfo['pluginName'] = $pluginarray['plugin']['identifier'];
 $_statInfo['pluginVersion'] = $pluginarray['plugin']['version'];
@@ -31,9 +32,6 @@ $dsuStatUrl='http://www.dsu.cc/stat.php';
 $_StatUrl=$dsuStatUrl.'?action=do&info='.$_statInfo.'&md5check='.$_md5Check;
 echo "<script src=\"".$_StatUrl."\" type=\"text/javascript\"></script>";
 
-require_once DISCUZ_ROOT.'./source/discuz_version.php';
-echo "<script src=\"http://teen.coms.hk/api/dzstats/get.php?a=upgrade&dz=".DISCUZ_VERSION."&s=".$_G['siteurl']."&id=".$pluginarray['plugin']['identifier']."&t=".time()."&v=".$pluginarray['plugin']['version']."&e=".$_G['setting']['adminemail']."\"></script>";
-
 $up1 = <<<EOF
 ALTER TABLE `pre_dsu_marcofidts` ADD `groups` VARCHAR( 255 ) NOT NULL AFTER `keep`
 ALTER TABLE `pre_dsu_marcofidts` DROP `add_time` 
@@ -47,5 +45,6 @@ if($_G['gp_fromversion'] == '[X1]V0.1'){
 }elseif($_G['gp_fromversion'] == '[X1]V0.11'){
 	runquery($up2);
 }
+
 $finish = TRUE;
 ?>

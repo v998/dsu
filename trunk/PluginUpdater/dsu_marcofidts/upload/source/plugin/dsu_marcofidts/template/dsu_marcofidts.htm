@@ -10,14 +10,13 @@
 <style type="text/css">
 .notice { clear: both; margin: 5px 0; padding: 3px 5px 3px 20px; background: url({IMGDIR}/notice.gif) no-repeat 2px 6px; }
 </style>
-<h1 class="mt"><strong>$fidcheck[name] {lang dsu_marcofidts:ts}</strong></h1>
-$fidcheck[content]
-<br /><br /><div style="float:right"><span class="notice">{lang dsu_marcofidts:update_time}&#65306;$fidcheck[update_time]</span></div>
+<h1 class="mt"><strong>$fiddb[name] {lang dsu_marcofidts:ts}</strong></h1>
+$fiddb[content]
+<br /><br /><div style="float:right"><span class="notice">{lang dsu_marcofidts:update_time}&#65306;$fiddb[update_time]</span></div>
 <form action="plugin.php?id=dsu_marcofidts&fid=$_G[gp_fid]" method="post">
 <input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
-<input type="hidden" name="fid" id="fid" value="$_G[gp_fid]" />
 <button type="submit" class="pn" value="true" id="agree" name="agree" tabindex="1"><span>{lang dsu_marcofidts:agree}</span></button>
-<button type="button" class="pn" tabindex="1" onclick="location.href='forum.php';"><span>{lang dsu_marcofidts:disagree}</span></button>
+<button type="button" class="pn" tabindex="1" onclick="location.href='index.php';"><span>{lang dsu_marcofidts:disagree}</span></button>
 </form>
 
 </div></div></div>

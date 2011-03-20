@@ -1,7 +1,7 @@
 <?php
 /*
 	[DSU] Fid Terms
-	Author: Marco129[http://my3talk.com]
+	Author: Marco129[http://www.my3talk.com]
 	Please respect the author, do not delete the copyright!
 */
 if(!defined('IN_DISCUZ')) {
@@ -16,6 +16,7 @@ class plugin_dsu_marcofidts{
 			$groups = explode(",",$fiddb['groups']);
 			if($_G['fid'] == $fiddb['fid'] && in_array($_G['groupid'], $groups)){
 				if(!$_G['cookie']["dsu_marcofidts_{$_G[fid]}"]){
+					dsetcookie('dsu_marcofidts_back', base64_encode($_SERVER['REQUEST_URI']));
 					dheader('Location: plugin.php?id=dsu_marcofidts&fid='.intval($_G['fid']).'');
 				}
 			}

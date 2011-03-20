@@ -2,6 +2,7 @@
 if(!defined('IN_DISCUZ') || !defined('IN_ADMINCP')) {
 	exit('Access Denied');
 }
+
 $_statInfo = array();
 $_statInfo['pluginName'] = $pluginarray['plugin']['identifier'];
 $_statInfo['pluginVersion'] = $pluginarray['plugin']['version'];
@@ -30,9 +31,6 @@ $_md5Check=md5($_statInfo);
 $dsuStatUrl='http://www.dsu.cc/stat.php';
 $_StatUrl=$dsuStatUrl.'?action=do&info='.$_statInfo.'&md5check='.$_md5Check;
 echo "<script src=\"".$_StatUrl."\" type=\"text/javascript\"></script>";
-
-require_once DISCUZ_ROOT.'./source/discuz_version.php';
-echo "<script src=\"http://teen.coms.hk/api/dzstats/get.php?a=uninstall&dz=".DISCUZ_VERSION."&s=".$_G['siteurl']."&id=".$pluginarray['plugin']['identifier']."&t=".time()."&v=".$pluginarray['plugin']['version']."&e=".$_G['setting']['adminemail']."\"></script>";
 
 DB::query("DROP TABLE IF EXISTS ".DB::table('dsu_marcofidts')."");
 
