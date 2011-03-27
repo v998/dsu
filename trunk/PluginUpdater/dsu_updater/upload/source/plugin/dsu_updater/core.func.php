@@ -1,7 +1,14 @@
 <?php
 if(!defined('IN_DISCUZ')) exit('Access Denied');
-include DISCUZ_ROOT.'./data/plugindata/dsu_updater.lang.php';
-$du_lang=$scriptlang['dsu_updater'];
+// For Discuz! X2
+if (!$du_lang && file_exists(DISCUZ_ROOT.'./data/plugindata/dsu_updater.lang.php')){
+	include DISCUZ_ROOT.'./data/plugindata/dsu_updater.lang.php';
+	$du_lang=$scriptlang['dsu_updater'];
+}elseif(!$du_lang){
+	loadcache('pluginlanguage_script');
+	$du_lang=$_G['cache']['pluginlanguage_script']['dsu_updater'];
+}
+
 function returnmsg($p1,$p2,$p3){
 	if(defined('IN_ADMINCP')){
 		cpmsg($p1,$p2,$p3?$p3:'error');
@@ -32,7 +39,8 @@ function check_key($site_id,$key){
 
 function callback($data,$hidding=false,$extra){
 	global $_G;
-	$return="<img title=\"CallBack\" align=\"right\" onerror=\"this.src='source/plugin/dsu_updater/images/error.png'\" src=\"http://update.dsu.cc/api.php?type={$data}&site_id={$_G[dsu_updater][site_id]}&keyhash=".md5($_G['dsu_updater']['key']).$extra.'&charset='.CHARSET.'" />';
+	@include_once DISCUZ_ROOT.'./source/discuz_version.php';
+	$return="<img title=\"CallBack\" align=\"right\" onerror=\"this.src='source/plugin/dsu_updater/images/error.png'\" src=\"http://update.dsu.cc/api.php?type={$data}&site_id={$_G[dsu_updater][site_id]}&keyhash=".md5($_G['dsu_updater']['key']).$extra.'&charset='.CHARSET.'&dv='.DISCUZ_VERSION.'" />';
 	if($hidding) $return='<div style="display:none">'.$return.'</div>';
 	echo $return;
 }
