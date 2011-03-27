@@ -33,9 +33,16 @@
 #dsu_updater_notice .flbc:hover {
 	background-position:-60px 0;
 }
-#dsu_updater_notice .detail {}
-#dsu_updater_notice h4 {}
-#dsu_updater_notice h4 a {}
+#dsu_updater_notice .detail {
+	padding: 10px;
+	text-align: left;
+}
+#dsu_updater_notice h4 {
+	margin-bottom: 5px;
+}
+#dsu_updater_notice h4 a {
+	color: #06C;
+}
 #dsu_updater_notice ul {
 	padding:5px 3px;
 	overflow:hidden;
