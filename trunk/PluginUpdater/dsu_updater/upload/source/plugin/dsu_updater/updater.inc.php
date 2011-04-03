@@ -3,8 +3,15 @@
 if(!defined('IN_DISCUZ') || !defined('IN_ADMINCP')) exit('Access Denied');
 
 $plugin_id='dsu_updater';
-@include DISCUZ_ROOT."./data/plugindata/{$plugin_id}.lang.php";
-$xml_name=$scriptlang[$plugin_id]['xml_file_name'];
+// For Discuz! X2
+if (!$du_lang && file_exists(DISCUZ_ROOT."./data/plugindata/{$plugin_id}.lang.php")){
+	include DISCUZ_ROOT."./data/plugindata/{$plugin_id}.lang.php";
+	$du_lang=$scriptlang[$plugin_id];
+}elseif(!$du_lang){
+	loadcache('pluginlanguage_script');
+	$du_lang=$_G['cache']['pluginlanguage_script'][$plugin_id];
+}
+$xml_name='discuz_plugin_dsu_updater_'.$du_lang['charset'].'.xml';
 $program_ver=DB::result_first('SELECT version FROM '.DB::table('common_plugin')." WHERE identifier='{$plugin_id}'");
 $plugin_dir=DISCUZ_ROOT."./source/plugin/{$plugin_id}";
 $plugin_subfolders=array('template');

@@ -14,7 +14,7 @@
 			<item id="datatables"><![CDATA[]]></item>
 			<item id="directory"><![CDATA[dsu_updater/]]></item>
 			<item id="copyright"><![CDATA[kookxiang @ DSU Team.]]></item>
-			<item id="version"><![CDATA[1.1]]></item>
+			<item id="version"><![CDATA[1.2]]></item>
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[checker]]></item>
@@ -69,8 +69,8 @@
 		<item id="version"><![CDATA[X1.5]]></item>
 		<item id="language">
 			<item id="scriptlang">
-				<item id="xml_file_name"><![CDATA[discuz_plugin_dsu_updater_TC_UTF8.xml]]></item>
-				<item id="write_error"><![CDATA[寫入setting.inc.php失敗，請檢查文件權限！]]></item>
+				<item id="charset"><![CDATA[TC_UTF8]]></item>
+				<item id="write_error"><![CDATA[寫入data/dsu_updater.inc.php失敗，請檢查文件權限！]]></item>
 				<item id="lost_key"><![CDATA[安全密鑰(Key)丟失，請登錄 update.dsu.cc 綁定.]]></item>
 				<item id="accept_succeed"><![CDATA[授權完成！]]></item>
 				<item id="installed_plugin"><![CDATA[已安裝插件]]></item>
@@ -101,7 +101,7 @@
 				<item id="do_update"><![CDATA[開始更新]]></item>
 			</item>
 		</item>
-		<item id="installfile"><![CDATA[stat.php]]></item>
+		<item id="installfile"><![CDATA[install.php]]></item>
 		<item id="uninstallfile"><![CDATA[stat.php]]></item>
 		<item id="upgradefile"><![CDATA[stat.php]]></item>
 		<item id="license"><![CDATA[[list]
