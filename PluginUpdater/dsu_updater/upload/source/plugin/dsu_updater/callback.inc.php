@@ -31,6 +31,7 @@ switch($_G['gp_do']){
 		$_G['dsu_updater'][$type]=stripslashes(stripslashes($_G['gp_data']));
 		if($_G['gp_is_array']) $_G['dsu_updater'][$type]=unserialize($_G['dsu_updater'][$type]);
 		save_setting();
+		dexit('ok');
 		break;
 	case 'receive_file':
 		get_setting();
@@ -49,7 +50,7 @@ switch($_G['gp_do']){
 			}
 		}
 		$pluginid=DB::result_first('SELECT pluginid FROM '.DB::table('common_plugin')." WHERE identifier='{$_G[gp_plugin]}'");
-		dexit("ok|$pluginid");
+		dexit("ok|$pluginid|".$du_lang['charset']);
 		break;
 	case 'check':
 		get_setting();
