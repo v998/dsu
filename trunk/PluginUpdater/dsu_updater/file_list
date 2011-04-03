@@ -6,6 +6,7 @@ source/plugin/dsu_updater/discuz_plugin_dsu_updater_SC_GBK.xml
 source/plugin/dsu_updater/discuz_plugin_dsu_updater_SC_UTF8.xml
 source/plugin/dsu_updater/discuz_plugin_dsu_updater_TC_BIG5.xml
 source/plugin/dsu_updater/discuz_plugin_dsu_updater_TC_UTF8.xml
+source/plugin/dsu_updater/install.php
 source/plugin/dsu_updater/main.inc.php
 source/plugin/dsu_updater/news.inc.php
 source/plugin/dsu_updater/stat.php
