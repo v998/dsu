@@ -1,0 +1,10 @@
+.dsu_stamp {
+	position: relative;
+	top: 30px;
+	float: right;
+	padding-right: 30px;
+	height: 0px;
+}
+.add_stamp {
+	background: url(../../source/plugin/dsu_stamp/stamp.png) no-repeat 0 50%;
+}

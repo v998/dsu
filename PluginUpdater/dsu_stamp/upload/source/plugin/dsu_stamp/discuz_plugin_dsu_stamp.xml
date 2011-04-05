@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X1.5]]></item>
+	<item id="Time"><![CDATA[2011-04-05 10:12]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://127.0.0.1/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[¡¾DSU¡¿Ìû×ÓÍ¼ÕÂ]]></item>
+			<item id="identifier"><![CDATA[dsu_stamp]]></item>
+			<item id="description"><![CDATA[Discuz! Ö÷Ìâ¼ø¶¨µÄÉý¼¶°æ£¬Ö§³Ö¸ø»Ø¸´Ìí¼ÓÍ¼ÕÂ.]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[dsu_stamp/]]></item>
+			<item id="copyright"><![CDATA[kookxiang @ DSU Team.]]></item>
+			<item id="version"><![CDATA[1.0]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[stamp]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[stamp]]></item>
+					<item id="menu"><![CDATA[Í¼ÕÂ¹ÜÀí]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X1.5]]></item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="add_stamp"><![CDATA[<a class="add_stamp" href="plugin.php?id=dsu_stamp&pid={pid}&authorid={author}" onclick="showWindow('dsu_stamp', this.href)">Ìí¼ÓÍ¼ÕÂ</a>]]></item>
+				<item id="access_not_allow"><![CDATA[Ô½È¨·ÃÎÊ£¬Çë·µ»Ø£¡]]></item>
+				<item id="no_title"><![CDATA[ÎÞ±êÌâ»Ø¸´]]></item>
+				<item id="notification_add"><![CDATA[×ð¾´µÄÓÃ»§£º<br>ÄúºÃ£¡Äú·¢±íµÄÖ÷Ìâ¡°{post}¡±±»¹ÜÀíÔ± {user} Ìí¼ÓÁËÍ¼ÕÂ¡£<br>Ìû×ÓµØÖ·£º<a href="forum.php?mod=redirect&goto=findpost&pid={pid}">µ¥»÷´Ë´¦²é¿´</a>]]></item>
+				<item id="notification_del"><![CDATA[×ð¾´µÄÓÃ»§£º<br>ÄúºÃ£¡Äú·¢±íµÄÖ÷Ìâ¡°{post}¡±±»¹ÜÀíÔ± {user} É¾³ýÁËÍ¼ÕÂ¡£<br>Ìû×ÓµØÖ·£º<a href="forum.php?mod=redirect&goto=findpost&pid={pid}">µ¥»÷´Ë´¦²é¿´</a>]]></item>
+				<item id="add_succeed"><![CDATA[Ìí¼ÓÍ¼ÕÂ³É¹¦£¡]]></item>
+				<item id="del_succeed"><![CDATA[É¾³ýÍ¼ÕÂ³É¹¦£¡]]></item>
+				<item id="edit_succeed"><![CDATA[Í¼ÕÂ±à¼­³É¹¦£¡]]></item>
+				<item id="stamp_edit"><![CDATA[Í¼ÕÂ±à¼­]]></item>
+				<item id="stamp_manage"><![CDATA[Í¼ÕÂ¹ÜÀí]]></item>
+				<item id="stamp_name"><![CDATA[Í¼ÕÂÃû³Æ]]></item>
+				<item id="stamp_url"><![CDATA[Í¼ÕÂÎÄ¼þÃû]]></item>
+				<item id="stamp_action"><![CDATA[²Ù×÷]]></item>
+				<item id="stamp_modify"><![CDATA[<a href="admin.php?action=plugins&operation=config&identifier=dsu_stamp&pmod=stamp&edit={sid}">ÐÞ¸Ä</a>]]></item>
+				<item id="stamp_add"><![CDATA[<tr><td></td><td colspan="3"><div><a href="#addrow" name="addrow" onclick="addrow(this, 0)" class="addtr">Ìí¼ÓÍ¼ÕÂ</a></div></td></tr>]]></item>
+				<item id="tipd"><![CDATA[<li>Í¼ÕÂÇë·Åµ½ source/plugin/dsu_stamp/stamps/ Ä¿Â¼ÏÂ</li><li>Í¼ÕÂÎÄ¼þÃûÐè°üº¬ÍØÕ¹Ãû£¬Èç£º stamp.gif</li>]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="add_stamp"><![CDATA[Ìí¼ÓÍ¼ÕÂ]]></item>
+				<item id="stamp_list"><![CDATA[Í¼ÕÂÁÐ±í£º]]></item>
+				<item id="no_stamp"><![CDATA[ÎÞÍ¼ÕÂ]]></item>
+				<item id="notice_author"><![CDATA[Í¨Öª×÷Õß]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+	<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+	<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+	<item id="license"><![CDATA[[list]
+[*]±¾²å¼þ°æÈ¨¹éÊô²å¼þ×÷Õß,¼°ÆäÏÂÊôDiscuz! Student UnionÍÅ¶ÓËùÓÐ.
+[*]Î´¾­²å¼þ×÷ÕßÐí¿É,ÈÎºÎÈË²»µÃÒÔÈÎºÎÐÎÊ½ÔÚÈÎºÎµØ·½·¢²¼/×ª·¢Ô­°æÒÔ¼°ÆäÑÜÉúµÄÐÞ¸Ä°æ.
+[*][b]²å¼þ×÷Õß:[/b]kookxiang
+[*][b]×÷Æ·¼ò½é:[/b]Discuz! Ö÷Ìâ¼ø¶¨µÄÉý¼¶°æ£¬Ö§³Ö¸ø»Ø¸´Ìí¼ÓÍ¼ÕÂ.
+[*]ÈçÓÐÈÎºÎ¹ØÓÚÊ¹ÓÃÉÏµÄÒÉÎÊ,ÇëÖÁ[url]http://www.dsu.cc/forum-44-1.html[/url]Ìá³ö.
+[*][color=Red]Èç¹ûÄúÔ¸Òâ×ÊÖúÎÒÃÇ,ÇëÖÁ[url]http://www.dsu.cc/donate.php[/url]¶ÔÎÒÃÇ½øÐÐÔÞÖú.[/color]
+[*]×îºó,¸ÐÐ»ÄúÊ¹ÓÃÎÒÃÇµÄ²å¼þ,Ò²Ï£ÍûÄúÄÜ¹»¸øÎÒÃÇDSUÍÅ¶ÓÌá¹©¸üºÃµÄÒâ¼û([url=http://www.dsu.cc/]Çëµã»÷ÕâÀï½øÈëDSUÍÅ¶Ó¹Ù·½Õ¾µã[/url]).
+[/list]]]></item>
+	</item>
+</root>

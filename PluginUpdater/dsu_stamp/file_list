@@ -1,0 +1,17 @@
+source/plugin/dsu_stamp/discuz_plugin_dsu_stamp.xml
+source/plugin/dsu_stamp/discuz_plugin_dsu_stamp_SC_GBK.xml
+source/plugin/dsu_stamp/discuz_plugin_dsu_stamp_SC_UTF8.xml
+source/plugin/dsu_stamp/discuz_plugin_dsu_stamp_TC_BIG5.xml
+source/plugin/dsu_stamp/discuz_plugin_dsu_stamp_TC_UTF8.xml
+source/plugin/dsu_stamp/dsu_stamp.inc.php
+source/plugin/dsu_stamp/index.htm
+source/plugin/dsu_stamp/install.php
+source/plugin/dsu_stamp/stamp.class.php
+source/plugin/dsu_stamp/stamp.inc.php
+source/plugin/dsu_stamp/stamp.png
+source/plugin/dsu_stamp/uninstall.php
+source/plugin/dsu_stamp/upgrade.php
+source/plugin/dsu_stamp/stamps/index.htm
+source/plugin/dsu_stamp/template/add_stamp.htm
+source/plugin/dsu_stamp/template/extend_common.css
+source/plugin/dsu_stamp/template/index.htm
