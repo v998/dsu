@@ -60,7 +60,7 @@
 				<item id="stamp_action"><![CDATA[操作]]></item>
 				<item id="stamp_modify"><![CDATA[<a href="admin.php?action=plugins&operation=config&identifier=dsu_stamp&pmod=stamp&edit={sid}">修改</a>]]></item>
 				<item id="stamp_add"><![CDATA[<tr><td></td><td colspan="3"><div><a href="#addrow" name="addrow" onclick="addrow(this, 0)" class="addtr">添加图章</a></div></td></tr>]]></item>
-				<item id="tipd"><![CDATA[<li>图章请放到 source/plugin/dsu_stamp/stamps/ 目录下</li><li>图章文件名需包含拓展名，如： stamp.gif</li>]]></item>
+				<item id="tips"><![CDATA[<li>图章请放到 source/plugin/dsu_stamp/stamps/ 目录下</li><li>图章文件名需包含拓展名，如： stamp.gif</li>]]></item>
 			</item>
 			<item id="templatelang">
 				<item id="add_stamp"><![CDATA[添加图章]]></item>
