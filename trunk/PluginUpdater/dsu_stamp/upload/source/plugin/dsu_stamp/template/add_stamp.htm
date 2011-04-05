@@ -1,0 +1,40 @@
+<!--{template common/header}-->
+<!--{if empty($_G['gp_infloat'])}-->
+<div id="ct" class="wp cl">
+	<div class="mn">
+		<div class="bm bw0">
+<!--{/if}-->
+
+<form method="post" autocomplete="off" id="stampform" action="plugin.php?id=dsu_stamp&pid={$_G[gp_pid]}"
+	<div class="f_c">
+		<h3 class="flb">
+			<em id="return_$_G['gp_handlekey']">{lang dsu_stamp:add_stamp}</em>
+			<span>
+				<!--{if !empty($_G['gp_infloat'])}--><a href="javascript:;" class="flbc" onclick="hideWindow('$_G['gp_handlekey']')" title="{lang close}">{lang close}</a><!--{/if}-->
+			</span>
+		</h3>
+		<input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+		<input type="hidden" name="handlekey" value="$_G['gp_handlekey']" />
+		<div class="c">
+			<p>{lang dsu_stamp:stamp_list}</p>
+			<select name="stampid" class="ps" style="min-width:150px;">
+				<option value="0" {if !$old_stamp}selected{/if}>{lang dsu_stamp:no_stamp}</option>
+				{loop $stamps $stampid $stampname}
+				<option value="{$stampid}" {if $old_stamp==$stampid}selected{/if}>{$stampname}</option>
+				{/loop}
+			</select>
+		</div>
+	</div>
+	<div class="o pns cl{if empty($_G['gp_infloat'])} mtm{/if}">
+		<button type="submit" id="stampsubmit" class="pn pnc" value="true" name="stampsubmit" tabindex="3"><span>{lang submit}</span></button>
+		<input type="checkbox" checked class="pc" name="send_msg" id="send_msg" value="{$_G[gp_authorid]}" />
+		<label for="send_msg">{lang dsu_stamp:notice_author}</label>
+	</div>
+</form>
+
+<!--{if empty($_G['gp_infloat'])}-->
+		</div>
+	</div>
+</div>
+<!--{/if}-->
+<!--{template common/footer}-->
