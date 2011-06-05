@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /*
 	Install Uninstall Upgrade AutoStat System Code
 */
@@ -24,7 +24,7 @@ $_StatUrl=$dsuStatUrl.'?action=do&info='.$_statInfo.'&md5check='.$_md5Check;
 echo "<script src=\"".$_StatUrl."\" type=\"text/javascript\"></script>";
 //start to put your own code
 
-
+updatecache('css');
 
 
 
