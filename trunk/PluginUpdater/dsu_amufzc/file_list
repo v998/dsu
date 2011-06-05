@@ -1,6 +1,5 @@
 source/plugin/dsu_amufzc/admin.inc.php
 source/plugin/dsu_amufzc/discuz_plugin_dsu_amufzc.xml
-source/plugin/dsu_amufzc/discuz_plugin_dsu_amufzc_HTML_Entities.xml
 source/plugin/dsu_amufzc/discuz_plugin_dsu_amufzc_SC_GBK.xml
 source/plugin/dsu_amufzc/discuz_plugin_dsu_amufzc_SC_UTF8.xml
 source/plugin/dsu_amufzc/discuz_plugin_dsu_amufzc_TC_BIG5.xml

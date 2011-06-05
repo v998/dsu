@@ -37,6 +37,7 @@ if (submitcheck('submit')){
 	showtableheader(lang('plugin/dsu_stamp','stamp_edit'));
 	showsetting(lang('plugin/dsu_stamp','stamp_name'), 'name', $stamp['name'], 'text');
 	showsetting(lang('plugin/dsu_stamp','stamp_url'), 'url', $stamp['url'], 'text');
+	echo "<tr><td><div style=\"padding-left:15px\"><img src=\"source/plugin/dsu_stamp/stamps/{$stamp[url]}\"></div></td></tr>";
 	showsubmit('submit');
 	showtablefooter();
 	showformfooter();
@@ -61,7 +62,7 @@ while($result=DB::fetch($query)){
 	showtablerow('', array('class="td25"', 'class="td26"', 'class="td26"', 'class="td28"'), array(
 		'<input type="checkbox" class="checkbox" name="delete[]" value="'.$result['sid'].'" />',
 		$result['name'],
-		$result['url'],
+		"<img width=\"32px\" src=\"source/plugin/dsu_stamp/stamps/{$result[url]}\"> &nbsp; {$result[url]}",
 		lang('plugin/dsu_stamp','stamp_modify',array('sid'=>$result['sid'])),
 	));
 }
