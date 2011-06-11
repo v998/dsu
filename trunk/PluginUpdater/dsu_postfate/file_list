@@ -1,0 +1,9 @@
+source/plugin/dsu_postfate/discuz_plugin_dsu_postfate_SC_GBK.xml
+source/plugin/dsu_postfate/discuz_plugin_dsu_postfate_SC_UTF8.xml
+source/plugin/dsu_postfate/discuz_plugin_dsu_postfate_TC_BIG5.xml
+source/plugin/dsu_postfate/discuz_plugin_dsu_postfate_TC_UTF8.xml
+source/plugin/dsu_postfate/dsu_postfate.inc.php
+source/plugin/dsu_postfate/hooks.class.php
+source/plugin/dsu_postfate/install.php
+source/plugin/dsu_postfate/uninstall.php
+source/plugin/dsu_postfate/template/dsu_postfate.htm

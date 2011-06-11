@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X1.5]]></item>
+	<item id="Time"><![CDATA[2010-09-10 18:39]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://localhost/1.5/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[【DSU】發帖際遇]]></item>
+			<item id="identifier"><![CDATA[dsu_postfate]]></item>
+			<item id="description"><![CDATA[發帖時遇到隨機事件,並進行隨機獎懲.]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[dsu_postfate/]]></item>
+			<item id="copyright"><![CDATA[Kookxiang,Shy9000 @ DSU Team]]></item>
+			<item id="version"><![CDATA[2.0]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[dsu_postfate]]></item>
+					<item id="menu"><![CDATA[發帖際遇]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[5]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[hooks]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X1.5]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[際遇設定]]></item>
+				<item id="description"><![CDATA[請嚴格按照格式填寫！一行一個
+格式：獎勵詳細信息,獎勵最小值,獎勵最大值
+詳細信息中的積分數量請用{credit}表示，積分名稱用{creditname}表示，積分單位用{creditunit}表示，用戶名用{username}表示.]]></item>
+				<item id="variable"><![CDATA[setting]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[{username}發帖時在路邊撿到{creditname}{credit}{creditunit}，偷偷放進了口袋.     （{creditname}+{credit}）,1,5
+{username}發帖時沒有注意，被小偷偷去了{creditname}{credit}{creditunit}.     （{creditname}-{credit}）,-5,-1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[獎懲積分]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[credit]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[影響板塊]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[forum]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[2]]></item>
+				</item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[影響用戶組]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[usergroup]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[9]]></item>
+					<item id="1"><![CDATA[10]]></item>
+					<item id="2"><![CDATA[11]]></item>
+					<item id="3"><![CDATA[12]]></item>
+					<item id="4"><![CDATA[13]]></item>
+					<item id="5"><![CDATA[14]]></item>
+					<item id="6"><![CDATA[15]]></item>
+					<item id="7"><![CDATA[16]]></item>
+					<item id="8"><![CDATA[17]]></item>
+					<item id="9"><![CDATA[18]]></item>
+					<item id="10"><![CDATA[19]]></item>
+					<item id="11"><![CDATA[1]]></item>
+					<item id="12"><![CDATA[2]]></item>
+					<item id="13"><![CDATA[3]]></item>
+					<item id="14"><![CDATA[4]]></item>
+					<item id="15"><![CDATA[5]]></item>
+					<item id="16"><![CDATA[6]]></item>
+					<item id="17"><![CDATA[7]]></item>
+					<item id="18"><![CDATA[8]]></item>
+				</item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[發帖際遇概率]]></item>
+				<item id="description"><![CDATA[數字範圍：(0,1)
+不明白的自己上網Google「數學 區間」]]></item>
+				<item id="variable"><![CDATA[num]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0.3]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="dsu_postfate_inc_php_1"><![CDATA[月d日H時i分]]></item>
+				<item id="hooks_class_php_1"><![CDATA[發帖際遇]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="dsu_postfate_htm_1"><![CDATA[發帖際遇]]></item>
+				<item id="dsu_postfate_htm_2"><![CDATA[際遇記錄]]></item>
+				<item id="dsu_postfate_htm_3"><![CDATA[所有際遇]]></item>
+				<item id="dsu_postfate_htm_4"><![CDATA[我的際遇]]></item>
+				<item id="dsu_postfate_htm_5"><![CDATA[獎懲排行]]></item>
+				<item id="dsu_postfate_htm_6"><![CDATA[時間]]></item>
+				<item id="dsu_postfate_htm_7"><![CDATA[人物]]></item>
+				<item id="dsu_postfate_htm_8"><![CDATA[事件]]></item>
+				<item id="dsu_postfate_htm_9"><![CDATA[觸發地]]></item>
+				<item id="dsu_postfate_htm_10"><![CDATA[回復]]></item>
+				<item id="dsu_postfate_htm_11"><![CDATA[點此進入]]></item>
+				<item id="dsu_postfate_htm_12"><![CDATA[目前沒有際遇事件]]></item>
+				<item id="dsu_postfate_htm_19"><![CDATA[論壇十大幸運人物]]></item>
+				<item id="dsu_postfate_htm_20"><![CDATA[論壇十大悲情人物]]></item>
+				<item id="dsu_postfate_htm_22"><![CDATA[獎勵次數]]></item>
+				<item id="dsu_postfate_htm_24"><![CDATA[懲罰次數]]></item>
+				<item id="dsu_postfate_htm_26"><![CDATA[際遇說明]]></item>
+				<item id="dsu_postfate_htm_27"><![CDATA[發新主題]]></item>
+				<item id="dsu_postfate_htm_28"><![CDATA[回復際遇幾率]]></item>
+				<item id="dsu_postfate_htm_29"><![CDATA[獎懲積分]]></item>
+				<item id="dsu_postfate_htm_30"><![CDATA[我的際遇統計]]></item>
+				<item id="dsu_postfate_htm_32"><![CDATA[次]]></item>
+				<item id="dsu_postfate_htm_35"><![CDATA[版本信息]]></item>
+				<item id="dsu_postfate_htm_36"><![CDATA[作者]]></item>
+				<item id="dsu_postfate_htm_37"><![CDATA[【DSU】]]></item>
+			</item>
+		</item>
+<item id="installfile"><![CDATA[install.php]]></item>
+<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+<item id="license"><![CDATA[[list]
+[*]本插件版權歸屬插件作者,及其下屬Discuz! Student Union團隊所有.
+[*]未經插件作者許可,任何人不得以任何形式在任何地方發佈/轉發原版以及其衍生的修改版.
+[*][b]插件作者:[/b]Kookxiang,shy9000
+[*][b]作品簡介:[/b]發帖時遇到隨機事件,並進行隨機獎懲.
+[*][b]發佈地址:[/b][url]http://www.dsu.cc/thread-27768-1-1.html[/url]
+[*]如有任何關於使用上的疑問,請至[url]http://www.dsu.cc/forum-44-1.html[/url]提出.
+[*][color=Red]如果您願意資助我們,請至[url]http://www.dsu.cc/donate.php[/url]對我們進行贊助.[/color]
+[*]最後,感謝您使用我們的插件,也希望您能夠給我們DSU團隊提供更好的意見([url=http://www.dsu.cc/]請點擊這裡進入DSU團隊官方站點[/url]).
+[/list]]]></item>
+</item>
+</root>
