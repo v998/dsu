@@ -8,66 +8,10 @@ class plugin_dsu_amufzc {
 
 	function plugin_dsu_amufzc() {
 		global $_G;
-		require './data/plugindata/dsu_amufzc.lang.php';
-		$this->lang = $scriptlang['dsu_amufzc'];
 		$this->email = $_G['cache']['plugin']['dsu_amufzc']['email'];
-		$this->regemail = (array)unserialize($_G['setting']['reginput']);
+		$this->regemail = (array)$_G['setting']['reginput'];
+		//var_dump($_G['setting']['reginput']);
 		$this->regemail['email'] = $this->regemail['email']?$this->regemail['email']:'email';
-		$this->js = '<script type="text/javascript">
-var xmlHttp
-
-function getzcm()
-{
-document.getElementById("msg").innerHTML=\'<img src="source/plugin/dsu_amufzc/loading.gif" style="border: 0px" />'.$this->lang['94'].'\'
-var f = document.register; 
-var email = f.'.$this->regemail['email'].'.value;
-var activationauth = f.activationauth.value;
-xmlHttp=GetXmlHttpObject()
-if (xmlHttp==null)
-  {
-  alert ("Browser does not support HTTP Request")
-  return
-  } 
-var url="plugin.php?id=dsu_amufzc:getzcm"
-url=url+"&email="+email
-url=url+"&activationauth="+activationauth
-url=url+"&snd="+Math.random()
-xmlHttp.onreadystatechange=stateChanged 
-xmlHttp.open("GET",url,true)
-xmlHttp.send(null)
-} 
-
-function stateChanged() 
-{ 
-if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete")
- { 
- document.getElementById("msg").innerHTML=xmlHttp.responseText 
- } 
-}
-
-function GetXmlHttpObject()
-{
-var xmlHttp=null;
-try
- {
- // Firefox, Opera 8.0+, Safari
- xmlHttp=new XMLHttpRequest();
- }
-catch (e)
- {
- // Internet Explorer
- try
-  {
-  xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
-  }
- catch (e)
-  {
-  xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
-  }
- }
-return xmlHttp;
-}</script>';
-
 	}
 
 }
@@ -106,28 +50,29 @@ class plugin_dsu_amufzc_member extends plugin_dsu_amufzc {
 			if($_G['gp_email'] != $query['email']){
 				showmessage('dsu_amufzc:11', '');
 			}
-			//showmessage('dsu_amufzc:12', '');
+
+		}
+	}
+
+	function register_fzc_output($a){
+		global $_G;
+		$_G['gp_rid'] = strip_tags($_G['gp_rid']);
+		if($_POST && $a["message"]=='register_succeed' && $_G['gp_rid']){
+			DB::query("UPDATE ".DB::table("plugin_dsuamfzc")." SET yes = '1'  WHERE rid = '{$_G['gp_rid']}'");
 		}
 	}
 
 	function register_input(){
-		global $_G; 
+		global $_G ; 
 		$_G['gp_rid'] = strip_tags($_G['gp_rid']);
+		$return = '';
 		if($_G['gp_action'] == 'activation'){
-			$return = '<SPAN id="msg"><label class="xs2"><em>'.$this->lang['3'].':</em><input type="text" id="rid" name="rid" autocomplete="off" size="25" maxlength="15" value="'.$_G['gp_rid'].'" class="txt"> *</label><A HREF="javascript:;" onClick="getzcm();return false;">'.$this->lang['7'].'</A></SPAN>'.$this->js;
+			include template('dsu_amufzc:afzc');
+			return $return;
 		}else{
-			$return = '<SPAN id="msg"><label class="xs2"><em>'.$this->lang['3'].':</em><input type="text" id="rid" name="rid" autocomplete="off" size="25" maxlength="15" value="'.$_G['gp_rid'].'" class="txt"> *</label><A HREF="javascript:;" onClick="getzcm();return false;">'.$this->lang['7'].'</A>'.$this->lang['8'].'</SPAN>'.$this->js;
-		}
-		
-
-		return $return;
-	}
-
-	function register_test_output($a){
-		global $_G;
-		$_G['gp_rid'] = strip_tags($_G['gp_rid']);
-		if($_POST && $a['message'] =='' && $_G['gp_rid']){
-			DB::query("UPDATE ".DB::table("plugin_dsuamfzc")." SET yes = '1'  WHERE rid = '{$_G['gp_rid']}'");
+			$input = (array)unserialize(base64_decode(getcookie('dsu_amufzc_'.$_G['gp_rid'])));
+			include template('dsu_amufzc:fzc');
+			return $return;
 		}
 	}
 

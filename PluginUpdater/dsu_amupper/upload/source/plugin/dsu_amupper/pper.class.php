@@ -36,17 +36,17 @@ class plugin_dsu_amupper {
 			$return_cj ='<div style="position: absolute; top: -100000px;" id="soundplayerlayer"></div>';
 			$return_cj .='<script type="text/javascript" reload="1">function toneplayer(file){document.getElementById(\'soundplayerlayer\').innerHTML = AC_FL_RunContent(\'id\', \'pmsoundplayer\', \'name\', \'pmsoundplayer\', \'width\', \'0\', \'height\', \'0\', \'src\', \'./source/plugin/dsu_amupper/template/sound/player.swf\', \'FlashVars\', \'sFile=./source/plugin/dsu_amupper/template/sound/pm_\' + file + \'.mp3\', \'menu\', \'false\',  \'allowScriptAccess\', \'sameDomain\', \'swLiveConnect\', \'true\');}</script>';
 			if($this -> cookiefooter && $this -> cookies){
-				return $return_cj.base64_decode($this -> cookiefooter);
+				//return $return_cj.base64_decode($this -> cookiefooter);
 			}
 
 			if(!$this -> query){
 				$cdb_pper['uid'] = intval($_G['uid']);
-				$this -> query = DB::fetch_first("SELECT * FROM ".DB::table("plugin_dsuampper")." WHERE uid= '{$cdb_pper['uid']}'");
-				$this -> cdbtoday = dgmdate($this -> query['lasttime'],'Ymd',8); 
+				$this -> query = DB::fetch_first("SELECT * FROM ".DB::table("plugin_dsuampper")." WHERE uid= '{$cdb_pper['uid']}'"); 
 			}
+			$this -> cdbtoday = dgmdate($this -> query['lasttime'],'Ymd',8);
 			if($this -> query && $this -> cdbtoday == $this -> today){
-				$returnfooter = '<div id="ppered_menu" style="display:none;width:240px;">
-					<p class="crly">
+				$returnfooter = '<ul id="ppered_menu" style="display:none;width:240px;">
+					<p class="crly" style="padding:6px 8px;border:1px solid #CDCDCD;background:#F2F2F2;line-height:1.6em;">
 					<SPAN class="y xg1" ><a href="plugin.php?id=dsu_amupper:list" target="_blank">'.lang("plugin/dsu_amupper","menu2").'</a></SPAN>
 					<strong>'.lang("plugin/dsu_amupper","menu1").'</strong>'.$this -> query['addup'].lang("plugin/dsu_amupper","menu4").'
 					<br>'.lang("plugin/dsu_amupper","menu3").$this -> query['continuous'].lang("plugin/dsu_amupper","menu4").'
@@ -55,7 +55,7 @@ class plugin_dsu_amupper {
 				if($special_reward = $this->special_reward($this ->query['continuous'])){
 					$returnfooter .= '<br><font color="red">'.$special_reward.'</font>';
 				}
-				$returnfooter .= '</p></div>';
+				$returnfooter .= '</p></ul>';
 			}
 			dsetcookie('dsu_amupper_footer', base64_encode($returnfooter), 600);
 			dsetcookie('dsu_amupper_header', base64_encode($this->returnheader), 600);
@@ -64,7 +64,6 @@ class plugin_dsu_amupper {
 			$returnfooter ='';
 		}
 		return $return_cj.$returnfooter;
-
 	}
 	
 	function special_reward($i){
@@ -107,11 +106,11 @@ class plugin_dsu_amupper {
 		global $_G;
 
 		$dsu_amupperimage = $_G['cache']['plugin']['dsu_amupper']['image'];
-		$this -> return_txt = '<span class="pipe">|</span><span id="my_amupper"><a href="javascript:;" onclick="ajaxget(\'plugin.php?id=dsu_amupper:pper&ajax=1&formhash='.$_G['formhash'].'\', \'my_amupper\', \'my_amupper\', \''.lang("plugin/dsu_amupper","ppering").'\', \'\',function () {toneplayer('.$this -> tone.');});">'.lang("plugin/dsu_amupper","pper0").'</a>&nbsp;</span>';
-		$this -> return_img = '<span class="pipe">|</span><span id="my_amupper"><a href="javascript:;" onclick="ajaxget(\'plugin.php?id=dsu_amupper:pper&ajax=1&formhash='.$_G['formhash'].'\', \'my_amupper\', \'my_amupper\', \''.lang("plugin/dsu_amupper","ppering").'\', \'\',function () {toneplayer('.$this -> tone.');});">'.lang("plugin/dsu_amupper","pper1").'</a>&nbsp;</span>';
+		$this -> return_txt = '<span class="pipe">|</span><a id="my_amupper" href="javascript:;" onclick="ajaxget(\'plugin.php?id=dsu_amupper:pper&ajax=1&formhash='.$_G['formhash'].'\', \'my_amupper\', \'my_amupper\', \''.lang("plugin/dsu_amupper","ppering").'\', \'\',function () {toneplayer('.$this -> tone.');});">'.lang("plugin/dsu_amupper","pper0",array('hcolor'=>$_G['cache']['plugin']['dsu_amupper']['hcolor'])).'</a>';
+		$this -> return_img = '<span class="pipe">|</span><a id="my_amupper" href="javascript:;" onclick="ajaxget(\'plugin.php?id=dsu_amupper:pper&ajax=1&formhash='.$_G['formhash'].'\', \'my_amupper\', \'my_amupper\', \''.lang("plugin/dsu_amupper","ppering").'\', \'\',function () {toneplayer('.$this -> tone.');});">'.lang("plugin/dsu_amupper","pper1").'</a>';
 		$this -> return_auto = '<script type="text/javascript">function autopper(){ajaxget(\'plugin.php?id=dsu_amupper:pper&ajax=1&formhash='.$_G['formhash'].'\', \'my_amupper\', \'my_amupper\', \''.lang("plugin/dsu_amupper","ppering").'\', \'\',function () {toneplayer('.$this -> tone.');});}window.onload=autopper;</script>';
-		$this -> returned_txt = '<span class="pipe">|</span><span id="ppered" onmouseover="showMenu({\'ctrlid\':this.id,\'pos\':\'43\'})"><A HREF="plugin.php?id=dsu_amupper:list" target="_blank">'.lang("plugin/dsu_amupper","info0").'</A></span>&nbsp;';
-		$this -> returned_img = '<span class="pipe">|</span><span id="ppered" onmouseover="showMenu({\'ctrlid\':this.id,\'pos\':\'43\'})"><A HREF="plugin.php?id=dsu_amupper:list" target="_blank">'.lang("plugin/dsu_amupper","info1").'</A></span>&nbsp;';
+		$this -> returned_txt = '<span class="pipe">|</span><A  id="ppered" onmouseover="delayShow(this)" HREF="plugin.php?id=dsu_amupper:list" target="_blank">'.lang("plugin/dsu_amupper","info0",array('lcolor'=>$_G['cache']['plugin']['dsu_amupper']['lcolor'])).'</A>';
+		$this -> returned_img = '<span class="pipe">|</span><A id="ppered" onmouseover="delayShow(this)" HREF="plugin.php?id=dsu_amupper:list" target="_blank">'.lang("plugin/dsu_amupper","info1").'</A>';
 
 		$today = dgmdate($_G['timestamp'],'Ymd',8);
 		$yesterday = dgmdate($_G['timestamp']-86400,'Ymd',8);
@@ -160,25 +159,56 @@ class plugin_dsu_amupper_forum extends plugin_dsu_amupper {
 	function post_top(){
 		global $_G;
 		if($_G['uid'] && $_G['cache']['plugin']['dsu_amupper']['force']){
-			if(isset($_G['gp_message'])){
-				$cdb_pper['uid'] = intval($_G['uid']);
-				$this -> query = DB::fetch_first("SELECT * FROM ".DB::table("plugin_dsuampper")." WHERE uid= '{$cdb_pper['uid']}'");
-				if($this -> query){
-					$today = dgmdate($_G['timestamp'],'Ymd');
-					$this -> lasttime = dgmdate($this -> query['lasttime'],'Ymd');
-				}
+			$cdb_pper['uid'] = intval($_G['uid']);
+			$this -> query = DB::fetch_first("SELECT * FROM ".DB::table("plugin_dsuampper")." WHERE uid= '{$cdb_pper['uid']}'");
+//			if(isset($_G['gp_message'])){
+			if($this -> query){
+				$today = dgmdate($_G['timestamp'],'Ymd');
+				$this -> lasttime = dgmdate($this -> query['lasttime'],'Ymd');
+			}
 
-				if(!$this -> query || $today != $this -> lasttime){
-					if(!$_G['inajax']){$url = 'setTimeout(function(){location.reload()},2000);return false;';}
-					if($_G['cache']['plugin']['dsu_amupper']['image']){
-						showmessage(lang('plugin/dsu_amupper','nopper1',array('formhash'=>$_G['formhash'],'tone'=>$_G['cache']['plugin']['dsu_amupper']['tone'],'js'=>$url)),'');
-					}else{
-						showmessage(lang('plugin/dsu_amupper','nopper0',array('formhash'=>$_G['formhash'],'tone'=>$_G['cache']['plugin']['dsu_amupper']['tone'],'js'=>$url)),'');
+			if(!$this -> query || $today > $this -> lasttime){
+				if(!$_G['inajax']){$url = dreferer();}else{$url = '';}
+				if($_G['cache']['plugin']['dsu_amupper']['image']){
+					showmessage(lang('plugin/dsu_amupper','nopper1',array('formhash'=>$_G['formhash'],'tone'=>$_G['cache']['plugin']['dsu_amupper']['tone'])),$url);
+				}else{
+					showmessage(lang('plugin/dsu_amupper','nopper0',array('formhash'=>$_G['formhash'],'tone'=>$_G['cache']['plugin']['dsu_amupper']['tone'],'hcolor'=>$_G['cache']['plugin']['dsu_amupper']['hcolor'])),$url);
+				}
+			}
+//			}
+		}
+		return $_G['gp_message'];
+	}
+
+	function viewthread_sidetop_output($a){
+		//var_dump($a);
+		global $_G,$postlist;
+		if($_G['cache']['plugin']['dsu_amupper']['postshow']){
+			$aid = $_G['forum_thread']['authorid'];$return = array();
+			$tid = $_G['tid'];
+			if($postlist && $aid){
+				foreach ($postlist as $value){
+					if($value['first']){
+						$amu_query = DB::fetch_first("SELECT * FROM ".DB::table("plugin_dsuampper")." WHERE uid= '{$aid}'");
+						if($amu_query){
+							$today = dgmdate($_G['timestamp'],'Ymd');
+							$lasttime = dgmdate($amu_query['lasttime'],'Ymd');
+						}
+						if(!$amu_query['addup'] || $today != $lasttime){
+							$addup = $amu_query['addup']?$amu_query['addup']:0;
+							$return[0] = '<div id="amu_sno" style="background:url( source/plugin/dsu_amupper/images/sno.png )  no-repeat;background-position: 18px 1px;height:25px;"><span style="position:relative;left:22px;top:4px;font-size: 10px;">'.lang('plugin/dsu_amupper','pperinfo',array('addup'=>$addup)).'</span></div>';
+						}
+						if($amu_query && $today == $lasttime){
+							$addup = $amu_query['addup']?$amu_query['addup']:0;
+							$return[0] = '<div id="amu_sno" style="background:url( source/plugin/dsu_amupper/images/sok.png )  no-repeat;background-position: 18px 1px;height:25px;"><span style="position:relative;left:22px;top:4px;font-size: 10px;">'.lang('plugin/dsu_amupper','pperinfo',array('addup'=>$addup)).'</span></div>';
+						}
 					}
 				}
 			}
+		}else{
+			$return = array();
 		}
-		return $_G['gp_message'];
+		return $return;
 	}
 }
 ?>

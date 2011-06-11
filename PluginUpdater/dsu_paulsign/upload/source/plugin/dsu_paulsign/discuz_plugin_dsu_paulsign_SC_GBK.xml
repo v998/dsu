@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <root>
 	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
-	<item id="Version"><![CDATA[X1.5]]></item>
-	<item id="Time"><![CDATA[2011-01-16 07:45]]></item>
-	<item id="From"><![CDATA[Discuz! Board (http://localhost/1.5/)]]></item>
+	<item id="Version"><![CDATA[X2]]></item>
+	<item id="Time"><![CDATA[2011-06-07 16:57]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://125.108.246.230/2.0/)]]></item>
 	<item id="Data">
 		<item id="plugin">
 			<item id="available"><![CDATA[1]]></item>
@@ -14,7 +14,7 @@
 			<item id="datatables"><![CDATA[]]></item>
 			<item id="directory"><![CDATA[dsu_paulsign/]]></item>
 			<item id="copyright"><![CDATA[Shy9000 @ DSU Team]]></item>
-			<item id="version"><![CDATA[3.0]]></item>
+			<item id="version"><![CDATA[3.1]]></item>
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[sign_import]]></item>
@@ -23,6 +23,10 @@
 					<item id="type"><![CDATA[3]]></item>
 					<item id="adminid"><![CDATA[0]]></item>
 					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
 				</item>
 				<item id="1">
 					<item id="name"><![CDATA[sign]]></item>
@@ -31,6 +35,10 @@
 					<item id="type"><![CDATA[11]]></item>
 					<item id="adminid"><![CDATA[0]]></item>
 					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
 				</item>
 				<item id="2">
 					<item id="name"><![CDATA[sign]]></item>
@@ -39,10 +47,14 @@
 					<item id="type"><![CDATA[5]]></item>
 					<item id="adminid"><![CDATA[0]]></item>
 					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
 				</item>
 			</item>
 		</item>
-		<item id="version"><![CDATA[X1.5]]></item>
+		<item id="version"><![CDATA[X2]]></item>
 		<item id="var">
 			<item id="0">
 				<item id="displayorder"><![CDATA[33]]></item>
@@ -320,6 +332,7 @@
 					<item id="3"><![CDATA[13]]></item>
 					<item id="4"><![CDATA[14]]></item>
 					<item id="5"><![CDATA[15]]></item>
+					<item id="6"><![CDATA[1]]></item>
 				</item>
 			</item>
 			<item id="26">
@@ -418,16 +431,6 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="35">
-				<item id="displayorder"><![CDATA[40]]></item>
-				<item id="title"><![CDATA[Á¬ÐøÇ©µ½Ö¸Êý×î´óÖµ]]></item>
-				<item id="description"><![CDATA[ÊäÈëÁ¬ÐøÇ©µ½×î´óµÄËæ»úÖµ,&quot;0.&quot;Çë²»ÒªÊäÈë,ÊäÈëÒ»¸ö´Ó1µ½999µÄÊý×Ö.ÆäÖÐ1´ú±í0.001,999´ú±í0.999
-²»È¡&quot;0&quot;µÄÔ­Òò,ÒòÎªmt_randº¯ÊýÖ»Ö§³ÖÕûÊý]]></item>
-				<item id="variable"><![CDATA[lastednumh]]></item>
-				<item id="type"><![CDATA[number]]></item>
-				<item id="value"><![CDATA[1]]></item>
-				<item id="extra"><![CDATA[]]></item>
-			</item>
-			<item id="36">
 				<item id="displayorder"><![CDATA[35]]></item>
 				<item id="title"><![CDATA[Ç©µ½Ö÷ÅÅÐÐ°´µ±ÈÕµ¹ÐòÅÅÁÐ]]></item>
 				<item id="description"><![CDATA[]]></item>
@@ -436,7 +439,7 @@
 				<item id="value"><![CDATA[1]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
-			<item id="37">
+			<item id="36">
 				<item id="displayorder"><![CDATA[34]]></item>
 				<item id="title"><![CDATA[Ç©µ½²Ù×÷ÊÇ·ñAjax?]]></item>
 				<item id="description"><![CDATA[]]></item>
@@ -445,7 +448,7 @@
 				<item id="value"><![CDATA[1]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
-			<item id="38">
+			<item id="37">
 				<item id="displayorder"><![CDATA[36]]></item>
 				<item id="title"><![CDATA[ÊÇ·ñ¿ªÆô×ÊÁÏÒ³Ç©µ½ÏêÇé]]></item>
 				<item id="description"><![CDATA[]]></item>
@@ -454,7 +457,7 @@
 				<item id="value"><![CDATA[1]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
-			<item id="39">
+			<item id="38">
 				<item id="displayorder"><![CDATA[30]]></item>
 				<item id="title"><![CDATA[Ç©µ½µÈ¼¶Ãû³Æ]]></item>
 				<item id="description"><![CDATA[Ò»ÐÐÒ»¸öµÈ¼¶Ãû³Æ
@@ -474,23 +477,13 @@
 °éÌ³ÖÕÀÏ]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
-			<item id="40">
-				<item id="displayorder"><![CDATA[39]]></item>
-				<item id="title"><![CDATA[Á¬ÐøÇ©µ½Ö¸Êý×îÐ¡Öµ]]></item>
-				<item id="description"><![CDATA[ÊäÈëÁ¬ÐøÇ©µ½×îÐ¡µÄËæ»úÖµ,&quot;0.&quot;Çë²»ÒªÊäÈë,ÊäÈëÒ»¸ö´Ó1µ½999µÄÊý×Ö.ÆäÖÐ1´ú±í0.001,999´ú±í0.999
-²»È¡&quot;0&quot;µÄÔ­Òò,ÒòÎªmt_randº¯ÊýÖ»Ö§³ÖÕûÊý]]></item>
-				<item id="variable"><![CDATA[lastednuml]]></item>
-				<item id="type"><![CDATA[number]]></item>
-				<item id="value"><![CDATA[1]]></item>
-				<item id="extra"><![CDATA[]]></item>
-			</item>
-			<item id="41">
-				<item id="displayorder"><![CDATA[38]]></item>
-				<item id="title"><![CDATA[Á¬ÐøÇ©µ½Ö¸Êý¿ª¹Ø]]></item>
-				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[lastedop]]></item>
-				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[0]]></item>
+			<item id="39">
+				<item id="displayorder"><![CDATA[43]]></item>
+				<item id="title"><![CDATA[×Ô¶¨ÒåÃ¿ÈÕÇ©µ½Ìû±êÌâ]]></item>
+				<item id="description"><![CDATA[µ±Ç©µ½ÉèÖÃÖÐµÄ&quot;Ç©µ½µÄ×Ô¶¯»Ø¸´ÀàÐÍ&quot;ÉèÖÃÎª&quot;Ö¸¶¨°æ¿éÃ¿ÌìÒ»Ö÷Ìâ&quot;Ê±¸ÃÑ¡ÏîÓÐÐ§,ÔÂÓÃ{m}ÈÕÓÃ{d}´ú»».]]></item>
+				<item id="variable"><![CDATA[title_thread]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[{m} ÔÂ {d} ÈÕ Ç©µ½¼ÇÂ¼Ìù.]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 		</item>
@@ -546,10 +539,6 @@
 				<item id="echo_14"><![CDATA[ Ìì .]]></item>
 				<item id="echo_15"><![CDATA[¸Ã»áÔ±Ä¿Ç°»ñµÃµÄ×Ü½±ÀøÎª:]]></item>
 				<item id="echo_16"><![CDATA[ , ÉÏ´Î»ñµÃµÄ½±ÀøÎª:]]></item>
-				<item id="echo_17"><![CDATA[Á¬ÐøÇ©µ½ÌìÊý :]]></item>
-				<item id="month"><![CDATA[ÔÂ]]></item>
-				<item id="day"><![CDATA[ÈÕ]]></item>
-				<item id="ftids"><![CDATA[Ç©µ½¼ÇÂ¼Ìù]]></item>
 				<item id="xsqb"><![CDATA[ÏÔÊ¾È«²¿]]></item>
 				<item id="ban_01"><![CDATA[¸Ã½ñÈÕ×îÏëËµÄÚÈÝÒÑ±»¹ÜÀíÔ±ÆÁ±Î!]]></item>
 				<item id="ban_02"><![CDATA[ÆÁ±Î¸Ã½ñÈÕ×îÏëËµÄÚÈÝ³É¹¦£¡]]></item>
@@ -570,7 +559,6 @@
 				<item id="classn_09"><![CDATA[Ç©µ½Ê±¼ä]]></item>
 				<item id="classn_10"><![CDATA[»ñµÃ½±½ð]]></item>
 				<item id="classn_11"><![CDATA[¸ÃÓÃ»§´ÓÎ´Ç©µ½]]></item>
-				<item id="classn_12"><![CDATA[Á¬ÐøÇ©µ½]]></item>
 				<item id="tsn_01"><![CDATA[ÎÒÔÚ]]></item>
 				<item id="tsn_02"><![CDATA[Íê³ÉÇ©µ½,ÊÇ]]></item>
 				<item id="tsn_03"><![CDATA[½ñÌì]]></item>
@@ -645,7 +633,6 @@
 				<item id="mb_fwt7"><![CDATA[Äú´ÓÎ´Ç©µ½¹ý£¬¸Ï¿ìÇ©µ½°É!]]></item>
 				<item id="mb_fwt8"><![CDATA[ÄúÄ¿Ç°»ñµÃµÄ×Ü½±ÀøÎª:]]></item>
 				<item id="mb_fwt9"><![CDATA[ , ÉÏ´Î»ñµÃµÄ½±ÀøÎª:]]></item>
-				<item id="mb_fwt10"><![CDATA[ , ÄúÒÑ¾­Á¬ÐøÇ©µ½:]]></item>
 				<item id="mb_jryqe"><![CDATA[Äú½ñÌìÒÑ¾­Ç©µ½¹ýÁË]]></item>
 				<item id="mb_xztxtodaysay"><![CDATA[ÌîÐ´½ñÈÕ×îÏëËµ]]></item>
 				<item id="mb_lastreward"><![CDATA[ÉÏ´Î½±Àø]]></item>
@@ -666,10 +653,6 @@
 				<item id="tj_03"><![CDATA[ÈË]]></item>
 				<item id="tj_04"><![CDATA[½ñÈÕÒÑÇ©µ½]]></item>
 				<item id="tj_05"><![CDATA[×òÈÕ¹²Ç©µ½]]></item>
-				<item id="cr_01"><![CDATA[ÎÊÌâ×ÉÑ¯]]></item>
-				<item id="cr_02"><![CDATA[BUG·´À¡]]></item>
-				<item id="cr_03"><![CDATA[ÈÕ³£Ê¹ÓÃÎÊÌâÇëµã»÷´Ë½øÐÐÑ¯ÎÊ.]]></item>
-				<item id="cr_04"><![CDATA[³ÌÐòµÄ´íÎóÇëµã´Ë½øÐÐ·´À¡,Ê¹ÓÃÎÊÌâÇëÎðµã´ËÑ¯ÎÊ!]]></item>
 				<item id="ajax_01"><![CDATA[Ã¿ÈÕÇ©µ½]]></item>
 				<item id="ajax_02"><![CDATA[Ç©µ½ÌáÊ¾]]></item>
 				<item id="ajax_03"><![CDATA[¹Ø±Õ]]></item>
@@ -679,13 +662,14 @@
 		</item>
 <item id="installfile"><![CDATA[install.php]]></item>
 <item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+<item id="upgradefile"><![CDATA[upgrade.php]]></item>
 <item id="license"><![CDATA[[list]
 [*]±¾²å¼þ°æÈ¨¹éÊô²å¼þ×÷Õß,¼°ÆäÏÂÊôDiscuz! Student UnionÍÅ¶ÓËùÓÐ.
 [*]Î´¾­²å¼þ×÷ÕßÐí¿É,ÈÎºÎÈË²»µÃÒÔÈÎºÎÐÎÊ½ÔÚÈÎºÎµØ·½·¢²¼/×ª·¢Ô­°æÒÔ¼°ÆäÑÜÉúµÄÐÞ¸Ä°æ.
 [*][b]²å¼þ×÷Õß:[/b]shy9000
-[*][b]ÌØ±ðÃùÐ»:[/b]ÁÖµÂÎ°[²Î¿¼ÆäÃ¿ÈÕÐÄÇé²å¼þ²¿·ÖÃÀ»¯·½Ê½.]
 [*][b]×÷Æ·¼ò½é:[/b]±¾²å¼þ½«ÔÚÇ°Ì¨Ìí¼ÓÒ»¸öÇ©µ½Ãæ°å£¬ÔÚÕâÀïÄã¿ÉÒÔ½øÐÐÇ©µ½²Ù×÷£¬ÒÔ¼°²é¿´Ç©µ½ÅÅÐÐ°ñ,»¹¿ÉÒÔÊ¹ÓÃÇ©µ½×Ô¶¯»ØÌû¹¦ÄÜ¡£
-[*][b]·¢²¼µØÖ·:[/b][url]http://www.dsu.cc/thread-27298-1-1.html[/url]
+[*][b]·¢²¼µØÖ·:[/b][url]http://www.dsu.cc/thread-44760-1-1.html[/url]
+[*][b]°ïÖúÊÖ²á:[/b][url]http://www.dsu.cc/thread-59-1-1.html[/url]
 [*]ÈçÓÐÈÎºÎ¹ØÓÚÊ¹ÓÃÉÏµÄÒÉÎÊ,ÇëÖÁ[url]http://www.dsu.cc/forum-44-1.html[/url]Ìá³ö.
 [*][color=Red]Èç¹ûÄúÔ¸Òâ×ÊÖúÎÒÃÇ,ÇëÖÁ[url]http://www.dsu.cc/donate.php[/url]¶ÔÎÒÃÇ½øÐÐÔÞÖú.[/color]
 [*]×îºó,¸ÐÐ»ÄúÊ¹ÓÃÎÒÃÇµÄ²å¼þ,Ò²Ï£ÍûÄúÄÜ¹»¸øÎÒÃÇDSUÍÅ¶ÓÌá¹©¸üºÃµÄÒâ¼û([url=http://www.dsu.cc/]Çëµã»÷ÕâÀï½øÈëDSUÍÅ¶Ó¹Ù·½Õ¾µã[/url]).

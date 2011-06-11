@@ -1,21 +1,22 @@
 <?php
 /*
-	dsu_paulsign Echo By shy9000[DSU.CC] 2011-1-16
+	dsu_paulsign Echo By shy9000[DSU.CC] 2011-06-08
 */
 class plugin_dsu_paulsign{
 	function global_usernav_extra2() {
 		global $_G,$show_message;
-		session_start();
-		$tdtime = gmmktime(0,0,0,dgmdate($_G['timestamp'], 'n'),dgmdate($_G['timestamp'], 'j'),dgmdate($_G['timestamp'], 'Y')) - (getglobal('setting/timeoffset') * 3600);
+		$fixtime = $_G['timestamp'] - (getglobal('member/timeoffset') - getglobal('setting/timeoffset'))*3600;
+		$tdtime = gmmktime(0,0,0,dgmdate($fixtime, 'n'),dgmdate($fixtime, 'j'),dgmdate($fixtime, 'Y')) - (getglobal('setting/timeoffset') * 3600);
 		$var = $_G['cache']['plugin']['dsu_paulsign'];
+		$allowmem = memory('check');
 		if($var['ajax_sign'] && $var['ifopen'] && !$show_message && !defined('IN_dsu_paulsign') && !defined('IN_dsu_paulsc') && !$_G['gp_infloat'] && !$_G['inajax'] && $_G['uid'] && !in_array($_G['uid'],explode(",",$var['ban'])) && in_array($_G['groupid'], unserialize($var['groups']))) {
-			$sessionname = $_G['uid'].'_signtime';
-			$signtime = $_SESSION[$sessionname];
+			if($allowmem) $signtime = memory('get', 'dsu_pualsign_'.$_G['uid']);
 			if(!$signtime){
 				$qiandaodb = DB::fetch_first("SELECT time FROM ".DB::table('dsu_paulsign')." WHERE uid='$_G[uid]'");
-				$htime = dgmdate($_G['timestamp'], 'H');
+				$htime = dgmdate($_G['timestamp'], 'H') - (getglobal('member/timeoffset') - getglobal('setting/timeoffset'));
+				if($htime >= 24) $htime -= 24;
 				if($qiandaodb){
-					$_SESSION[$sessionname] = $qiandaodb['time'];
+					if($allowmem) memory('set', 'dsu_pualsign_'.$_G['uid'], $qiandaodb['time'], 86400);
 					if($qiandaodb['time'] < $tdtime){
 						if($var['timeopen']) {
 							if(!($htime < $var['stime']) && !($htime > $var['ftime'])) return '<span class="pipe">|</span><a href="javascript:;" onclick="showWindow(\'dsu_paulsign\', \'plugin.php?id=dsu_paulsign:sign\')"><font color="red">'.lang('plugin/dsu_paulsign','encore_01').'</font></a> ';
@@ -51,7 +52,6 @@ class plugin_dsu_paulsign{
 			global $_G;
 			if(defined('IN_MOBILE')) {
 				return '';
-				//Make for the next wap ver,this is a hook created by shy9000.
 			}else{
 				if($_G['cache']['plugin']['dsu_paulsign']['ajax_sign']){
 					return '<script type="text/javascript">showWindow(\'dsu_paulsign\', \'plugin.php?id=dsu_paulsign:sign\');</script>';
@@ -60,17 +60,18 @@ class plugin_dsu_paulsign{
 				}
 			}
 		}
-		session_start();
-		$tdtime = gmmktime(0,0,0,dgmdate($_G['timestamp'], 'n'),dgmdate($_G['timestamp'], 'j'),dgmdate($_G['timestamp'], 'Y')) - (getglobal('setting/timeoffset') * 3600);
+		$fixtime = $_G['timestamp'] - (getglobal('member/timeoffset') - getglobal('setting/timeoffset'))*3600;
+		$tdtime = gmmktime(0,0,0,dgmdate($fixtime, 'n'),dgmdate($fixtime, 'j'),dgmdate($fixtime, 'Y')) - (getglobal('setting/timeoffset') * 3600);
 		$var = $_G['cache']['plugin']['dsu_paulsign'];
+		$allowmem = memory('check');
 		if($var['ifopen'] && $var['ftopen'] && !$show_message && !defined('IN_dsu_paulsign') && !defined('IN_dsu_paulsc') && !$_G['gp_infloat'] && !$_G['inajax'] && $_G['uid'] && in_array($_G['groupid'], unserialize($var['tzgroupid'])) && !in_array($_G['uid'],explode(",",$var['ban'])) && in_array($_G['groupid'], unserialize($var['groups']))) {
-			$sessionname = $_G['uid'].'_signtime';
-			$signtime = $_SESSION[$sessionname];
+			if($allowmem) $signtime = memory('get', 'dsu_pualsign_'.$_G['uid']);
 			if(!$signtime){
 				$qiandaodb = DB::fetch_first("SELECT time FROM ".DB::table('dsu_paulsign')." WHERE uid='$_G[uid]'");
-				$htime = dgmdate($_G['timestamp'], 'H');
+				$htime = dgmdate($_G['timestamp'], 'H') - (getglobal('member/timeoffset') - getglobal('setting/timeoffset'));
+				if($htime >= 24) $htime -= 24;
 				if($qiandaodb){
-					$_SESSION[$sessionname] = $qiandaodb['time'];
+					if($allowmem) memory('set', 'dsu_pualsign_'.$_G['uid'], $qiandaodb['time'], 86400);
 					if($qiandaodb['time'] < $tdtime){
 						if($var['timeopen']) {
 							if(!($htime < $var['stime']) && !($htime > $var['ftime'])) return dsu_signtz();
@@ -104,7 +105,8 @@ class plugin_dsu_paulsign{
 class plugin_dsu_paulsign_home extends plugin_dsu_paulsign {
 	function space_profile_baseinfo_bottom() {
 		global $_G;
-		$tdtime = gmmktime(0,0,0,dgmdate($_G['timestamp'], 'n'),dgmdate($_G['timestamp'], 'j'),dgmdate($_G['timestamp'], 'Y')) - (getglobal('setting/timeoffset') * 3600);
+		$fixtime = $_G['timestamp'] - (getglobal('member/timeoffset') - getglobal('setting/timeoffset'))*3600;
+		$tdtime = gmmktime(0,0,0,dgmdate($fixtime, 'n'),dgmdate($fixtime, 'j'),dgmdate($fixtime, 'Y')) - (getglobal('setting/timeoffset') * 3600);
 		$var = $_G['cache']['plugin']['dsu_paulsign'];
 		if($var['spaceopen']){
 			$creditnamecn = $_G['setting']['extcredits'][$var[nrcredit]]['title'];
@@ -147,7 +149,7 @@ class plugin_dsu_paulsign_home extends plugin_dsu_paulsign {
 					$q['level'] = lang('plugin/dsu_paulsign','echo_11')."<font color=green><b>[LV.1]{$lv1name}</b></font>".lang('plugin/dsu_paulsign','echo_12')."<font color=#FF0000><b>[LV.2]{$lv2name}</b></font>".lang('plugin/dsu_paulsign','echo_13')."<font color=#FF0000><b>{$q['lvqd']}</b></font>".lang('plugin/dsu_paulsign','echo_14');
 				}
 				$q['if']= $qiandaodb['time']< $tdtime ? "<span class=gray>".lang('plugin/dsu_paulsign','echo_1')."</span>" : "<font color=green>".lang('plugin/dsu_paulsign','echo_2')."</font>";
-				return "<div class='bm bbda cl'><h2>".lang('plugin/dsu_paulsign','echo_3')."</h2><p>".lang('plugin/dsu_paulsign','echo_4')." <b>{$qiandaodb['days']}</b> ".lang('plugin/dsu_paulsign','echo_5')."</p><p>".lang('plugin/dsu_paulsign','echo_17')." <b>{$qiandaodb['lasted']}</b> ".lang('plugin/dsu_paulsign','echo_5')."</p><p>".lang('plugin/dsu_paulsign','echo_6')." <b>{$qiandaodb['mdays']}</b> ".lang('plugin/dsu_paulsign','echo_5')."</p><p>".lang('plugin/dsu_paulsign','echo_7')." <font color=#ff00cc>{$qtime}</font></p><p>".lang('plugin/dsu_paulsign','echo_15')."{$creditnamecn} <font color=#ff00cc><b>{$qiandaodb['reward']}</b></font> {$_G[setting][extcredits][$var[nrcredit]]['unit']}".lang('plugin/dsu_paulsign','echo_16')."{$creditnamecn} <font color=#ff00cc><b>{$qiandaodb['lastreward']}</b></font> {$_G[setting][extcredits][$var[nrcredit]]['unit']}.</p><p>{$q['level']}</p><p>".lang('plugin/dsu_paulsign','echo_8')."{$q['if']}".lang('plugin/dsu_paulsign','echo_9')."</p></div>";
+				return "<div class='bm bbda cl'><h2>".lang('plugin/dsu_paulsign','echo_3')."</h2><p>".lang('plugin/dsu_paulsign','echo_4')." <b>{$qiandaodb['days']}</b> ".lang('plugin/dsu_paulsign','echo_5')."</p><p>".lang('plugin/dsu_paulsign','echo_6')." <b>{$qiandaodb['mdays']}</b> ".lang('plugin/dsu_paulsign','echo_5')."</p><p>".lang('plugin/dsu_paulsign','echo_7')." <font color=#ff00cc>{$qtime}</font></p><p>".lang('plugin/dsu_paulsign','echo_15')."{$creditnamecn} <font color=#ff00cc><b>{$qiandaodb['reward']}</b></font> {$_G[setting][extcredits][$var[nrcredit]]['unit']}".lang('plugin/dsu_paulsign','echo_16')."{$creditnamecn} <font color=#ff00cc><b>{$qiandaodb['lastreward']}</b></font> {$_G[setting][extcredits][$var[nrcredit]]['unit']}.</p><p>{$q['level']}</p><p>".lang('plugin/dsu_paulsign','echo_8')."{$q['if']}".lang('plugin/dsu_paulsign','echo_9')."</p></div>";
 			}else{
 				return "<div class='bm bbda cl'><h2>".lang('plugin/dsu_paulsign','echo_3')."</h2><p>".lang('plugin/dsu_paulsign','echo_10')."</p></div>";
 			}
@@ -160,7 +162,8 @@ class plugin_dsu_paulsign_forum extends plugin_dsu_paulsign {
 	function viewthread_postbottom_output(){
 		global $_G,$postlist;
 		$authorid_pd = $postlist[$_G["forum_firstpid"]]["authorid"];
-		$tdtime = gmmktime(0,0,0,dgmdate($_G['timestamp'], 'n'),dgmdate($_G['timestamp'], 'j'),dgmdate($_G['timestamp'], 'Y')) - (getglobal('setting/timeoffset') * 3600);
+		$fixtime = $_G['timestamp'] - (getglobal('member/timeoffset') - getglobal('setting/timeoffset'))*3600;
+		$tdtime = gmmktime(0,0,0,dgmdate($fixtime, 'n'),dgmdate($fixtime, 'j'),dgmdate($fixtime, 'Y')) - (getglobal('setting/timeoffset') * 3600);
 		$lang['classn_03'] = lang('plugin/dsu_paulsign','classn_03');
 		$lang['classn_04'] = lang('plugin/dsu_paulsign','classn_04');
 		$lang['classn_05'] = lang('plugin/dsu_paulsign','classn_05');
@@ -169,7 +172,7 @@ class plugin_dsu_paulsign_forum extends plugin_dsu_paulsign {
 		$lang['classn_08'] = lang('plugin/dsu_paulsign','classn_08');
 		$lang['classn_09'] = lang('plugin/dsu_paulsign','classn_09');
 		$lang['classn_10'] = lang('plugin/dsu_paulsign','classn_10');
-		$open = $_G['cache']['plugin']['dsu_paulsign']['tidphopen'];   
+		$open = $_G['cache']['plugin']['dsu_paulsign']['tidphopen'];
 		if($open){
 			$qdtype = $_G['cache']['plugin']['dsu_paulsign']['qdtype'];
 			if($qdtype == 2){
@@ -219,7 +222,7 @@ class plugin_dsu_paulsign_forum extends plugin_dsu_paulsign {
 				return array(0=>$return);
 			}else{
 				return array();
-			}	 
+			}
 		}else{
 		  return array();
 		}
@@ -227,7 +230,6 @@ class plugin_dsu_paulsign_forum extends plugin_dsu_paulsign {
 	function viewthread_sidetop_output() {
 		global $postlist,$_G;
 		$open = $_G['cache']['plugin']['dsu_paulsign']['sidebarmode'];
-		$lastedop = $_G['cache']['plugin']['dsu_paulsign']['lastedop'];
 		if(empty($_G['gp_tid']) || !is_array($postlist) || !$open) return array();
 		$pids=array_keys($postlist);
 		$authorids=array();
@@ -238,7 +240,7 @@ class plugin_dsu_paulsign_forum extends plugin_dsu_paulsign {
 		$authorids = array_filter($authorids);
 		$authorids = dimplode($authorids);
 		if($authorids == '') return array();
-		$uidlists = DB::query("SELECT uid,days,lasted,qdxq,time FROM ".DB::table('dsu_paulsign')." WHERE uid IN($authorids)");
+		$uidlists = DB::query("SELECT uid,days,qdxq,time FROM ".DB::table('dsu_paulsign')." WHERE uid IN($authorids)");
 		$days = array();
 		$nlvtext =str_replace(array("\r\n", "\n", "\r"), '/hhf/', $_G['cache']['plugin']['dsu_paulsign']['lvtext']);
 		list($lv1name, $lv2name, $lv3name, $lv4name, $lv5name, $lv6name, $lv7name, $lv8name, $lv9name, $lv10name, $lvmastername) = explode("/hhf/", $nlvtext);
@@ -246,7 +248,6 @@ class plugin_dsu_paulsign_forum extends plugin_dsu_paulsign {
 			$days[$mrc['uid']]['days'] = $mrc['days'];
 			$days[$mrc['uid']]['qdxq'] = $mrc['qdxq'];
 			$days[$mrc['uid']]['time'] = dgmdate($mrc['time'], 'u');
-			if ($lastedop) $days[$mrc['uid']]['lasted'] = $mrc['lasted'];
 			if ($mrc['days'] >= '1500') {
 				$days[$mrc['uid']]['level'] = "[LV.Master]{$lvmastername}";
 			} elseif ($mrc['days'] >= '750') {
@@ -290,25 +291,11 @@ class plugin_dsu_paulsign_forum extends plugin_dsu_paulsign {
 				$days[$mrc['uid']]['qdxqzw'] = lang('plugin/dsu_paulsign','mb_qb9');
 			}
 			$days[] = $mrc;
-		} 
-		$echoq = array();  
+		}
+		$echoq = array();
 		$firstcycle = 1;
 		foreach($postlist as $key => $val) {
 			if($days[$postlist[$key][authorid]][days]) {
-				if ($lastedop){
-					if($firstcycle == '1'){
-						if($open == '2')$echoonce = '<style>
-.qdsmile {padding:3px; margin-left:10px; margin-right:10px; list-style:none;}
-.qdsmile li{padding:5px .4em;background:#F7FAFF;border:2px dashed #D1D8D8;}
-.qdsmile li img{margin-bottom:5px;}
-</style>
-<div class="qdsmile"><li><center>'.lang('plugin/dsu_paulsign','ta_mind').'</center><table><tr><th><img src=source/plugin/dsu_paulsign/img/'.$days[$postlist[$key][authorid]][qdxq].'.gif><th><font size=5>'.$days[$postlist[$key][authorid]][qdxqzw].'</font><br>'.$days[$postlist[$key][authorid]][time].'</tr></table></li></div>';
-						$echoonce .= '<p>'.lang('plugin/dsu_paulsign','classn_01').': '.$days[$postlist[$key][authorid]][days].' '.lang('plugin/dsu_paulsign','classn_02').'</p><p>'.lang('plugin/dsu_paulsign','classn_12').': '.$days[$postlist[$key][authorid]][lasted].' '.lang('plugin/dsu_paulsign','classn_02').'</p><p>'.$days[$postlist[$key][authorid]][level].'</p>';
-					}else{
-						if($open == '2')$echoonce = '<div class="qdsmile"><li><center>'.lang('plugin/dsu_paulsign','ta_mind').'</center><table><tr><th><img src=source/plugin/dsu_paulsign/img/'.$days[$postlist[$key][authorid]][qdxq].'.gif><th><font size=5>'.$days[$postlist[$key][authorid]][qdxqzw].'</font><br>'.$days[$postlist[$key][authorid]][time].'</tr></table></li></div>';
-						$echoonce .= '<p>'.lang('plugin/dsu_paulsign','classn_01').': '.$days[$postlist[$key][authorid]][days].' '.lang('plugin/dsu_paulsign','classn_02').'</p><p>'.lang('plugin/dsu_paulsign','classn_12').': '.$days[$postlist[$key][authorid]][lasted].' '.lang('plugin/dsu_paulsign','classn_02').'</p><p>'.$days[$postlist[$key][authorid]][level].'</p>';
-					}
-				} else {
 					if($firstcycle == '1'){
 						if($open == '2')$echoonce = '<style>
 .qdsmile {padding:3px; margin-left:10px; margin-right:10px; list-style:none;}
@@ -321,7 +308,6 @@ class plugin_dsu_paulsign_forum extends plugin_dsu_paulsign {
 						if($open == '2')$echoonce = '<div class="qdsmile"><li><center>'.lang('plugin/dsu_paulsign','ta_mind').'</center><table><tr><th><img src=source/plugin/dsu_paulsign/img/'.$days[$postlist[$key][authorid]][qdxq].'.gif><th><font size=5>'.$days[$postlist[$key][authorid]][qdxqzw].'</font><br>'.$days[$postlist[$key][authorid]][time].'</tr></table></li></div>';
 						$echoonce .= '<p>'.lang('plugin/dsu_paulsign','classn_01').': '.$days[$postlist[$key][authorid]][days].' '.lang('plugin/dsu_paulsign','classn_02').'</p><p>'.$days[$postlist[$key][authorid]][level].'</p>';
 					}
-				}
 			} else {
 				if($firstcycle == '1'){
 					if($open == '2')$echoonce = '<style>
@@ -337,7 +323,7 @@ class plugin_dsu_paulsign_forum extends plugin_dsu_paulsign {
 			$firstcycle++;
 			$echoq[] = $echoonce;
 			$echoonce = '';
-		}  
+		}
 		return $echoq;
 	}
 }

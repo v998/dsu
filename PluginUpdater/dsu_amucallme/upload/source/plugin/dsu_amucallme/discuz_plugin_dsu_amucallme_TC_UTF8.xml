@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2]]></item>
+	<item id="Time"><![CDATA[2011-06-04 15:32]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://127.0.0.1/dx/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[【DSU】呼我]]></item>
+			<item id="identifier"><![CDATA[dsu_amucallme]]></item>
+			<item id="description"><![CDATA[論壇cc系統！]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[dsu_amucallme/]]></item>
+			<item id="copyright"><![CDATA[阿牧]]></item>
+			<item id="version"><![CDATA[1.07]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[admin]]></item>
+					<item id="menu"><![CDATA[積分設置]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[callme]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[3]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[允許被@的用戶組]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[callgids]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[1]]></item>
+					<item id="1"><![CDATA[2]]></item>
+					<item id="2"><![CDATA[3]]></item>
+				</item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[允許使用@用戶組的用戶組]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[gids]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[1]]></item>
+				</item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[啟用版塊]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[fids]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[2]]></item>
+					<item id="1"><![CDATA[38]]></item>
+					<item id="2"><![CDATA[39]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="callme"><![CDATA[呼我]]></item>
+				<item id="sendmsg"><![CDATA[您好！{username}邀請您參與話題討論（在帖子中提到了您），具體內容(<A HREF="{url}" target="_blank">查看更多內容...</A>)：<BR>{message}<BR>您也可以直接回復他：<A HREF="{reply}" onclick="showWindow('reply', this.href)">馬上回復</A>。]]></item>
+				<item id="admin2_h1"><![CDATA[@功能消費設定]]></item>
+				<item id="admin2_t2"><![CDATA[積分類型]]></item>
+				<item id="admin2_t3"><![CDATA[積分數量]]></item>
+				<item id="admin2_t4"><![CDATA[有效用戶組]]></item>
+				<item id="admin2_p1"><![CDATA[<li>這裡您可以對各個用戶組會員使用@功能，設置各自的費用：</li><li>比如您設置，新手上路 1金幣 ，表示新手上路會員@一個用戶時需要消耗1金幣，@ N個會員時，需要N個金幣。</li>]]></item>
+				<item id="admin2_s1"><![CDATA[添加]]></item>
+				<item id="admin2_s2"><![CDATA[提交]]></item>
+				<item id="admin2_i"><![CDATA[提交完成!]]></item>
+				<item id="sf"><![CDATA[<span class="xi1">&nbsp;&nbsp;收費標準：{cost}/人*次</span>]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="cm"><![CDATA[呼我吧]]></item>
+				<item id="sb"><![CDATA[搜索]]></item>
+				<item id="ss"><![CDATA[搜索看看]]></item>
+				<item id="lz"><![CDATA[(樓主)]]></item>
+				<item id="u"><![CDATA[這是我們給您推薦的]]></item>
+				<item id="f"><![CDATA[這是隨機推薦的好友]]></item>
+				<item id="g"><![CDATA[您可以試試@用戶組]]></item>
+				<item id="jgshow"><![CDATA[搜索結果顯示區：]]></item>
+				<item id="noshow"><![CDATA[沒有您搜索到相關會員]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+		<item id="license"><![CDATA[  [*]本插件版權歸屬插件作者,及其下屬Discuz! Student Union團隊所有.
+[*]未經插件作者許可,任何人不得以任何形式在任何地方發佈/轉發原版以及其衍生的修改版.
+[*][b]插件作者:[/b]阿牧
+[*][b]作品簡介:[/b]讓論壇用戶直接聯繫的更加緊密
+[*][b]發佈地址:[/b][url]http://www.dsu.cc[/url]
+[*]如有任何關於使用上的疑問,請至[url]http://www.dsu.cc/forum-44-1.html[/url]提出.
+[*]最後,感謝您使用我們的插件,也希望您能夠給我們DSU團隊提供更好的意見([url=http://www.dsu.cc/]請點擊這裡進入DSU團隊官方站點[/url]).]]></item>
+		<item id="intro"><![CDATA[
+			[color=DeepSkyBlue][b]關於本插件的相關信息:[/b][/color]
+				名稱: [b]論壇CC系統[/b]
+				版本: [b]1.07[/b]
+				作者: 阿牧
+				DSU榮譽出品 http://www.dsu.cc
+				-------------------------------------------
+				本插件僅供個人非商業用途使用!
+				禁止任何形式的封裝再發佈行為.
+				特此聲明.
+
+				2011年05月29日
+			]]></item>
+	</item>
+</root>

@@ -1,7 +1,7 @@
 <?php
 
 /*
-	dsu_paulfamehall_XML By SILVER And shy9000[17Studio WorkStation] 2010-03-03
+	dsu_paulfamehall_XML By SILVER And shy9000[DSU Team] 2011-06-08
 */
 
 function SILVER_writeFameHallXML($gid) {
@@ -15,7 +15,7 @@ function SILVER_writeFameHallXML($gid) {
 	while($setting = DB::fetch($query)) {
 		$settings[$setting['variable']] = $setting['value'];
 	}
-	
+
 	$famexml .= "\t<config>\r\n";
 	$famexml .= "\t\t<frameDefaultColor>".$settings['fame_frmcolor']."</frameDefaultColor>\r\n";
 	$famexml .= "\t\t<frameActiveColor>".$settings['fame_frmcoloract']."</frameActiveColor>\r\n";
@@ -35,7 +35,7 @@ function SILVER_writeFameHallXML($gid) {
 			$avatarurl = DISCUZ_ROOT.'./data/cache/mrt_img/'.basename($fh['uid'].'.jpg');
 			if(!is_file($avatarurl) || (time() - filemtime($avatarurl)) > 604800){
 				if((time() - filemtime($avatarurl)) > 604800) @unlink($avatarurl);
-				$avatar = avatar($fh['uid'], 'middle', TRUE, FALSE, TRUE);
+				$avatar = avatar($fh['uid'], 'middle', TRUE, False, TRUE);
 				file_put_contents($avatarurl, file_get_contents($avatar));
 			}
 			$famexml .= "\n\t<record>\r\n";

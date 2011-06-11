@@ -8,10 +8,12 @@ if(!defined('IN_DISCUZ')) {
 if($_G['uid']){
 	$limit = 40;
 	if($_G['gp_order'] == 'continuous'){
-		$order = 'continuous';
+		$odmod = 'continuous';
+		$order = 'continuous DESC , addup DESC ,lasttime';
 		$url = "plugin.php?id=dsu_amupper:list&order=continuous";
 	}else{
-		$order = 'addup';
+		$odmod = 'addup';
+		$order = 'addup DESC , continuous DESC ,lasttime';
 		$url = "plugin.php?id=dsu_amupper:list";
 	}
 	$today = dgmdate($_G['timestamp']);
@@ -22,7 +24,7 @@ if($_G['uid']){
 	$start_limit = ($page - 1) * $limit;
 	$multipage = multi($num, $limit, $page, $url);
 
-	$sql="SELECT * FROM ".DB::table('plugin_dsuampper')." ORDER BY ".$order." DESC , lasttime ASC LIMIT ".$start_limit." ,".$limit;
+	$sql="SELECT * FROM ".DB::table('plugin_dsuampper')." ORDER BY ".$order." LIMIT ".$start_limit." ,".$limit;
 	$querygg=DB::query($sql);
 	$amtopid=$start_limit;
 
@@ -37,11 +39,11 @@ if($_G['uid']){
 		$sql2="SELECT * FROM ".DB::table('common_member')." WHERE uid IN ({$pperuid})";
 		$querygg2=DB::query($sql2);
 		while ($value2=DB::fetch($querygg2)){
-			$ppername[$value2['uid']]=$value2['username'];
+			$ppername[$value2['uid']]=cutstr($value2['username'],8,"...");
 		}
 	}	
 
-	$sql="SELECT * FROM ".DB::table('plugin_dsuampper')." ORDER BY ".$order." DESC , lasttime ASC LIMIT ".$start_limit." ,".$limit;
+	$sql="SELECT * FROM ".DB::table('plugin_dsuampper')." ORDER BY ".$order." LIMIT ".$start_limit." ,".$limit;
 	$querygg=DB::query($sql);
 	while ($value=DB::fetch($querygg)){
 		$ammlist['uid'] = $value['uid'];
@@ -56,9 +58,14 @@ if($_G['uid']){
 	$cdb_pper['uid'] = intval($_G['uid']);
 	$query = DB::fetch_first("SELECT * FROM ".DB::table("plugin_dsuampper")." WHERE uid = '{$cdb_pper['uid']}'");
 	if($query){
-		$myindex = DB::result_first("SELECT COUNT(*) FROM ".DB::table('plugin_dsuampper')." WHERE addup > '{$query['addup']}' OR addup = '{$query['addup']}' AND lasttime < '{$query['lasttime']}' OR lasttime = '{$query['lasttime']}'");
-		$mycontinuous = DB::result_first("SELECT COUNT(*) FROM ".DB::table('plugin_dsuampper')." WHERE continuous > '{$query['continuous']}' OR continuous = '{$query['continuous']}' AND lasttime < '{$query['lasttime']}' OR lasttime = '{$query['lasttime']}'");
-		if($order == 'continuous'){$mypospage = ceil($mycontinuous / $limit);}else{$mypospage = ceil($myindex / $limit);}
+		$myindex = DB::result_first("SELECT COUNT(*) from ".DB::table('plugin_dsuampper')." WHERE addup > '{$query['addup']}' OR ( addup = '{$query['addup']}' AND ( continuous > '{$query['continuous']}' OR ( continuous = '{$query['continuous']}' AND lasttime <= '{$query['lasttime']}')))");
+		$mycontinuous = DB::result_first("SELECT COUNT(*) from ".DB::table('plugin_dsuampper')." WHERE continuous > '{$query['continuous']}' OR ( continuous = '{$query['continuous']}' AND ( addup > '{$query['addup']}' OR ( addup = '{$query['addup']}' AND lasttime <= '{$query['lasttime']}')))");
+		if($odmod == 'continuous'){
+			$mypospage = ceil($mycontinuous / $limit);
+		}else{
+			$mypospage = ceil($myindex / $limit);
+		}
+		//if($_G['uid']){echo '<BR><BR><BR>Á¬Ðø'.$mycontinuous;echo '|ÀÛ¼Æ'.$myindex;}
 	}
 }else{
 	showmessage('to_login', 'member.php?mod=logging&action=login', array(), array('showmsg' => true, 'login' => 1));

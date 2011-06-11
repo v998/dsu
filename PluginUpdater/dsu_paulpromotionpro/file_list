@@ -1,0 +1,14 @@
+source/plugin/dsu_paulpromotionpro/cron_dsu_paulpromotionpro_daily.inc.php
+source/plugin/dsu_paulpromotionpro/discuz_plugin_dsu_paulpromotionpro_SC_GBK.xml
+source/plugin/dsu_paulpromotionpro/discuz_plugin_dsu_paulpromotionpro_SC_UTF8.xml
+source/plugin/dsu_paulpromotionpro/discuz_plugin_dsu_paulpromotionpro_TC_BIG5.xml
+source/plugin/dsu_paulpromotionpro/discuz_plugin_dsu_paulpromotionpro_TC_UTF8.xml
+source/plugin/dsu_paulpromotionpro/dsu_paulpromotionpro.class.php
+source/plugin/dsu_paulpromotionpro/dsu_paulpromotionpro.inc.php
+source/plugin/dsu_paulpromotionpro/index.htm
+source/plugin/dsu_paulpromotionpro/install.php
+source/plugin/dsu_paulpromotionpro/uninstall.php
+source/plugin/dsu_paulpromotionpro/upgrade.php
+source/plugin/dsu_paulpromotionpro/img/box.gif
+source/plugin/dsu_paulpromotionpro/img/warning.gif
+source/plugin/dsu_paulpromotionpro/template/dsu_paulpromotionpro.htm

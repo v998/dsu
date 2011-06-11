@@ -1,16 +1,15 @@
 <?php
 /*
-	dsu_paulfamehall_VIEW By shy9000 2010-10-31
+	dsu_paulfamehall_VIEW By shy9000 2011-06-08
 */
-define('NOROBOT', TRUE);
 require_once DISCUZ_ROOT.'./source/plugin/dsu_paulfamehall/fame.func.php';
-require_once DISCUZ_ROOT.'./data/plugindata/dsu_paulfamehall.lang.php';
-$lang = $scriptlang['dsu_paulfamehall'];
+loadcache('pluginlanguage_script');
+$lang = $_G['cache']['pluginlanguage_script']['dsu_paulfamehall'];
 $navigation = "{$lang['php_01']}";
 $navtitle = "$navigation";
-$famever = '5.9';
-$fameBuild = 'T1031';
-$fameadd = 'http://www.dsu.cc/thread-27766-1-1.html';
+$famever = '6.0';
+$fameBuild = 'E0608';
+$fameadd = 'http://www.dsu.cc/thread-75335-1-1.html';
 $fameflash = 'source/plugin/dsu_paulfamehall/star.swf';
 function shy9000_famehall_updateCache() {
 	$query = DB::query("SELECT g.groupname, g.grouppic, m.uid, m.gid, m.value FROM ".DB::table('mingrentang')." m, ".DB::table('mingrentanggroup')." g WHERE m.gid=g.id ORDER BY m.uid");
@@ -296,7 +295,7 @@ if($_G['gp_action'] == ''){
 		$settings[$setting['variable']] = $setting['value'];
 	}
 	$blackname = $settings['fame_blackname'];
-	$blackname = explode(",", $blackname); 
+	$blackname = explode(",", $blackname);
 	$blackname = is_array($blackname) ? $blackname : array();
 	$ch_credit = trim($settings['fame_mincredit']);
 	$maxabout = trim($settings['fame_maxtext']);

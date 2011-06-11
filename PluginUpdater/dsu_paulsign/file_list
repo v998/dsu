@@ -7,6 +7,7 @@ source/plugin/dsu_paulsign/sign.class.php
 source/plugin/dsu_paulsign/sign.inc.php
 source/plugin/dsu_paulsign/sign_import.inc.php
 source/plugin/dsu_paulsign/uninstall.php
+source/plugin/dsu_paulsign/upgrade.php
 source/plugin/dsu_paulsign/img/ch.gif
 source/plugin/dsu_paulsign/img/fd.gif
 source/plugin/dsu_paulsign/img/kx.gif
@@ -24,4 +25,3 @@ source/plugin/dsu_paulsign/template/ajaxsign.htm
 source/plugin/dsu_paulsign/template/float.htm
 source/plugin/dsu_paulsign/template/sign.htm
 source/plugin/dsu_paulsign/template/sign_list.htm
-source/plugin/dsu_paulsign/template/mobile/sign.htm

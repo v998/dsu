@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 <root>
 	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
-	<item id="Version"><![CDATA[X1.5]]></item>
-	<item id="Time"><![CDATA[2010-09-10 19:48]]></item>
-	<item id="From"><![CDATA[Discuz! Board (http://localhost/1.5/)]]></item>
+	<item id="Version"><![CDATA[X2]]></item>
+	<item id="Time"><![CDATA[2011-06-08 11:02]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://127.0.0.1/2.0/)]]></item>
 	<item id="Data">
 		<item id="plugin">
 			<item id="available"><![CDATA[1]]></item>
@@ -14,7 +14,7 @@
 			<item id="datatables"><![CDATA[]]></item>
 			<item id="directory"><![CDATA[dsu_paulfamehall/]]></item>
 			<item id="copyright"><![CDATA[shy9000 @ DSU Team]]></item>
-			<item id="version"><![CDATA[5.9]]></item>
+			<item id="version"><![CDATA[6.0]]></item>
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[dsu_paulfamehall]]></item>
@@ -34,7 +34,7 @@
 				</item>
 			</item>
 		</item>
-		<item id="version"><![CDATA[X1.5]]></item>
+		<item id="version"><![CDATA[X2]]></item>
 		<item id="language">
 			<item id="scriptlang">
 				<item id="echo_01"><![CDATA[名人堂状态]]></item>
@@ -166,9 +166,6 @@
 				<item id="admin_79"><![CDATA[留空为否,输入任何数字为是]]></item>
 				<item id="admin_80"><![CDATA[当前分组:]]></item>
 				<item id="admin_81"><![CDATA[返回编辑分组]]></item>
-				<item id="admin_82"><![CDATA[分组图片名称]]></item>
-				<item id="admin_83"><![CDATA[分组图片名称方框中请输入您放入source/plugin/dsu_paulfamehall/gpic文件夹中的组别图片的名称,留空则为默认的def.gif]]></item>
-				<item id="admin_84"><![CDATA[分组图片]]></item>
 				<item id="php_01"><![CDATA[名人堂]]></item>
 				<item id="php_02"><![CDATA[无效的越权访问]]></item>
 				<item id="php_03"><![CDATA[无效操作]]></item>
@@ -227,7 +224,7 @@
 [*]未经插件作者许可,任何人不得以任何形式在任何地方发布/转发原版以及其衍生的修改版.
 [*][b]插件作者:[/b]shy9000
 [*][b]作品简介:[/b]荣誉展示
-[*][b]发布地址:[/b][url]http://www.dsu.cc/thread-27766-1-1.html[/url]
+[*][b]发布地址:[/b][url]http://www.dsu.cc/thread-75335-1-1.html[/url]
 [*]如有任何关于使用上的疑问,请至[url]http://www.dsu.cc/forum-44-1.html[/url]提出.
 [*][color=Red]如果您愿意资助我们,请至[url]http://www.dsu.cc/donate.php[/url]对我们进行赞助.[/color]
 [*]最后,感谢您使用我们的插件,也希望您能够给我们DSU团队提供更好的意见([url=http://www.dsu.cc/]请点击这里进入DSU团队官方站点[/url]).
