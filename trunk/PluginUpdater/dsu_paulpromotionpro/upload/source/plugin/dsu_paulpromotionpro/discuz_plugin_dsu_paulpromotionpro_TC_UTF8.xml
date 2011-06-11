@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2]]></item>
+	<item id="Time"><![CDATA[2010-09-05 16:12]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://localhost/1.5/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[【DSU】推廣中心]]></item>
+			<item id="identifier"><![CDATA[dsu_paulpromotionpro]]></item>
+			<item id="description"><![CDATA[本插件為默認Discuz!的推廣中心的增強版本,注:上線激活獎勵會在每天凌晨的0點進行批量發送.]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[dsu_paulpromotionpro/]]></item>
+			<item id="copyright"><![CDATA[Shy9000 @ DSU Team]]></item>
+			<item id="version"><![CDATA[2.5]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[dsu_paulpromotionpro]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[dsu_paulpromotionpro]]></item>
+					<item id="menu"><![CDATA[推廣中心]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[5]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[是否開啟推廣中心增強版]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[open]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[上線獎勵的積分項2]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[creditcc2]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[獎勵激活的發帖數要求]]></item>
+				<item id="description"><![CDATA[被邀請人需要達到該用戶的上線的獎勵激活要求的發帖數的最低要求]]></item>
+				<item id="variable"><![CDATA[postpass]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[50]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[推廣抽獎獎勵最小值]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ticketmin]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[推廣抽獎開關]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ticketopen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[推廣抽獎獎勵積分項]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ticketcr]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[推廣中心黑名單用戶]]></item>
+				<item id="description"><![CDATA[請輸入黑名單用戶的UID,如需輸入多個,請用半角逗號隔開,被輸入該項的用戶將無法進入推廣中心，以及無法獲得宣傳獎勵]]></item>
+				<item id="variable"><![CDATA[blackuid]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[推廣中心公告]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[message]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[歡迎大家進行論壇的推廣,推廣有獎勵.]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[上線獎勵的積分項1]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[creditcc]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[每次激活獎勵的積分值1]]></item>
+				<item id="description"><![CDATA[該項必填,積分值2選填]]></item>
+				<item id="variable"><![CDATA[creditz]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[10]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[獎勵激活的註冊時間要求]]></item>
+				<item id="description"><![CDATA[被邀請人需要達到該用戶的上線的獎勵激活要求的註冊時間的最低要求,單位為天]]></item>
+				<item id="variable"><![CDATA[regpass]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[10]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[每次激活獎勵的積分值2]]></item>
+				<item id="description"><![CDATA[該項選填,如無請空著或者輸0,多積分獎勵用.]]></item>
+				<item id="variable"><![CDATA[creditz2]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[推廣抽獎獎勵最大值]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ticketmax]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[50]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[抽獎限制次數]]></item>
+				<item id="description"><![CDATA[不限請輸0或置空]]></item>
+				<item id="variable"><![CDATA[tickettimes]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[抽獎花費的積分項]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ticketfcr]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[抽獎花費的積分值]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ticketfvr]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[100]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="title"><![CDATA[是否開啟貼內推廣鏈接顯示]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[tidopens]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="17">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[獎勵激活的在線時間要求]]></item>
+				<item id="description"><![CDATA[被邀請人需要達到該用戶的上線的獎勵激活要求的在線時間的最低要求,單位為小時]]></item>
+				<item id="variable"><![CDATA[timepass]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[50]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="php_01"><![CDATA[本推廣中心已經暫時被管理員關閉,請稍後訪問!]]></item>
+				<item id="php_02"><![CDATA[您的賬號已經被管理員封殺,請聯繫管理員解封後再次嘗試進入!]]></item>
+				<item id="php_03"><![CDATA[推廣中心]]></item>
+				<item id="mb_01"><![CDATA[推廣方法及說明]]></item>
+				<item id="mb_02"><![CDATA[如果您的被推廣人通過下面任意一個鏈接訪問論壇並註冊新會員]]></item>
+				<item id="mb_03"><![CDATA[另外,如果該用戶的在線時間達到了]]></item>
+				<item id="mb_04"><![CDATA[小時]]></item>
+				<item id="mb_05"><![CDATA[, 發帖數達到了]]></item>
+				<item id="mb_06"><![CDATA[貼]]></item>
+				<item id="mb_07"><![CDATA[, 註冊日期達到了]]></item>
+				<item id="mb_08"><![CDATA[天]]></item>
+				<item id="mb_09"><![CDATA[那麼次日凌晨零時您將可以獲得]]></item>
+				<item id="mb_10"><![CDATA[, 並且此推廣獎勵可以累加，所以您得要多多努力推廣喲!]]></item>
+				<item id="mb_11"><![CDATA[下面是您的推廣鏈接,您可以通過複製下面的推廣鏈接在QQ,MSN等IM以及其他的網站和論壇分享給任何人.]]></item>
+				<item id="mb_12"><![CDATA[推廣連接:]]></item>
+				<item id="mb_13"><![CDATA[推廣鏈接已經複製到剪貼板]]></item>
+				<item id="mb_14"><![CDATA[複製]]></item>
+				<item id="mb_15"><![CDATA[推廣排行榜]]></item>
+				<item id="mb_16"><![CDATA[按照總已推廣人數排列]]></item>
+				<item id="mb_17"><![CDATA[按照已經激活人數排行]]></item>
+				<item id="mb_18"><![CDATA[我的未激活被推廣人列表]]></item>
+				<item id="mb_19"><![CDATA[我的已激活被推廣人列表]]></item>
+				<item id="mb_20"><![CDATA[用戶名]]></item>
+				<item id="mb_21"><![CDATA[總已推廣人數]]></item>
+				<item id="mb_22"><![CDATA[總已激活人數]]></item>
+				<item id="mb_23"><![CDATA[已獲得推廣獎勵]]></item>
+				<item id="mb_24"><![CDATA[積分項:]]></item>
+				<item id="mb_25"><![CDATA[以上數據除總已推廣人數實時更新以外,總已激活人數會在每天凌晨零時更新.]]></item>
+				<item id="mb_26"><![CDATA[暫無人存在被推廣人.]]></item>
+				<item id="mb_27"><![CDATA[用戶名]]></item>
+				<item id="mb_28"><![CDATA[總已激活人數]]></item>
+				<item id="mb_29"><![CDATA[總已推廣人數]]></item>
+				<item id="mb_30"><![CDATA[已獲得推廣獎勵]]></item>
+				<item id="mb_31"><![CDATA[積分項:]]></item>
+				<item id="mb_32"><![CDATA[以上數據除總已推廣人數實時更新以外,總已激活人數會在每天凌晨零時更新.]]></item>
+				<item id="mb_33"><![CDATA[暫無人存在已經達到激活獎勵要求的被推廣人.]]></item>
+				<item id="mb_34"><![CDATA[用戶名]]></item>
+				<item id="mb_35"><![CDATA[註冊天數[單位:天]]]></item>
+				<item id="mb_36"><![CDATA[發帖數[單位:貼]]]></item>
+				<item id="mb_37"><![CDATA[在線時間[單位:小時]]]></item>
+				<item id="mb_38"><![CDATA[以上未激活的被推廣人,如果已經達到了激活要求,那麼次日凌晨零時將進行激活操作,到時候您也將獲得激活獎勵.]]></item>
+				<item id="mb_39"><![CDATA[藍色代表已經達到要求的項目,紅色代表未達到要求的項目]]></item>
+				<item id="mb_40"><![CDATA[您目前暫無未激活的被推廣人.]]></item>
+				<item id="mb_41"><![CDATA[用戶名]]></item>
+				<item id="mb_42"><![CDATA[註冊時間]]></item>
+				<item id="mb_43"><![CDATA[他目前擁有的被推廣人數]]></item>
+				<item id="mb_44"><![CDATA[您目前暫無已激活的被推廣人.]]></item>
+				<item id="mb_45"><![CDATA[推廣 信息台]]></item>
+				<item id="mb_46"><![CDATA[展開]]></item>
+				<item id="mb_47"><![CDATA[您目前已經擁有被推廣人]]></item>
+				<item id="mb_48"><![CDATA[人]]></item>
+				<item id="mb_49"><![CDATA[其中已經達到激活要求的被推廣人有]]></item>
+				<item id="mb_50"><![CDATA[人]]></item>
+				<item id="mb_51"><![CDATA[您目前累計已經獲得獎勵:]]></item>
+				<item id="mb_52"><![CDATA[推廣中心公告]]></item>
+				<item id="mb_53"><![CDATA[版本信息]]></item>
+				<item id="mb_54"><![CDATA[Promotion Pro 推廣中心增強版插件 作者: shy9000 ,此版本專供Discuz!X1及以上版本使用,其他版本使用後可能會出現錯誤!]]></item>
+				<item id="mb_55"><![CDATA[以及]]></item>
+				<item id="mb_56"><![CDATA[推廣中心首頁]]></item>
+				<item id="mb_57"><![CDATA[推廣鏈接]]></item>
+				<item id="mb_58"><![CDATA[使用方法]]></item>
+				<item id="mb_59"><![CDATA[效果演示]]></item>
+				<item id="mb_60"><![CDATA[複製]]></item>
+				<item id="mb_61"><![CDATA[推廣鏈接已經複製到剪貼板]]></item>
+				<item id="mb_62"><![CDATA[直接複製地址發給您的朋友或放在您的QQ個人空間裡.]]></item>
+				<item id="mb_63"><![CDATA[Discuz! 代碼 格式——可將代碼放在論壇的個人簽名裡，適用於各類支持的論壇.]]></item>
+				<item id="mb_64"><![CDATA[HTML格式——可用於所有支持HTML的地方，可放在你的博客裡面.]]></item>
+				<item id="pm_01"><![CDATA[您獲得了下線激活獎勵]]></item>
+				<item id="pm_02"><![CDATA[因為您的下線]]></item>
+				<item id="pm_03"><![CDATA[達到了激活獎勵的條件, 所以您獲得了獎勵]]></item>
+				<item id="pm_04"><![CDATA[,以後您要多多推廣本論壇哦!]]></item>
+				<item id="n121_01"><![CDATA[參數錯誤]]></item>
+				<item id="n121_02"><![CDATA[您的抽獎次數已經超過了限定值]]></item>
+				<item id="n121_03"><![CDATA[您的消耗積分不夠,請稍後再試.]]></item>
+				<item id="n121_04"><![CDATA[開啟成功,恭喜您獲得了]]></item>
+				<item id="n121_05"><![CDATA[非法操作]]></item>
+				<item id="n121_06"><![CDATA[清空成功!]]></item>
+				<item id="n121_07"><![CDATA[推廣 神秘寶箱]]></item>
+				<item id="n121_08"><![CDATA[每次開箱子需要耗費]]></item>
+				<item id="n121_09"><![CDATA[, 您目前擁有]]></item>
+				<item id="n121_10"><![CDATA[, 另外 , 您已經開過了]]></item>
+				<item id="n121_11"><![CDATA[次寶箱]]></item>
+				<item id="n121_12"><![CDATA[總共開箱限制次數:]]></item>
+				<item id="n121_13"><![CDATA[次]]></item>
+				<item id="n121_14"><![CDATA[當您開啟箱子後, 系統將隨機贈送您]]></item>
+				<item id="n121_15"><![CDATA[若干]]></item>
+				<item id="n121_16"><![CDATA[, 贈送數額在]]></item>
+				<item id="n121_17"><![CDATA[到]]></item>
+				<item id="n121_18"><![CDATA[之間, 所以請您慎重考慮後再點下寶箱進行開啟.]]></item>
+				<item id="n121_19"><![CDATA[您用完了您的寶箱開啟次數,無法開啟寶箱.]]></item>
+				<item id="n121_20"><![CDATA[讓我開啟那屬於我的寶箱吧!]]></item>
+				<item id="n121_21"><![CDATA[您的消耗積分不夠,另外您也用完了您的寶箱開啟次數,無法開啟寶箱.]]></item>
+				<item id="n121_22"><![CDATA[您的消耗積分不夠,無法開啟寶箱.]]></item>
+				<item id="n121_23"><![CDATA[前台管理]]></item>
+				<item id="n121_24"><![CDATA[清空宣傳人數]]></item>
+				<item id="n121_25"><![CDATA[清空抽獎次數]]></item>
+				<item id="tid_01"><![CDATA[出自]]></item>
+				<item id="tid_02"><![CDATA[帖子地址]]></item>
+				<item id="tid_03"><![CDATA[複製成功,快快去分享該文章吧]]></item>
+				<item id="class_01"><![CDATA[已經有人通過您的推廣鏈接註冊成為會員!]]></item>
+				<item id="class_02"><![CDATA[恭喜您,{username}通過您的推廣鏈接註冊成為了會員,當他達到了下線獎勵的要求時你將會獲得獎勵,獎勵在他達到下線要求後的次日凌晨將會自動發放給您!]]></item>
+				<item id="tip_01"><![CDATA[如果您的朋友通過下面任意一個鏈接訪問站點，您將獲相應積分獎勵]]></item>
+				<item id="tip_02"><![CDATA[如果您的朋友不但訪問並且註冊成為會員，您將再獲得相應積分獎勵]]></item>
+				<item id="tip_03"><![CDATA[如果您的朋友通過下面任意一個鏈接訪問站點並註冊新會員，您將獲得相應積分獎勵]]></item>
+				<item id="addnew_01"><![CDATA[帖子地址已經複製到剪貼板<br />您可以用快捷鍵 Ctrl + V 粘貼到 QQ、MSN 裡。]]></item>
+				<item id="addnew_02"><![CDATA[推薦給好友]]></item>
+				<item id="addnew_03"><![CDATA[帖子永久地址：]]></item>
+				<item id="addnew_04"><![CDATA[隨機精華推薦]]></item>
+			</item>
+		</item>
+<item id="installfile"><![CDATA[install.php]]></item>
+<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+<item id="intro"><![CDATA[DSU Team 版權所有]]></item>
+<item id="license"><![CDATA[[list]
+[*]本插件版權歸屬插件作者,及其下屬Discuz! Student Union團隊所有.
+[*]未經插件作者許可,任何人不得以任何形式在任何地方發佈/轉發原版以及其衍生的修改版.
+[*][b]插件作者:[/b]shy9000
+[*][b]作品簡介:[/b]本插件為默認Discuz!的推廣中心的增強版本,注:上線激活獎勵會在每天凌晨的0點進行批量發送.
+[*][b]發佈地址:[/b][url]http://www.dsu.cc/thread-75336-1-1.html[/url]
+[*]如有任何關於使用上的疑問,請至[url]http://www.dsu.cc/forum-44-1.html[/url]提出.
+[*][color=Red]如果您願意資助我們,請至[url]http://www.dsu.cc/donate.php[/url]對我們進行贊助.[/color]
+[*]最後,感謝您使用我們的插件,也希望您能夠給我們DSU團隊提供更好的意見([url=http://www.dsu.cc/]請點擊這裡進入DSU團隊官方站點[/url]).
+[/list]]]></item>
+</item>
+</root>

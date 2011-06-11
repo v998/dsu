@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <root>
 	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
-	<item id="Version"><![CDATA[X1.5]]></item>
-	<item id="Time"><![CDATA[2011-02-11 20:15]]></item>
-	<item id="From"><![CDATA[Discuz! Board (http://localhost/dx/)]]></item>
+	<item id="Version"><![CDATA[X2 RC]]></item>
+	<item id="Time"><![CDATA[2011-05-21 18:59]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://127.0.0.1/dx/)]]></item>
 	<item id="Data">
 		<item id="plugin">
 			<item id="available"><![CDATA[1]]></item>
@@ -14,7 +14,7 @@
 			<item id="datatables"><![CDATA[]]></item>
 			<item id="directory"><![CDATA[dsu_amufzc/]]></item>
 			<item id="copyright"><![CDATA[【DSU】阿牧]]></item>
-			<item id="version"><![CDATA[1.53]]></item>
+			<item id="version"><![CDATA[1.56]]></item>
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[updater]]></item>
@@ -54,15 +54,15 @@
 				</item>
 			</item>
 		</item>
-		<item id="version"><![CDATA[X1.5]]></item>
+		<item id="version"><![CDATA[X2 RC]]></item>
 		<item id="var">
 			<item id="0">
 				<item id="displayorder"><![CDATA[0]]></item>
-				<item id="title"><![CDATA[生成间期]]></item>
-				<item id="description"><![CDATA[单位：秒（在设置的时间内，相同的email不可以再次生成注册码）]]></item>
-				<item id="variable"><![CDATA[maxtime]]></item>
-				<item id="type"><![CDATA[number]]></item>
-				<item id="value"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[开启邮箱验证]]></item>
+				<item id="description"><![CDATA[将注册地址发送到邮箱中，而不是直接显示。]]></item>
+				<item id="variable"><![CDATA[email]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="1">
@@ -76,16 +76,58 @@
 			</item>
 			<item id="2">
 				<item id="displayorder"><![CDATA[0]]></item>
-				<item id="title"><![CDATA[开启邮箱验证]]></item>
-				<item id="description"><![CDATA[将注册地址发送到邮箱中，而不是直接显示。]]></item>
-				<item id="variable"><![CDATA[email]]></item>
-				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[生成间期]]></item>
+				<item id="description"><![CDATA[单位：秒（在设置的时间内，相同的email不可以再次生成注册码）]]></item>
+				<item id="variable"><![CDATA[maxtime]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[5]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 		</item>
 		<item id="language">
 			<item id="scriptlang">
+				<item id="1"><![CDATA[<B>提示</B>：缺少注册码，请点击下面的“获取注册码”链接获取。]]></item>
+				<item id="2"><![CDATA[<B>提示</B>：注册码错误或过期，请点击下面的“获取注册码”链接重新获取。]]></item>
+				<item id="3"><![CDATA[注册码]]></item>
+				<item id="4"><![CDATA[<B>提示</B>：注册码已经发送到您刚才填写的邮箱（{email}）中了。]]></item>
+				<item id="5"><![CDATA[<B>提示</B>：请填写&nbsp;Email/邮箱&nbsp;项！]]></item>
+				<item id="6"><![CDATA[<B>提示</B>：请填写好&nbsp;Email/邮箱&nbsp;项目后，点击提交，以获取注册码。]]></item>
+				<item id="7"><![CDATA[<B><FONT COLOR="#FF0000">点击获取注册码</FONT></B>]]></item>
+				<item id="8"><![CDATA[(请先填写好Email项)]]></item>
+				<item id="9"><![CDATA[<H3>您未填写Email或者您填写的Email格式有误。</H3>]]></item>
+				<item id="91"><![CDATA[<H3>请{maxtime}秒后再申请注册码。</H3>]]></item>
+				<item id="92"><![CDATA[<H3>该邮箱/Email已经申请过注册码了，请更换邮箱/Email。</H3>]]></item>
+				<item id="93"><![CDATA[<H3>如果没有收到注册码，请在垃圾邮件中找一找。</H3>]]></item>
+				<item id="931"><![CDATA[<H3>邮件发送失败,为不影响您注册，免去邮件审核！</H3>]]></item>
+				<item id="94"><![CDATA[正在生成注册码，请稍候...]]></item>
+				<item id="10"><![CDATA[已经发送到您的邮箱中]]></item>
+				<item id="11"><![CDATA[您填写的Email与注册码不匹配]]></item>
+				<item id="12"><![CDATA[您的激活信息有误，无法获得注册码（或者重试）。]]></item>
+				<item id="13"><![CDATA[您的邮箱信息有误，无法获得注册码。您提供的邮箱为:]]></item>
+				<item id="14"><![CDATA[如果您邮箱填写有误，请修改邮箱后重新]]></item>
+				<item id="email_subject"><![CDATA[Email 地址验证]]></item>
+				<item id="email_message"><![CDATA[
+<p>您好，这封信是由 {bbname}发送的。</p>
+<p>您的注册码为：<strong>{code}</strong>（激活的话请自行复制注册码！），如果您是新注册也可以直接点击链接：<a href="{url}" target="_blank">{url}</a></p>
+<p>如果你并没有访问过我们的论坛，或没有进行上述操作，请忽略这封邮件。你不需要退订或进行其他进一步的操作。</p>
+<br />
+<p>
+此致<br />
+{bbname} 管理团队.<br />
+{siteurl}</p>]]></item>
+				<item id="a1"><![CDATA[【DSU】防注册机]]></item>
+				<item id="a2"><![CDATA[数据清理]]></item>
+				<item id="a3"><![CDATA[时间]]></item>
+				<item id="a4"><![CDATA[删除指定时间以前的没有使用的注册码，单位：天。]]></item>
+				<item id="a5"><![CDATA[提交]]></item>
+				<item id="a6"><![CDATA[恭喜您，清理完毕（删除{del}条/剩余{sy}条）！]]></item>
+				<item id="a7"><![CDATA[没有符合条件的记录！]]></item>
+				<item id="a8"><![CDATA[数据表不存在 / 您填写的时间太小或者不正确！]]></item>
+				<item id="discuz_message"><![CDATA[DSU! 提示]]></item>
+				<item id="message_redirect"><![CDATA[如果你的浏览器没有自动跳转，请点击这里]]></item>
+				<item id="xml_file_name"><![CDATA[discuz_plugin_dsu_amufzc_SC_GBK.xml]]></item>
+			</item>
+			<item id="templatelang">
 				<item id="1"><![CDATA[<B>提示</B>：缺少注册码，请点击下面的“获取注册码”链接获取。]]></item>
 				<item id="2"><![CDATA[<B>提示</B>：注册码错误或过期，请点击下面的“获取注册码”链接重新获取。]]></item>
 				<item id="3"><![CDATA[注册码]]></item>
@@ -141,7 +183,7 @@
 		<item id="intro"><![CDATA[
 			[color=DeepSkyBlue][b]关于本插件的相关信息:[/b][/color]
 				名称: [b]防注册机[/b]
-				版本: [b]1.53[/b]
+				版本: [b]1.56[/b]
 				(更新内容：优化了应邮箱填写错误的用户体验)
 				作者: 阿牧
 				DSU荣誉出品 http://www.dsu.cc
@@ -151,7 +193,7 @@
 				禁止任何形式的封装再发布行为.
 				特此声明.
 
-				2011年02月10日
+				2011年05月21日
 			]]></item>
 	</item>
 </root>

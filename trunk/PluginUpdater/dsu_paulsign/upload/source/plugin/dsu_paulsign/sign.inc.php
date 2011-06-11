@@ -1,14 +1,15 @@
 <?php
 /*
-	dsu_paulsign Main By shy9000[DSU.CC] 2011-1-1
+	dsu_paulsign Main By shy9000[DSU.CC] 2011-06-08
 */
 define('IN_dsu_paulsign', '1');
-require_once DISCUZ_ROOT.'./data/plugindata/dsu_paulsign.lang.php';
-session_start();
-$tdtime = gmmktime(0,0,0,dgmdate($_G['timestamp'], 'n'),dgmdate($_G['timestamp'], 'j'),dgmdate($_G['timestamp'], 'Y')) - (getglobal('setting/timeoffset') * 3600);
-$htime = dgmdate($_G['timestamp'], 'H');
+$fixtime = $_G['timestamp'] - (getglobal('member/timeoffset') - getglobal('setting/timeoffset'))*3600;
+$tdtime = gmmktime(0,0,0,dgmdate($fixtime, 'n'),dgmdate($fixtime, 'j'),dgmdate($fixtime, 'Y')) - (getglobal('setting/timeoffset') * 3600);
+$htime = dgmdate($_G['timestamp'], 'H') - (getglobal('member/timeoffset') - getglobal('setting/timeoffset'));
+if($htime >= 24) $htime -= 24;
 $var = $_G['cache']['plugin']['dsu_paulsign'];
-$lang = $scriptlang['dsu_paulsign'];
+loadcache('pluginlanguage_script');
+$lang = $_G['cache']['pluginlanguage_script']['dsu_paulsign'];
 $nlvtext =str_replace(array("\r\n", "\n", "\r"), '/hhf/', $var['lvtext']);
 $nfastreplytext =str_replace(array("\r\n", "\n", "\r"), '/hhf/', $var['fastreplytext']);
 $njlmain =str_replace(array("\r\n", "\n", "\r"), '/hhf/', $var['jlmain']);
@@ -27,14 +28,18 @@ $qiandaodb = DB::fetch_first("SELECT * FROM ".DB::table('dsu_paulsign')." WHERE 
 $stats = DB::fetch_first("SELECT * FROM ".DB::table('dsu_paulsignset')." WHERE id='1'");
 $qddb = DB::fetch_first("SELECT time FROM ".DB::table('dsu_paulsign')." ORDER BY time DESC limit 0,1");
 $lastmonth=dgmdate($qddb['time'], 'm');
-$nowmonth=dgmdate($_G['timestamp'], 'm');
+$nowmonth=dgmdate($fixtime, 'm');
 if($nowmonth!=$lastmonth){
 	DB::query("UPDATE ".DB::table('dsu_paulsign')." SET mdays=0 WHERE uid");
 }
 function sign_msg($msg, $treferer = '') {
 	global $_G;
-	include template('dsu_paulsign:float');
-	dexit();
+	if(defined('IN_MOBILE')) {
+		//
+	}else{
+		include template('dsu_paulsign:float');
+		dexit();
+	}
 }
 if(empty($_G['uid'])) showmessage('to_login', 'member.php?mod=logging&action=login', array(), array('showmsg' => true, 'login' => 1));
 if(!$var['ifopen'] && $_G['adminid'] != 1) showmessage($var['plug_clsmsg'], 'index.php');
@@ -122,6 +127,9 @@ if($_G['gp_operation'] == 'zong' || $_G['gp_operation'] == 'month' || $_G['gp_op
 		$mrcs[] = $mrc;
 	}
 } elseif($_G['gp_operation'] == 'ban') {
+	if($_G['gp_formhash'] != FORMHASH) {
+		showmessage('undefined_action', NULL);
+	}
 	if($_G['adminid'] == 1) {
 		DB::query("UPDATE ".DB::table('dsu_paulsign')." SET todaysay='{$lang['ban_01']}' WHERE uid='$_G[gp_banuid]'");
 		showmessage("{$lang['ban_02']}", dreferer());
@@ -168,16 +176,16 @@ if($_G['gp_operation'] == 'zong' || $_G['gp_operation'] == 'month' || $_G['gp_op
 			break;
 			case 5:
 				$todaysay = "{$var['fastreply5']}";
-			break; 
+			break;
 			case 6:
 				$todaysay = "{$var['fastreply6']}";
-			break; 
+			break;
 			case 7:
 				$todaysay = "{$var['fastreply7']}";
-			break; 
+			break;
 			case 8:
 				$todaysay = "{$var['fastreply8']}";
-			break; 
+			break;
 			default:
 				$todaysay = "{$var['fastreply1']}";
 		}
@@ -187,25 +195,11 @@ if($_G['gp_operation'] == 'zong' || $_G['gp_operation'] == 'month' || $_G['gp_op
 	if(in_array($_G['groupid'], $jlxgroups) && $var['jlx'] != '0') {
 		$credit = $credit * $var['jlx'];
 	}
-	$qiandaodb['lasted'] = $qiandaodb['lasted'] ? $qiandaodb['lasted'] : 0;
-	if((86400 > ($tdtime - $qiandaodb['time'])) && $var['lastedop'] && $qiandaodb['lasted'] != '0'){
-		$randlastednum = mt_rand($var[lastednuml],$var[lastednumh]);
-		$randlastednum = sprintf("%03d", $randlastednum);
-		$randlastednum = '0.'.$randlastednum;
-		$randlastednum = $randlastednum * $qiandaodb['lasted']; 
-		$credit = round($credit*(1+$randlastednum));
-	}
 	$num = DB::result_first("SELECT COUNT(*) FROM ".DB::table('dsu_paulsign')." WHERE time >= {$tdtime} ");
 	if(!$qiandaodb['uid']) {
 		DB::query("INSERT INTO ".DB::table('dsu_paulsign')." (uid,time) VALUES ('$_G[uid]',$_G[timestamp])");
 	}
-	if((86400 > ($tdtime - $qiandaodb['time'])) && $var['lastedop']){
-		DB::query("UPDATE ".DB::table('dsu_paulsign')." SET days=days+1,mdays=mdays+1,time='$_G[timestamp]',qdxq='$_G[gp_qdxq]',todaysay='$todaysay',reward=reward+{$credit},lastreward='$credit',lasted=lasted+1 WHERE uid='$_G[uid]'");
-	} elseif((86400 < ($tdtime - $qiandaodb['time'])) && $var['lastedop']){
-		DB::query("UPDATE ".DB::table('dsu_paulsign')." SET days=days+1,mdays=mdays+1,time='$_G[timestamp]',qdxq='$_G[gp_qdxq]',todaysay='$todaysay',reward=reward+{$credit},lastreward='$credit',lasted='1' WHERE uid='$_G[uid]'");
-	} else {
-		DB::query("UPDATE ".DB::table('dsu_paulsign')." SET days=days+1,mdays=mdays+1,time='$_G[timestamp]',qdxq='$_G[gp_qdxq]',todaysay='$todaysay',reward=reward+{$credit},lastreward='$credit',lasted='0' WHERE uid='$_G[uid]'");
-	}
+	DB::query("UPDATE ".DB::table('dsu_paulsign')." SET days=days+1,mdays=mdays+1,time='$_G[timestamp]',qdxq='$_G[gp_qdxq]',todaysay='$todaysay',reward=reward+{$credit},lastreward='$credit' WHERE uid='$_G[uid]'");
 	updatemembercount($_G['uid'], array($var['nrcredit'] => $credit));
 	if(file_exists(DISCUZ_ROOT.'./source/plugin/dsu_kkvip/vip.func.php')){
 		include_once DISCUZ_ROOT.'./source/plugin/dsu_kkvip/vip.func.php';
@@ -239,13 +233,13 @@ if($_G['gp_operation'] == 'zong' || $_G['gp_operation'] == 'month' || $_G['gp_op
 			break;
 			case 4:
 				list($exacr,$exacz) = explode("|", $var['jlmain5']);
-			break; 
+			break;
 			case 5:
 				list($exacr,$exacz) = explode("|", $var['jlmain6']);
-			break; 
+			break;
 			case 6:
 				list($exacr,$exacz) = explode("|", $var['jlmain7']);
-			break; 
+			break;
 			case 7:
 				list($exacr,$exacz) = explode("|", $var['jlmain8']);
 			break;
@@ -254,20 +248,21 @@ if($_G['gp_operation'] == 'zong' || $_G['gp_operation'] == 'month' || $_G['gp_op
 			break;
 			case 9:
 				list($exacr,$exacz) = explode("|", $var['jlmain10']);
-			break;	
+			break;
 		}
 		$psc = $num+1;
 		if($exacr && $exacz) updatemembercount($_G['uid'], array($exacr => $exacz));
 	}
 		if($var['qdtype'] == '2') {
 			$thread = DB::fetch_first("SELECT * FROM ".DB::table('forum_thread')." WHERE tid='$var[tidnumber]'");
-			$hft = dgmdate($_G['timestamp'], 'Y-m-d H:i');
+			$hft = dgmdate($fixtime, 'Y-m-d H:i');
 			if($num >=0 && $num <=9 && $exacr && $exacz) {
 				$message = "[quote][size=2][color=gray][color=teal] [/color][color=gray]{$lang[tsn_01]}[/color] [color=darkorange]{$hft}[/color] {$lang[tsn_02]}[color=red]{$lang[tsn_03]}[/color][color=darkorange]{$lang[tsn_04]}{$psc}{$lang[tsn_05]}[/color]{$lang[tsn_06]} [/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][title]} [/color][color=darkorange]{$credit}[/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][unit]}[/color][color=gray]{$lang[tsn_17]}[/color] [color=gray]{$_G[setting][extcredits][$exacr][title]} [/color][color=darkorange]{$exacz}[/color][color=gray]{$_G[setting][extcredits][$exacr][unit]}[/color][/color][/size][/quote][size=3][color=dimgray]{$lang[tsn_07]}[color=red]{$todaysay}[/color]{$lang[tsn_08]}[/color][/size]";
 			} else {
 				$message = "[quote][size=2][color=gray][color=teal] [/color][color=gray]{$lang[tsn_01]}[/color] [color=darkorange]{$hft}[/color] {$lang[tsn_09]}{$lang[tsn_06]} [/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][title]} [/color][color=darkorange]{$credit} [/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][unit]}[/color][/size][/quote][size=3][color=dimgray]{$lang[tsn_07]}[color=red]{$todaysay}[/color]{$lang[tsn_08]}[/color][/size]";
 			}
 			require_once libfile('function/post');
+			require_once libfile('function/forum');
 			$pid = insertpost(array('fid' => $thread['fid'],'tid' => $var['tidnumber'],'first' => '0','author' => $_G['username'],'authorid' => $_G['uid'],'subject' => '','dateline' => $_G['timestamp'],'message' => $message,'useip' => $_G['clientip'],'invisible' => '0','anonymous' => '0','usesig' => '0','htmlon' => '0','bbcodeoff' => '0','smileyoff' => '0','parseurloff' => '0','attachment' => '0',));
 			DB::query("UPDATE ".DB::table('forum_thread')." SET lastposter='$_G[username]', lastpost='$_G[timestamp]', replies=replies+1 WHERE tid='$var[tidnumber]' AND fid='$thread[fid]'", 'UNBUFFERED');
 			updatepostcredits('+', $_G['uid'], 'reply', $thread['fid']);
@@ -276,9 +271,8 @@ if($_G['gp_operation'] == 'zong' || $_G['gp_operation'] == 'month' || $_G['gp_op
 			$tidnumber = $var['tidnumber'];
 		} elseif($var['qdtype'] == '3') {
 			if($num=='0' || ($stats['qdtidnumber'] == '0')) {
-				$fqdtime = dgmdate($_G['timestamp'], "m{$lang[month]}d{$lang[day]}");
-				$subject = "{$fqdtime} {$lang[ftids]}";
-				$hft = dgmdate($_G['timestamp'], 'Y-m-d H:i');
+				$subject=str_replace(array('{m}','{d}'),array(dgmdate($fixtime, 'm'),dgmdate($fixtime, ' d')),$var['title_thread']);
+				$hft = dgmdate($fixtime, 'Y-m-d H:i');
 				if($exacr && $exacz) {
 					$message = "[quote][size=2][color=dimgray]{$lang[tsn_10]}[/color][url={$_G[siteurl]}plugin.php?id=dsu_paulsign:sign][color=darkorange]{$lang[tsn_11]}[/color][/url][color=dimgray]{$lang[tsn_12]}[/color][/size][/quote][quote][size=2][color=gray][color=teal] [/color][color=gray]{$lang[tsn_01]}[/color] [color=darkorange]{$hft}[/color] {$lang[tsn_02]}[color=red]{$lang[tsn_03]}[/color][color=darkorange]{$lang[tsn_04]}{$lang[tsn_13]}{$lang[tsn_05]}[/color]{$lang[tsn_06]} [/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][title]} [/color][color=darkorange]{$credit}[/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][unit]}[/color][color=gray]{$lang[tsn_17]}[/color] [color=gray]{$_G[setting][extcredits][$exacr][title]} [/color][color=darkorange]{$exacz}[/color][color=gray]{$_G[setting][extcredits][$exacr][unit]}[/color][/color][/size][/quote][size=3][color=dimgray]{$lang[tsn_07]}[color=red]{$todaysay}[/color]{$lang[tsn_08]}[/color][/size]";
 				} else {
@@ -288,6 +282,7 @@ if($_G['gp_operation'] == 'zong' || $_G['gp_operation'] == 'month' || $_G['gp_op
 				$tid = DB::insert_id();
 				DB::query("UPDATE ".DB::table('dsu_paulsignset')." SET qdtidnumber = '$tid' WHERE id='1'");
 				require_once libfile('function/post');
+				require_once libfile('function/forum');
 				$pid = insertpost(array('fid' => $var['fidnumber'],'tid' => $tid,'first' => '1','author' => $_G['username'],'authorid' => $_G['uid'],'subject' => $subject,'dateline' => $_G['timestamp'],'message' => $message,'useip' => $_G['clientip'],'invisible' => '0','anonymous' => '0','usesig' => '0','htmlon' => '0','bbcodeoff' => '0','smileyoff' => '0','parseurloff' => '0','attachment' => '0',));
 				$expiration = $_G['timestamp'] + 86400;
 				DB::query("INSERT INTO ".DB::table('forum_thread')."mod (tid, uid, username, dateline, action, expiration, status) VALUES ('$tid', '$_G[uid]', '$_G[username]', '$_G[timestamp]', 'EHL', '$expiration', '1')");
@@ -299,13 +294,14 @@ if($_G['gp_operation'] == 'zong' || $_G['gp_operation'] == 'month' || $_G['gp_op
 			} else {
 				$tidnumber = $stats['qdtidnumber'];
 				$thread = DB::fetch_first("SELECT subject FROM ".DB::table('forum_thread')." WHERE tid='$tidnumber'");
-				$hft = dgmdate($_G['timestamp'], 'Y-m-d H:i');
+				$hft = dgmdate($fixtime, 'Y-m-d H:i');
 				if($num >=1 && $num <=9 && $exacr && $exacz) {
 					$message = "[quote][size=2][color=gray][color=teal] [/color][color=gray]{$lang[tsn_01]}[/color] [color=darkorange]{$hft}[/color] {$lang[tsn_02]}[color=red]{$lang[tsn_03]}[/color][color=darkorange]{$lang[tsn_04]}{$psc}{$lang[tsn_05]}[/color]{$lang[tsn_06]} [/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][title]} [/color][color=darkorange]{$credit}[/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][unit]}[/color][color=gray]{$lang[tsn_17]}[/color] [color=gray]{$_G[setting][extcredits][$exacr][title]} [/color][color=darkorange]{$exacz}[/color][color=gray]{$_G[setting][extcredits][$exacr][unit]}[/color][/color][/size][/quote][size=3][color=dimgray]{$lang[tsn_07]}[color=red]{$todaysay}[/color]{$lang[tsn_08]}[/color][/size]";
 				} else {
 					$message = "[quote][size=2][color=gray][color=teal] [/color][color=gray]{$lang[tsn_01]}[/color] [color=darkorange]{$hft}[/color] {$lang[tsn_09]}{$lang[tsn_06]} [/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][title]} [/color][color=darkorange]{$credit} [/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][unit]}[/color][/size][/quote][size=3][color=dimgray]{$lang[tsn_07]}[color=red]{$todaysay}[/color]{$lang[tsn_08]}[/color][/size]";
 				}
 				require_once libfile('function/post');
+				require_once libfile('function/forum');
 				$pid = insertpost(array('fid' => $var['fidnumber'],'tid' => $tidnumber,'first' => '0','author' => $_G['username'],'authorid' => $_G['uid'],'subject' => '','dateline' => $_G['timestamp'],'message' => $message,'useip' => $_G['clientip'],'invisible' => '0','anonymous' => '0','usesig' => '0','htmlon' => '0','bbcodeoff' => '0','smileyoff' => '0','parseurloff' => '0','attachment' => '0',));
 				DB::query("UPDATE ".DB::table('forum_thread')." SET lastposter='$_G[username]', lastpost='$_G[timestamp]', replies=replies+1 WHERE tid='$tidnumber' AND fid='$var[fidnumber]'", 'UNBUFFERED');
 				updatepostcredits('+', $_G['uid'], 'reply', $var['fidnumber']);
@@ -313,8 +309,7 @@ if($_G['gp_operation'] == 'zong' || $_G['gp_operation'] == 'month' || $_G['gp_op
 				DB::query("UPDATE ".DB::table('forum_forum')." SET lastpost='$lastpost', posts=posts+1, todayposts=todayposts+1 WHERE fid='$var[fidnumber]'", 'UNBUFFERED');
 			}
 		}
-	$sessionname = $_G['uid'].'_signtime';
-	$_SESSION[$sessionname] = $_G['timestamp'];
+	if(memory('check')) memory('set', 'dsu_pualsign_'.$_G['uid'], $_G['timestamp'], 86400);
 	if($num ==0) {
 		if($stats['todayq'] > $stats['highestq']) DB::query("UPDATE ".DB::table('dsu_paulsignset')." SET highestq='$stats[todayq]' WHERE id='1'");
 		DB::query("UPDATE ".DB::table('dsu_paulsignset')." SET yesterdayq='$stats[todayq]',todayq=1 WHERE id='1'");
@@ -372,8 +367,8 @@ $q['if']= $qiandaodb['time']<$tdtime ? "<span class=gray>".$lang['tdno']."</span
 $qtime = dgmdate($qiandaodb['time'], 'Y-m-d H:i');
 $navigation = $lang['name'];
 $navtitle = "$navigation";
-$signBuild = 'Ver 3.0 Encore<br>&copy; Shy9000<br>'; 
-$signadd = 'http://www.dsu.cc/thread-27298-1-1.html';
+$signBuild = 'Ver 3.1 For X2!<br>&copy; <a href="http://loger.me/">Shy9000</a><br>';
+$signadd = 'http://www.dsu.cc/thread-44760-1-1.html';
 if($_G['inajax']){
 	include template('dsu_paulsign:ajaxsign');
 }else{

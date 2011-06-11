@@ -15,16 +15,30 @@
 .qdsmile li img{margin-bottom:5px;}
 .qdsmile li:hover{cursor:pointer;background:#F7FAFF;border:2px dashed #D1D8D8;}
 </style>
-<SCRIPT type=text/javascript>
+<script type="text/javascript">
 function levelts(msg, script) {
     script = !script ? '' : script;
     var c = '<div class="f_c"><div class="c floatwrap" style="height: 370px">' + msg + '</div></div>';
 	var t = '{lang dsu_paulsign:lvmsg}' ;
 	showDialog(c, 'info', t);
 }
-</SCRIPT>
+function Icon_selected(sId) {
+    var oImg = document.getElementsByTagName('li');
+    for (var i = 0; i < oImg.length; i++) {
+      if (oImg[i].id == sId) {
+		var selectname = document.getElementById(oImg[i].id + "_s");
+        selectname.checked = true;
+        oImg[i].style. background = '#F7FAFF';
+		oImg[i].style. border = '2px dashed #D1D8D8';
+      } else {
+        oImg[i].style. background = '';
+		oImg[i].style. border = '';
+      }
+    }
+}
+</script>
 <div id="pt" class="bm cl"><div class="z">
-<a href="./" class="nvhm" title="{lang home}">$_G[setting][bbname]</a><em>&rsaquo;</em><a href="plugin.php?id=dsu_paulsign:sign">{lang dsu_paulsign:name}</a></div> 
+<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a><em>&rsaquo;</em><a href="plugin.php?id=dsu_paulsign:sign">{lang dsu_paulsign:name}</a></div> 
 </div>
 <div id="ct" class="ct2 wp cl">
 <div class="mn">
@@ -37,28 +51,28 @@ function levelts(msg, script) {
             <tr>
               <td class="tr3 tac">
                 <ul class="qdsmile">
-                  <li id="kx" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/kx.gif" /><br /><input type="radio" name="qdxq" value="kx"></center></li>
-                  <li id="ng" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/ng.gif" /><br /><input type="radio" name="qdxq" value="ng"></center></li>
-                  <li id="ym" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/ym.gif" /><br /><input type="radio" name="qdxq" value="ym"></center></li>
-                  <li id="wl" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/wl.gif" /><br /><input type="radio" name="qdxq" value="wl"></center></li>
-                  <li id="nu" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/nu.gif" /><br /><input type="radio" name="qdxq" value="nu"></center></li>
-                  <li id="ch" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/ch.gif" /><br /><input type="radio" name="qdxq" value="ch"></center></li>
-                  <li id="fd" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/fd.gif" /><br /><input type="radio" name="qdxq" value="fd"></center></li>
-                  <li id="yl" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/yl.gif" /><br /><input type="radio" name="qdxq" value="yl"></center></li>
-                  <li id="shuai" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/shuai.gif" /><br /><input type="radio" name="qdxq" value="shuai"></center></li>
+                  <input id="kx_s" type="radio" name="qdxq" value="kx" style="display:none"><li id="kx" onclick="Icon_selected(this.id)" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/kx.gif" /><br /></center></li>
+                  <input id="ng_s" type="radio" name="qdxq" value="ng" style="display:none"><li id="ng" onclick="Icon_selected(this.id)" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/ng.gif" /><br /></center></li>
+                  <input id="ym_s" type="radio" name="qdxq" value="ym" style="display:none"><li id="ym" onclick="Icon_selected(this.id)" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/ym.gif" /><br /></center></li>
+                  <input id="wl_s" type="radio" name="qdxq" value="wl" style="display:none"><li id="wl" onclick="Icon_selected(this.id)" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/wl.gif" /><br /></center></li>
+                  <input id="nu_s" type="radio" name="qdxq" value="nu" style="display:none"><li id="nu" onclick="Icon_selected(this.id)" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/nu.gif" /><br /></center></li>
+                  <input id="ch_s" type="radio" name="qdxq" value="ch" style="display:none"><li id="ch" onclick="Icon_selected(this.id)" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/ch.gif" /><br /></center></li>
+                  <input id="fd_s" type="radio" name="qdxq" value="fd" style="display:none"><li id="fd" onclick="Icon_selected(this.id)" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/fd.gif" /><br /></center></li>
+                  <input id="yl_s" type="radio" name="qdxq" value="yl" style="display:none"><li id="yl" onclick="Icon_selected(this.id)" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/yl.gif" /><br /></center></li>
+                  <input id="shuai_s" type="radio" name="qdxq" value="shuai" style="display:none"><li id="shuai" onclick="Icon_selected(this.id)" onmouseover="showMenu({'ctrlid':this.id, 'pos':'21'});"><center><img src="source/plugin/dsu_paulsign/img/shuai.gif" /><br /></center></li>
                 </ul>
-                <div style="padding:20px 0;"><!--{if $var['qdajax']}--><a href="javascript:;" onclick="showWindow('qwindow', 'qiandao', 'post', '0');return false"><img src="source/plugin/dsu_paulsign/img/qdtb.gif" width="100px" height="35px" /></a><!--{else}--><input type="submit" class=btn value="" style="border:none;background:url(source/plugin/dsu_paulsign/img/qdtb.gif) left top no-repeat;width:100px; height:35px;"><!--{/if}--></div>
+                <div style="padding:20px 0;"><!--{if $var['qdajax']}--><a href="javascript:;" onclick="showWindow('qwindow', 'qiandao', 'post', '0');return false"><img src="source/plugin/dsu_paulsign/img/qdtb.gif" width="100px" height="35px" /></a><!--{else}--><input type="submit" class="btn" value="" style="border:none;background:url(source/plugin/dsu_paulsign/img/qdtb.gif) left top no-repeat;width:100px; height:35px;"><!--{/if}--></div>
               </td>
             </tr>
-<div id="kx_menu" class="g_up" style="display:none"><div class="crly"><center>{lang dsu_paulsign:mb_qb1}</center></div><div class="mncr"></div></div>
-<div id="ng_menu" class="g_up" style="display:none"><div class="crly"><center>{lang dsu_paulsign:mb_qb2}</center></div><div class="mncr"></div></div>
-<div id="ym_menu" class="g_up" style="display:none"><div class="crly"><center>{lang dsu_paulsign:mb_qb3}</center></div><div class="mncr"></div></div>
-<div id="wl_menu" class="g_up" style="display:none"><div class="crly"><center>{lang dsu_paulsign:mb_qb4}</center></div><div class="mncr"></div></div>
-<div id="nu_menu" class="g_up" style="display:none"><div class="crly"><center>{lang dsu_paulsign:mb_qb5}</center></div><div class="mncr"></div></div>
-<div id="ch_menu" class="g_up" style="display:none"><div class="crly"><center>{lang dsu_paulsign:mb_qb6}</center></div><div class="mncr"></div></div>
-<div id="fd_menu" class="g_up" style="display:none"><div class="crly"><center>{lang dsu_paulsign:mb_qb7}</center></div><div class="mncr"></div></div>
-<div id="yl_menu" class="g_up" style="display:none"><div class="crly"><center>{lang dsu_paulsign:mb_qb8}</center></div><div class="mncr"></div></div>
-<div id="shuai_menu" class="g_up" style="display:none"><div class="crly"><center>{lang dsu_paulsign:mb_qb9}</center></div><div class="mncr"></div></div>
+<div id="kx_menu" class="tip tip_4" style="display:none;width:50px;margin:0px 0px 0px 30px;"><div class="tip_horn"></div><div class="tip_c"><center>{lang dsu_paulsign:mb_qb1}</center></div></div>
+<div id="ng_menu" class="tip tip_4" style="display:none;width:50px;margin:0px 0px 0px 30px;"><div class="tip_horn"></div><div class="tip_c"><center>{lang dsu_paulsign:mb_qb2}</center></div></div>
+<div id="ym_menu" class="tip tip_4" style="display:none;width:50px;margin:0px 0px 0px 30px;"><div class="tip_horn"></div><div class="tip_c"><center>{lang dsu_paulsign:mb_qb3}</center></div></div>
+<div id="wl_menu" class="tip tip_4" style="display:none;width:50px;margin:0px 0px 0px 30px;"><div class="tip_horn"></div><div class="tip_c"><center>{lang dsu_paulsign:mb_qb4}</center></div></div>
+<div id="nu_menu" class="tip tip_4" style="display:none;width:50px;margin:0px 0px 0px 30px;"><div class="tip_horn"></div><div class="tip_c"><center>{lang dsu_paulsign:mb_qb5}</center></div></div>
+<div id="ch_menu" class="tip tip_4" style="display:none;width:50px;margin:0px 0px 0px 30px;"><div class="tip_horn"></div><div class="tip_c"><center>{lang dsu_paulsign:mb_qb6}</center></div></div>
+<div id="fd_menu" class="tip tip_4" style="display:none;width:50px;margin:0px 0px 0px 30px;"><div class="tip_horn"></div><div class="tip_c"><center>{lang dsu_paulsign:mb_qb7}</center></div></div>
+<div id="yl_menu" class="tip tip_4" style="display:none;width:50px;margin:0px 0px 0px 30px;"><div class="tip_horn"></div><div class="tip_c"><center>{lang dsu_paulsign:mb_qb8}</center></div></div>
+<div id="shuai_menu" class="tip tip_4" style="display:none;width:50px;margin:0px 0px 0px 30px;"><div class="tip_horn"></div><div class="tip_c"><center>{lang dsu_paulsign:mb_qb9}</center></div></div>
 <table summary="Qd" cellspacing="0" cellpadding="0" class="tfm">
 <tr>
 <th>{lang dsu_paulsign:mb_mode1}</th>
@@ -137,7 +151,7 @@ function levelts(msg, script) {
 		<td>$mrc['lastreward'] {$_G['setting']['extcredits'][$var[nrcredit]]['unit']}</td>
 		<td>$mrc['if']</td>
 	</tr>
-	<tr class="colplural"><td align="left" colspan="9">{lang dsu_paulsign:mb_zxs}: <img src="source/plugin/dsu_paulsign/img/$mrc[qdxq].gif" /> $mrc[todaysay] <!--{if $_G['uid'] && $_G['adminid'] == 1}--><a href="plugin.php?id=dsu_paulsign:sign&operation=ban&banuid=$mrc[uid]"  title="{lang dsu_paulsign:ban_04}"><font color=red>[{lang dsu_paulsign:ban_05}]</font></a><!--{/if}--></td></tr>
+	<tr class="colplural"><td align="left" colspan="9">{lang dsu_paulsign:mb_zxs}: <img src="source/plugin/dsu_paulsign/img/$mrc[qdxq].gif" /> $mrc[todaysay] <!--{if $_G['uid'] && $_G['adminid'] == 1}--><a href="plugin.php?id=dsu_paulsign:sign&operation=ban&banuid=$mrc[uid]&formhash={FORMHASH}"  title="{lang dsu_paulsign:ban_04}"><font color=red>[{lang dsu_paulsign:ban_05}]</font></a><!--{/if}--></td></tr>
 	<!--{/loop}-->
 	<!--{if !empty($multipage)}--><tr><td colspan="8"><div class="pages_btns">$multipage</div></td></tr><!--{/if}-->
 <!--{else}-->
@@ -184,7 +198,7 @@ function levelts(msg, script) {
 </div>
 <div class="um" id="qdmsgt" style="">
 <!--{if $qiandaodb}-->
-<p><font color=#FF0000><b>$_G['username']</b></font> {lang dsu_paulsign:mb_fwt1} <b>$qiandaodb['days']</b> {lang dsu_paulsign:mb_fwt2}<!--{if $var['lastedop']}-->{lang dsu_paulsign:mb_fwt10} <b>$qiandaodb['lasted']</b> {lang dsu_paulsign:mb_fwt2}<!--{/if}--></p>
+<p><font color=#FF0000><b>$_G['username']</b></font> {lang dsu_paulsign:mb_fwt1} <b>$qiandaodb['days']</b> {lang dsu_paulsign:mb_fwt2}</p>
 <p>{lang dsu_paulsign:mb_fwt3}<b>$qiandaodb['mdays']</b> {lang dsu_paulsign:mb_fwt2}</p>
 <p>{lang dsu_paulsign:mb_fwt4}$q['if']{lang dsu_paulsign:mb_fwt5}</p>
 <p>{lang dsu_paulsign:mb_fwt6}<font color=#ff00cc>$qtime</font> </p>

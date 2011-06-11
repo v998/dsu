@@ -7,16 +7,21 @@
 <div id="pt" class="bm cl">
 	<!--{subtemplate common/simplesearchform}-->
 	<div class="z">
-		<a href="./" id="fjump"{if $_G['setting']['forumjump'] == 1} onmouseover="showMenu({'ctrlid':this.id})"{/if} class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em><!--{if $order == 'addup'}-->{lang dsu_amupper:titl1}<!--{elseif $order == 'continuous'}-->{lang dsu_amupper:titl2}<!--{/if}-->
+		<a href="./" id="fjump"{if $_G['setting']['forumjump'] == 1} onmouseover="showMenu({'ctrlid':this.id})"{/if} class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em><!--{if $odmod == 'addup'}-->{lang dsu_amupper:titl1}<!--{elseif $odmod == 'continuous'}-->{lang dsu_amupper:titl2}<!--{/if}-->
 	</div>
 </div>
 
 <div class="bm">
 	<div class="bm_h cl">
 		<span class="y">
-			<!--{if $order == 'addup'}--><a class="xi1 xw1" href="plugin.php?id=dsu_amupper:list&order=continuous&page={$mypospage}">{lang dsu_amupper:titl2}</a><!--{elseif $order == 'continuous'}--><a class="xi1 xw1" href="plugin.php?id=dsu_amupper:list&order=addup&page={$mypospage}">{lang dsu_amupper:titl1}</a><!--{/if}-->&nbsp;|&nbsp;<a class="xi1 xw1" href="plugin.php?id=dsu_amupper:list{if $order == 'continuous'}&order=continuous{/if}&page={$mypospage}">{lang dsu_amupper:title}</a>
+			<!--{if $odmod == 'addup'}-->
+			<a class="xi1 xw1" href="plugin.php?id=dsu_amupper:list&order=continuous">{lang dsu_amupper:titl2}</a>
+			<!--{elseif $odmod == 'continuous'}-->
+			<a class="xi1 xw1" href="plugin.php?id=dsu_amupper:list&order=addup">{lang dsu_amupper:titl1}</a>
+			<!--{/if}-->&nbsp;|&nbsp;
+			<a class="xi1 xw1" href="plugin.php?id=dsu_amupper:list{if $odmod == 'continuous'}&order=continuous{/if}&page={$mypospage}">{lang dsu_amupper:title}</a>
 		</span>
-		<h2><!--{if $order == 'addup'}-->{lang dsu_amupper:titl1}<!--{elseif $order == 'continuous'}-->{lang dsu_amupper:titl2}<!--{/if}--></h2>
+		<h2><!--{if $odmod == 'addup'}-->{lang dsu_amupper:titl1}<!--{elseif $odmod == 'continuous'}-->{lang dsu_amupper:titl2}<!--{/if}--></h2>
 	</div>
 	<div class="bm_c dsu_amupper_list cl">
 		<ul class="cl">

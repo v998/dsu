@@ -40,12 +40,12 @@ CREATE TABLE IF NOT EXISTS `cdb_dsu_paulsign` (
   `time` int(10) NOT NULL,
   `days` int(5) NOT NULL DEFAULT '0',
   `mdays` int(5) NOT NULL DEFAULT '0',
-  `lasted` int(5) NOT NULL DEFAULT '0',
   `reward` int(12) NOT NULL DEFAULT '0',
   `lastreward` int(12) NOT NULL DEFAULT '0',
   `qdxq` varchar(5) NOT NULL,
   `todaysay` varchar(100) NOT NULL,
-  PRIMARY KEY (`uid`)
+  PRIMARY KEY (`uid`),
+  KEY `time` (`time`)
 ) ENGINE=MyISAM;
 DROP TABLE IF EXISTS `cdb_dsu_paulsignset`;
 CREATE TABLE IF NOT EXISTS `cdb_dsu_paulsignset` (
@@ -59,5 +59,17 @@ CREATE TABLE IF NOT EXISTS `cdb_dsu_paulsignset` (
 INSERT INTO `cdb_dsu_paulsignset` (id, todayq, yesterdayq, highestq, qdtidnumber) VALUES ('1', '0', '0', '0', '0');
 EOF;
 runquery($sql);
+if(PHP_VERSION < '5.1'){
+	$result = DB::fetch_first("SELECT * FROM ".DB::table('common_setting')." WHERE skey='profilegroup'");
+	$profilegroup = unserialize($result['svalue']);
+	unset($profilegroup['base']['field']['timeoffset']);
+	unset($profilegroup['work']['field']['timeoffset']);
+	unset($profilegroup['edu']['field']['timeoffset']);
+	unset($profilegroup['contact']['field']['timeoffset']);
+	unset($profilegroup['info']['field']['timeoffset']);
+	$profilegroup = serialize($profilegroup);
+	DB::query("UPDATE ".DB::table('common_setting')." SET svalue='$profilegroup' WHERE skey='profilegroup'");
+	DB::query("UPDATE ".DB::table('common_member')." SET timeoffset='' WHERE uid");
+}
 $finish = TRUE;
 ?>

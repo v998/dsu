@@ -6,20 +6,19 @@
 !defined('IN_DISCUZ') && exit('Access Denied');
 !defined('IN_ADMINCP') && exit('Access Denied');
 DEFINE('OFFSET_DELIMETER', "\t");
-require_once DISCUZ_ROOT.'./data/plugindata/dsu_amufzc.lang.php';
 
-$lang = $scriptlang['dsu_amufzc'];
 
 if(!$_G['gp_submit']){
-	showtableheader($lang['admin_h1']);
+	showtableheader(lang('plugin/dsu_amufzc','a2'));
 	showformheader("plugins&operation=config&identifier=dsu_amufzc&pmod=admin&submit=1", "");
-	shownav('plugin', $lang['a1'], $lang['a2']);
-	showsetting($lang['a3'], 'time', '1', 'text', '',0, $lang['a4']);
+	shownav('plugin', lang('plugin/dsu_amufzc','a1'), lang('plugin/dsu_amufzc','a2'));
+	showsetting(lang('plugin/dsu_amufzc','a3'), 'time', '1', 'text', '',0, lang('plugin/dsu_amufzc','a4'));
 	echo '<input type="hidden" name="formhash" value="'.FORMHASH.'">';
-	showsubmit('submit', $lang['a5']);
+	showsubmit('submit', lang('plugin/dsu_amufzc','a5'));
 	showformfooter();
 	showtablefooter();
-}elseif($_G['gp_submit'] == '1' && $_G['adminid']=='1' && $_G['gp_formhash']==FORMHASH){
+}elseif($_G['gp_submit'] && $_G['adminid']=='1' && $_G['gp_formhash']==FORMHASH){
+
 	$times = intval($_G['gp_time']*60*60*24);
 	$tablename = DB::table("plugin_dsuamfzc");
 	$query = DB::query("SHOW TABLES LIKE '$tablename'");
@@ -52,6 +51,7 @@ if(!$_G['gp_submit']){
 	}else{
 		cpmsg('dsu_amufzc:a8', 'action=plugins&operation=config&identifier=dsu_amufzc&pmod=admin','succeed');
 	}
+
 }
 
 function array2php($array,$file,$arrayname)  {

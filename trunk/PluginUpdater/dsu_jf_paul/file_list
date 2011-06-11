@@ -1,0 +1,9 @@
+source/plugin/dsu_jf_paul/discuz_plugin_dsu_jf_paul_SC_GBK.xml
+source/plugin/dsu_jf_paul/discuz_plugin_dsu_jf_paul_SC_UTF8.xml
+source/plugin/dsu_jf_paul/discuz_plugin_dsu_jf_paul_TC_BIG5.xml
+source/plugin/dsu_jf_paul/discuz_plugin_dsu_jf_paul_TC_UTF8.xml
+source/plugin/dsu_jf_paul/dsu_jf_paul.class.php
+source/plugin/dsu_jf_paul/GB_BIG.js
+source/plugin/dsu_jf_paul/install.php
+source/plugin/dsu_jf_paul/uninstall.php
+source/plugin/dsu_jf_paul/upgrade.php

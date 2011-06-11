@@ -1,0 +1,41 @@
+<!--{block return}-->
+<SPAN id="msg">
+<div class="rfm"> 
+<table> 
+<tr>
+<th>
+<span class="rq">*</span><label for="rid">{lang dsu_amufzc:3}:</label></th> 
+<td><input type="text" id="rid" name="rid" autocomplete="off" class="px" size="25" value="$randid" /></td> 
+<td class="tipcol"><span id="msging"><A HREF="javascript:;" onClick=" showBBzcm();" >{lang dsu_amufzc:7}</A>{lang dsu_amufzc:8}</span><i id="tip_rid" class="p_tip"></i></td>
+</tr> 
+</table> 
+</div>
+</SPAN>
+
+<script type="text/javascript"> 
+$('$this->regemail[username]').value = '$input[1]';
+$('$this->regemail[password]').value = '$input[2]';
+$('$this->regemail[password2]').value = '$input[3]';
+$('$this->regemail[email]').value = '$input[4]';
+$('rid').value = '$_G[gp_rid]';
+function showBBzcm() {
+	var username = '$this->regemail[username]';
+	var email = '$this->regemail[email]';
+	var password = '$this->regemail[password]';
+	var password2 = '$this->regemail[password2]';
+
+	activationauth = document.getElementsByName('activationauth')[0].value;
+
+	email = $(email).value;
+	username = $(username).value;
+	password = $(password).value;
+	password2 = $(password2).value;
+
+var msgshow = '{lang dsu_amufzc:94}';
+
+	var geturl = 'plugin.php?id=dsu_amufzc:ajaxget&email=' + email + '&username=' + username + '&password2=' + password2 + '&password=' + password + '&activationauth=' + activationauth + '&rand=' + Math.random();
+
+    ajaxget(geturl, 'msg', 'msging',msgshow);
+}
+</script> 
+<!--{/block}-->

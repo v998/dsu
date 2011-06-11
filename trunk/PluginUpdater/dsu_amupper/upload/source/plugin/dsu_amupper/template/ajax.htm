@@ -1,7 +1,12 @@
-{template common/header}
-<!--{if $dsu_amupperimage == '1'}-->
-<span id="ppered" onmouseover="showMenu({'ctrlid':this.id,'pos':'43'})">{lang dsu_amupper:info1}</span>
-<!--{else}-->
-<span id="ppered" onmouseover="showMenu({'ctrlid':this.id,'pos':'43'})">{lang dsu_amupper:info0}</span>
+{subtemplate common/header}
+<!--{if !$dsu_amuppercked}-->
+	$returnajax
 <!--{/if}-->
-{template common/footer}
+<!--{if $dsu_amuppercked}-->
+	<!--{if $dsu_amupperimage == '1'}-->
+	{lang dsu_amupper:info1}
+	<!--{else}-->
+	<FONT COLOR="$dsu_amupperlcolor">{lang dsu_amupper:info0}</FONT>
+	<!--{/if}-->
+<!--{/if}-->
+{subtemplate common/footer}

@@ -4,9 +4,9 @@
 */
 !defined('IN_DISCUZ') && exit('Access Denied');
 !defined('IN_ADMINCP') && exit('Access Denied');
-require_once DISCUZ_ROOT.'./data/plugindata/dsu_paulsign.lang.php';
-$lang = $scriptlang['dsu_paulsign'];
-if($_G['gp_submit'] == '') {
+loadcache('pluginlanguage_script');
+$lang = $_G['cache']['pluginlanguage_script']['dsu_paulsign'];
+if(!$_G['gp_submit']) {
 showtableheader('Sign Import Made by:Shy9000');
 showformheader("plugins&operation=config&identifier=dsu_paulsign&pmod=sign_import&submit=1", "");
 showsetting("{$lang[import_01]}", 'imm', '', 'radio');
@@ -17,13 +17,13 @@ echo '<input type="hidden" name="formhash" value="'.FORMHASH.'">';
 showsubmit('submit', "OK!");
 showformfooter();
 showtablefooter();
-} elseif($_G['gp_submit'] == '1' && $_G['adminid']=='1' && $_G['gp_formhash']==FORMHASH) {
+} elseif($_G['gp_submit'] && $_G['adminid']=='1' && $_G['gp_formhash']==FORMHASH) {
 if($_G['gp_icc']){
 	$tablepre = $_G['config']['db'][1]['tablepre'];
 	DB::query("DROP TABLE IF EXISTS ".DB::table('dsu_paulsign')."");
 	DB::query("DROP TABLE IF EXISTS ".DB::table('dsu_paulsignset')."");
-	DB::query("RENAME TABLE {$tablepre}rs_sign TO {$tablepre}dsu_paulsign");
-	DB::query("RENAME TABLE {$tablepre}rs_signset TO {$tablepre}dsu_paulsignset");
+	DB::query("RENAME TABLE ".DB::table('rs_sign')." TO ".DB::table('dsu_paulsign')."");
+	DB::query("RENAME TABLE ".DB::table('rs_signset')." TO ".DB::table('dsu_paulsignset')."");
 }else{
 	if($_G['gp_imm']){
 		$query = DB::query("SELECT * FROM ".DB::table('msign_record')."");
@@ -33,7 +33,7 @@ if($_G['gp_icc']){
 			if(!$mrc['ifcz']['uid']) {
 				$mrc['saying'] = dhtmlspecialchars($mrc['saying']);
 				$mrc['saying'] = daddslashes($mrc['saying']);
-				DB::query("INSERT INTO ".DB::table('dsu_paulsign')." (uid,time,days,mdays,lasted,reward,lastreward,qdxq,todaysay) VALUES ('$mrc[uid]','$mrc[signdate]','$mrc[totalsign]','$mrc[days]','0','$mrc[reward]','$mrc[reward]','kx','$mrc[saying]')");
+				DB::query("INSERT INTO ".DB::table('dsu_paulsign')." (uid,time,days,mdays,reward,lastreward,qdxq,todaysay) VALUES ('$mrc[uid]','$mrc[signdate]','$mrc[totalsign]','$mrc[days]','$mrc[reward]','$mrc[reward]','kx','$mrc[saying]')");
 			}else{
 				$mrc['im_days']= $mrc['ifcz']['days'] + $mrc['totalsign'];
 				$mrc['im_mdays']= $mrc['ifcz']['mdays'] + $mrc['days'];
@@ -59,7 +59,7 @@ if($_G['gp_icc']){
 			if(!$mrc['ifcz']['uid']) {
 				$mrc['todaysay'] = dhtmlspecialchars($mrc['todaysay']);
 				$mrc['todaysay'] = daddslashes($mrc['todaysay']);
-				DB::query("INSERT INTO ".DB::table('dsu_paulsign')." (uid,time,days,mdays,lasted,reward,lastreward,qdxq,todaysay) VALUES ('$mrc[uid]','$mrc[time]','$mrc[days]','$mrc[mdays]','$mrc[lasted]','$mrc[reward]','$mrc[lastreward]','$mrc[qdxq]','$mrc[todaysay]')");
+				DB::query("INSERT INTO ".DB::table('dsu_paulsign')." (uid,time,days,mdays,reward,lastreward,qdxq,todaysay) VALUES ('$mrc[uid]','$mrc[time]','$mrc[days]','$mrc[mdays]','$mrc[reward]','$mrc[lastreward]','$mrc[qdxq]','$mrc[todaysay]')");
 			}else{
 				$mrc['im_days']= $mrc['ifcz']['days'] + $mrc['days'];
 				$mrc['im_mdays']= $mrc['ifcz']['mdays'] + $mrc['mdays'];

@@ -5,22 +5,21 @@
 !defined('IN_DISCUZ') && exit('Access Denied');
 !defined('IN_ADMINCP') && exit('Access Denied');
 
-require_once DISCUZ_ROOT.'./data/plugindata/dsu_amupper.lang.php';
 
-$lang = $scriptlang['dsu_amupper'];
 if(file_exists(DISCUZ_ROOT.'./data/dsu_amupper.lock')) {
 	cpmsg('dsu_amupper:admin_ed', 'action=plugins&operation=config&identifier=dsu_amupper','succeed');
 	exit;
 } 
+
 if(!$_G['gp_submit']){
-	showtableheader($lang['admin_h1']);
+	showtableheader(lang("plugin/dsu_amupper","admin_h1"));
 	showformheader("plugins&operation=config&identifier=dsu_amupper&pmod=admin&submit=1", "");
-	showsetting("{$lang['admin_f2']}", 'reserve', '1', 'radio');
+	showsetting(lang('plugin/dsu_amupper','admin_f2'), 'reserve', '1', 'radio');
 	echo '<input type="hidden" name="formhash" value="'.FORMHASH.'">';
 	showsubmit('submit', "OK!");
 	showformfooter();
 	showtablefooter();
-}elseif($_G['gp_submit'] == '1' && $_G['adminid']=='1' && $_G['gp_formhash']==FORMHASH){
+}elseif($_G['gp_submit'] && $_G['adminid']=='1' && $_G['gp_formhash']==FORMHASH){
 	$tablename = DB::table('dsu_paulsign');
 	$amuppertable = DB::table('plugin_dsuampper');
 	$query = DB::query("SHOW TABLES LIKE '$tablename'");

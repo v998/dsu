@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2]]></item>
+	<item id="Time"><![CDATA[2011-06-08 10:28]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://127.0.0.1/2.0/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[【DSU】简繁切换]]></item>
+			<item id="identifier"><![CDATA[dsu_jf_paul]]></item>
+			<item id="description"><![CDATA[在底部导航中加上简繁切换功能.]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[dsu_jf_paul/]]></item>
+			<item id="copyright"><![CDATA[Shy9000@DSU And 佚名]]></item>
+			<item id="version"><![CDATA[1.2]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[dsu_jf_paul]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[默认是简/繁?]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[def]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1=繁體中文
+2=简体中文]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[显示位置]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[displaypos]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[1=顶部菜单左侧
+2=顶部菜单右侧
+3=底部菜单]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[是否加红粗显示]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[light]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="jt"><![CDATA[简体中文]]></item>
+				<item id="ft"><![CDATA[繁體中文]]></item>
+			</item>
+		</item>
+<item id="installfile"><![CDATA[install.php]]></item>
+<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+<item id="intro"><![CDATA[
+在底部导航中加上简繁切换功能.
+]]></item>
+<item id="license"><![CDATA[[list]
+[*]本插件版权归属插件作者,及其下属Discuz! Student Union团队所有.
+[*]未经插件作者许可,任何人不得以任何形式在任何地方发布/转发原版以及其衍生的修改版.
+[*][b]插件作者:[/b]shy9000
+[*][b]作品简介:[/b]在底部导航中加上简繁切换功能.
+[*][b]发布地址:[/b][url]http://www.dsu.cc/thread-75334-1-1.html[/url]
+[*]如有任何关于使用上的疑问,请至[url]http://www.dsu.cc/forum-44-1.html[/url]提出.
+[*][color=Red]如果您愿意资助我们,请至[url]http://www.dsu.cc/donate.php[/url]对我们进行赞助.[/color]
+[*]最后,感谢您使用我们的插件,也希望您能够给我们DSU团队提供更好的意见([url=http://www.dsu.cc/]请点击这里进入DSU团队官方站点[/url]).
+[/list]]]></item>
+</item>
+</root>

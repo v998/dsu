@@ -1,0 +1,282 @@
+{subtemplate common/header}
+<style type="text/css"> 
+.datalist { zoom: 1; }
+.datalist table { margin-bottom: 30px; width: 100%; border: 1px solid #E6E7E1; }
+.datalist th, .datalist td { padding: 4px 5px; border: 1px solid #E6E7E1; font-weight: 400; }
+.datalist th img { vertical-align: top; }
+.datalist table .stat_subject { border-right: none; }
+.datalist table .stat_num { padding-right: 15px; text-align: right; border-left: none; }
+ 
+.datalist .datatable { margin-bottom: 10px; }
+.datalist .datatable, .datalist .datatable th, .datalist .datatable td { border-width: 1px 0; }
+.datalist .fixtable { table-layout: fixed; }
+.colplural, .colplural th, .colplural td, th.highlight, td.highlight { background-color: {COMMONBG}; }
+</style> 
+<div id="pt" class="bm cl"><div class="z">
+<a href="./" class="nvhm" title="{lang home}">$_G[setting][bbname]</a><em>&rsaquo;</em><a href="plugin.php?id=dsu_paulpromotionpro:dsu_paulpromotionpro">{$lang['php_03']}</a></div></div>
+<div id="ct" class="ct2 wp cl">
+<div class="mn">
+             <h1 class="mt"><img alt="profile" src="static/image/feed/profile.gif" class="vm" /> {$lang['php_03']}</h1>
+              <ul class="tb cl">
+				<li {if $_G['gp_mode'] == ''}class="a"{/if}><a href="plugin.php?id=dsu_paulpromotionpro:dsu_paulpromotionpro">{$lang['mb_56']}</a></li>
+                <li {if $_G['gp_mode'] == '2'}class="a"{/if}><a href="plugin.php?id=dsu_paulpromotionpro:dsu_paulpromotionpro&mode=2">{$lang['mb_15']}</a></li>
+              </ul>
+		<!--{if $_G['gp_mode'] == '2'}-->
+         <p class="tbmu">
+				<a href="plugin.php?id=dsu_paulpromotionpro:dsu_paulpromotionpro&mode=2"{if $_G['gp_operation'] == ''} class="a"{/if}>{$lang['mb_16']}</a><span class="pipe">|</span>
+				<a href="plugin.php?id=dsu_paulpromotionpro:dsu_paulpromotionpro&mode=2&operation=actnum"{if $_G['gp_operation'] == 'actnum'} class="a"{/if}>{$lang['mb_17']}</a><span class="pipe">|</span>
+				<a href="plugin.php?id=dsu_paulpromotionpro:dsu_paulpromotionpro&mode=2&operation=mynoactxx"{if $_G['gp_operation'] == 'mynoactxx'} class="a"{/if}>{$lang['mb_18']}</a><span class="pipe">|</span>
+				<a href="plugin.php?id=dsu_paulpromotionpro:dsu_paulpromotionpro&mode=2&operation=myactxx"{if $_G['gp_operation'] == 'myactxx'}  class="a"{/if}>{$lang['mb_19']}</a>
+		 </p>
+		<!--{else}-->
+         <p class="tbmu">
+<!--{if $var['ticketopen']}-->
+<a href="plugin.php?id=dsu_paulpromotionpro:dsu_paulpromotionpro" {if $_G['gp_view'] == ''}class="a"{/if}><span>{$lang['mb_01']}</span></a><span class="pipe">|</span>
+<a href="plugin.php?id=dsu_paulpromotionpro:dsu_paulpromotionpro&view=2" {if $_G['gp_view'] == '2'}class="a"{/if}><span>{$lang['mb_45']}</span></a><span class="pipe">|</span>
+<a href="plugin.php?id=dsu_paulpromotionpro:dsu_paulpromotionpro&view=3" {if $_G['gp_view'] == '3'}class="a"{/if}><span>{$lang['n121_07']}</span></a>
+<!--{else}-->
+<a href="plugin.php?id=dsu_paulpromotionpro:dsu_paulpromotionpro" {if $_G['gp_view'] == ''}class="a"{/if}><span>{$lang['mb_01']}</span></a><span class="pipe">|</span>
+<a href="plugin.php?id=dsu_paulpromotionpro:dsu_paulpromotionpro&view=2" {if $_G['gp_view'] == '2'}class="a"{/if}><span>{$lang['mb_45']}</span></a>
+<!--{/if}-->
+		 </p>
+		<!--{/if}-->
+<br>
+<!--{if $_G['gp_view'] == '' && $_G['gp_mode'] !== '2'}-->
+<!--{if $_G['setting']['creditspolicy']['promotion_visit']}--><p>{$lang['tip_01']}</p><!--{/if}-->
+<!--{if $_G['setting']['creditspolicy']['promotion_register'] && $_G['setting']['creditspolicy']['promotion_visit']}--><p>{$lang['tip_02']}</p><!--{/if}-->
+<!--{if $_G['setting']['creditspolicy']['promotion_register'] && !$_G['setting']['creditspolicy']['promotion_visit']}--><p>{$lang['tip_03']}</p><!--{/if}-->
+<p>{$lang['mb_03']} <span class="emfont">{$var['timepass']} {$lang['mb_04']}</span>{$lang['mb_05']} <span class="emfont">{$var['postpass']} {$lang['mb_06']}</span>{$lang['mb_07']} <span class="emfont">{$var['regpass']} {$lang['mb_08']}</span><br>{$lang['mb_09']} <span class="emfont">{$_G[setting][extcredits][$var[creditcc]][title]} {$var[creditz]} {$_G[setting][extcredits][$var[creditcc]][unit]}</span><!--{if $var[creditz2]}-->{$lang['mb_55']} <span class="emfont">{$_G[setting][extcredits][$var[creditcc2]][title]} {$var[creditz2]} {$_G[setting][extcredits][$var[creditcc2]][unit]} </span><!--{/if}-->{$lang['mb_10']}<br>{$lang['mb_11']}</p>
+				<table cellspacing="0" cellpadding="0" class="tfm">
+					<!--{if $digest_thread}-->
+					<tr>
+						<td>
+							<p class="mtm pns"><font color="red">{$lang['addnew_04']}</font>
+							<input type="text" class="px" onclick="this.select();setCopy('{$digest_thread[subject]}\n{$_G[siteurl]}forum.php?mod=viewthread&tid={$digest_thread[tid]}&fromuid={$_G[uid]}', '{$lang[mb_61]}');" value="{$digest_thread[subject]} {$_G[siteurl]}forum.php?mod=viewthread&tid={$digest_thread[tid]}&fromuid={$_G[uid]}" size="50" />
+							&nbsp;&nbsp;<button type="submit" class="pn" onclick="setCopy('{$digest_thread[subject]}\n{$_G[siteurl]}forum.php?mod=viewthread&tid={$digest_thread[tid]}&fromuid={$_G[uid]}', '{$lang[mb_61]}');" type="submit"><em>{$lang['mb_60']}</em></button></p>
+							<p class="mtm pns">{$lang['mb_58']}: {$lang['mb_62']}</p>
+							<p class="mtm pns">{$lang['mb_59']}: <br>$digest_thread[subject]<br>{$_G[siteurl]}forum.php?mod=viewthread&tid={$digest_thread[tid]}&fromuid={$_G[uid]}</p>
+						</td>
+					</tr>
+					<!--{/if}-->
+					<tr>
+						<td>
+							<p class="mtm pns">{$lang['mb_57']}1
+							<input type="text" class="px" onclick="this.select();setCopy(this.value, '{$lang[mb_61]}');" value="$_G[siteurl]?fromuid=$_G[uid]" size="50" />
+							&nbsp;&nbsp;<button type="submit" class="pn" onclick="setCopy('$_G[siteurl]?fromuid=$_G[uid]', '{$lang[mb_61]}');" type="submit"><em>{$lang['mb_60']}</em></button></p>
+							<p class="mtm pns">{$lang['mb_58']}: {$lang['mb_62']}</p>
+							<p class="mtm pns">{$lang['mb_59']}: $_G[siteurl]?fromuid=$_G[uid]</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="mtm pns">{$lang['mb_57']}2
+							<input type="text" class="px" onclick="this.select();setCopy(this.value, '{$lang[mb_61]}');" value="$_G[siteurl]?fromuser={echo rawurlencode($_G[username])}" size="50" />
+							&nbsp;&nbsp;<button type="submit" class="pn" onclick="setCopy('$_G[siteurl]?fromuser={echo rawurlencode($_G[username])}', '{$lang[mb_61]}');"><em>{$lang['mb_60']}</em></button></p>
+							<p class="mtm pns">{$lang['mb_58']}: {$lang['mb_62']}</p>
+							<p class="mtm pns">{$lang['mb_59']}: $_G[siteurl]?fromuser={echo rawurlencode($_G[username])}</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="mtm pns">{$lang['mb_57']}3
+							<input type="text" class="px" onclick="this.select();setCopy(this.value, '{$lang[mb_61]}');" value="[url=$_G[siteurl]?fromuser={echo rawurlencode($_G[username])}]{$_G[setting][bbname]}[/url]" size="50" />
+							&nbsp;&nbsp;<button type="submit" class="pn" onclick="setCopy('[url=$_G[siteurl]?fromuser={echo rawurlencode($_G[username])}]{$_G[setting][bbname]}[/url]', '{$lang[mb_61]}');"><em>{$lang['mb_60']}</em></button></p>
+							<p class="mtm pns">{$lang['mb_58']}: {$lang['mb_63']}</p>
+							<p class="mtm pns">{$lang['mb_59']}: <a href="$_G[siteurl]?fromuser={echo rawurlencode($_G[username])}" target="_blank">{$_G[setting][bbname]}</a></p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="mtm pns">{$lang['mb_57']}4
+							<input type="text" class="px" onclick="this.select();setCopy(this.value, '{$lang[mb_61]}');" value="[url=$_G[siteurl]?fromuser={echo rawurlencode($_G[username])}][img]{$_G[siteurl]}{$_G[style][boardimg]}[/img][/url]" size="50" />
+							&nbsp;&nbsp;<button type="submit" class="pn" onclick="setCopy('[url=$_G[siteurl]?fromuser={echo rawurlencode($_G[username])}][img]{$_G[siteurl]}{$_G[style][boardimg]}[/img][/url]', '{$lang[mb_61]}');"><em>{$lang['mb_60']}</em></button></p>
+							<p class="mtm pns">{$lang['mb_58']}: {$lang['mb_63']}</p>
+							<p class="mtm pns">{$lang['mb_59']}: <a href="$_G[siteurl]?fromuser={echo rawurlencode($_G[username])}" target="_blank">$_G[style][boardlogo]</a></p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="mtm pns">{$lang['mb_57']}5
+							<input type="text" class="px" onclick="this.select();setCopy(this.value, '{$lang[mb_61]}');" value="<a href=&quot;{$_G[siteurl]}?fromuser={echo rawurlencode($_G[username])}&quot; target=&quot;_blank&quot;>{$_G[setting][bbname]}</a>" size="50" />
+							&nbsp;&nbsp;<button type="submit" class="pn" onclick="setCopy('<a href=&quot;{$_G[siteurl]}?fromuser={echo rawurlencode($_G[username])}&quot; target=&quot;_blank&quot;>{$_G[setting][bbname]}</a>', '{$lang[mb_61]}');"><em>{$lang['mb_60']}</em></button></p>
+							<p class="mtm pns">{$lang['mb_58']}: {$lang['mb_64']}</p>
+							<p class="mtm pns">{$lang['mb_59']}: <a href="$_G[siteurl]?fromuser={echo rawurlencode($_G[username])}" target="_blank">$_G[setting][bbname]</a></p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p class="mtm pns">{$lang['mb_57']}6
+							<input type="text" class="px" onclick="this.select();setCopy(this.value, '{$lang[mb_61]}');" value="<a href=&quot;{$_G[siteurl]}?fromuser={echo rawurlencode($_G[username])}&quot; target=&quot;_blank&quot;>{echo htmlspecialchars($_G[style][boardlogo])}</a>" size="50" />
+							&nbsp;&nbsp;<button type="submit" class="pn" onclick="setCopy('<a href=&quot;{$_G[siteurl]}?fromuser={echo rawurlencode($_G[username])}&quot; target=&quot;_blank&quot;>{echo htmlspecialchars($_G[style][boardlogo])}</a>', '{$lang[mb_61]}');"><em>{$lang['mb_60']}</em></button></p>
+							<p class="mtm pns">{$lang['mb_58']}: {$lang['mb_64']}</p>
+							<p class="mtm pns">{$lang['mb_59']}: <a href="$_G[siteurl]?fromuser={echo rawurlencode($_G[username])}" target="_blank">$_G[style][boardlogo]</a></p>
+						</td>
+					</tr>
+				</table>
+<!--{elseif $_G['gp_view'] == '2' && $_G['gp_mode'] !== '2'}-->
+<p>{$lang['mb_47']} <font color=blue><b>{$alldsu_paulpromotionpronum}</b></font> {$lang['mb_48']}[{$lang['mb_49']} <font color=green><b>{$actdsu_paulpromotionpronum}</b></font> {$lang['mb_50']}]</p>
+<p>{$lang['mb_51']} {$_G[setting][extcredits][$var[creditcc]][title]} <font color=blue><b>{$ccactdsu_paulpromotionpronum}</b></font> {$_G[setting][extcredits][$var[creditcc]][unit]}<!--{if $var[creditz2]}--> {$lang['mb_55']}  {$_G[setting][extcredits][$var[creditcc2]][title]} <font color=blue><b>{$ccactdsu_paulpromotionpronum2}</b></font> {$_G[setting][extcredits][$var[creditcc2]][unit]} </span><!--{/if}--></p>
+<!--{elseif $_G['gp_view'] == '3' && $_G['gp_mode'] !== '2' && $var['ticketopen']}-->
+<p>{$lang['n121_08']} $_G[setting][extcredits][$var[ticketfcr]]['title'] <font color=green><b>$var[ticketfvr]</b></font> $_G[setting][extcredits][$var[ticketfcr]]['unit']{$lang['n121_09']} $_G[setting][extcredits][$var[ticketfcr]]['title'] <font color=blue><b>$memberscr</b></font> $_G[setting][extcredits][$var[ticketfcr]]['unit'] {$lang['n121_10']} {$dsu_paulpromotionpronum['boxtimes']} {$lang['n121_11']}<!--{if $var['tickettimes']}-->[{$lang['n121_12']} $var[tickettimes] {$lang['n121_13']}]<!--{/if}-->.</p>
+<p>{$lang['n121_14']}<font color=green><b>{$_G[setting][extcredits][$var[ticketcr]]['title']}</b></font>{$lang['n121_15']}{$_G[setting][extcredits][$var[ticketcr]]['unit']}{$lang['n121_16']} <font color=red><b>$var[ticketmin]</b></font> {$lang['n121_17']} <font color=red><b>$var[ticketmax]</b></font> {$lang['n121_18']}</p>
+<p align="center">
+<!--{if $var[ticketfvr] < $memberscr}-->
+<!--{if $var['tickettimes'] && ($var['tickettimes'] == $dsu_paulpromotionpronum[boxtimes])}-->
+<img src="source/plugin/dsu_paulpromotionpro/img/warning.gif" border="0" /><br><font color=red><b>{$lang['n121_19']}</b></font>
+<!--{else}-->
+<a href="plugin.php?id=dsu_paulpromotionpro:dsu_paulpromotionpro&operation=boxopen" title="{$lang['n121_20']}"><img src="source/plugin/dsu_paulpromotionpro/img/box.gif" alt="{$lang['n121_20']}" border="0" /></a>
+<!--{/if}-->
+<!--{else}-->
+<!--{if $var['tickettimes'] && ($var['tickettimes'] == $dsu_paulpromotionpronum[boxtimes])}-->
+<img src="source/plugin/dsu_paulpromotionpro/img/warning.gif" border="0" /><br><font color=red><b>{$lang['n121_21']}</b></font>
+<!--{else}-->
+<img src="source/plugin/dsu_paulpromotionpro/img/warning.gif" border="0" /><br><font color=red><b>{$lang['n121_22']}</b></font>
+<!--{/if}-->
+<!--{/if}-->
+</p>	
+<!--{/if}-->	
+
+<!--{if $_G['gp_operation'] == '' && $_G['gp_mode'] == '2'}-->
+			<div class="datalist">
+				<table cellspacing="0" cellpadding="0" summary="phb" class="datatable" style="margin-bottom:30px;">
+					<tr class="colplural">
+						<th width="1%"></th>
+						<th width="30%">{$lang['mb_20']}</th>
+						<th width="20%">{$lang['mb_21']}</th>
+						<th width="20%">{$lang['mb_22']}</th>
+						<th width="28%">{$lang['mb_23']}[{$lang['mb_24']}{$_G[setting][extcredits][$var[creditcc]][title]}]</th>
+					</tr>
+<!--{if $mrcs}-->
+	<!--{loop $mrcs $mrc}-->
+	<tr>
+		<td></td>
+		<td><a href="home.php?mod=space&uid=$mrc[uid]" target="_blank">$mrc[username]</a></td>
+		<td>$mrc[allnum]</td>
+		<td>$mrc[actnum]</td>
+		<td>$mrc[cc] {$_G[setting][extcredits][$var[creditcc]][unit]}</td>
+	</tr>
+	<!--{/loop}-->
+	<tr><td colspan="5">{$lang['mb_25']}</td></tr>
+<!--{else}-->
+<tr><td colspan="5">{$lang['mb_26']}</td></tr>
+<!--{/if}-->
+				</table>
+			</div>
+<!--{elseif $_G['gp_operation'] == 'actnum' && $_G['gp_mode'] == '2'}-->
+			<div class="datalist">
+				<table cellspacing="0" cellpadding="0" summary="phb" class="datatable" style="margin-bottom:30px;">
+					<tr class="colplural">
+						<th width="1%"></th>
+						<th width="30%">{$lang['mb_27']}</th>
+						<th width="20%">{$lang['mb_28']}</th>
+						<th width="20%">{$lang['mb_29']}</th>
+						<th width="28%">{$lang['mb_30']}[{$lang['mb_31']}{$_G[setting][extcredits][$var[creditcc]][title]}]</th>
+					</tr>
+<!--{if $mrcs}-->
+	<!--{loop $mrcs $mrc}-->
+	<tr>
+		<td></td>
+		<td><a href="home.php?mod=space&uid=$mrc[uid]" target="_blank">$mrc[username]</a></td>
+		<td>$mrc[actnum]</td>
+		<td>$mrc[allnum]</td>
+		<td>$mrc[cc] {$_G[setting][extcredits][$var[creditcc]][unit]}</td>
+	</tr>
+	<!--{/loop}-->
+	<tr><td colspan="5">{$lang['mb_32']}</td></tr>
+<!--{else}-->
+<tr><td colspan="5">{$lang['mb_33']}</td></tr>
+<!--{/if}-->
+				</table>
+			</div>
+<!--{elseif $_G['gp_operation'] == 'mynoactxx' && $_G['gp_mode'] == '2'}-->
+			<div class="datalist">
+				<table cellspacing="0" cellpadding="0" summary="phb" class="datatable" style="margin-bottom:30px;">
+					<tr class="colplural">
+						<th width="1%"></th>
+						<th width="24%">{$lang['mb_34']}</th>
+						<th width="25%">{$lang['mb_35']}</th>
+						<th width="25%">{$lang['mb_36']}</th>
+						<th width="25%">{$lang['mb_37']}</th>
+					</tr>
+<!--{if $mrcs}-->
+	<!--{loop $mrcs $mrc}-->
+	<tr>
+		<td></td>
+		<td><a href="home.php?mod=space&uid=$mrc[uid]" target="_blank">$mrc[username]</a></td>
+		<td>$mrc[regdate]</td>
+		<td>$mrc[posts]</td>
+		<td>$mrc[oltime]</td>
+	</tr>
+	<!--{/loop}-->
+	<tr><td colspan="5">{$lang['mb_38']}[{$lang['mb_39']}]</td></tr>
+	<!--{if !empty($multipage)}--><tr><td colspan="8"><div class="pages_btns">$multipage</div></td></tr><!--{/if}-->
+<!--{else}-->
+<tr><td colspan="5">{$lang['mb_40']}</td></tr>
+<!--{/if}-->
+				</table>
+			</div>
+<!--{elseif $_G['gp_operation'] == 'myactxx' && $_G['gp_mode'] == '2'}-->
+			<div class="datalist">
+				<table cellspacing="0" cellpadding="0" summary="phb" class="datatable" style="margin-bottom:30px;">
+					<tr class="colplural">
+						<th width="1%"></th>
+						<th width="33%">{$lang['mb_41']}</th>
+						<th width="33%">{$lang['mb_42']}</th>
+						<th width="32%">{$lang['mb_43']}</th>
+					</tr>
+<!--{if $mrcs}-->
+	<!--{loop $mrcs $mrc}-->
+	<tr>
+		<td></td>
+		<td><a href="home.php?mod=space&uid=$mrc[uid]" target="_blank">$mrc[username]</a></td>
+		<td>$mrc[regdate]</td>
+		<td>$mrc[allnum]</td>
+	</tr>
+	<!--{/loop}-->
+	<!--{if !empty($multipage)}--><tr><td colspan="8"><div class="pages_btns">$multipage</div></td></tr><!--{/if}-->
+<!--{else}-->
+<tr><td colspan="5">{$lang['mb_44']}</td></tr>
+<!--{/if}-->
+				</table>
+			</div>
+<!--{/if}-->	
+
+</div>
+
+<div class="sd">
+	<div class="bm">
+			<div class="bm_h cl">
+				<h2>{$lang['mb_52']}</h2>
+			</div>
+			<div class="bm_c">
+				<ul class="xl">
+						<li>{$var['message']}</li>
+				</ul>
+			</div>
+	</div>
+	<div class="bm">
+			<div class="bm_h cl">
+				<h2>{$lang['mb_53']}</h2>
+			</div>
+			<div class="bm_c">
+				<ul class="xl">
+						<li><a href="{$add}" title="{$lang['mb_54']}" target="_blank"><span style="font: bold 14px Arial; color: #fbb040;">[DSU]</span><span style="font: bold 13px Verdana; color: #f15a29;">Promotion Pro</span></a><span style="font: normal 9px Verdana; display:block;">$ver $Build</span></li>
+				</ul>
+			</div>
+	</div>
+<!--{if $_G['adminid'] == 1}-->
+	<div class="bm">
+			<div class="bm_h cl">
+				<h2>{$lang['n121_23']}</h2>
+			</div>
+			<div class="bm_c">
+				<ul class="xl">
+						<li><a href="plugin.php?id=dsu_paulpromotionpro:dsu_paulpromotionpro&operation=tuptimes">{$lang['n121_24']}</a></li>
+						<li><a href="plugin.php?id=dsu_paulpromotionpro:dsu_paulpromotionpro&operation=tuboxtimes">{$lang['n121_25']}</a></li>
+				</ul>
+			</div>
+	</div>
+<!--{/if}-->
+</div>
+</div>
+{subtemplate common/footer}
