@@ -1,5 +1,5 @@
 {template common/header_ajax}
-		<h3 class="flb"><em>{lang dsu_paulsign:ajax_01}</em><span><a href="javascript:;" class="flbc" onclick="hideWindow('$_G['gp_handlekey']');" title="{lang close}">{lang close}</a></span></h3>
+		<h3 class="flb"><em>{lang dsu_paulsign:ajax_01}</em><!--{if !$var['ftopen'] || ($var['ftopen'] && !in_array($_G['groupid'], unserialize($var['groups'])) || in_array($_G['uid'],explode(",",$var['ban'])) ) }--><span><a href="javascript:;" class="flbc" onclick="hideWindow('$_G['gp_handlekey']');" title="{lang close}">{lang close}</a></span><!--{/if}--></h3>
 		<form id="qiandao" method="post" action="plugin.php?id=dsu_paulsign:sign&operation=qiandao&infloat=1&sign_as=1" onkeydown="if(event.keyCode==13){showWindow('qwindow', 'qiandao', 'post', '0');return false}">
 		<div class="f_c" style="width:690px;margin:10px;">
 <!--{if $qiandaodb['time'] < $tdtime}-->
