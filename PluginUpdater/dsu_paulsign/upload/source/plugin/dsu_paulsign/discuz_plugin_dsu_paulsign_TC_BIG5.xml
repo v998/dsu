@@ -2,8 +2,8 @@
 <root>
 	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
 	<item id="Version"><![CDATA[X2]]></item>
-	<item id="Time"><![CDATA[2011-06-07 16:57]]></item>
-	<item id="From"><![CDATA[Discuz! Board (http://125.108.246.230/2.0/)]]></item>
+	<item id="Time"><![CDATA[2011-06-30 09:36]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://localhost/2.0/)]]></item>
 	<item id="Data">
 		<item id="plugin">
 			<item id="available"><![CDATA[1]]></item>
@@ -14,21 +14,9 @@
 			<item id="datatables"><![CDATA[]]></item>
 			<item id="directory"><![CDATA[dsu_paulsign/]]></item>
 			<item id="copyright"><![CDATA[Shy9000 @ DSU Team]]></item>
-			<item id="version"><![CDATA[3.1]]></item>
+			<item id="version"><![CDATA[3.2]]></item>
 			<item id="__modules">
 				<item id="0">
-					<item id="name"><![CDATA[sign_import]]></item>
-					<item id="menu"><![CDATA[簽到舊數據導入]]></item>
-					<item id="url"><![CDATA[]]></item>
-					<item id="type"><![CDATA[3]]></item>
-					<item id="adminid"><![CDATA[0]]></item>
-					<item id="displayorder"><![CDATA[0]]></item>
-					<item id="navtitle"><![CDATA[]]></item>
-					<item id="navicon"><![CDATA[]]></item>
-					<item id="navsubname"><![CDATA[]]></item>
-					<item id="navsuburl"><![CDATA[]]></item>
-				</item>
-				<item id="1">
 					<item id="name"><![CDATA[sign]]></item>
 					<item id="menu"><![CDATA[]]></item>
 					<item id="url"><![CDATA[]]></item>
@@ -40,7 +28,7 @@
 					<item id="navsubname"><![CDATA[]]></item>
 					<item id="navsuburl"><![CDATA[]]></item>
 				</item>
-				<item id="2">
+				<item id="1">
 					<item id="name"><![CDATA[sign]]></item>
 					<item id="menu"><![CDATA[每日簽到]]></item>
 					<item id="url"><![CDATA[]]></item>
@@ -52,273 +40,112 @@
 					<item id="navsubname"><![CDATA[]]></item>
 					<item id="navsuburl"><![CDATA[]]></item>
 				</item>
+				<item id="2">
+					<item id="name"><![CDATA[sign_import]]></item>
+					<item id="menu"><![CDATA[簽到舊數據導入]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[sign_helper]]></item>
+					<item id="menu"><![CDATA[幫助手冊]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="4">
+					<item id="name"><![CDATA[sign_troubleshooting]]></item>
+					<item id="menu"><![CDATA[數據表自動修復]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[3]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
 			</item>
 		</item>
 		<item id="version"><![CDATA[X2]]></item>
 		<item id="var">
 			<item id="0">
-				<item id="displayorder"><![CDATA[33]]></item>
-				<item id="title"><![CDATA[帖子側邊顯示模式]]></item>
-				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[sidebarmode]]></item>
-				<item id="type"><![CDATA[select]]></item>
-				<item id="value"><![CDATA[2]]></item>
-				<item id="extra"><![CDATA[0=關閉
-1=簡單模式
-2=詳細模式]]></item>
+				<item id="displayorder"><![CDATA[43]]></item>
+				<item id="title"><![CDATA[自定義每日簽到帖標題]]></item>
+				<item id="description"><![CDATA[當簽到設置中的&quot;簽到的自動回復類型&quot;設置為&quot;指定版塊每天一主題&quot;時該選項有效,月用{m}日用{d}年用{y}論壇名稱用{bbname}發帖用戶名{author}代換.]]></item>
+				<item id="variable"><![CDATA[title_thread]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[{y} 年 {m} 月 {d} 日 簽到記錄貼.]]></item>
+				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="1">
-				<item id="displayorder"><![CDATA[42]]></item>
-				<item id="title"><![CDATA[是否將最想說同步到家園記錄]]></item>
-				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[sync_say]]></item>
-				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[0]]></item>
+				<item id="displayorder"><![CDATA[30]]></item>
+				<item id="title"><![CDATA[簽到等級名稱]]></item>
+				<item id="description"><![CDATA[一行一個等級名稱
+按順序分別為從1-10以及Master等級的名稱]]></item>
+				<item id="variable"><![CDATA[lvtext]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[初來乍到
+偶爾看看I
+偶爾看看II
+偶爾看看III
+常住居民I
+常住居民II
+常住居民III
+以壇為家I
+以壇為家II
+以壇為家III
+伴壇終老]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="2">
-				<item id="displayorder"><![CDATA[27]]></item>
-				<item id="title"><![CDATA[是否開啟「今日最想說」選填]]></item>
+				<item id="displayorder"><![CDATA[36]]></item>
+				<item id="title"><![CDATA[是否開啟資料頁簽到詳情]]></item>
 				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[todaysayxt]]></item>
+				<item id="variable"><![CDATA[spaceopen]]></item>
 				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[0]]></item>
+				<item id="value"><![CDATA[1]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="3">
-				<item id="displayorder"><![CDATA[28]]></item>
-				<item id="title"><![CDATA[是否開啟快速選擇模式]]></item>
+				<item id="displayorder"><![CDATA[34]]></item>
+				<item id="title"><![CDATA[簽到操作是否Ajax?]]></item>
 				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[ksopen]]></item>
+				<item id="variable"><![CDATA[qdajax]]></item>
 				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[0]]></item>
+				<item id="value"><![CDATA[1]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="4">
-				<item id="displayorder"><![CDATA[29]]></item>
-				<item id="title"><![CDATA[快速回復語句]]></item>
-				<item id="description"><![CDATA[每行一個,分別為快速回復語句的1-8句.]]></item>
-				<item id="variable"><![CDATA[fastreplytext]]></item>
-				<item id="type"><![CDATA[textarea]]></item>
-				<item id="value"><![CDATA[哎...今天夠累的，簽到來了1...
-哎...今天夠累的，簽到來了2...
-哎...今天夠累的，簽到來了3...
-哎...今天夠累的，簽到來了4...
-哎...今天夠累的，簽到來了5...
-哎...今天夠累的，簽到來了6...
-哎...今天夠累的，簽到來了7...
-哎...今天夠累的，簽到來了8...]]></item>
+				<item id="displayorder"><![CDATA[35]]></item>
+				<item id="title"><![CDATA[簽到主排行按當日倒序排列]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[qddesc]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="5">
-				<item id="displayorder"><![CDATA[22]]></item>
-				<item id="title"><![CDATA[是否簽到後跳轉到原簽到帖]]></item>
-				<item id="description"><![CDATA[僅對於&quot;簽到的自動回復類型&quot;中非選擇&quot;關閉&quot;的設置後有效.]]></item>
-				<item id="variable"><![CDATA[tzopen]]></item>
+				<item id="displayorder"><![CDATA[30]]></item>
+				<item id="title"><![CDATA[是否開啟前台統計]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[tjopen]]></item>
 				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[0]]></item>
+				<item id="value"><![CDATA[1]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="6">
-				<item id="displayorder"><![CDATA[21]]></item>
-				<item id="title"><![CDATA[自動開貼的typeid]]></item>
-				<item id="description"><![CDATA[僅對於&quot;簽到的自動回復類型&quot;中選擇了&quot;指定版塊每天一主題&quot;的設置後有效,如不清楚作用請留著不要設置.]]></item>
-				<item id="variable"><![CDATA[qdtypeid]]></item>
-				<item id="type"><![CDATA[number]]></item>
-				<item id="value"><![CDATA[0]]></item>
-				<item id="extra"><![CDATA[]]></item>
-			</item>
-			<item id="7">
-				<item id="displayorder"><![CDATA[14]]></item>
-				<item id="title"><![CDATA[最多獎勵積分值]]></item>
-				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[maxcredit]]></item>
-				<item id="type"><![CDATA[number]]></item>
-				<item id="value"><![CDATA[10]]></item>
-				<item id="extra"><![CDATA[]]></item>
-			</item>
-			<item id="8">
-				<item id="displayorder"><![CDATA[12]]></item>
-				<item id="title"><![CDATA[簽到獎勵積分段]]></item>
-				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[nrcredit]]></item>
-				<item id="type"><![CDATA[extcredit]]></item>
-				<item id="value"><![CDATA[2]]></item>
-				<item id="extra"><![CDATA[]]></item>
-			</item>
-			<item id="9">
-				<item id="displayorder"><![CDATA[13]]></item>
-				<item id="title"><![CDATA[最少獎勵積分值]]></item>
-				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[mincredit]]></item>
-				<item id="type"><![CDATA[number]]></item>
-				<item id="value"><![CDATA[5]]></item>
-				<item id="extra"><![CDATA[]]></item>
-			</item>
-			<item id="10">
-				<item id="displayorder"><![CDATA[16]]></item>
-				<item id="title"><![CDATA[指定用戶組獲取獎勵是一般的幾倍]]></item>
-				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[jlx]]></item>
-				<item id="type"><![CDATA[number]]></item>
-				<item id="value"><![CDATA[2]]></item>
-				<item id="extra"><![CDATA[]]></item>
-			</item>
-			<item id="11">
-				<item id="displayorder"><![CDATA[15]]></item>
-				<item id="title"><![CDATA[前十額外獎勵項自定義]]></item>
-				<item id="description"><![CDATA[從第一名到第十名可以自定義額外獎勵的積分項與數值
-例如1|20為第一行,就是1樓獎勵一號積分項20點.]]></item>
-				<item id="variable"><![CDATA[jlmain]]></item>
-				<item id="type"><![CDATA[textarea]]></item>
-				<item id="value"><![CDATA[2|10
-2|9
-2|8
-2|7
-2|6
-2|5
-2|4
-2|3
-2|2
-2|1]]></item>
-				<item id="extra"><![CDATA[]]></item>
-			</item>
-			<item id="12">
-				<item id="displayorder"><![CDATA[11]]></item>
-				<item id="title"><![CDATA[結束時間段]]></item>
-				<item id="description"><![CDATA[24小時制，請填寫整數,實際結束時間為該點的59分，例：如果我填寫的是22,那麼實際結束時間為22：59.]]></item>
-				<item id="variable"><![CDATA[ftime]]></item>
-				<item id="type"><![CDATA[number]]></item>
-				<item id="value"><![CDATA[22]]></item>
-				<item id="extra"><![CDATA[]]></item>
-			</item>
-			<item id="13">
-				<item id="displayorder"><![CDATA[26]]></item>
-				<item id="title"><![CDATA[按用戶組排列指定用戶組]]></item>
-				<item id="description"><![CDATA[在「是否開啟前台按照指定用戶組排列」開啟後本項目有效.]]></item>
-				<item id="variable"><![CDATA[plgroups]]></item>
-				<item id="type"><![CDATA[groups]]></item>
-				<item id="extra"><![CDATA[]]></item>
-				<item id="__value">
-					<item id="0"><![CDATA[16]]></item>
-					<item id="1"><![CDATA[17]]></item>
-					<item id="2"><![CDATA[18]]></item>
-					<item id="3"><![CDATA[19]]></item>
-					<item id="4"><![CDATA[1]]></item>
-					<item id="5"><![CDATA[2]]></item>
-					<item id="6"><![CDATA[3]]></item>
-				</item>
-			</item>
-			<item id="14">
-				<item id="displayorder"><![CDATA[23]]></item>
-				<item id="title"><![CDATA[是否開啟獎勵排行榜]]></item>
-				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[rewardlistopen]]></item>
-				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[1]]></item>
-				<item id="extra"><![CDATA[]]></item>
-			</item>
-			<item id="15">
-				<item id="displayorder"><![CDATA[24]]></item>
-				<item id="title"><![CDATA[是否開啟前台按照指定用戶組排列]]></item>
-				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[plopen]]></item>
-				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[1]]></item>
-				<item id="extra"><![CDATA[]]></item>
-			</item>
-			<item id="16">
-				<item id="displayorder"><![CDATA[25]]></item>
-				<item id="title"><![CDATA[按用戶組排列選項卡顯示字]]></item>
-				<item id="description"><![CDATA[在「是否開啟前台按照指定用戶組排列」開啟後本項目有效.]]></item>
-				<item id="variable"><![CDATA[xxkxsz]]></item>
-				<item id="type"><![CDATA[text]]></item>
-				<item id="value"><![CDATA[按照管理組簽到時間排列]]></item>
-				<item id="extra"><![CDATA[]]></item>
-			</item>
-			<item id="17">
-				<item id="displayorder"><![CDATA[20]]></item>
-				<item id="title"><![CDATA[自動開貼的板塊]]></item>
-				<item id="description"><![CDATA[僅對於&quot;簽到的自動回復類型&quot;中選擇了&quot;指定版塊每天一主題&quot;的設置後有效.]]></item>
-				<item id="variable"><![CDATA[fidnumber]]></item>
-				<item id="type"><![CDATA[forum]]></item>
-				<item id="value"><![CDATA[2]]></item>
-				<item id="extra"><![CDATA[]]></item>
-			</item>
-			<item id="18">
-				<item id="displayorder"><![CDATA[19]]></item>
-				<item id="title"><![CDATA[單貼回復的tid編號]]></item>
-				<item id="description"><![CDATA[僅對於&quot;簽到的自動回復類型&quot;中選擇了&quot;指定貼自動回復&quot;的設置後有效.]]></item>
-				<item id="variable"><![CDATA[tidnumber]]></item>
-				<item id="type"><![CDATA[number]]></item>
-				<item id="value"><![CDATA[0]]></item>
-				<item id="extra"><![CDATA[]]></item>
-			</item>
-			<item id="19">
-				<item id="displayorder"><![CDATA[17]]></item>
-				<item id="title"><![CDATA[獎勵增倍的指定用戶組選擇]]></item>
-				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[jlxgroups]]></item>
-				<item id="type"><![CDATA[groups]]></item>
-				<item id="extra"><![CDATA[]]></item>
-				<item id="__value">
-					<item id="0"><![CDATA[16]]></item>
-					<item id="1"><![CDATA[17]]></item>
-					<item id="2"><![CDATA[18]]></item>
-					<item id="3"><![CDATA[19]]></item>
-					<item id="4"><![CDATA[1]]></item>
-					<item id="5"><![CDATA[2]]></item>
-					<item id="6"><![CDATA[3]]></item>
-				</item>
-			</item>
-			<item id="20">
-				<item id="displayorder"><![CDATA[18]]></item>
-				<item id="title"><![CDATA[簽到的自動回復類型]]></item>
-				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[qdtype]]></item>
-				<item id="type"><![CDATA[select]]></item>
-				<item id="value"><![CDATA[3]]></item>
-				<item id="extra"><![CDATA[1=關閉
-2=指定貼自動回復
-3=指定版塊每天一主題]]></item>
-			</item>
-			<item id="21">
-				<item id="displayorder"><![CDATA[10]]></item>
-				<item id="title"><![CDATA[開始時間段]]></item>
-				<item id="description"><![CDATA[24小時制，請填寫整數，可以與結束時間段相同，例如我開始填11時，結束填11時，那麼簽到時間則是每天的11:00-11:59.]]></item>
-				<item id="variable"><![CDATA[stime]]></item>
-				<item id="type"><![CDATA[number]]></item>
-				<item id="value"><![CDATA[8]]></item>
-				<item id="extra"><![CDATA[]]></item>
-			</item>
-			<item id="22">
-				<item id="displayorder"><![CDATA[8]]></item>
-				<item id="title"><![CDATA[簽到用戶總發帖數限制]]></item>
-				<item id="description"><![CDATA[不填寫即不作限制，該限制不影響下面的用戶組設置]]></item>
-				<item id="variable"><![CDATA[mintdpost]]></item>
-				<item id="type"><![CDATA[number]]></item>
-				<item id="value"><![CDATA[0]]></item>
-				<item id="extra"><![CDATA[]]></item>
-			</item>
-			<item id="23">
-				<item id="displayorder"><![CDATA[9]]></item>
-				<item id="title"><![CDATA[是否開啟簽到時間段限制]]></item>
-				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[timeopen]]></item>
-				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[0]]></item>
-				<item id="extra"><![CDATA[]]></item>
-			</item>
-			<item id="24">
-				<item id="displayorder"><![CDATA[7]]></item>
-				<item id="title"><![CDATA[禁止簽到的會員]]></item>
-				<item id="description"><![CDATA[請輸入其Uid，多個會員請以半角逗號&quot;,&quot;間隔]]></item>
-				<item id="variable"><![CDATA[ban]]></item>
-				<item id="type"><![CDATA[text]]></item>
-				<item id="value"><![CDATA[]]></item>
-				<item id="extra"><![CDATA[]]></item>
-			</item>
-			<item id="25">
 				<item id="displayorder"><![CDATA[6]]></item>
 				<item id="title"><![CDATA[未簽到自動跳轉的用戶組]]></item>
 				<item id="description"><![CDATA[僅對於&quot;是否開啟今日未簽到跳轉&quot;中選擇了&quot;開啟&quot;的設置後有效.]]></item>
@@ -332,19 +159,63 @@
 					<item id="3"><![CDATA[13]]></item>
 					<item id="4"><![CDATA[14]]></item>
 					<item id="5"><![CDATA[15]]></item>
-					<item id="6"><![CDATA[1]]></item>
 				</item>
 			</item>
-			<item id="26">
+			<item id="7">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[是否開啟簽到插件]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ifopen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[32]]></item>
+				<item id="title"><![CDATA[帖中排行人數]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[tidpnum]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[20]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[41]]></item>
+				<item id="title"><![CDATA[是否AJAX懸浮簽到]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ajax_sign]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[31]]></item>
+				<item id="title"><![CDATA[簽到帖中顯示排行開關]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[tidphopen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[公告[請使用html代碼]]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[notice]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[歡迎使用簽到中心.]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
 				<item id="displayorder"><![CDATA[5]]></item>
 				<item id="title"><![CDATA[是否開啟今日未簽到跳轉]]></item>
 				<item id="description"><![CDATA[選是後每天未簽到的用戶將會自動跳轉到每日簽到.]]></item>
 				<item id="variable"><![CDATA[ftopen]]></item>
 				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[1]]></item>
+				<item id="value"><![CDATA[0]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
-			<item id="27">
+			<item id="13">
 				<item id="displayorder"><![CDATA[2]]></item>
 				<item id="title"><![CDATA[插件關閉提示]]></item>
 				<item id="description"><![CDATA[]]></item>
@@ -353,7 +224,7 @@
 				<item id="value"><![CDATA[簽到中心正在維護，請稍後訪問。]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
-			<item id="28">
+			<item id="14">
 				<item id="displayorder"><![CDATA[4]]></item>
 				<item id="title"><![CDATA[允許使用的用戶組]]></item>
 				<item id="description"><![CDATA[]]></item>
@@ -376,115 +247,267 @@
 					<item id="12"><![CDATA[3]]></item>
 				</item>
 			</item>
-			<item id="29">
-				<item id="displayorder"><![CDATA[3]]></item>
-				<item id="title"><![CDATA[公告[請使用html代碼]]]></item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[18]]></item>
+				<item id="title"><![CDATA[簽到的自動回復類型]]></item>
 				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[notice]]></item>
-				<item id="type"><![CDATA[textarea]]></item>
-				<item id="value"><![CDATA[歡迎使用簽到中心.]]></item>
+				<item id="variable"><![CDATA[qdtype]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[3]]></item>
+				<item id="extra"><![CDATA[1=關閉
+2=指定貼自動回復
+3=指定版塊每天一主題]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[開始時間段]]></item>
+				<item id="description"><![CDATA[24小時制，請填寫整數，可以與結束時間段相同，例如我開始填11時，結束填11時，那麼簽到時間則是每天的11:00-11:59.]]></item>
+				<item id="variable"><![CDATA[stime]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[8]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
-			<item id="30">
-				<item id="displayorder"><![CDATA[41]]></item>
-				<item id="title"><![CDATA[是否AJAX懸浮簽到]]></item>
+			<item id="17">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[簽到用戶總發帖數限制]]></item>
+				<item id="description"><![CDATA[不填寫即不作限制，該限制不影響下面的用戶組設置]]></item>
+				<item id="variable"><![CDATA[mintdpost]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="18">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[是否開啟簽到時間段限制]]></item>
 				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[ajax_sign]]></item>
+				<item id="variable"><![CDATA[timeopen]]></item>
 				<item id="type"><![CDATA[radio]]></item>
 				<item id="value"><![CDATA[0]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
-			<item id="31">
-				<item id="displayorder"><![CDATA[31]]></item>
-				<item id="title"><![CDATA[簽到帖中顯示排行開關]]></item>
+			<item id="19">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[禁止簽到的會員]]></item>
+				<item id="description"><![CDATA[請輸入其Uid，多個會員請以半角逗號&quot;,&quot;間隔]]></item>
+				<item id="variable"><![CDATA[ban]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="20">
+				<item id="displayorder"><![CDATA[23]]></item>
+				<item id="title"><![CDATA[是否開啟獎勵排行榜]]></item>
 				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[tidphopen]]></item>
+				<item id="variable"><![CDATA[rewardlistopen]]></item>
 				<item id="type"><![CDATA[radio]]></item>
 				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="21">
+				<item id="displayorder"><![CDATA[24]]></item>
+				<item id="title"><![CDATA[是否開啟前台按照指定用戶組排列]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[plopen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="22">
+				<item id="displayorder"><![CDATA[25]]></item>
+				<item id="title"><![CDATA[按用戶組排列選項卡顯示字]]></item>
+				<item id="description"><![CDATA[在「是否開啟前台按照指定用戶組排列」開啟後本項目有效.]]></item>
+				<item id="variable"><![CDATA[xxkxsz]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[按照管理組簽到時間排列]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="23">
+				<item id="displayorder"><![CDATA[20]]></item>
+				<item id="title"><![CDATA[自動開貼的板塊]]></item>
+				<item id="description"><![CDATA[僅對於&quot;簽到的自動回復類型&quot;中選擇了&quot;指定版塊每天一主題&quot;的設置後有效.]]></item>
+				<item id="variable"><![CDATA[fidnumber]]></item>
+				<item id="type"><![CDATA[forum]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="24">
+				<item id="displayorder"><![CDATA[19]]></item>
+				<item id="title"><![CDATA[單貼回復的tid編號]]></item>
+				<item id="description"><![CDATA[僅對於&quot;簽到的自動回復類型&quot;中選擇了&quot;指定貼自動回復&quot;的設置後有效.]]></item>
+				<item id="variable"><![CDATA[tidnumber]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="25">
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="title"><![CDATA[獎勵增倍的指定用戶組選擇]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[jlxgroups]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[16]]></item>
+					<item id="1"><![CDATA[17]]></item>
+					<item id="2"><![CDATA[18]]></item>
+					<item id="3"><![CDATA[19]]></item>
+					<item id="4"><![CDATA[1]]></item>
+					<item id="5"><![CDATA[2]]></item>
+					<item id="6"><![CDATA[3]]></item>
+				</item>
+			</item>
+			<item id="26">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[結束時間段]]></item>
+				<item id="description"><![CDATA[24小時制，請填寫整數,實際結束時間為該點的59分，例：如果我填寫的是22,那麼實際結束時間為22：59.]]></item>
+				<item id="variable"><![CDATA[ftime]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[22]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="27">
+				<item id="displayorder"><![CDATA[26]]></item>
+				<item id="title"><![CDATA[按用戶組排列指定用戶組]]></item>
+				<item id="description"><![CDATA[在「是否開啟前台按照指定用戶組排列」開啟後本項目有效.]]></item>
+				<item id="variable"><![CDATA[plgroups]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[16]]></item>
+					<item id="1"><![CDATA[17]]></item>
+					<item id="2"><![CDATA[18]]></item>
+					<item id="3"><![CDATA[19]]></item>
+					<item id="4"><![CDATA[1]]></item>
+					<item id="5"><![CDATA[2]]></item>
+					<item id="6"><![CDATA[3]]></item>
+				</item>
+			</item>
+			<item id="28">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[簽到獎勵積分段]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[nrcredit]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="29">
+				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="title"><![CDATA[最少獎勵積分值]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[mincredit]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="30">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[指定用戶組獲取獎勵是一般的幾倍]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[jlx]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="31">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[前十額外獎勵項自定義]]></item>
+				<item id="description"><![CDATA[從第一名到第十名可以自定義額外獎勵的積分項與數值
+例如1|20為第一行,就是1樓獎勵一號積分項20點.]]></item>
+				<item id="variable"><![CDATA[jlmain]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[2|10
+2|9
+2|8
+2|7
+2|6
+2|5
+2|4
+2|3
+2|2
+2|1]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="32">
-				<item id="displayorder"><![CDATA[32]]></item>
-				<item id="title"><![CDATA[帖中排行人數]]></item>
+				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="title"><![CDATA[最多獎勵積分值]]></item>
 				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[tidpnum]]></item>
+				<item id="variable"><![CDATA[maxcredit]]></item>
 				<item id="type"><![CDATA[number]]></item>
-				<item id="value"><![CDATA[20]]></item>
+				<item id="value"><![CDATA[10]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="33">
-				<item id="displayorder"><![CDATA[1]]></item>
-				<item id="title"><![CDATA[是否開啟簽到插件]]></item>
-				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[ifopen]]></item>
+				<item id="displayorder"><![CDATA[22]]></item>
+				<item id="title"><![CDATA[是否簽到後跳轉到原簽到帖]]></item>
+				<item id="description"><![CDATA[僅對於&quot;簽到的自動回復類型&quot;中非選擇&quot;關閉&quot;的設置後有效.]]></item>
+				<item id="variable"><![CDATA[tzopen]]></item>
 				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[1]]></item>
+				<item id="value"><![CDATA[0]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="34">
-				<item id="displayorder"><![CDATA[30]]></item>
-				<item id="title"><![CDATA[是否開啟前台統計]]></item>
-				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[tjopen]]></item>
-				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[1]]></item>
+				<item id="displayorder"><![CDATA[21]]></item>
+				<item id="title"><![CDATA[自動開貼的typeid]]></item>
+				<item id="description"><![CDATA[僅對於&quot;簽到的自動回復類型&quot;中選擇了&quot;指定版塊每天一主題&quot;的設置後有效,如不清楚作用請留著不要設置.]]></item>
+				<item id="variable"><![CDATA[qdtypeid]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="35">
-				<item id="displayorder"><![CDATA[35]]></item>
-				<item id="title"><![CDATA[簽到主排行按當日倒序排列]]></item>
+				<item id="displayorder"><![CDATA[27]]></item>
+				<item id="title"><![CDATA[是否開啟「今日最想說」選填]]></item>
 				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[qddesc]]></item>
+				<item id="variable"><![CDATA[todaysayxt]]></item>
 				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[1]]></item>
+				<item id="value"><![CDATA[0]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="36">
-				<item id="displayorder"><![CDATA[34]]></item>
-				<item id="title"><![CDATA[簽到操作是否Ajax?]]></item>
+				<item id="displayorder"><![CDATA[28]]></item>
+				<item id="title"><![CDATA[是否開啟快速選擇模式]]></item>
 				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[qdajax]]></item>
+				<item id="variable"><![CDATA[ksopen]]></item>
 				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[1]]></item>
+				<item id="value"><![CDATA[0]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="37">
-				<item id="displayorder"><![CDATA[36]]></item>
-				<item id="title"><![CDATA[是否開啟資料頁簽到詳情]]></item>
-				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[spaceopen]]></item>
-				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[1]]></item>
+				<item id="displayorder"><![CDATA[29]]></item>
+				<item id="title"><![CDATA[快速回復語句]]></item>
+				<item id="description"><![CDATA[每行一個,分別為快速回復語句的1-8句.]]></item>
+				<item id="variable"><![CDATA[fastreplytext]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[哎...今天夠累的，簽到來了1...
+哎...今天夠累的，簽到來了2...
+哎...今天夠累的，簽到來了3...
+哎...今天夠累的，簽到來了4...
+哎...今天夠累的，簽到來了5...
+哎...今天夠累的，簽到來了6...
+哎...今天夠累的，簽到來了7...
+哎...今天夠累的，簽到來了8...]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="38">
-				<item id="displayorder"><![CDATA[30]]></item>
-				<item id="title"><![CDATA[簽到等級名稱]]></item>
-				<item id="description"><![CDATA[一行一個等級名稱
-按順序分別為從1-10以及Master等級的名稱]]></item>
-				<item id="variable"><![CDATA[lvtext]]></item>
-				<item id="type"><![CDATA[textarea]]></item>
-				<item id="value"><![CDATA[初來乍到
-偶爾看看I
-偶爾看看II
-偶爾看看III
-常住居民I
-常住居民II
-常住居民III
-以壇為家I
-以壇為家II
-以壇為家III
-伴壇終老]]></item>
+				<item id="displayorder"><![CDATA[42]]></item>
+				<item id="title"><![CDATA[是否將最想說同步到家園記錄]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[sync_say]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="39">
-				<item id="displayorder"><![CDATA[43]]></item>
-				<item id="title"><![CDATA[自定義每日簽到帖標題]]></item>
-				<item id="description"><![CDATA[當簽到設置中的&quot;簽到的自動回復類型&quot;設置為&quot;指定版塊每天一主題&quot;時該選項有效,月用{m}日用{d}代換.]]></item>
-				<item id="variable"><![CDATA[title_thread]]></item>
-				<item id="type"><![CDATA[text]]></item>
-				<item id="value"><![CDATA[{m} 月 {d} 日 簽到記錄貼.]]></item>
-				<item id="extra"><![CDATA[]]></item>
+				<item id="displayorder"><![CDATA[33]]></item>
+				<item id="title"><![CDATA[帖子側邊顯示模式]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[sidebarmode]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[0=關閉
+1=簡單模式
+2=詳細模式]]></item>
 			</item>
 		</item>
 		<item id="language">
@@ -577,13 +600,21 @@
 				<item id="tsn_16"><![CDATA[, 另外還獲得了額外獎勵]]></item>
 				<item id="tsn_17"><![CDATA[,另外我還額外獲得了]]></item>
 				<item id="tsn_18"><![CDATA[恭喜你簽到成功!獲得隨機獎勵]]></item>
-				<item id="import_01"><![CDATA[選是從MK每日簽到導入|選否從簽到舊數據導入]]></item>
-				<item id="import_02"><![CDATA[簽到舊數據表名[選是請無視]]]></item>
-				<item id="import_03"><![CDATA[簽到舊統計表名[選是請無視]]]></item>
+				<item id="import_02"><![CDATA[[DPS]每日簽到舊數據表名]]></item>
+				<item id="import_03"><![CDATA[[DPS]每日簽到舊統計表名]]></item>
 				<item id="import_04"><![CDATA[錯誤,舊簽到統計表不存在!]]></item>
 				<item id="import_05"><![CDATA[錯誤,舊簽到數據表表不存在!]]></item>
 				<item id="import_06"><![CDATA[導入完成!]]></item>
 				<item id="encore_01"><![CDATA[簽到領獎!]]></item>
+				<item id="import_07"><![CDATA[簽到舊數據導入裝置]]></item>
+				<item id="import_08"><![CDATA[請選擇您目前數據庫中存在的簽到表版本]]></item>
+				<item id="import_09"><![CDATA[打卡機]]></item>
+				<item id="import_10"><![CDATA[每日簽到]]></item>
+				<item id="import_11"><![CDATA[[閃翼]每日簽到]]></item>
+				<item id="import_12"><![CDATA[提交]]></item>
+				<item id="import_13"><![CDATA[舊數據表缺失,無法導入]]></item>
+				<item id="import_14"><![CDATA[未輸入舊數據表名稱,無法導入]]></item>
+				<item id="import_15"><![CDATA[表單提交錯誤,請重新提交]]></item>
 			</item>
 			<item id="templatelang">
 				<item id="name"><![CDATA[每日簽到]]></item>
@@ -658,6 +689,62 @@
 				<item id="ajax_03"><![CDATA[關閉]]></item>
 				<item id="encore_02"><![CDATA[點我簽到!]]></item>
 				<item id="encore_03"><![CDATA[點此返回]]></item>
+				<item id="helper"><![CDATA[<table class="tb tb2 " id="content" summary="content">
+<tr><th  class="partition">目錄</th></tr>
+<tr><td class="tipsblock" s="1"><ul id="tipslis"><li><a href="#1">每日簽到一天一主題模式的使用方法</a></li><li><a href="#2">簽到的隨機獎勵獲得過程</a></li><li><a href="#3">簽到前十名額外獎勵設置方法</a></li><li><a href="#4">當日未簽到自動跳轉的功能介紹與設置</a></li><li><a href="#5">簽到後自動跳轉到帖子頁的功能介紹</a></li><li><a href="#6">獎勵排行榜的功能介紹以及開啟方法</a></li><li><a href="#7">簽到操作Ajax功能介紹以及使用方法</a></li><li><a href="#8">每日簽到單貼記錄模式的使用方法</a></li><li><a href="#9">作者寄語</a></li></ul></td></tr></table>
+<table class="tb tb2 " id="1" summary="1">
+<tr><th  class="partition">每日簽到一天一主題模式的使用方法</th></tr>
+<tr><td class="tipsblock" s="1"><ul id="tipslis"><li>首先進入後台的簽到設置,然後按照如下的說明進行設置:</li><li>簽到的自動回復類型 設置成 指定板塊每天一主題
+</li><li>自動開貼的板塊 設置成 你所對應的簽到板塊</li><li>自動開貼的typeid 給高級用戶用的,為了達到分類的效果,你可以設置該區的分類,分類中添加簽到分類,那麼這個簽到分類所對應的的分類ID,即是這裡所要填寫的typeid,如果不懂就不要改了,放著即可</li></ul></td></tr></table>
+<table class="tb tb2 " id="2" summary="2">
+<tr><th  class="partition">簽到的隨機獎勵獲得過程</th></tr>
+<tr><td class="tipsblock" s="1"><ul id="tipslis"><li>如果你對一些用戶為什麼獲得那麼高的獎勵感到詫異,請看這裡:</li><li>首先是根據您所設定的上下限進行隨機獎勵數值生成</li><li>然後就是對你所指定的用戶組進行加倍獎勵</li><li>所以,不恰當的設置將會給您帶來一些麻煩</li></ul></td></tr></table>
+<table class="tb tb2 " id="3" summary="3">
+<tr><th  class="partition">簽到前十名額外獎勵設置方法</th></tr>
+<tr><td class="tipsblock" s="1"><ul id="tipslis"><li>找到"前十額外獎勵項自定義"對應十行分別改為如下的格式</li><li>第1名的額外獎勵積分代號|第1名的額外獎勵積分值<br>
+第2名的額外獎勵積分代號|第2名的額外獎勵積分值<br>
+第3名的額外獎勵積分代號|第3名的額外獎勵積分值<br>
+第4名的額外獎勵積分代號|第4名的額外獎勵積分值<br>
+第5名的額外獎勵積分代號|第5名的額外獎勵積分值<br>
+第6名的額外獎勵積分代號|第6名的額外獎勵積分值<br>
+第7名的額外獎勵積分代號|第7名的額外獎勵積分值<br>
+第8名的額外獎勵積分代號|第8名的額外獎勵積分值<br>
+第9名的額外獎勵積分代號|第9名的額外獎勵積分值<br>
+第10名的額外獎勵積分代號|第10名的額外獎勵積分值</li><li>舉例如下:</li><li>1|10<br>
+1|8<br>
+1|6<br>
+1|4<br>
+1|2<br>
+2|10<br>
+2|8<br>
+2|6<br>
+2|4<br>
+2|2<br></li><li>如果你不想要加對應名數的積分獎勵的話<br>
+可以將對應的行填成<br>
+0|0</li></ul></td></tr></table>
+<table class="tb tb2 " id="4" summary="4">
+<tr><th  class="partition">當日未簽到自動跳轉的功能介紹與設置</th></tr>
+<tr><td class="tipsblock" s="1"><ul id="tipslis"><li>該功能的效果就是將當日未簽到的指定的用戶組的用戶重定向到簽到頁,進行強制的簽到操作.,方法如下:
+</li><li>首先將"是否開啟今日未簽到跳轉"這個開關打開後</li><li>設置好"未簽到自動跳轉的用戶組",即可生效</li><li>"是否開啟今日未簽到跳轉"開關打開後,"未簽到自動跳轉的用戶組"不可為空,否則會引起論壇的錯誤!</li></ul></td></tr></table>
+<table class="tb tb2 " id="5" summary="5">
+<tr><th  class="partition">簽到後自動跳轉到帖子頁的功能介紹</th></tr>
+<tr><td class="tipsblock" s="1"><ul id="tipslis"><li>作用是將點擊簽到按鈕簽到後的用戶重定向到當天或者指定的簽到帖的最後一樓[即所自動生成的該用戶的簽到記錄],方法如下:</li><li>到後台的簽到設置,將"是否簽到後跳轉到原簽到帖"打開後即可生效</li></ul></td></tr></table>
+<table class="tb tb2 " id="6" summary="6">
+<tr><th  class="partition">獎勵排行榜的功能介紹以及開啟方法</th></tr>
+<tr><td class="tipsblock" s="1"><ul id="tipslis"><li>開啟該功能後,簽到的排行榜選擇中將多出一個獎勵排行榜,列出論壇總獎勵的前十排行.,開啟方法如下:
+</li><li>到後台的簽到設置,將"是否開啟獎勵排行榜"打開後即可生效</li></ul></td></tr></table>
+<table class="tb tb2 " id="7" summary="7">
+<tr><th  class="partition">簽到操作Ajax功能介紹以及使用方法</th></tr>
+<tr><td class="tipsblock" s="1"><ul id="tipslis"><li>開啟後,點擊簽到按鈕後所出現的提示全部用懸浮框顯示,更加美觀.使用方法如下:
+</li><li>到後台的簽到設置,將"簽到操作是否Ajax?"打開後即可生效</li><li>如果你想在論壇的任何頁面上進行懸浮簽到的話</li><li>將"是否AJAX懸浮簽到"選是即可</li></ul></td></tr></table>
+<table class="tb tb2 " id="8" summary="8">
+<tr><th  class="partition">每日簽到單貼記錄模式的使用方法</th></tr>
+<tr><td class="tipsblock" s="1"><ul id="tipslis"><li>作用:將設置之後的人簽到的記錄全部發表在所設置的帖子之內。方法如下:</li><li>首先進入後台的簽到設置,然後按照如下的說明進行設置:</li><li>"簽到的自動回復類型" 設置成 "指定貼自動回復"<br>
+"單貼回復的tid編號" 設置成 "簽到記錄的對應主題的tid"<br>
+後即可生效</li></ul></td></tr></table>
+<table class="tb tb2 " id="9" summary="9">
+<tr><th  class="partition">作者寄語</th></tr>
+<tr><td class="tipsblock" s="1"><ul id="tipslis"><li>每日簽到如果設置得當將會給您的站點帶來人氣的增加.</li><li>如知名的許嵩論壇和中國文學論壇等等大型站點,也使用了我們的產品</li><li>以此可見簽到的資源開銷應該不是特別的大,所以各位也請放心吧!</li><li>最後,2011.7.23日之後,各位如果有空的話,幫忙在DZ插件大賽的投票中投簽到一票,來支持我們的成果,謝謝!</li></ul></td></tr></table>]]></item>
 			</item>
 		</item>
 <item id="installfile"><![CDATA[install.php]]></item>

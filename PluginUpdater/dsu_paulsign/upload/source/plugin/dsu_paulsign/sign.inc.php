@@ -270,8 +270,8 @@ if($_G['gp_operation'] == 'zong' || $_G['gp_operation'] == 'month' || $_G['gp_op
 			DB::query("UPDATE ".DB::table('forum_forum')." SET lastpost='$lastpost', posts=posts+1, todayposts=todayposts+1 WHERE fid='$thread[fid]'", 'UNBUFFERED');
 			$tidnumber = $var['tidnumber'];
 		} elseif($var['qdtype'] == '3') {
-			if($num=='0' || ($stats['qdtidnumber'] == '0')) {
-				$subject=str_replace(array('{m}','{d}'),array(dgmdate($fixtime, 'm'),dgmdate($fixtime, ' d')),$var['title_thread']);
+			if($num=='0' || $stats['qdtidnumber'] == '0') {
+				$subject=str_replace(array('{m}','{d}','{y}','{bbname}','{author}'),array(dgmdate($fixtime, 'm'),dgmdate($fixtime, ' d'),dgmdate($fixtime, 'Y'),$_G['setting']['bbname'],$_G['username']),$var['title_thread']);
 				$hft = dgmdate($fixtime, 'Y-m-d H:i');
 				if($exacr && $exacz) {
 					$message = "[quote][size=2][color=dimgray]{$lang[tsn_10]}[/color][url={$_G[siteurl]}plugin.php?id=dsu_paulsign:sign][color=darkorange]{$lang[tsn_11]}[/color][/url][color=dimgray]{$lang[tsn_12]}[/color][/size][/quote][quote][size=2][color=gray][color=teal] [/color][color=gray]{$lang[tsn_01]}[/color] [color=darkorange]{$hft}[/color] {$lang[tsn_02]}[color=red]{$lang[tsn_03]}[/color][color=darkorange]{$lang[tsn_04]}{$lang[tsn_13]}{$lang[tsn_05]}[/color]{$lang[tsn_06]} [/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][title]} [/color][color=darkorange]{$credit}[/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][unit]}[/color][color=gray]{$lang[tsn_17]}[/color] [color=gray]{$_G[setting][extcredits][$exacr][title]} [/color][color=darkorange]{$exacz}[/color][color=gray]{$_G[setting][extcredits][$exacr][unit]}[/color][/color][/size][/quote][size=3][color=dimgray]{$lang[tsn_07]}[color=red]{$todaysay}[/color]{$lang[tsn_08]}[/color][/size]";
@@ -367,7 +367,7 @@ $q['if']= $qiandaodb['time']<$tdtime ? "<span class=gray>".$lang['tdno']."</span
 $qtime = dgmdate($qiandaodb['time'], 'Y-m-d H:i');
 $navigation = $lang['name'];
 $navtitle = "$navigation";
-$signBuild = 'Ver 3.1 For X2!<br>&copy; <a href="http://loger.me/">Shy9000</a><br>';
+$signBuild = 'Ver 3.2 For X2!<br>DSU Team 1ST Anniversary<br>&copy; <a href="http://loger.me/">Shy9000</a><br>';
 $signadd = 'http://www.dsu.cc/thread-44760-1-1.html';
 if($_G['inajax']){
 	include template('dsu_paulsign:ajaxsign');
