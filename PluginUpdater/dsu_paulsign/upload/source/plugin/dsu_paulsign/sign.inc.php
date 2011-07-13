@@ -1,7 +1,8 @@
 <?php
 /*
-	dsu_paulsign Main By shy9000[DSU.CC] 2011-06-08
+	dsu_paulsign Main By shy9000[DSU.CC] 2011-07-12
 */
+!defined('IN_DISCUZ') && exit('Access Denied');
 define('IN_dsu_paulsign', '1');
 $fixtime = $_G['timestamp'] - (getglobal('member/timeoffset') - getglobal('setting/timeoffset'))*3600;
 $tdtime = gmmktime(0,0,0,dgmdate($fixtime, 'n'),dgmdate($fixtime, 'j'),dgmdate($fixtime, 'Y')) - (getglobal('setting/timeoffset') * 3600);
@@ -35,7 +36,8 @@ if($nowmonth!=$lastmonth){
 function sign_msg($msg, $treferer = '') {
 	global $_G;
 	if(defined('IN_MOBILE')) {
-		//
+		include template('dsu_paulsign:float');
+		dexit();
 	}else{
 		include template('dsu_paulsign:float');
 		dexit();
@@ -160,6 +162,10 @@ if($_G['gp_operation'] == 'zong' || $_G['gp_operation'] == 'month' || $_G['gp_op
 		if(strlen($todaysay) > 100) sign_msg($lang['ts_ovts']);
 		if(strlen($todaysay) < 6) sign_msg($lang['ts_syts']);
 		if (!preg_match("/[^A-Za-z0-9.,]/",$todaysay)) sign_msg($lang['ts_saywater']);
+		$illegaltest = censormod($todaysay);
+		if($illegaltest) {
+			sign_msg($lang['ts_illegaltext']);
+		}
 	} elseif ($_G['gp_qdmode']=='2') {
 		switch ($_G['gp_fastreply']){
 			case 1:
@@ -340,7 +346,7 @@ if ($qiandaodb['days'] >= '1500') {
 	$q['level'] = "{$lang['level']}<font color=green><b>[LV.9]{$lv9name}</b></font>{$lang['level2']} <font color=#FF0000><b>{$q['lvqd']}</b></font> {$lang['level3']} <font color=#FF0000><b>[LV.10]{$lv10name}</b></font> .";
 } elseif ($qiandaodb['days'] >= '240') {
 	$q['lvqd'] = 365 - $qiandaodb['days'];
-	$q['level'] = "{$lang['level']}<font color=green><b>[LV.8]{$lv10name}</b></font>{$lang['level2']} <font color=#FF0000><b>{$q['lvqd']}</b></font> {$lang['level3']} <font color=#FF0000><b>[LV.9]{$lv9name}</b></font> .";
+	$q['level'] = "{$lang['level']}<font color=green><b>[LV.8]{$lv8name}</b></font>{$lang['level2']} <font color=#FF0000><b>{$q['lvqd']}</b></font> {$lang['level3']} <font color=#FF0000><b>[LV.9]{$lv9name}</b></font> .";
 } elseif ($qiandaodb['days'] >= '120') {
 	$q['lvqd'] = 240 - $qiandaodb['days'];
 	$q['level'] = "{$lang['level']}<font color=green><b>[LV.7]{$lv7name}</b></font>{$lang['level2']} <font color=#FF0000><b>{$q['lvqd']}</b></font> {$lang['level3']} <font color=#FF0000><b>[LV.8]{$lv8name}</b></font> .";
@@ -367,7 +373,7 @@ $q['if']= $qiandaodb['time']<$tdtime ? "<span class=gray>".$lang['tdno']."</span
 $qtime = dgmdate($qiandaodb['time'], 'Y-m-d H:i');
 $navigation = $lang['name'];
 $navtitle = "$navigation";
-$signBuild = 'Ver 3.2 For X2!<br>DSU Team 1ST Anniversary<br>&copy; <a href="http://loger.me/">Shy9000</a><br>';
+$signBuild = 'Ver 3.4 For X2!<br>DSU Team 1ST Anniversary<br>&copy; <a href="http://loger.me/">Shy9000</a><br>';
 $signadd = 'http://www.dsu.cc/thread-44760-1-1.html';
 if($_G['inajax']){
 	include template('dsu_paulsign:ajaxsign');
