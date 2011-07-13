@@ -1,0 +1,12 @@
+source/plugin/dsu_kksfs_dzx/connect.inc.php
+source/plugin/dsu_kksfs_dzx/discuz_plugin_dsu_kksfs_dzx.xml
+source/plugin/dsu_kksfs_dzx/discuz_plugin_dsu_kksfs_dzx_SC_GBK.xml
+source/plugin/dsu_kksfs_dzx/discuz_plugin_dsu_kksfs_dzx_SC_UTF8.xml
+source/plugin/dsu_kksfs_dzx/discuz_plugin_dsu_kksfs_dzx_TC_BIG5.xml
+source/plugin/dsu_kksfs_dzx/discuz_plugin_dsu_kksfs_dzx_TC_UTF8.xml
+source/plugin/dsu_kksfs_dzx/dsu_kksfs_dzx.inc.php
+source/plugin/dsu_kksfs_dzx/install.php
+source/plugin/dsu_kksfs_dzx/logs.inc.php
+source/plugin/dsu_kksfs_dzx/sfs.class.php
+source/plugin/dsu_kksfs_dzx/uninstall.php
+source/plugin/dsu_kksfs_dzx/validator.xml
