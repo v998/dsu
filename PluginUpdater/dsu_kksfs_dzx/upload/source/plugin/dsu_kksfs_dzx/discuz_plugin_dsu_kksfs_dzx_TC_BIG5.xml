@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2]]></item>
+	<item id="Time"><![CDATA[2011-07-03 14:06]]></item>
+	<item id="From"><![CDATA[KK's Laboratory (http://127.0.0.1/x2/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[¡iDSU¡jSFS]]></item>
+			<item id="identifier"><![CDATA[dsu_kksfs_dzx]]></item>
+			<item id="description"><![CDATA[Stop Forum Spam - ¥þ¥@¬É¯¸ªøÁp¦X°_¨Ó¡A©è¨î¼s§i¾÷¡I]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[dsu_kksfs_dzx/]]></item>
+			<item id="copyright"><![CDATA[Stop Forum Spam and kookxiang @ DSU Team.]]></item>
+			<item id="version"><![CDATA[1.12]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[sfs]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[logs]]></item>
+					<item id="menu"><![CDATA[ÄdºI°O¿ý]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[5]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[connect]]></item>
+					<item id="menu"><![CDATA[³s±µ´ú¸Õ]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[8]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[¶³ÀË´ú API Key]]></item>
+				<item id="description"><![CDATA[½Ð¨ì www.stopforumspam.com Àò¨úAPI Key]]></item>
+				<item id="variable"><![CDATA[key]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[¤¹³\«e¥xª½±µÁ|³ø¼s§i©«ªº¥Î¤á²Õ]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[admin]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[1]]></item>
+					<item id="1"><![CDATA[2]]></item>
+					<item id="2"><![CDATA[3]]></item>
+				</item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[¨¾¿m¯Å§O]]></item>
+				<item id="description"><![CDATA[¤j©óµ¥©ó¦¹¯Å§Oªº¥Î¤á·|³Q¸T¤î¡C
+( 1~¥¿µL½a¤j¡A1¬°³ÌÄY®æ)]]></item>
+				<item id="variable"><![CDATA[level]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[±Ò¥Î¶³ÀË´úªº¥Î¤á²Õ]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[usergroup]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[9]]></item>
+					<item id="1"><![CDATA[10]]></item>
+					<item id="2"><![CDATA[11]]></item>
+					<item id="3"><![CDATA[12]]></item>
+				</item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[±Ò¥Î¥Î¤á¦æ¬°ÄdºIªº¥Î¤á²Õ]]></item>
+				<item id="description"><![CDATA[¥\¯à¤É¯Å¦Û¡G [KK]Adblock For Discuz 7.2]]></item>
+				<item id="variable"><![CDATA[adlock_group]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[9]]></item>
+					<item id="1"><![CDATA[10]]></item>
+					<item id="2"><![CDATA[11]]></item>
+					<item id="3"><![CDATA[12]]></item>
+					<item id="4"><![CDATA[13]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="allow_url_fopen_off"><![CDATA[¹ï¤£°_¡A±zªº PHP Àô¹Ò¤¤¥¼¶}±Ò allow_url_fopen ¤@¶µ]]></item>
+				<item id="block_kk_adblock"><![CDATA[¹ï¤£°_¡A¬°¤FºûÅ@½×¾Â¥¿±`¯´§Ç¡A±zªº¦¹¦¸¾Þ§@¤w³QÄdºI¡A½Ð»PºÞ²z­û¨ú±oÁpÃ´¡AÁÂÁÂ¡I]]></item>
+				<item id="block_post"><![CDATA[¹ï¤£°_¡A¬°¤FºûÅ@½×¾Â¥¿±`¯´§Ç¡A±zªº½ã¸¹¤w³Q¸T¤îµo©«¡A½Ð»PºÞ²z­û¨ú±oÁpÃ´¡AÁÂÁÂ¡I]]></item>
+				<item id="block_register"><![CDATA[¹ï¤£°_¡A¬°¤FºûÅ@½×¾Â¥¿±`¯´§Ç¡A±z¤w³Q¸T¤îµù¥U¡A½Ð»PºÞ²z­û¨ú±oÁpÃ´¡AÁÂÁÂ¡I]]></item>
+				<item id="clean"><![CDATA[²MªÅÄdºI°O¿ý]]></item>
+				<item id="clean_succeed"><![CDATA[²MªÅÄdºI°O¿ý§¹¦¨¡I]]></item>
+				<item id="delete_jump"><![CDATA[§R°£¥Î¤á¼Æ¾Ú¦¨¥\¡I¥¿¦bÂà¨ìSFS©x¤è¶i¦æÁ|³ø]]></item>
+				<item id="delete"><![CDATA[Á|³ø¨Ã§R°£]]></item>
+				<item id="delete_succeed"><![CDATA[§R°£¥Î¤á¼Æ¾Ú¦¨¥\¡I]]></item>
+				<item id="group_protect"><![CDATA[±zµLªk§R°£¯S®í¥Î¤á²Õªº¥Î¤á¡I]]></item>
+				<item id="link_error"><![CDATA[¹ï¤£°_¡A±z·í«eªºªA°È¾¹Àô¹ÒµLªk³s±µ¨ì SFS ©x¤è]]></item>
+				<item id="link_ok"><![CDATA[´ú¸Õ¦¨¥\¡AÅTÀ³³t«× {cost_time} ¬í]]></item>
+				<item id="no_uid"><![CDATA[¥¼µù¥U¥Î¤á]]></item>
+				<item id="reason_1"><![CDATA[¥Î¤á¦æ¬°ÄdºI]]></item>
+				<item id="reason_-1"><![CDATA[SFS API: ´cµû¼Æ¶q¹L¦h]]></item>
+				<item id="table_title"><![CDATA[³QÄdºI¥Î¤áID|³Q«Ê±þ­ì¦]|SFS API µ¹¤À|°O¿ý®É¶¡]]></item>
+				<item id="user_not_exist"><![CDATA[¥Î¤á¤£¦s¦b]]></item>
+			</item>
+			<item id="installlang">
+				<item id="header"><![CDATA[¡iDSU¡jSFS ¦w¸ËÂQ¾É]]></item>
+				<item id="step1"><![CDATA[®ÕÅçµ{§Ç]]></item>
+				<item id="step1_ok"><![CDATA[´¡¥ó¤å¥ó§¹¾ã©ÊÀË¬d³q¹L¡A¥¿¦b·Ç³Æ¦w¸Ë]]></item>
+				<item id="step2"><![CDATA[¤É¯Å¼Æ¾Ú®w]]></item>
+				<item id="step2_ok"><![CDATA[¤É¯Å¼Æ¾Ú®w§¹¦¨¡A¥¿¦b§¹¦¨¦w¸Ë]]></item>
+				<item id="step3"><![CDATA[§¹¦¨¦w¸Ë]]></item>
+				<item id="validator_new"><![CDATA[<h4 class="infotitle2">§A§Y±N¦w¸Ëªº´¡¥ó¦³·sª©¥» {newver} ¥i¥Î¡A¬O§_­nÄ~Äò¦w¸Ë¡H<br /><br /><a href="{url}" target="_blank">ÂIÀ»³o¸Ì¬d¬Ý´¡¥ó«H®§</a></h4>]]></item>
+				<item id="validator_error"><![CDATA[<h4 class="infotitle3">§A§Y±N¦w¸Ëªº¤£¬O­ìª©´¡¥ó¡A¬O§_­nÄ~Äò¦w¸Ë¡H<br /><br /><a href="{url}" target="_blank">ÂIÀ»³o¸Ì¬d¬Ý´¡¥ó«H®§</a></h4>]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="license"><![CDATA[[list]
+[*]¥»´¡¥óª©ÅvÂkÄÝ´¡¥ó§@ªÌ,¤Î¨ä¤UÄÝDiscuz! Student Union¹Î¶¤©Ò¦³.
+[*]¥¼¸g´¡¥ó§@ªÌ³\¥i,¥ô¦ó¤H¤£±o¥H¥ô¦ó§Î¦¡¦b¥ô¦ó¦a¤èµo§G/Âàµo­ìª©¥H¤Î¨ä­l¥Íªº­×§ïª©.
+[*][b]´¡¥ó§@ªÌ:[/b]kookxiang
+[*][b]§@«~Â²¤¶:[/b]Stop Forum Spam - ¥þ¥@¬É¯¸ªøÁp¦X°_¨Ó¡A©è¨î¼s§i¾÷¡I
+[*][b]µo§G¦a§}:[/b][url]http://www.dsu.cc[/url]
+[*]¦p¦³¥ô¦óÃö©ó¨Ï¥Î¤WªººÃ°Ý,½Ð¦Ü[url]http://www.dsu.cc/forum-44-1.html[/url]´£¥X.
+[*][color=Red]¦pªG±zÄ@·N¸ê§U§Ú­Ì,½Ð¦Ü[url]http://www.dsu.cc/donate.php[/url]¹ï§Ú­Ì¶i¦æÃÙ§U.[/color]
+[*]³Ì«á,·PÁÂ±z¨Ï¥Î§Ú­Ìªº´¡¥ó,¤]§Æ±æ±z¯à°÷µ¹§Ú­ÌDSU¹Î¶¤´£¨Ñ§ó¦nªº·N¨£([url=http://www.dsu.cc/]½ÐÂIÀ»³o¸Ì¶i¤JDSU¹Î¶¤©x¤è¯¸ÂI[/url]).
+[/list]]]></item>
+	</item>
+</root>

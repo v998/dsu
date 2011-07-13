@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2]]></item>
+	<item id="Time"><![CDATA[2011-07-03 14:06]]></item>
+	<item id="From"><![CDATA[KK's Laboratory (http://127.0.0.1/x2/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[【DSU】SFS]]></item>
+			<item id="identifier"><![CDATA[dsu_kksfs_dzx]]></item>
+			<item id="description"><![CDATA[Stop Forum Spam - 全世界站长联合起来，抵制广告机！]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[dsu_kksfs_dzx/]]></item>
+			<item id="copyright"><![CDATA[Stop Forum Spam and kookxiang @ DSU Team.]]></item>
+			<item id="version"><![CDATA[1.12]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[sfs]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[logs]]></item>
+					<item id="menu"><![CDATA[拦截记录]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[5]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[connect]]></item>
+					<item id="menu"><![CDATA[连接测试]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[8]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[云检测 API Key]]></item>
+				<item id="description"><![CDATA[请到 www.stopforumspam.com 获取API Key]]></item>
+				<item id="variable"><![CDATA[key]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[允许前台直接举报广告帖的用户组]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[admin]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[1]]></item>
+					<item id="1"><![CDATA[2]]></item>
+					<item id="2"><![CDATA[3]]></item>
+				</item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[防御级别]]></item>
+				<item id="description"><![CDATA[大于等于此级别的用户会被禁止。
+( 1~正无穷大，1为最严格)]]></item>
+				<item id="variable"><![CDATA[level]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[启用云检测的用户组]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[usergroup]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[9]]></item>
+					<item id="1"><![CDATA[10]]></item>
+					<item id="2"><![CDATA[11]]></item>
+					<item id="3"><![CDATA[12]]></item>
+				</item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[启用用户行为拦截的用户组]]></item>
+				<item id="description"><![CDATA[功能升级自： [KK]Adblock For Discuz 7.2]]></item>
+				<item id="variable"><![CDATA[adlock_group]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[9]]></item>
+					<item id="1"><![CDATA[10]]></item>
+					<item id="2"><![CDATA[11]]></item>
+					<item id="3"><![CDATA[12]]></item>
+					<item id="4"><![CDATA[13]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="allow_url_fopen_off"><![CDATA[对不起，您的 PHP 环境中未开启 allow_url_fopen 一项]]></item>
+				<item id="block_kk_adblock"><![CDATA[对不起，为了维护论坛正常秩序，您的此次操作已被拦截，请与管理员取得联系，谢谢！]]></item>
+				<item id="block_post"><![CDATA[对不起，为了维护论坛正常秩序，您的账号已被禁止发帖，请与管理员取得联系，谢谢！]]></item>
+				<item id="block_register"><![CDATA[对不起，为了维护论坛正常秩序，您已被禁止注册，请与管理员取得联系，谢谢！]]></item>
+				<item id="clean"><![CDATA[清空拦截记录]]></item>
+				<item id="clean_succeed"><![CDATA[清空拦截记录完成！]]></item>
+				<item id="delete_jump"><![CDATA[删除用户数据成功！正在转到SFS官方进行举报]]></item>
+				<item id="delete"><![CDATA[举报并删除]]></item>
+				<item id="delete_succeed"><![CDATA[删除用户数据成功！]]></item>
+				<item id="group_protect"><![CDATA[您无法删除特殊用户组的用户！]]></item>
+				<item id="link_error"><![CDATA[对不起，您当前的服务器环境无法连接到 SFS 官方]]></item>
+				<item id="link_ok"><![CDATA[测试成功，响应速度 {cost_time} 秒]]></item>
+				<item id="no_uid"><![CDATA[未注册用户]]></item>
+				<item id="reason_1"><![CDATA[用户行为拦截]]></item>
+				<item id="reason_-1"><![CDATA[SFS API: 恶评数量过多]]></item>
+				<item id="table_title"><![CDATA[被拦截用户ID|被封杀原因|SFS API 给分|记录时间]]></item>
+				<item id="user_not_exist"><![CDATA[用户不存在]]></item>
+			</item>
+			<item id="installlang">
+				<item id="header"><![CDATA[【DSU】SFS 安装向导]]></item>
+				<item id="step1"><![CDATA[校验程序]]></item>
+				<item id="step1_ok"><![CDATA[插件文件完整性检查通过，正在准备安装]]></item>
+				<item id="step2"><![CDATA[升级数据库]]></item>
+				<item id="step2_ok"><![CDATA[升级数据库完成，正在完成安装]]></item>
+				<item id="step3"><![CDATA[完成安装]]></item>
+				<item id="validator_new"><![CDATA[<h4 class="infotitle2">你即将安装的插件有新版本 {newver} 可用，是否要继续安装？<br /><br /><a href="{url}" target="_blank">点击这里查看插件信息</a></h4>]]></item>
+				<item id="validator_error"><![CDATA[<h4 class="infotitle3">你即将安装的不是原版插件，是否要继续安装？<br /><br /><a href="{url}" target="_blank">点击这里查看插件信息</a></h4>]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="license"><![CDATA[[list]
+[*]本插件版权归属插件作者,及其下属Discuz! Student Union团队所有.
+[*]未经插件作者许可,任何人不得以任何形式在任何地方发布/转发原版以及其衍生的修改版.
+[*][b]插件作者:[/b]kookxiang
+[*][b]作品简介:[/b]Stop Forum Spam - 全世界站长联合起来，抵制广告机！
+[*][b]发布地址:[/b][url]http://www.dsu.cc[/url]
+[*]如有任何关于使用上的疑问,请至[url]http://www.dsu.cc/forum-44-1.html[/url]提出.
+[*][color=Red]如果您愿意资助我们,请至[url]http://www.dsu.cc/donate.php[/url]对我们进行赞助.[/color]
+[*]最后,感谢您使用我们的插件,也希望您能够给我们DSU团队提供更好的意见([url=http://www.dsu.cc/]请点击这里进入DSU团队官方站点[/url]).
+[/list]]]></item>
+	</item>
+</root>
