@@ -2,6 +2,7 @@
 /*
 	dsu_paulsign Echo By shy9000[DSU.CC] 2011-06-08
 */
+!defined('IN_DISCUZ') && exit('Access Denied');
 class plugin_dsu_paulsign{
 	function global_usernav_extra2() {
 		global $_G,$show_message;
@@ -125,7 +126,7 @@ class plugin_dsu_paulsign_home extends plugin_dsu_paulsign {
 					$q['level'] = lang('plugin/dsu_paulsign','echo_11')."<font color=green><b>[LV.9]{$lv9name}</b></font>".lang('plugin/dsu_paulsign','echo_12')."<font color=#FF0000><b>[LV.10]{$lv10name}</b></font>".lang('plugin/dsu_paulsign','echo_13')."<font color=#FF0000><b>{$q['lvqd']}</b></font>".lang('plugin/dsu_paulsign','echo_14');
 				} elseif ($qiandaodb['days'] >= '240') {
 					$q['lvqd'] = 365 - $qiandaodb['days'];
-					$q['level'] = lang('plugin/dsu_paulsign','echo_11')."<font color=green><b>[LV.8]{$lv10name}</b></font>".lang('plugin/dsu_paulsign','echo_12')."<font color=#FF0000><b>[LV.9]{$lv9name}</b></font>".lang('plugin/dsu_paulsign','echo_13')."<font color=#FF0000><b>{$q['lvqd']}</b></font>".lang('plugin/dsu_paulsign','echo_14');
+					$q['level'] = lang('plugin/dsu_paulsign','echo_11')."<font color=green><b>[LV.8]{$lv8name}</b></font>".lang('plugin/dsu_paulsign','echo_12')."<font color=#FF0000><b>[LV.9]{$lv9name}</b></font>".lang('plugin/dsu_paulsign','echo_13')."<font color=#FF0000><b>{$q['lvqd']}</b></font>".lang('plugin/dsu_paulsign','echo_14');
 				} elseif ($qiandaodb['days'] >= '120') {
 					$q['lvqd'] = 240 - $qiandaodb['days'];
 					$q['level'] = lang('plugin/dsu_paulsign','echo_11')."<font color=green><b>[LV.7]{$lv7name}</b></font>".lang('plugin/dsu_paulsign','echo_12')."<font color=#FF0000><b>[LV.8]{$lv8name}</b></font>".lang('plugin/dsu_paulsign','echo_13')."<font color=#FF0000><b>{$q['lvqd']}</b></font>".lang('plugin/dsu_paulsign','echo_14');
@@ -200,7 +201,7 @@ class plugin_dsu_paulsign_forum extends plugin_dsu_paulsign {
 					} elseif ($mrc['days'] >= '365') {
 			  			$mrc['level'] = "[LV.9]{$lv9name}";
 					} elseif ($mrc['days'] >= '240') {
-			  			$mrc['level'] = "[LV.8]{$lv10name}";
+			  			$mrc['level'] = "[LV.8]{$lv8name}";
 					} elseif ($mrc['days'] >= '120') {
 			  			$mrc['level'] = "[LV.7]{$lv7name}";
 					} elseif ($mrc['days'] >= '60') {
@@ -255,7 +256,7 @@ class plugin_dsu_paulsign_forum extends plugin_dsu_paulsign {
 			} elseif ($mrc['days'] >= '365') {
 			  	$days[$mrc['uid']]['level'] = "[LV.9]{$lv9name}";
 			} elseif ($mrc['days'] >= '240') {
-			  	$days[$mrc['uid']]['level'] = "[LV.8]{$lv10name}";
+			  	$days[$mrc['uid']]['level'] = "[LV.8]{$lv8name}";
 			} elseif ($mrc['days'] >= '120') {
 			  	$days[$mrc['uid']]['level'] = "[LV.7]{$lv7name}";
 			} elseif ($mrc['days'] >= '60') {

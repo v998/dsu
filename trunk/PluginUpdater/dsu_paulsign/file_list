@@ -8,9 +8,11 @@ source/plugin/dsu_paulsign/sign.class.php
 source/plugin/dsu_paulsign/sign.inc.php
 source/plugin/dsu_paulsign/sign_helper.inc.php
 source/plugin/dsu_paulsign/sign_import.inc.php
+source/plugin/dsu_paulsign/sign_mobile.class.php
 source/plugin/dsu_paulsign/sign_troubleshooting.inc.php
 source/plugin/dsu_paulsign/uninstall.php
 source/plugin/dsu_paulsign/upgrade.php
+source/plugin/dsu_paulsign/validator.xml
 source/plugin/dsu_paulsign/img/ch.gif
 source/plugin/dsu_paulsign/img/face_sel.gif
 source/plugin/dsu_paulsign/img/fd.gif
@@ -22,6 +24,7 @@ source/plugin/dsu_paulsign/img/qdtb.gif
 source/plugin/dsu_paulsign/img/qdtb.psd
 source/plugin/dsu_paulsign/img/qdtb1.gif
 source/plugin/dsu_paulsign/img/shuai.gif
+source/plugin/dsu_paulsign/img/Thumbs.db
 source/plugin/dsu_paulsign/img/wl.gif
 source/plugin/dsu_paulsign/img/yl.gif
 source/plugin/dsu_paulsign/img/ym.gif
@@ -30,3 +33,5 @@ source/plugin/dsu_paulsign/template/float.htm
 source/plugin/dsu_paulsign/template/sign.htm
 source/plugin/dsu_paulsign/template/sign_helper.htm
 source/plugin/dsu_paulsign/template/sign_list.htm
+source/plugin/dsu_paulsign/template/mobile/float.htm
+source/plugin/dsu_paulsign/template/mobile/sign.htm
