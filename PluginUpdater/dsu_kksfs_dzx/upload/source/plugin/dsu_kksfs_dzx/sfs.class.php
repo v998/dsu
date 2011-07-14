@@ -41,7 +41,7 @@ class plugin_dsu_kksfs_dzx{
 			if($post['adminid']){
 				$return[]='';
 			}else{
-				$return[]='<a href="plugin.php?id=dsu_kksfs_dzx&uid='.$post['authorid'].'&formhash='.md5(FORMHASH).'" onclick="showWindow(\'dsu_sfs\',this.href);" style="background: url(static/image/common/recyclebin.gif) no-repeat 5px 56%" target="_blank">'.lang('plugin/dsu_kksfs_dzx','delete').'</a>';
+				$return[]='<a href="javascript:;" onclick="showDialog(\''.lang('plugin/dsu_kksfs_dzx','confirm_kill').'\',\'confirm\',\'[DSU] SFS\',function(){showWindow(\'dsu_sfs\', \'plugin.php?id=dsu_kksfs_dzx&uid='.$post['authorid'].'&formhash='.md5(FORMHASH).'\')});return false;" style="background: url(static/image/common/recyclebin.gif) no-repeat 5px 56%" target="_blank">'.lang('plugin/dsu_kksfs_dzx','delete').'</a>';
 			}
 		}
 		return $return;
