@@ -14,7 +14,7 @@
 			<item id="datatables"><![CDATA[]]></item>
 			<item id="directory"><![CDATA[dsu_kksfs_dzx/]]></item>
 			<item id="copyright"><![CDATA[Stop Forum Spam and kookxiang @ DSU Team.]]></item>
-			<item id="version"><![CDATA[1.12]]></item>
+			<item id="version"><![CDATA[1.13]]></item>
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[sfs]]></item>
@@ -126,6 +126,7 @@
 				<item id="block_register"><![CDATA[對不起，為了維護論壇正常秩序，您已被禁止註冊，請與管理員取得聯繫，謝謝！]]></item>
 				<item id="clean"><![CDATA[清空攔截記錄]]></item>
 				<item id="clean_succeed"><![CDATA[清空攔截記錄完成！]]></item>
+				<item id="confirm_kill"><![CDATA[您確定要刪除這個用戶嗎？<br>註：此操作不可撤銷]]></item>
 				<item id="delete_jump"><![CDATA[刪除用戶數據成功！正在轉到SFS官方進行舉報]]></item>
 				<item id="delete"><![CDATA[舉報並刪除]]></item>
 				<item id="delete_succeed"><![CDATA[刪除用戶數據成功！]]></item>
