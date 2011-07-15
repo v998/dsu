@@ -6,6 +6,7 @@
 !defined('IN_ADMINCP') && exit('Access Denied');
 loadcache('pluginlanguage_script');
 $lang = $_G['cache']['pluginlanguage_script']['dsu_paulsign'];
+if(is_file(DISCUZ_ROOT.'./data/dsu_paulsign_import.lock'))cpmsg("{$lang[import_16]}", '');
 if(!$_G['gp_submit']) {
 showtableheader($lang['import_07'].' 20110619 By [DSU]Shy9000');
 showformheader("plugins&operation=config&identifier=dsu_paulsign&pmod=sign_import&submit=1", "");
@@ -57,11 +58,11 @@ if($_G['gp_imchoice'] == '3'){
 		if($tj){
 			DB::query("UPDATE ".DB::table('dsu_paulsignset')." SET todayq='$tj[todayq]',yesterdayq='$tj[yesterdayq]',highestq='$tj[highestq]',qdtidnumber='$tj[qdtidnumber]' WHERE id='1'");
 		}else{
-			cpmsg("{$lang[import_04]}", 'admin.php?action=plugins&operation=config&identifier=dsu_paulsign&pmod=sign_import');
+			cpmsg("{$lang[import_04]}", '');
 		}
 		$query = DB::query("SELECT * FROM {$_G[gp_signt]}");
 		if(!$query){
-			cpmsg("{$lang[import_05]}", 'admin.php?action=plugins&operation=config&identifier=dsu_paulsign&pmod=sign_import');
+			cpmsg("{$lang[import_05]}", '');
 		}
 		$mrcs = array();
 		while($mrc = DB::fetch($query)) {
@@ -79,7 +80,8 @@ if($_G['gp_imchoice'] == '3'){
 			$mrcs[] = $mrc;
 		}
 }
-	cpmsg("{$lang[import_06]}", 'admin.php?action=plugins&operation=config&identifier=dsu_paulsign&anchor=vars');
+	file_put_contents(DISCUZ_ROOT.'./data/dsu_paulsign_import.lock', '1');
+	cpmsg("{$lang[import_06]}", '');
 }else{
 	cpmsg("{$lang[import_15]}", '');
 }

@@ -6,6 +6,7 @@ source/plugin/dsu_paulsign/discuz_plugin_dsu_paulsign_TC_UTF8.xml
 source/plugin/dsu_paulsign/install.php
 source/plugin/dsu_paulsign/sign.class.php
 source/plugin/dsu_paulsign/sign.inc.php
+source/plugin/dsu_paulsign/sign_crash.inc.php
 source/plugin/dsu_paulsign/sign_helper.inc.php
 source/plugin/dsu_paulsign/sign_import.inc.php
 source/plugin/dsu_paulsign/sign_mobile.class.php
