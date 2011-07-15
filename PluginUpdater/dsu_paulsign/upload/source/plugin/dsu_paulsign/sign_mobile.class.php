@@ -7,7 +7,7 @@ class mobileplugin_dsu_paulsign {
 				dheader('Location: plugin.php?id=dsu_paulsign:sign&mobile=yes');
 			}
 			$var = $_G['cache']['plugin']['dsu_paulsign'];
-			if(defined('IN_dsu_paulsign') || $_G['setting']['mobile']['mobileforward'] || $show_message || defined('IN_dsu_paulsc') || !$_G['uid'] || !$var['ifopen'] || !$var['wap_sign']) return '';
+			if(defined('IN_dsu_paulsign') || $show_message || defined('IN_dsu_paulsc') || !$_G['uid'] || !$var['ifopen'] || !$var['wap_sign']) return '';
 			$fixtime = $_G['timestamp'] - (getglobal('member/timeoffset') - getglobal('setting/timeoffset'))*3600;
 			$tdtime = gmmktime(0,0,0,dgmdate($fixtime, 'n'),dgmdate($fixtime, 'j'),dgmdate($fixtime, 'Y')) - (getglobal('setting/timeoffset') * 3600);
 			$allowmem = memory('check');

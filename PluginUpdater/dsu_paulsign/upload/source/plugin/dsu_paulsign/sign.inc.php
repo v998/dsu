@@ -373,7 +373,7 @@ $q['if']= $qiandaodb['time']<$tdtime ? "<span class=gray>".$lang['tdno']."</span
 $qtime = dgmdate($qiandaodb['time'], 'Y-m-d H:i');
 $navigation = $lang['name'];
 $navtitle = "$navigation";
-$signBuild = 'Ver 3.4 For X2!<br>DSU Team 1ST Anniversary<br>&copy; <a href="http://loger.me/">Shy9000</a><br>';
+$signBuild = 'Ver 3.5 For X2!<br>DSU Team 1ST Anniversary<br>&copy; <a href="http://loger.me/">Shy9000</a><br>';
 $signadd = 'http://www.dsu.cc/thread-44760-1-1.html';
 if($_G['inajax']){
 	include template('dsu_paulsign:ajaxsign');

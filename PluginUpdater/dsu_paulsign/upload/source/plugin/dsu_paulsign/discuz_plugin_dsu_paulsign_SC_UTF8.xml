@@ -14,7 +14,7 @@
 			<item id="datatables"><![CDATA[]]></item>
 			<item id="directory"><![CDATA[dsu_paulsign/]]></item>
 			<item id="copyright"><![CDATA[Shy9000 @ DSU Team]]></item>
-			<item id="version"><![CDATA[3.4]]></item>
+			<item id="version"><![CDATA[3.5]]></item>
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[sign]]></item>
@@ -81,6 +81,18 @@
 					<item id="menu"><![CDATA[]]></item>
 					<item id="url"><![CDATA[]]></item>
 					<item id="type"><![CDATA[28]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="6">
+					<item id="name"><![CDATA[sign_crash]]></item>
+					<item id="menu"><![CDATA[冗余数据清理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
 					<item id="adminid"><![CDATA[0]]></item>
 					<item id="displayorder"><![CDATA[0]]></item>
 					<item id="navtitle"><![CDATA[]]></item>
@@ -636,6 +648,7 @@
 				<item id="import_13"><![CDATA[旧数据表缺失,无法导入]]></item>
 				<item id="import_14"><![CDATA[未输入旧数据表名称,无法导入]]></item>
 				<item id="import_15"><![CDATA[表单提交错误,请重新提交]]></item>
+				<item id="import_16"><![CDATA[已经导入过一次,切勿重复导入,如果您想重复导入,请删除data/dsu_paulsign_import.lock]]></item>
 				<item id="ts_illegaltext"><![CDATA[每日最想说中包含敏感词,请修改后重新提交]]></item>
 			</item>
 			<item id="installlang">

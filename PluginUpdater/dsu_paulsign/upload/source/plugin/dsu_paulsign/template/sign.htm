@@ -74,7 +74,7 @@ function Icon_selected(sId) {
 <div id="yl_menu" class="tip tip_4" style="display:none;width:50px;margin:0px 0px 0px 30px;"><div class="tip_horn"></div><div class="tip_c"><center>{lang dsu_paulsign:mb_qb8}</center></div></div>
 <div id="shuai_menu" class="tip tip_4" style="display:none;width:50px;margin:0px 0px 0px 30px;"><div class="tip_horn"></div><div class="tip_c"><center>{lang dsu_paulsign:mb_qb9}</center></div></div>
 <table summary="Qd" cellspacing="0" cellpadding="0" class="tfm">
-<tr>
+<tr{if !$var['ksopen'] && !$var['todaysayxt']} style="display:none;"{/if}>
 <th>{lang dsu_paulsign:mb_mode1}</th>
 <td>
 <label><input type="radio" name="qdmode" value="1" checked="checked" onclick="if(checked == true){document.getElementById('mode1').style.display='';document.getElementById('mode2').style.display='none';}">&nbsp;{lang dsu_paulsign:mb_mode2}</label>&nbsp;&nbsp;
@@ -107,8 +107,17 @@ function Icon_selected(sId) {
         </div>
 <!--{else}-->
 <h1 class="mt">{lang dsu_paulsign:mb_jryqe}</h1>
+<!--{if $qiandaodb}-->
+<p><font color="#FF0000"><b>$_G['username']</b></font> {lang dsu_paulsign:mb_fwt1} <b>$qiandaodb['days']</b> {lang dsu_paulsign:mb_fwt2}</p>
+<p>{lang dsu_paulsign:mb_fwt3}<b>$qiandaodb['mdays']</b> {lang dsu_paulsign:mb_fwt2}</p>
+<p>{lang dsu_paulsign:mb_fwt6}<font color="#ff00cc">$qtime</font> </p>
+<p>{lang dsu_paulsign:mb_fwt8}{$_G[setting][extcredits][$var[nrcredit]][title]} <font color="#ff00cc"><b>$qiandaodb['reward']</b></font> {$_G['setting']['extcredits'][$var[nrcredit]]['unit']}{lang dsu_paulsign:mb_fwt9}{$_G[setting][extcredits][$var[nrcredit]][title]} <font color="#ff00cc"><b>$qiandaodb['lastreward']</b></font> {$_G['setting']['extcredits'][$var[nrcredit]]['unit']}.</p>
+<p>{$q['level']}</p>
+<!--{else}-->
+<p>{lang dsu_paulsign:mb_fwt7}</p>
 <!--{/if}-->
-			<h2 class="mbn">{lang dsu_paulsign:mb_ph}</h2>
+<!--{/if}-->
+			<h1 class="mt">{lang dsu_paulsign:mb_ph}</h1>
               <ul class="tb cl">
 				<li {if $_G['gp_operation'] == ''}class="a"{/if}><a href="plugin.php?id=dsu_paulsign:sign">{lang dsu_paulsign:mb_scqd}</a></li>
 				<li {if $_G['gp_operation'] == 'zong'}class="a"{/if}><a href="plugin.php?id=dsu_paulsign:sign&operation=zong">{lang dsu_paulsign:mb_zts}</a></li>
@@ -190,6 +199,7 @@ function Icon_selected(sId) {
 			</div>
 <!--{/if}-->
 
+<!--{if $qiandaodb['time'] < $tdtime}-->
 <div id="qdmsgt_c" class="umh">
 <h3 onclick="toggle_collapse('qdmsgt', 1, 1);">{lang dsu_paulsign:mb_fwt}</h3>
 <div class="umh_act">
@@ -198,16 +208,17 @@ function Icon_selected(sId) {
 </div>
 <div class="um" id="qdmsgt" style="">
 <!--{if $qiandaodb}-->
-<p><font color=#FF0000><b>$_G['username']</b></font> {lang dsu_paulsign:mb_fwt1} <b>$qiandaodb['days']</b> {lang dsu_paulsign:mb_fwt2}</p>
+<p><font color="#FF0000"><b>$_G['username']</b></font> {lang dsu_paulsign:mb_fwt1} <b>$qiandaodb['days']</b> {lang dsu_paulsign:mb_fwt2}</p>
 <p>{lang dsu_paulsign:mb_fwt3}<b>$qiandaodb['mdays']</b> {lang dsu_paulsign:mb_fwt2}</p>
 <p>{lang dsu_paulsign:mb_fwt4}$q['if']{lang dsu_paulsign:mb_fwt5}</p>
-<p>{lang dsu_paulsign:mb_fwt6}<font color=#ff00cc>$qtime</font> </p>
-<p>{lang dsu_paulsign:mb_fwt8}{$_G[setting][extcredits][$var[nrcredit]][title]} <font color=#ff00cc><b>$qiandaodb['reward']</b></font> {$_G['setting']['extcredits'][$var[nrcredit]]['unit']}{lang dsu_paulsign:mb_fwt9}{$_G[setting][extcredits][$var[nrcredit]][title]} <font color=#ff00cc><b>$qiandaodb['lastreward']</b></font> {$_G['setting']['extcredits'][$var[nrcredit]]['unit']}.</p>
+<p>{lang dsu_paulsign:mb_fwt6}<font color="#ff00cc">$qtime</font> </p>
+<p>{lang dsu_paulsign:mb_fwt8}{$_G[setting][extcredits][$var[nrcredit]][title]} <font color="#ff00cc"><b>$qiandaodb['reward']</b></font> {$_G['setting']['extcredits'][$var[nrcredit]]['unit']}{lang dsu_paulsign:mb_fwt9}{$_G[setting][extcredits][$var[nrcredit]][title]} <font color="#ff00cc"><b>$qiandaodb['lastreward']</b></font> {$_G['setting']['extcredits'][$var[nrcredit]]['unit']}.</p>
 <p>{$q['level']}</p>
 <!--{else}-->
 <p>{lang dsu_paulsign:mb_fwt7}</p>
 <!--{/if}-->
 </div>
+<!--{/if}-->
 	
 </div>
 <div class="sd">

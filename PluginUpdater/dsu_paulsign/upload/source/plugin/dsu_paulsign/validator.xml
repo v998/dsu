@@ -24,19 +24,20 @@
 		<item id="18"><![CDATA[source/plugin/dsu_paulsign/install.php]]></item>
 		<item id="19"><![CDATA[source/plugin/dsu_paulsign/sign.class.php]]></item>
 		<item id="20"><![CDATA[source/plugin/dsu_paulsign/sign.inc.php]]></item>
-		<item id="21"><![CDATA[source/plugin/dsu_paulsign/sign_helper.inc.php]]></item>
-		<item id="22"><![CDATA[source/plugin/dsu_paulsign/sign_import.inc.php]]></item>
-		<item id="23"><![CDATA[source/plugin/dsu_paulsign/sign_mobile.class.php]]></item>
-		<item id="24"><![CDATA[source/plugin/dsu_paulsign/sign_troubleshooting.inc.php]]></item>
-		<item id="25"><![CDATA[source/plugin/dsu_paulsign/template/ajaxsign.htm]]></item>
-		<item id="26"><![CDATA[source/plugin/dsu_paulsign/template/float.htm]]></item>
-		<item id="27"><![CDATA[source/plugin/dsu_paulsign/template/mobile/float.htm]]></item>
-		<item id="28"><![CDATA[source/plugin/dsu_paulsign/template/mobile/sign.htm]]></item>
-		<item id="29"><![CDATA[source/plugin/dsu_paulsign/template/sign.htm]]></item>
-		<item id="30"><![CDATA[source/plugin/dsu_paulsign/template/sign_helper.htm]]></item>
-		<item id="31"><![CDATA[source/plugin/dsu_paulsign/template/sign_list.htm]]></item>
-		<item id="32"><![CDATA[source/plugin/dsu_paulsign/uninstall.php]]></item>
-		<item id="33"><![CDATA[source/plugin/dsu_paulsign/upgrade.php]]></item>
-		<item id="34"><![CDATA[source/plugin/dsu_paulsign/validator.xml]]></item>
+		<item id="21"><![CDATA[source/plugin/dsu_paulsign/sign_crash.inc.php]]></item>
+		<item id="22"><![CDATA[source/plugin/dsu_paulsign/sign_helper.inc.php]]></item>
+		<item id="23"><![CDATA[source/plugin/dsu_paulsign/sign_import.inc.php]]></item>
+		<item id="24"><![CDATA[source/plugin/dsu_paulsign/sign_mobile.class.php]]></item>
+		<item id="25"><![CDATA[source/plugin/dsu_paulsign/sign_troubleshooting.inc.php]]></item>
+		<item id="26"><![CDATA[source/plugin/dsu_paulsign/template/ajaxsign.htm]]></item>
+		<item id="27"><![CDATA[source/plugin/dsu_paulsign/template/float.htm]]></item>
+		<item id="28"><![CDATA[source/plugin/dsu_paulsign/template/mobile/float.htm]]></item>
+		<item id="29"><![CDATA[source/plugin/dsu_paulsign/template/mobile/sign.htm]]></item>
+		<item id="30"><![CDATA[source/plugin/dsu_paulsign/template/sign.htm]]></item>
+		<item id="31"><![CDATA[source/plugin/dsu_paulsign/template/sign_helper.htm]]></item>
+		<item id="32"><![CDATA[source/plugin/dsu_paulsign/template/sign_list.htm]]></item>
+		<item id="33"><![CDATA[source/plugin/dsu_paulsign/uninstall.php]]></item>
+		<item id="34"><![CDATA[source/plugin/dsu_paulsign/upgrade.php]]></item>
+		<item id="35"><![CDATA[source/plugin/dsu_paulsign/validator.xml]]></item>
 	</item>
 </root>

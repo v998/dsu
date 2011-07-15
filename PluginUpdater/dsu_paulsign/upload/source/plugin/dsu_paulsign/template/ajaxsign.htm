@@ -7,35 +7,42 @@
 .qdsmile{padding:3px;margin:auto;float:left;list-style:none;float:left}
 .qdsmile li{float: left;padding:5px .4em;border:2px #fff solid;}
 .qdsmile li img{margin-bottom:5px;}
-.qdsmile li:hover{cursor:pointer;background:#F7FAFF;border:2px dashed #D1D8D8;}
+.qdsmile li:hover{cursor:pointer;}
 </style>
 	<h3>{lang dsu_paulsign:mb_xz}<!--{if $var['ftopen']}--><br><font color="red">[{lang dsu_paulsign:mb_xz1}]</font><!--{/if}--></h3>
 		  <input type="hidden" name="formhash" value="{FORMHASH}">
+			<script>
+			function Icon_selected(sId) {
+				var oImg = document.getElementsByTagName('li');
+				for (var i = 0; i < oImg.length; i++) {
+				  if (oImg[i].id == sId) {
+					var selectname = document.getElementById(oImg[i].id + "_s");
+					selectname.checked = true;
+					oImg[i].style. background = '#EFEFEF';
+				  } else {
+					oImg[i].style. background = '';
+				  }
+				}
+			}
+			</script>
           <table width="100%" cellpadding="0" cellspacing="0" align="center">
             <tr>
               <td>
-                  <span id="kx" onmouseover="showMenu({'ctrlid':this.id, 'pos':'11'});"><img src="source/plugin/dsu_paulsign/img/kx.gif" /><input type="radio" name="qdxq" value="kx"></span>
-                  <span id="ng" onmouseover="showMenu({'ctrlid':this.id, 'pos':'11'});"><img src="source/plugin/dsu_paulsign/img/ng.gif" /><input type="radio" name="qdxq" value="ng"></span>
-                  <span id="ym" onmouseover="showMenu({'ctrlid':this.id, 'pos':'11'});"><img src="source/plugin/dsu_paulsign/img/ym.gif" /><input type="radio" name="qdxq" value="ym"></span>
-                  <span id="wl" onmouseover="showMenu({'ctrlid':this.id, 'pos':'11'});"><img src="source/plugin/dsu_paulsign/img/wl.gif" /><input type="radio" name="qdxq" value="wl"></span>
-                  <span id="nu" onmouseover="showMenu({'ctrlid':this.id, 'pos':'11'});"><img src="source/plugin/dsu_paulsign/img/nu.gif" /><input type="radio" name="qdxq" value="nu"></span>
-                  <span id="ch" onmouseover="showMenu({'ctrlid':this.id, 'pos':'11'});"><img src="source/plugin/dsu_paulsign/img/ch.gif" /><input type="radio" name="qdxq" value="ch"></span>
-                  <span id="fd" onmouseover="showMenu({'ctrlid':this.id, 'pos':'11'});"><img src="source/plugin/dsu_paulsign/img/fd.gif" /><input type="radio" name="qdxq" value="fd"></span>
-                  <span id="yl" onmouseover="showMenu({'ctrlid':this.id, 'pos':'11'});"><img src="source/plugin/dsu_paulsign/img/yl.gif" /><input type="radio" name="qdxq" value="yl"></span>
-                  <span id="shuai" onmouseover="showMenu({'ctrlid':this.id, 'pos':'11'});"><img src="source/plugin/dsu_paulsign/img/shuai.gif" /><input type="radio" name="qdxq" value="shuai"></span>
+                <ul class="qdsmile">
+                  <input id="kx_s" type="radio" name="qdxq" value="kx" style="display:none"><li id="kx" onclick="Icon_selected(this.id)"><center><img src="source/plugin/dsu_paulsign/img/kx.gif"><br>{lang dsu_paulsign:mb_qb1}<br></center></li>
+                  <input id="ng_s" type="radio" name="qdxq" value="ng" style="display:none"><li id="ng" onclick="Icon_selected(this.id)"><center><img src="source/plugin/dsu_paulsign/img/ng.gif"><br>{lang dsu_paulsign:mb_qb2}<br></center></li>
+                  <input id="ym_s" type="radio" name="qdxq" value="ym" style="display:none"><li id="ym" onclick="Icon_selected(this.id)"><center><img src="source/plugin/dsu_paulsign/img/ym.gif"><br>{lang dsu_paulsign:mb_qb3}<br></center></li>
+                  <input id="wl_s" type="radio" name="qdxq" value="wl" style="display:none"><li id="wl" onclick="Icon_selected(this.id)"><center><img src="source/plugin/dsu_paulsign/img/wl.gif"><br>{lang dsu_paulsign:mb_qb4}<br></center></li>
+                  <input id="nu_s" type="radio" name="qdxq" value="nu" style="display:none"><li id="nu" onclick="Icon_selected(this.id)"><center><img src="source/plugin/dsu_paulsign/img/nu.gif"><br>{lang dsu_paulsign:mb_qb5}<br></center></li>
+                  <input id="ch_s" type="radio" name="qdxq" value="ch" style="display:none"><li id="ch" onclick="Icon_selected(this.id)"><center><img src="source/plugin/dsu_paulsign/img/ch.gif"><br>{lang dsu_paulsign:mb_qb6}<br></center></li>
+                  <input id="fd_s" type="radio" name="qdxq" value="fd" style="display:none"><li id="fd" onclick="Icon_selected(this.id)"><center><img src="source/plugin/dsu_paulsign/img/fd.gif"><br>{lang dsu_paulsign:mb_qb7}<br></center></li>
+                  <input id="yl_s" type="radio" name="qdxq" value="yl" style="display:none"><li id="yl" onclick="Icon_selected(this.id)"><center><img src="source/plugin/dsu_paulsign/img/yl.gif"><br>{lang dsu_paulsign:mb_qb8}<br></center></li>
+                  <input id="shuai_s" type="radio" name="qdxq" value="shuai" style="display:none"><li id="shuai" onclick="Icon_selected(this.id)"><center><img src="source/plugin/dsu_paulsign/img/shuai.gif"><br>{lang dsu_paulsign:mb_qb9}<br></center></li>
+                </ul>
               </td>
             </tr>
-<div id="kx_menu" class="tip tip_4" style="display:none;width:50px;"><div class="tip_c"><center>{lang dsu_paulsign:mb_qb1}</center></div></div>
-<div id="ng_menu" class="tip tip_4" style="display:none;width:50px;"><div class="tip_c"><center>{lang dsu_paulsign:mb_qb2}</center></div></div>
-<div id="ym_menu" class="tip tip_4" style="display:none;width:50px;"><div class="tip_c"><center>{lang dsu_paulsign:mb_qb3}</center></div></div>
-<div id="wl_menu" class="tip tip_4" style="display:none;width:50px;"><div class="tip_c"><center>{lang dsu_paulsign:mb_qb4}</center></div></div>
-<div id="nu_menu" class="tip tip_4" style="display:none;width:50px;"><div class="tip_c"><center>{lang dsu_paulsign:mb_qb5}</center></div></div>
-<div id="ch_menu" class="tip tip_4" style="display:none;width:50px;"><div class="tip_c"><center>{lang dsu_paulsign:mb_qb6}</center></div></div>
-<div id="fd_menu" class="tip tip_4" style="display:none;width:50px;"><div class="tip_c"><center>{lang dsu_paulsign:mb_qb7}</center></div></div>
-<div id="yl_menu" class="tip tip_4" style="display:none;width:50px;"><div class="tip_c"><center>{lang dsu_paulsign:mb_qb8}</center></div></div>
-<div id="shuai_menu" class="tip tip_4" style="display:none;width:50px;"><div class="tip_c"><center>{lang dsu_paulsign:mb_qb9}</center></div></div>
 <table summary="Qd" cellspacing="0" cellpadding="0" class="tfm">
-<tr>
+<tr{if !$var['ksopen'] && !$var['todaysayxt']} style="display:none;"{/if}>
 <th>{lang dsu_paulsign:mb_mode1}</th>
 <td>
 <label><input type="radio" name="qdmode" value="1" checked="checked" onclick="if(checked == true){document.getElementById('mode1').style.display='';document.getElementById('mode2').style.display='none';}">&nbsp;{lang dsu_paulsign:mb_mode2}</label>&nbsp;&nbsp;

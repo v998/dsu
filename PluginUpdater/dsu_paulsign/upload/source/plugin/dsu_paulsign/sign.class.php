@@ -1,6 +1,6 @@
 <?php
 /*
-	dsu_paulsign Echo By shy9000[DSU.CC] 2011-06-08
+	dsu_paulsign Echo By shy9000[DSU.CC] 2011-07-15
 */
 !defined('IN_DISCUZ') && exit('Access Denied');
 class plugin_dsu_paulsign{
@@ -20,27 +20,27 @@ class plugin_dsu_paulsign{
 					if($allowmem) memory('set', 'dsu_pualsign_'.$_G['uid'], $qiandaodb['time'], 86400);
 					if($qiandaodb['time'] < $tdtime){
 						if($var['timeopen']) {
-							if(!($htime < $var['stime']) && !($htime > $var['ftime'])) return '<span class="pipe">|</span><a href="javascript:;" onclick="showWindow(\'dsu_paulsign\', \'plugin.php?id=dsu_paulsign:sign\')"><font color="red">'.lang('plugin/dsu_paulsign','encore_01').'</font></a> ';
+							if(!($htime < $var['stime']) && !($htime > $var['ftime'])) return '<span class="pipe">|</span><a href="javascript:;" onclick="showWindow(\'dsu_paulsign\', \'plugin.php?id=dsu_paulsign:sign&'.FORMHASH.'\')"><font color="red">'.lang('plugin/dsu_paulsign','encore_01').'</font></a> ';
 						}else{
-							return '<span class="pipe">|</span><a href="javascript:;" onclick="showWindow(\'dsu_paulsign\', \'plugin.php?id=dsu_paulsign:sign\')"><font color="red">'.lang('plugin/dsu_paulsign','encore_01').'</font></a> ';
+							return '<span class="pipe">|</span><a href="javascript:;" onclick="showWindow(\'dsu_paulsign\', \'plugin.php?id=dsu_paulsign:sign&'.FORMHASH.'\')"><font color="red">'.lang('plugin/dsu_paulsign','encore_01').'</font></a> ';
 						}
 					}
 				}else{
 					$ttps = DB::fetch_first("SELECT posts FROM ".DB::table('common_member_count')." WHERE uid='$_G[uid]'");
 					if($var['mintdpost'] <= $ttps['posts']){
 						if($var['timeopen']) {
-							if(!($htime < $var['stime']) && !($htime > $var['ftime'])) return '<span class="pipe">|</span><a href="javascript:;" onclick="showWindow(\'dsu_paulsign\', \'plugin.php?id=dsu_paulsign:sign\')"><font color="red">'.lang('plugin/dsu_paulsign','encore_01').'</font></a> ';
+							if(!($htime < $var['stime']) && !($htime > $var['ftime'])) return '<span class="pipe">|</span><a href="javascript:;" onclick="showWindow(\'dsu_paulsign\', \'plugin.php?id=dsu_paulsign:sign&'.FORMHASH.'\')"><font color="red">'.lang('plugin/dsu_paulsign','encore_01').'</font></a> ';
 						}else{
-							return '<span class="pipe">|</span><a href="javascript:;" onclick="showWindow(\'dsu_paulsign\', \'plugin.php?id=dsu_paulsign:sign\')"><font color="red">'.lang('plugin/dsu_paulsign','encore_01').'</font></a> ';
+							return '<span class="pipe">|</span><a href="javascript:;" onclick="showWindow(\'dsu_paulsign\', \'plugin.php?id=dsu_paulsign:sign&'.FORMHASH.'\')"><font color="red">'.lang('plugin/dsu_paulsign','encore_01').'</font></a> ';
 						}
 					}
 				}
 			}else{
 				if($signtime < $tdtime){
 					if($var['timeopen']) {
-						if(!($htime < $var['stime']) && !($htime > $var['ftime'])) return '<span class="pipe">|</span><a href="javascript:;" onclick="showWindow(\'dsu_paulsign\', \'plugin.php?id=dsu_paulsign:sign\')"><font color="red">'.lang('plugin/dsu_paulsign','encore_01').'</font></a> ';
+						if(!($htime < $var['stime']) && !($htime > $var['ftime'])) return '<span class="pipe">|</span><a href="javascript:;" onclick="showWindow(\'dsu_paulsign\', \'plugin.php?id=dsu_paulsign:sign&'.FORMHASH.'\')"><font color="red">'.lang('plugin/dsu_paulsign','encore_01').'</font></a> ';
 					}else{
-						return '<span class="pipe">|</span><a href="javascript:;" onclick="showWindow(\'dsu_paulsign\', \'plugin.php?id=dsu_paulsign:sign\')"><font color="red">'.lang('plugin/dsu_paulsign','encore_01').'</font></a> ';
+						return '<span class="pipe">|</span><a href="javascript:;" onclick="showWindow(\'dsu_paulsign\', \'plugin.php?id=dsu_paulsign:sign&'.FORMHASH.'\')"><font color="red">'.lang('plugin/dsu_paulsign','encore_01').'</font></a> ';
 					}
 				}
 			}
@@ -55,7 +55,7 @@ class plugin_dsu_paulsign{
 				return '';
 			}else{
 				if($_G['cache']['plugin']['dsu_paulsign']['ajax_sign']){
-					return '<script type="text/javascript">showWindow(\'dsu_paulsign\', \'plugin.php?id=dsu_paulsign:sign\');</script>';
+					return '<script type="text/javascript">showWindow(\'dsu_paulsign\', \'plugin.php?id=dsu_paulsign:sign&'.FORMHASH.'\');</script>';
 				}else{
 					dheader('Location: plugin.php?id=dsu_paulsign:sign');
 				}
@@ -150,9 +150,9 @@ class plugin_dsu_paulsign_home extends plugin_dsu_paulsign {
 					$q['level'] = lang('plugin/dsu_paulsign','echo_11')."<font color=green><b>[LV.1]{$lv1name}</b></font>".lang('plugin/dsu_paulsign','echo_12')."<font color=#FF0000><b>[LV.2]{$lv2name}</b></font>".lang('plugin/dsu_paulsign','echo_13')."<font color=#FF0000><b>{$q['lvqd']}</b></font>".lang('plugin/dsu_paulsign','echo_14');
 				}
 				$q['if']= $qiandaodb['time']< $tdtime ? "<span class=gray>".lang('plugin/dsu_paulsign','echo_1')."</span>" : "<font color=green>".lang('plugin/dsu_paulsign','echo_2')."</font>";
-				return "<div class='bm bbda cl'><h2>".lang('plugin/dsu_paulsign','echo_3')."</h2><p>".lang('plugin/dsu_paulsign','echo_4')." <b>{$qiandaodb['days']}</b> ".lang('plugin/dsu_paulsign','echo_5')."</p><p>".lang('plugin/dsu_paulsign','echo_6')." <b>{$qiandaodb['mdays']}</b> ".lang('plugin/dsu_paulsign','echo_5')."</p><p>".lang('plugin/dsu_paulsign','echo_7')." <font color=#ff00cc>{$qtime}</font></p><p>".lang('plugin/dsu_paulsign','echo_15')."{$creditnamecn} <font color=#ff00cc><b>{$qiandaodb['reward']}</b></font> {$_G[setting][extcredits][$var[nrcredit]]['unit']}".lang('plugin/dsu_paulsign','echo_16')."{$creditnamecn} <font color=#ff00cc><b>{$qiandaodb['lastreward']}</b></font> {$_G[setting][extcredits][$var[nrcredit]]['unit']}.</p><p>{$q['level']}</p><p>".lang('plugin/dsu_paulsign','echo_8')."{$q['if']}".lang('plugin/dsu_paulsign','echo_9')."</p></div>";
+				return "<div class='pbm mbm bbda c'><h2 class='mbn'>".lang('plugin/dsu_paulsign','echo_3')."</h2><p>".lang('plugin/dsu_paulsign','echo_4')." <b>{$qiandaodb['days']}</b> ".lang('plugin/dsu_paulsign','echo_5')."</p><p>".lang('plugin/dsu_paulsign','echo_6')." <b>{$qiandaodb['mdays']}</b> ".lang('plugin/dsu_paulsign','echo_5')."</p><p>".lang('plugin/dsu_paulsign','echo_7')." <font color=#ff00cc>{$qtime}</font></p><p>".lang('plugin/dsu_paulsign','echo_15')."{$creditnamecn} <font color=#ff00cc><b>{$qiandaodb['reward']}</b></font> {$_G[setting][extcredits][$var[nrcredit]]['unit']}".lang('plugin/dsu_paulsign','echo_16')."{$creditnamecn} <font color=#ff00cc><b>{$qiandaodb['lastreward']}</b></font> {$_G[setting][extcredits][$var[nrcredit]]['unit']}.</p><p>{$q['level']}</p><p>".lang('plugin/dsu_paulsign','echo_8')."{$q['if']}".lang('plugin/dsu_paulsign','echo_9')."</p></div>";
 			}else{
-				return "<div class='bm bbda cl'><h2>".lang('plugin/dsu_paulsign','echo_3')."</h2><p>".lang('plugin/dsu_paulsign','echo_10')."</p></div>";
+				return "<div class='pbm mbm bbda c'><h2 class='mbn'>".lang('plugin/dsu_paulsign','echo_3')."</h2><p>".lang('plugin/dsu_paulsign','echo_10')."</p></div>";
 			}
 		}else{
 			return "";
