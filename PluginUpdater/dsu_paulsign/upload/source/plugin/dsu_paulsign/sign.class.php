@@ -11,13 +11,13 @@ class plugin_dsu_paulsign{
 		$var = $_G['cache']['plugin']['dsu_paulsign'];
 		$allowmem = memory('check');
 		if($var['ajax_sign'] && $var['ifopen'] && !$show_message && !defined('IN_dsu_paulsign') && !defined('IN_dsu_paulsc') && !$_G['gp_infloat'] && !$_G['inajax'] && $_G['uid'] && !in_array($_G['uid'],explode(",",$var['ban'])) && in_array($_G['groupid'], unserialize($var['groups']))) {
-			if($allowmem) $signtime = memory('get', 'dsu_pualsign_'.$_G['uid']);
+			if($allowmem && $var['mcacheopen']) $signtime = memory('get', 'dsu_pualsign_'.$_G['uid']);
 			if(!$signtime){
 				$qiandaodb = DB::fetch_first("SELECT time FROM ".DB::table('dsu_paulsign')." WHERE uid='$_G[uid]'");
 				$htime = dgmdate($_G['timestamp'], 'H') - (getglobal('member/timeoffset') - getglobal('setting/timeoffset'));
 				if($htime >= 24) $htime -= 24;
 				if($qiandaodb){
-					if($allowmem) memory('set', 'dsu_pualsign_'.$_G['uid'], $qiandaodb['time'], 86400);
+					if($allowmem && $var['mcacheopen']) memory('set', 'dsu_pualsign_'.$_G['uid'], $qiandaodb['time'], 86400);
 					if($qiandaodb['time'] < $tdtime){
 						if($var['timeopen']) {
 							if(!($htime < $var['stime']) && !($htime > $var['ftime'])) return '<span class="pipe">|</span><a href="javascript:;" onclick="showWindow(\'dsu_paulsign\', \'plugin.php?id=dsu_paulsign:sign&'.FORMHASH.'\')"><font color="red">'.lang('plugin/dsu_paulsign','encore_01').'</font></a> ';
@@ -66,13 +66,13 @@ class plugin_dsu_paulsign{
 		$var = $_G['cache']['plugin']['dsu_paulsign'];
 		$allowmem = memory('check');
 		if($var['ifopen'] && $var['ftopen'] && !$show_message && !defined('IN_dsu_paulsign') && !defined('IN_dsu_paulsc') && !$_G['gp_infloat'] && !$_G['inajax'] && $_G['uid'] && in_array($_G['groupid'], unserialize($var['tzgroupid'])) && !in_array($_G['uid'],explode(",",$var['ban'])) && in_array($_G['groupid'], unserialize($var['groups']))) {
-			if($allowmem) $signtime = memory('get', 'dsu_pualsign_'.$_G['uid']);
+			if($allowmem && $var['mcacheopen']) $signtime = memory('get', 'dsu_pualsign_'.$_G['uid']);
 			if(!$signtime){
 				$qiandaodb = DB::fetch_first("SELECT time FROM ".DB::table('dsu_paulsign')." WHERE uid='$_G[uid]'");
 				$htime = dgmdate($_G['timestamp'], 'H') - (getglobal('member/timeoffset') - getglobal('setting/timeoffset'));
 				if($htime >= 24) $htime -= 24;
 				if($qiandaodb){
-					if($allowmem) memory('set', 'dsu_pualsign_'.$_G['uid'], $qiandaodb['time'], 86400);
+					if($allowmem && $var['mcacheopen']) memory('set', 'dsu_pualsign_'.$_G['uid'], $qiandaodb['time'], 86400);
 					if($qiandaodb['time'] < $tdtime){
 						if($var['timeopen']) {
 							if(!($htime < $var['stime']) && !($htime > $var['ftime'])) return dsu_signtz();
