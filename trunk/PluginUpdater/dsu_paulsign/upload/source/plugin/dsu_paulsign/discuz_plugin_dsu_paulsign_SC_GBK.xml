@@ -14,7 +14,7 @@
 			<item id="datatables"><![CDATA[]]></item>
 			<item id="directory"><![CDATA[dsu_paulsign/]]></item>
 			<item id="copyright"><![CDATA[Shy9000 @ DSU Team]]></item>
-			<item id="version"><![CDATA[3.5]]></item>
+			<item id="version"><![CDATA[3.6]]></item>
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[sign]]></item>
@@ -538,6 +538,15 @@
 				<item id="title"><![CDATA[是否开启手机签到模式?]]></item>
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[wap_sign]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="41">
+				<item id="displayorder"><![CDATA[45]]></item>
+				<item id="title"><![CDATA[是否开启签到内存缓存]]></item>
+				<item id="description"><![CDATA[开启后可以减轻签到查询压力,但是有潜在的缓存数据问题,DZ这破东西内存缓存并不完善,总之,如果出现稀奇古怪的现象,请关闭此项]]></item>
+				<item id="variable"><![CDATA[mcacheopen]]></item>
 				<item id="type"><![CDATA[radio]]></item>
 				<item id="value"><![CDATA[0]]></item>
 				<item id="extra"><![CDATA[]]></item>
