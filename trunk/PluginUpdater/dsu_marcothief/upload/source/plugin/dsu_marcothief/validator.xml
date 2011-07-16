@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin Validator]]></item>
+	<item id="Version"><![CDATA[X2]]></item>
+	<item id="Data">
+		<item id="0"><![CDATA[source/plugin/dsu_marcothief/images/index.htm]]></item>
+		<item id="1"><![CDATA[source/plugin/dsu_marcothief/images/jail.jpg]]></item>
+		<item id="2"><![CDATA[source/plugin/dsu_marcothief/images/thief.png]]></item>
+		<item id="3"><![CDATA[source/plugin/dsu_marcothief/template/dsu_marcothief.htm]]></item>
+		<item id="4"><![CDATA[source/plugin/dsu_marcothief/template/index.htm]]></item>
+		<item id="5"><![CDATA[source/plugin/dsu_marcothief/discuz_plugin_dsu_marcothief_SC_GBK.xml]]></item>
+		<item id="6"><![CDATA[source/plugin/dsu_marcothief/discuz_plugin_dsu_marcothief_SC_UTF8.xml]]></item>
+		<item id="7"><![CDATA[source/plugin/dsu_marcothief/discuz_plugin_dsu_marcothief_TC_BIG5.xml]]></item>
+		<item id="8"><![CDATA[source/plugin/dsu_marcothief/discuz_plugin_dsu_marcothief_TC_UTF8.xml]]></item>
+		<item id="9"><![CDATA[source/plugin/dsu_marcothief/dsu_marcothief.func.php]]></item>
+		<item id="10"><![CDATA[source/plugin/dsu_marcothief/dsu_marcothief.inc.php]]></item>
+		<item id="11"><![CDATA[source/plugin/dsu_marcothief/dsu_marcothief_daily.php]]></item>
+		<item id="12"><![CDATA[source/plugin/dsu_marcothief/index.htm]]></item>
+		<item id="13"><![CDATA[source/plugin/dsu_marcothief/install.php]]></item>
+		<item id="14"><![CDATA[source/plugin/dsu_marcothief/uninstall.php]]></item>
+		<item id="15"><![CDATA[source/plugin/dsu_marcothief/upgrade.php]]></item>
+	</item>
+</root>
