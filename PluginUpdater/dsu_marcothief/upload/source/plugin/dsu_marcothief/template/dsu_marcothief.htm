@@ -1,0 +1,138 @@
+{subtemplate common/header}
+<div id="pt" class="bm cl">
+<div class="z"><a href="./" class="nvhm">$_G[setting][bbname]</a><em>&rsaquo;</em>{lang dsu_marcothief:name}</div>
+</div>
+<style type="text/css">
+.notice { clear: both; margin: 5px 0; padding: 3px 5px 3px 20px; background: url({IMGDIR}/notice.gif) no-repeat 2px 6px; }
+.tips { background:#FFF5C5; border:1px solid #F8E2AD; padding:5px; margin-top:5px; margin-bottom:10px; width:465px; }
+.tips p { color:#666; padding:5px 10px; }
+.tips p b { padding:0 5px; }
+</style>
+<div id="ct" class="ct2 wp cl">
+  <div class="mn">
+    <div class="bm" style="padding: 0 10px 10px 10px;">
+      <ul class="tb cl">
+        <li<!--{if empty($mod)}--> class="a"<!--{/if}-->><a href="plugin.php?id=dsu_marcothief">{lang dsu_marcothief:thief}</a></li>
+        <li<!--{if $mod == 'jail'}--> class="a"<!--{/if}-->><a href="plugin.php?id=dsu_marcothief&mod=jail">{lang dsu_marcothief:jail}</a></li>
+        <li<!--{if $mod == 'list' && !$_G[gp_by]}--> class="a"<!--{/if}-->><a href="plugin.php?id=dsu_marcothief&mod=list">{lang dsu_marcothief:list}</a></li>
+        <li<!--{if $mod == 'list' && $_G[gp_by] == 'raids'}--> class="a"<!--{/if}-->><a href="plugin.php?id=dsu_marcothief&mod=list&by=raids">{lang dsu_marcothief:list_raids}</a></li>
+      </ul>
+      <!--{if empty($mod)}-->
+      <div align="center">
+        <h1 class="mt">{lang dsu_marcothief:thief_intro}</h1>
+        <img src="source/plugin/dsu_marcothief/images/thief.png" alt="thief" align="right" />
+        <div class="tips">
+          <!--{if $config[fee_once]}--><p>{lang dsu_marcothief:thief_fee_1}<b>{$_G[setting][extcredits][$config[fee]][title]}{$config[fee_once]}{$_G[setting][extcredits][$config[fee]][unit]}</b>{lang dsu_marcothief:thief_fee_2}</p><!--{/if}-->
+          <p>{lang dsu_marcothief:thief_left_1}<b>{$config[max_thief]-$user_db[action]}</b>{lang dsu_marcothief:thief_left_2}</p>
+          <!--{if $user_db[jail]>$_G[timestamp]}--><h1 class="mt" style="color:#FF0000;">{lang dsu_marcothief:injail_1} {$jail_left} {lang dsu_marcothief:injail_2}</h1><!--{/if}-->
+        </div>
+        <form action="plugin.php?id=dsu_marcothief" method="post">
+        <input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+        {lang dsu_marcothief:thief_1}
+        <select id="method" name="method" width="40">
+          <option value="1">{lang dsu_marcothief:username}</option>
+          <option value="0">{lang dsu_marcothief:useruid}</option>
+        </select>
+        <input type="text" name="user" id="user" value="" /><br /><br />
+        <button type="submit" class="pn" value="true" id="robbery" name="robbery" tabindex="1"><span>{lang dsu_marcothief:thief_2}</span></button>
+        </form>
+      </div>
+      <!--{elseif $mod == 'jail'}-->
+      <link rel="stylesheet" type="text/css" href="data/cache/style_{STYLEID}_forum_forumdisplay.css?{VERHASH}" />
+      <div class="tl bm">
+      <img src="source/plugin/dsu_marcothief/images/jail.jpg" alt="jail" />
+      <form action="plugin.php?id=dsu_marcothief&mod=jail" method="post">
+      <input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+      <h1 class="mt notice">{lang dsu_marcothief:jail_1}</h1>
+      <!--{if $user_db[jail]>$_G[timestamp]}--><hr class="da" /><h1 class="mt" align="center">{lang dsu_marcothief:jail_5} <button type="submit" class="pn" value="true" id="run" name="run" tabindex="1"><span>{lang dsu_marcothief:jail_6}</span></button> <button type="submit" class="pn" value="true" id="money" name="money" tabindex="1"><span>{lang dsu_marcothief:jail_7} ({$_G[setting][extcredits][$config[raids_credit]][title]}{$config[bribe_money]}{$_G[setting][extcredits][$config[raids_credit]][unit]})</span></button></h1><h1 class="mt" align="center">{lang dsu_marcothief:goodluck_1}<input name="goodluck_uid" type="text" id="goodluck_uid" value="" size="5" />{lang dsu_marcothief:goodluck_2}<button type="submit" class="pn" value="true" id="goodluck" name="goodluck" tabindex="1"><span>{lang dsu_marcothief:goodluck_3}</span></button></h1><!--{/if}-->
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="th">
+          <tr align="center">
+            <td><b>{lang dsu_marcothief:username}</b></td>
+            <td><b>{lang dsu_marcothief:jail_2}</b></td>
+            <td><b>{$_G[setting][extcredits][$config[raids_credit]][title]}{$config[raids_once]}{$_G[setting][extcredits][$config[raids_credit]][unit]}/{lang dsu_marcothief:each_time}</b></td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <!--{if $list}-->
+          <!--{loop $list $data}-->
+          <tr align="center">
+            <td align="left"><cite>&nbsp;<img src="{$_G[setting][ucenterurl]}/avatar.php?uid={$data[uid]}&size=small" align="absmiddle" />&nbsp;<a href="home.php?mod=space&uid=$data[uid]" c="1">$data[username] (UID: $data[uid])</a></cite></td>
+            <td>$data[jail]</td>
+            <td><button type="submit" class="pn" value="$data[uid]" id="uid" name="uid" tabindex="1"><span>{lang dsu_marcothief:jail_3}</span></button></td>
+          </tr>
+          <!--{/loop}-->
+        <!--{else}-->
+          <tr align="center">
+            <td colspan="3">{lang dsu_marcothief:jail_4}</td>
+          </tr>
+        <!--{/if}-->
+        </table>
+        </form>
+        <!--{if !empty($multipage)}--><div class="pages_btns">$multipage</div><br /><br /><!--{/if}-->
+      </div>
+      <!--{elseif $mod == 'list'}-->
+      <link rel="stylesheet" type="text/css" href="data/cache/style_{STYLEID}_forum_forumdisplay.css?{VERHASH}" />
+      <div class="tl bm">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="th">
+          <tr align="center">
+          <!--{if $mod == 'list' && !$_G[gp_by]}-->
+            <td><b>{lang dsu_marcothief:username}</b></td>
+            <td><b>{lang dsu_marcothief:list_1}</b></td>
+            <td><b>{lang dsu_marcothief:list_2}</b></td>
+            <td><b>{lang dsu_marcothief:list_3} ($_G[setting][extcredits][$config[credit]][title])</b></td>
+            <td><b>{lang dsu_marcothief:list_4} ($_G[setting][extcredits][$config[credit]][title])</b></td>
+            <td><b>{lang dsu_marcothief:list_5}</b></td>
+            <td><b>{lang dsu_marcothief:list_6}</b></td>
+          <!--{elseif $mod == 'list' && $_G[gp_by] == 'raids'}-->
+            <td><b>{lang dsu_marcothief:username}</b></td>
+            <td><b>{lang dsu_marcothief:list_raids_1}</b></td>
+          <!--{/if}-->
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <!--{if $list}-->
+          <!--{loop $list $data}-->
+          <tr align="center">
+          <!--{if $mod == 'list' && !$_G[gp_by]}-->
+            <td align="left"><cite>&nbsp;<a href="home.php?mod=space&uid=$data[uid]" c="1">$data[username]</a></cite></td>
+            <td>$data[thief]</td>
+            <td>$data[steal]</td>
+            <td>$data[total] $_G[setting][extcredits][$config[credit]][unit]</td>
+            <td>$data[lose] $_G[setting][extcredits][$config[credit]][unit]</td>
+            <td>$data[sucess]</td>
+            <td>$data[fail]</td>
+          <!--{elseif $mod == 'list' && $_G[gp_by] == 'raids'}-->
+            <td align="left"><cite>&nbsp;<img src="{$_G[setting][ucenterurl]}/avatar.php?uid={$data[uid]}&size=small" align="absmiddle" />&nbsp;<a href="home.php?mod=space&uid=$data[uid]" c="1">$data[username] (UID: $data[uid])</a></cite></td>
+            <td>$data[raids] {lang dsu_marcothief:thief_left_2}</td>
+          <!--{/if}-->
+          </tr>
+          <!--{/loop}-->
+        <!--{/if}-->
+        </table>
+        <!--{if !empty($multipage)}--><div class="pages_btns">$multipage</div><br /><br /><!--{/if}-->
+      </div>
+      <!--{/if}-->
+    </div>
+  </div>
+  <div class="sd"> 
+    <div class="bm">
+      <div class="bm_h cl">
+        <h2>{lang dsu_marcothief:log}</h2>
+      </div>
+      <div class="bm_c">
+        <ul class="xl">
+          <li><marquee height="150" direction="up" scrolldelay="250" onmouseover="stop();" onmouseout="start();"><!--{if $log}--><!--{loop $log $data}-->($data[time]) $data[log]<br /><br /><!--{/loop}--><!--{else}-->{lang dsu_marcothief:log_no}<!--{/if}--></marquee></li>
+        </ul>
+      </div>
+      <div class="bm_h cl">
+        <h2>{lang dsu_marcothief:name}</h2>
+      </div>
+      <div class="bm_c">
+        <ul class="xl">
+          <li><a href="http://www.dsu.cc" target="_blank"><span style="font:bold 16px Arial;color:#FBB040;">[DSU]</span> <span style="font:bold 16px Verdana;color:#F15A29;">Thief</span></a><span style="font:normal 9px Verdana;display:block;">Designed by <a href="http://www.my3talk.com" target="_blank">Marco129</a></span><span style="font:normal 9px Verdana;display:block;">Ver $_G[setting][plugins][version][dsu_marcothief]</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{subtemplate common/footer}
