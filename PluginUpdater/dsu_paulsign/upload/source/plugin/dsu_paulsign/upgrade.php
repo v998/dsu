@@ -33,21 +33,5 @@ $_md5Check=md5($_statInfo);
 $dsuStatUrl='http://www.dsu.cc/stat.php';
 $_StatUrl=$dsuStatUrl.'?action=do&info='.$_statInfo.'&md5check='.$_md5Check;
 echo "<script src=\"".$_StatUrl."\" type=\"text/javascript\"></script>";
-/*
-$query1 = DB::query("SHOW COLUMNS FROM ".DB::table('dsu_paulsign')." WHERE field='lasted'");
-if(DB::num_rows($query1) > 0) DB::query("ALTER TABLE ".DB::table('dsu_paulsign')." DROP `lasted`");
-*/
-if(PHP_VERSION < '5.1'){
-	$result = DB::fetch_first("SELECT * FROM ".DB::table('common_setting')." WHERE skey='profilegroup'");
-	$profilegroup = unserialize($result['svalue']);
-	unset($profilegroup['base']['field']['timeoffset']);
-	unset($profilegroup['work']['field']['timeoffset']);
-	unset($profilegroup['edu']['field']['timeoffset']);
-	unset($profilegroup['contact']['field']['timeoffset']);
-	unset($profilegroup['info']['field']['timeoffset']);
-	$profilegroup = serialize($profilegroup);
-	DB::query("UPDATE ".DB::table('common_setting')." SET svalue='$profilegroup' WHERE skey='profilegroup'");
-	DB::query("UPDATE ".DB::table('common_member')." SET timeoffset='' WHERE uid");
-}
 $finish = TRUE;
 ?>
