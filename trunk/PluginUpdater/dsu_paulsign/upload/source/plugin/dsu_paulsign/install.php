@@ -54,18 +54,6 @@ switch($_GET['kk_step']){
 		break;
 	case 'sql':
 		runquery($sql);
-		if(PHP_VERSION < '5.1'){
-			$result = DB::fetch_first("SELECT * FROM ".DB::table('common_setting')." WHERE skey='profilegroup'");
-			$profilegroup = unserialize($result['svalue']);
-			unset($profilegroup['base']['field']['timeoffset']);
-			unset($profilegroup['work']['field']['timeoffset']);
-			unset($profilegroup['edu']['field']['timeoffset']);
-			unset($profilegroup['contact']['field']['timeoffset']);
-			unset($profilegroup['info']['field']['timeoffset']);
-			$profilegroup = serialize($profilegroup);
-			DB::query("UPDATE ".DB::table('common_setting')." SET svalue='$profilegroup' WHERE skey='profilegroup'");
-			DB::query("UPDATE ".DB::table('common_member')." SET timeoffset='' WHERE uid");
-		}
 		cpmsg($installlang['step2_ok'], "{$request_url}&kk_step=ok", 'succeed');
 		break;
 	case 'ok':

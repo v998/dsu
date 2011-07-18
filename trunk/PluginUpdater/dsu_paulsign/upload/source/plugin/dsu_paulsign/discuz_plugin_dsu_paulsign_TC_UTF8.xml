@@ -14,7 +14,7 @@
 			<item id="datatables"><![CDATA[]]></item>
 			<item id="directory"><![CDATA[dsu_paulsign/]]></item>
 			<item id="copyright"><![CDATA[Shy9000 @ DSU Team]]></item>
-			<item id="version"><![CDATA[3.6]]></item>
+			<item id="version"><![CDATA[3.8]]></item>
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[sign]]></item>
@@ -539,7 +539,7 @@
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[wap_sign]]></item>
 				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[0]]></item>
+				<item id="value"><![CDATA[1]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="41">
@@ -549,6 +549,24 @@
 				<item id="variable"><![CDATA[mcacheopen]]></item>
 				<item id="type"><![CDATA[radio]]></item>
 				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="42">
+				<item id="displayorder"><![CDATA[46]]></item>
+				<item id="title"><![CDATA[簽到時差]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[tos]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[8]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="43">
+				<item id="displayorder"><![CDATA[47]]></item>
+				<item id="title"><![CDATA[每日最想說是否同步到簽名]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[sync_sign]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 		</item>
@@ -659,6 +677,7 @@
 				<item id="import_15"><![CDATA[表單提交錯誤,請重新提交]]></item>
 				<item id="import_16"><![CDATA[已經導入過一次,切勿重複導入,如果您想重複導入,請刪除data/dsu_paulsign_import.lock]]></item>
 				<item id="ts_illegaltext"><![CDATA[每日最想說中包含敏感詞,請修改後重新提交]]></item>
+				<item id="fromsign"><![CDATA[<span class="xg1"><font size="1px"><a href="plugin.php?id=dsu_paulsign:sign"><img src="source/plugin/dsu_paulsign/img/paulsign.png" alt="(來自每日簽到)"></a></font></span>]]></item>
 			</item>
 			<item id="installlang">
 					<item id="header"><![CDATA[【DSU】插件安裝嚮導]]></item>
