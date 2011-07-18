@@ -46,9 +46,10 @@ class vip{
 				'level'=>1,
 				'oldgroup'=>$oldgroup,
 			));
-			$this->query("UPDATE pre_common_member SET groupid='{$this->vars[vip_group]}' WHERE uid='{$uid}' AND adminid<>'1'");
+			$this->query("UPDATE pre_common_member SET groupid='{$this->vars[vip_1_group]}' WHERE uid='{$uid}' AND adminid<>'1'");
 			$this->vip_cache[] = $uid;
-			save_syscache('dsu_vip',$this->vip_cache);
+			require_once libfile('function/cache');
+			updatecache('dsu_kkvip');
 		}else{
 			if(!$year_pay){
 				$this->query("UPDATE pre_dsu_vip SET exptime=exptime+'{$time}'");

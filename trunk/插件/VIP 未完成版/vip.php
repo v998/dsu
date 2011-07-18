@@ -5,11 +5,11 @@ define('CURSCRIPT', 'vip');
 
 require './source/class/class_core.php';
 $discuz = & discuz_core::instance();
-$cachelist = array('plugin','dsu_vip');
+$cachelist = array('plugin','dsu_kkvip');
 $discuz->cachelist = $cachelist;
 $discuz->init();
 include_once libfile('class/vip');
-$vip=$vip?$vip:new vip();
+$vip = $vip ? $vip : new vip();
 $is_vip=$vip->is_vip();
 $_G['vip']=$vip->getvipinfo($_G['uid']);
 $_G['vip']['exptime_text']=dgmdate($_G['vip']['exptime'],'d');
@@ -48,6 +48,7 @@ switch ($_G['vip']['level']) {
 		$next_level=2;
 		break;
 }
+$next_level = ($_G['vip']['level']>0 && $_G['vip']['level']<6) ? $_G['vip']['level'] + 1 : 0;
 
 define('CURMODULE',$do);
 runhooks();

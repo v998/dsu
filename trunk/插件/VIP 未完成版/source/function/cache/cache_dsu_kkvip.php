@@ -7,6 +7,6 @@ function build_cache_dsu_kkvip() {
 	while($user = DB::fetch($query)){
 		$vip[] = $user['uid'];
 	}
-	save_syscache('dsu_vip', (array)$vip);
+	save_syscache('dsu_kkvip', (array)$vip);
 }
 ?>
