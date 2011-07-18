@@ -1,0 +1,41 @@
+{template dsu_kkvip:header}
+<div style="display:none"><img id="pic_loader1" src=""><img id="pic_loader2" src=""></div>
+<div class="vipindex vipblock isvip">
+<h3 class="title">{lang dsu_kkvip:vip_usevip}</h3>
+<div class="content">
+<p><a href="#" onclick="change_status(this.id);return false;"><img id="btn_img" src=""></a></p><br>
+<div id="textout">
+<li><font color="red"><b>{$usevip_text}</b></font></li>
+{lang dsu_kkvip:tips}</div>
+</div></div>
+<script type="text/javascript">
+var open_btn_img="source/plugin/dsu_kkvip/images/btn_open.png";
+var close_btn_img="source/plugin/dsu_kkvip/images/btn_close.png";
+var status="$_G[vip][usevip]";
+var saved="1";
+$("pic_loader1").src=open_btn_img;
+$("pic_loader2").src=close_btn_img;
+function change_status(){
+	if(saved=="0"){
+		return false;
+	}
+	saved="0";
+	if (status=="1"){
+		$("btn_img").src=close_btn_img;
+		status="0";
+	}else{
+		$("btn_img").src=open_btn_img;
+		status="1";
+	}
+	ajaxget('vip.php?do=usevip&submit=yes&status='+status+'&formhash={FORMHASH}', 'textout', null ,'{lang dsu_kkvip:saving}' , null , "saved=1");
+}
+if (status=="1"){
+	$("btn_img").src=open_btn_img;
+}else{
+	$("btn_img").src=close_btn_img;
+}
+</script>
+</div></div>
+<div class="sd">{template dsu_kkvip:vip_sidebar}</div></div>
+
+{template common/footer}
