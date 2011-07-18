@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <root>
 	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
-	<item id="Version"><![CDATA[X2 RC]]></item>
-	<item id="Time"><![CDATA[2011-05-27 21:04]]></item>
+	<item id="Version"><![CDATA[X2]]></item>
+	<item id="Time"><![CDATA[2011-07-17 14:28]]></item>
 	<item id="From"><![CDATA[Discuz! Board (http://localhost/dx/)]]></item>
 	<item id="Data">
 		<item id="plugin">
@@ -14,7 +14,7 @@
 			<item id="datatables"><![CDATA[]]></item>
 			<item id="directory"><![CDATA[dsu_amupper/]]></item>
 			<item id="copyright"><![CDATA[阿牧 @ DSU Team]]></item>
-			<item id="version"><![CDATA[2.41]]></item>
+			<item id="version"><![CDATA[2.53]]></item>
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[pper]]></item>
@@ -22,13 +22,37 @@
 					<item id="url"><![CDATA[]]></item>
 					<item id="type"><![CDATA[11]]></item>
 					<item id="adminid"><![CDATA[0]]></item>
-					<item id="displayorder"><![CDATA[-1]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
 					<item id="navtitle"><![CDATA[]]></item>
 					<item id="navicon"><![CDATA[]]></item>
 					<item id="navsubname"><![CDATA[]]></item>
 					<item id="navsuburl"><![CDATA[]]></item>
 				</item>
 				<item id="1">
+					<item id="name"><![CDATA[list]]></item>
+					<item id="menu"><![CDATA[簽到排行]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[5]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[mobile]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[28]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
 					<item id="name"><![CDATA[admin]]></item>
 					<item id="menu"><![CDATA[數據處理]]></item>
 					<item id="url"><![CDATA[]]></item>
@@ -40,7 +64,7 @@
 					<item id="navsubname"><![CDATA[]]></item>
 					<item id="navsuburl"><![CDATA[]]></item>
 				</item>
-				<item id="2">
+				<item id="4">
 					<item id="name"><![CDATA[admin2]]></item>
 					<item id="menu"><![CDATA[特殊獎勵]]></item>
 					<item id="url"><![CDATA[]]></item>
@@ -54,55 +78,36 @@
 				</item>
 			</item>
 		</item>
-		<item id="version"><![CDATA[X2 RC]]></item>
+		<item id="version"><![CDATA[X2]]></item>
 		<item id="var">
 			<item id="0">
-				<item id="displayorder"><![CDATA[3]]></item>
-				<item id="title"><![CDATA[最高獎勵]]></item>
-				<item id="description"><![CDATA[當根據計算出來的獎勵值大於該數值時，只獎勵本值。]]></item>
-				<item id="variable"><![CDATA[supreme]]></item>
-				<item id="type"><![CDATA[number]]></item>
-				<item id="value"><![CDATA[100]]></item>
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[特殊時期]]></item>
+				<item id="description"><![CDATA[開啟表示，所有簽到視為連續簽到。]]></item>
+				<item id="variable"><![CDATA[liwai]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="1">
-				<item id="displayorder"><![CDATA[5]]></item>
-				<item id="title"><![CDATA[圖片版]]></item>
-				<item id="description"><![CDATA[開啟的話，前台的顯示是圖片，否則是文字。]]></item>
-				<item id="variable"><![CDATA[image]]></item>
-				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[1]]></item>
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[簽到記錄版塊]]></item>
+				<item id="description"><![CDATA[帖子生成在哪裡？為空表示關閉該功能。]]></item>
+				<item id="variable"><![CDATA[logid]]></item>
+				<item id="type"><![CDATA[forum]]></item>
+				<item id="value"><![CDATA[36]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="2">
-				<item id="displayorder"><![CDATA[6]]></item>
-				<item id="title"><![CDATA[獎勵提醒]]></item>
-				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[reward_notice]]></item>
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[特殊獎勵是否週期性]]></item>
+				<item id="description"><![CDATA[說明見特殊獎勵。]]></item>
+				<item id="variable"><![CDATA[periodicity]]></item>
 				<item id="type"><![CDATA[radio]]></item>
 				<item id="value"><![CDATA[1]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="3">
-				<item id="displayorder"><![CDATA[4]]></item>
-				<item id="title"><![CDATA[提示音]]></item>
-				<item id="description"><![CDATA[「是」，開啟提示音；
-「否」，關閉提示音。]]></item>
-				<item id="variable"><![CDATA[tone]]></item>
-				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[0]]></item>
-				<item id="extra"><![CDATA[]]></item>
-			</item>
-			<item id="4">
-				<item id="displayorder"><![CDATA[0]]></item>
-				<item id="title"><![CDATA[強制打卡]]></item>
-				<item id="description"><![CDATA[開啟強制打卡，用戶在發帖前（當日第一次）將必須先打卡簽到。如果遊客可以發帖，遊客不需要打卡。]]></item>
-				<item id="variable"><![CDATA[force]]></item>
-				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[1]]></item>
-				<item id="extra"><![CDATA[]]></item>
-			</item>
-			<item id="5">
 				<item id="displayorder"><![CDATA[1]]></item>
 				<item id="title"><![CDATA[積分類型]]></item>
 				<item id="description"><![CDATA[]]></item>
@@ -111,7 +116,7 @@
 				<item id="value"><![CDATA[2]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
-			<item id="6">
+			<item id="4">
 				<item id="displayorder"><![CDATA[2]]></item>
 				<item id="title"><![CDATA[基礎獎勵]]></item>
 				<item id="description"><![CDATA[建議值為1-3.]]></item>
@@ -120,95 +125,41 @@
 				<item id="value"><![CDATA[2]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
-			<item id="7">
-				<item id="displayorder"><![CDATA[7]]></item>
-				<item id="title"><![CDATA[自動簽到用戶組]]></item>
-				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[autogid]]></item>
-				<item id="type"><![CDATA[groups]]></item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[提醒補充信息]]></item>
+				<item id="description"><![CDATA[在提示打卡的窗口中自定義一些內容吧。]]></item>
+				<item id="variable"><![CDATA[reward_notice]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[歡迎您回訪本站，在開始瀏覽本站/參與交流前，請您先點擊下方的「馬上簽到」按鈕進行簽到，為此我們也送給您一些獎勵哦！<br><a href="http://cubichost.net/" target="_blank"><img src="http://cubichost.net/images/banner/dsu_ad.png" width="468" height="60"></a>]]></item>
 				<item id="extra"><![CDATA[]]></item>
-				<item id="__value">
-					<item id="0"><![CDATA[3]]></item>
-				</item>
 			</item>
-			<item id="8">
-				<item id="displayorder"><![CDATA[8]]></item>
-				<item id="title"><![CDATA[特殊獎勵是否週期性]]></item>
-				<item id="description"><![CDATA[說明見特殊獎勵。]]></item>
-				<item id="variable"><![CDATA[periodicity]]></item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[強制打卡]]></item>
+				<item id="description"><![CDATA[開啟強制打卡，用戶在發帖前（當日第一次）將必須先打卡簽到。如果遊客可以發帖，遊客不需要打卡。]]></item>
+				<item id="variable"><![CDATA[force]]></item>
 				<item id="type"><![CDATA[radio]]></item>
 				<item id="value"><![CDATA[1]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
-			<item id="9">
-				<item id="displayorder"><![CDATA[9]]></item>
-				<item id="title"><![CDATA[簽到記錄版塊]]></item>
-				<item id="description"><![CDATA[帖子生成在哪裡？為空表示關閉該功能。]]></item>
-				<item id="variable"><![CDATA[logid]]></item>
-				<item id="type"><![CDATA[forum]]></item>
-				<item id="value"><![CDATA[39]]></item>
-				<item id="extra"><![CDATA[]]></item>
-			</item>
-			<item id="10">
-				<item id="displayorder"><![CDATA[10]]></item>
-				<item id="title"><![CDATA[樓主顯示簽到]]></item>
-				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[postshow]]></item>
-				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[]]></item>
-				<item id="extra"><![CDATA[]]></item>
-			</item>
-			<item id="11">
-				<item id="displayorder"><![CDATA[5]]></item>
-				<item id="title"><![CDATA[文字版低調色]]></item>
-				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[lcolor]]></item>
-				<item id="type"><![CDATA[color]]></item>
-				<item id="value"><![CDATA[]]></item>
-				<item id="extra"><![CDATA[]]></item>
-			</item>
-			<item id="12">
-				<item id="displayorder"><![CDATA[5]]></item>
-				<item id="title"><![CDATA[文字版高亮色]]></item>
-				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[hcolor]]></item>
-				<item id="type"><![CDATA[color]]></item>
-				<item id="value"><![CDATA[]]></item>
-				<item id="extra"><![CDATA[]]></item>
-			</item>
-			<item id="13">
-				<item id="displayorder"><![CDATA[11]]></item>
-				<item id="title"><![CDATA[特殊時期]]></item>
-				<item id="description"><![CDATA[開啟表示，所有簽到視為連續簽到。]]></item>
-				<item id="variable"><![CDATA[liwai]]></item>
-				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[]]></item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[最高獎勵]]></item>
+				<item id="description"><![CDATA[當根據計算出來的獎勵值大於該數值時，只獎勵本值。]]></item>
+				<item id="variable"><![CDATA[supreme]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[100]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 		</item>
 		<item id="language">
 			<item id="scriptlang">
-				<item id="wrong"><![CDATA[非法提交數據！]]></item>
-				<item id="postok"><![CDATA[提交成功！]]></item>
-				<item id="pper1"><![CDATA[<img src="./source/plugin/dsu_amupper/images/dk.gif" style="margin-bottom:-6px;">]]></item>
-				<item id="pper0"><![CDATA[<FONT COLOR="{hcolor}"><B>我要簽到</B></FONT>]]></item>
-				<item id="nopper1"><![CDATA[您還未簽到，請簽到後再發帖/回復！[馬上簽到：<span id="my_amupperpost"><a href="javascript:;" onclick="ajaxget('plugin.php?id=dsu_amupper:pper&ajax=1&formhash={formhash}', 'my_amupperpost', 'my_amupperpost', '簽到中', '',function () {toneplayer({tone});});"><img src="./source/plugin/dsu_amupper/images/dk.gif" style="vertical-align:middle;"></a></span>&nbsp;]]]></item>
-				<item id="nopper0"><![CDATA[您還未簽到，請簽到後再發帖/回復！[馬上簽到：<span id="my_amupperpost"><a href="javascript:;" onclick="ajaxget('plugin.php?id=dsu_amupper:pper&ajax=1&formhash={formhash}', 'my_amupperpost', 'my_amupperpost', '簽到中', '',function () {toneplayer({tone});});"><FONT COLOR="{hcolor}"><B>我要簽到</B></FONT></a></span>&nbsp;]]]></item>
-				<item id="ppering"><![CDATA[簽到中]]></item>
-				<item id="pperinfo"><![CDATA[已累計簽到{addup}次]]></item>
-				<item id="info0"><![CDATA[<FONT COLOR="{lcolor}"><B>您已簽到</B></FONT>]]></item>
-				<item id="info1"><![CDATA[<img src="./source/plugin/dsu_amupper/images/wb.gif" style="margin-bottom:-6px;">]]></item>
-				<item id="info2"><![CDATA[您上次簽到時間為]]></item>
-				<item id="info3"><![CDATA[，連續簽到]]></item>
-				<item id="info4"><![CDATA[次，累計簽到]]></item>
-				<item id="info5"><![CDATA[次。]]></item>
-				<item id="menu1"><![CDATA[累計簽到：]]></item>
-				<item id="menu2"><![CDATA[查看簽到排行榜]]></item>
-				<item id="menu3"><![CDATA[連續簽到：]]></item>
-				<item id="menu4"><![CDATA[次]]></item>
-				<item id="notice"><![CDATA[恭喜您！由於您已經連續打卡簽到{continuous}次，特獎勵：{rewards}，明日打卡簽到獎勵：{reward_next}。{special_reward}]]></item>
-				<item id="msg"><![CDATA[{username},於{time}進行了打卡簽到，由於連續打卡簽到[b]{continuous}[/b]次，特獎勵：[b]{rewards}[/b]，明日打卡簽到獎勵：[b]{reward_next}[/b]。{special_reward}]]></item>
-				<item id="logsj"><![CDATA[{day} 打卡記錄]]></item>
+				<item id="showmsg"><![CDATA[尊敬的 <b>{name}</b> 會員,您好！]]></item>
+				<item id="wrong"><![CDATA[打卡失敗，請稍後再試！]]></item>
+				<item id="nopper"><![CDATA[您還未簽到，請簽到後再發帖/回復！]]></item>
+				<item id="logsj"><![CDATA[{day} 打卡記錄帖]]></item>
+				<item id="notice"><![CDATA[恭喜您！由於您已經連續打卡簽到 {continuous} 次，特獎勵：{rewards}，明日打卡簽到獎勵：{reward_next}。{special_reward}]]></item>
 				<item id="special_reward"><![CDATA[另外您符合特殊獎勵的條件，故另獎勵：{extcredits}{rewards}。]]></item>
 				<item id="specialreward_ts"><![CDATA[再連續簽到{minday}天，你就可以領取{reward}{extcredits}的特殊獎勵啦o(∩_∩)o ]]></item>
 				<item id="admin_h1"><![CDATA[<FONT SIZE="2" COLOR="#FF3300">本數據設置只針對【DSU每日簽到】設計，不能導入其他簽到插件的數據，請站長謹慎操作！</FONT>]]></item>
@@ -238,14 +189,16 @@
 				<item id="admin2_i"><![CDATA[提交完成!]]></item>
 				<item id="admin2_no"><![CDATA[所有用戶組]]></item>
 				<item id="title"><![CDATA[簽到排行榜]]></item>
-				<item id="title1111"><![CDATA[簽到排行榜]]></item>
+				<item id="sb"><![CDATA[<font color="red">馬上簽到</font>]]></item>
+				<item id="goto"><![CDATA[瀏覽簽到記錄帖]]></item>
+				<item id="vw"><![CDATA[簽到]]></item>
 			</item>
 			<item id="templatelang">
+				<item id="tit"><![CDATA[打卡簽到]]></item>
+				<item id="sb"><![CDATA[馬上簽到]]></item>
 				<item id="title"><![CDATA[我的位置]]></item>
 				<item id="titl1"><![CDATA[累計簽到排行]]></item>
 				<item id="titl2"><![CDATA[連續簽到排行]]></item>
-				<item id="info0"><![CDATA[<B>您已簽到</B>]]></item>
-				<item id="info1"><![CDATA[<img src="./source/plugin/dsu_amupper/images/wb.gif" style="vertical-align:middle;">&nbsp;]]></item>
 				<item id="info2"><![CDATA[您上次簽到時間為]]></item>
 				<item id="info3"><![CDATA[，連續簽到]]></item>
 				<item id="info4"><![CDATA[次，累計簽到]]></item>
@@ -271,7 +224,7 @@
 		<item id="intro"><![CDATA[
 			[color=DeepSkyBlue][b]關於本插件的相關信息:[/b][/color]
 				名稱: [b]打卡機[/b]
-				版本: [b]2.41[/b]
+				版本: [b]2.53[/b]
 				作者: 阿牧
 				DSU榮譽出品 http://www.dsu.cc
 				
@@ -280,7 +233,7 @@
 				禁止任何形式的封裝再發佈行為.
 				特此聲明.
 
-				2011年5月26日
+				2011年7月16日
 			]]></item>
 	</item>
 </root>
