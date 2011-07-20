@@ -2,24 +2,17 @@
 
 <div id="pt" class="cl">
 	<div class="z">
-		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a><em>&raquo;</em><a href="vip.php">VIP 中心</a>
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a><em>&raquo;</em><a href="vip.php">{lang dsu_kkvip:vip_center}</a>
 	</div>
-	<div class="z"><!--{hook/index_status_extra}--></div>
 </div>
 
 
 <div id="ct" class="wp cl n">
 	<div class="mn">
     	<div class="bm">
-			<h1 class="mt"><font color="red">VIP 中心</font></h1>
+			<h1 class="mt"><font color="red">{lang dsu_kkvip:vip_center}</font></h1>
 			<ul class="tb cl">
-				<li{if $do=="vipcenter"} class="a"{/if}><a href="vip.php">{lang dsu_kkvip:vip_index}</a></li>
-				<li{if $do=="paycenter" && $_G[gp_action]!='give'} class="a"{/if}><a href="vip.php?do=paycenter">{if !$vip->is_vip()}{lang dsu_kkvip:vip_pay}{else}{lang dsu_kkvip:vip_pay2}{/if}</a></li>
-				<li{if $do=="paycenter" && $_G[gp_action]=='give'} class="a"{/if}><a href="vip.php?do=paycenter&action=give">{lang dsu_kkvip:vip_pay_give}</a></li>
-				<li{if $do=="mylevel"} class="a"{/if}><a href="vip.php?do=mylevel">{lang dsu_kkvip:vip_mylevel}</a></li>
-				<li{if $do=="new_vip"} class="a"{/if}><a href="vip.php?do=new_vip">{lang dsu_kkvip:new_vip}</a></li>
-				<li{if $do=="vip_top"} class="a"{/if}><a href="vip.php?do=vip_top">{lang dsu_kkvip:vip_top}</a></li>
-				<li{if $do=="year"} class="a"{/if}><a href="vip.php?do=year">{lang dsu_kkvip:year}</a></li>
-				<li{if $do=="test"} class="a"{/if}><a href="vip.php?do=test&formhash={FORMHASH}">免费 VIP 体验</a></li>
-				<li{if $do=="test_del"} class="a"{/if}><a href="vip.php?do=test_del&formhash={FORMHASH}" onclick="if(!confirm('注销 VIP 会员功能不能撤销！\n一旦您确认注销服务，相应积分将不能返还。\n\n你确定不是手贱乱点？')){return false;}">注销 VIP 功能</a></li>
+				{loop $vip_menu $action $menu}
+					<li{if $do==$action} class="a"{/if}><a href="vip.php?do=$action">$menu</a></li>
+				{/loop}
 			</ul>

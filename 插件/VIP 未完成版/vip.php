@@ -16,7 +16,7 @@ $_G['vip']['exptime_text']=dgmdate($_G['vip']['exptime'],'d');
 
 $_G['basescript']='vip';
 $do=$_G['gp_do']?$_G['gp_do']:'vipcenter';
-if (preg_match('/[^a-zA-Z0-9_]/',$do)) showmessage('undefined_action');
+if (preg_match('/[^a-zA-Z0-9_]/', $do)) showmessage('undefined_action');
 if (!$_G['uid']) showmessage('not_loggedin','member.php?mod=logging&action=login');
 
 $vip_czz=$_G['vip']['year_vip']?$vip->vars['vip_czzday']:$vip->vars['vip_czzday']+$vip->vars['vip_czz_year'];
@@ -50,8 +50,22 @@ switch ($_G['vip']['level']) {
 }
 $next_level = ($_G['vip']['level']>0 && $_G['vip']['level']<6) ? $_G['vip']['level'] + 1 : 0;
 
-define('CURMODULE',$do);
+$vip_menu = array(
+	'vipcenter' => lang('plugin/dsu_kkvip', 'vip_index'),
+	'paycenter' => lang('plugin/dsu_kkvip', $vip->is_vip() ? 'vip_pay2' : 'vip_pay'),
+	'give_vip' => lang('plugin/dsu_kkvip', 'vip_pay_give'),
+	'mylevel' => lang('plugin/dsu_kkvip', 'vip_mylevel'),
+	'new_vip' => lang('plugin/dsu_kkvip', 'new_vip'),
+	'vip_top' => lang('plugin/dsu_kkvip', 'vip_top'),
+	'year' => lang('plugin/dsu_kkvip', 'year'),
+);
+define('CURMODULE', $do);
 runhooks();
+/*
+ * Here is the hook for attaching  menu item to the menu of plugin VIP
+ * e.g. $vip_menu['action_id'] = 'link name';
+ * and please remember to create a shortcut at VIP_DIR/module
+ */
 if (!file_exists(DISCUZ_ROOT."./source/plugin/dsu_kkvip/module/{$do}.inc.php")) showmessage('程序设计中……');
 include DISCUZ_ROOT."./source/plugin/dsu_kkvip/module/{$do}.inc.php";
 

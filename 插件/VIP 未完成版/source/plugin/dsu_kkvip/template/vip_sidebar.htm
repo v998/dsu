@@ -1,5 +1,5 @@
 <div class="ch">
-<label class="wx">VIP ÖÐÐÄ</label> 
+<label class="wx">{lang dsu_kkvip:vip_center}</label> 
 </div> 
 <div class="welcome">
 	<div class="info">
@@ -31,13 +31,9 @@
 <div class="bn">
 	<ul class="xl cl">
 		<h2><font color="red">{lang dsu_kkvip:side_dh}</font></h2>
-		<li><a href="vip.php">{lang dsu_kkvip:vip_index}</a></li>
-		<li><a href="vip.php?do=paycenter">{if !$vip->is_vip()}{lang dsu_kkvip:vip_pay}{else}{lang dsu_kkvip:vip_pay2}{/if}</a></li>
-		<li><a href="vip.php?do=paycenter&action=give">{lang dsu_kkvip:vip_pay_give}</a></li>
-		<li><a href="vip.php?do=mylevel">{lang dsu_kkvip:vip_mylevel}</a></li>
-		<li><a href="vip.php?do=new_vip">{lang dsu_kkvip:new_vip}</a></li>
-		<li><a href="vip.php?do=vip_top">{lang dsu_kkvip:vip_top}</a></li>
-		<li><a href="vip.php?do=year">{lang dsu_kkvip:year}</a></li>
+		{loop $vip_menu $action $menu}
+			<li><a href="vip.php?do=$action">$menu</a></li>
+		{/loop}
 	</ul>
 </div>
 <div class="bm">
