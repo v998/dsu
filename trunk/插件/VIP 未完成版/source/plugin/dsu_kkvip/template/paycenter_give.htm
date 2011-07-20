@@ -13,11 +13,10 @@
 				<span>{lang dsu_kkvip:paycenter_buy_htm_5}</span>$_G[member][username]
 			</li>
 			<li>
-				<span>{lang dsu_kkvip:paycenter_buy_htm_6}</span><span id="give_user" style="text-align: left;"></span><br>
+				<span>{lang dsu_kkvip:paycenter_buy_htm_6}</span><input type="text" name="uid" onblur="ajaxget('vip.php?do=give_vip&getuid=yes&username='+this.value, 'give_uid');" class="px"/>
 			</li>
 			<li>
-				<span>{lang dsu_kkvip:buyto}</span>
-				<input type="text" name="uid" onblur="ajaxget('vip.php?do=paycenter&action=give&getname=yes&uid='+this.value, 'give_user');" class="px"/>
+				<span>{lang dsu_kkvip:buyto}</span><span id="give_uid" style="text-align: left;"></span><br>				
 			</li>
 			<li>
 				<span>{lang dsu_kkvip:buytime}</span>

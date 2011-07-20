@@ -2,8 +2,8 @@
 <root>
 	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
 	<item id="Version"><![CDATA[X2]]></item>
-	<item id="Time"><![CDATA[2011-06-06 19:08]]></item>
-	<item id="From"><![CDATA[Discuz! Board (http://127.0.0.1/x2/)]]></item>
+	<item id="Time"><![CDATA[2011-07-20 23:04]]></item>
+	<item id="From"><![CDATA[KK's Laboratory (http://127.0.0.1/x2/)]]></item>
 	<item id="Data">
 		<item id="plugin">
 			<item id="available"><![CDATA[1]]></item>
@@ -17,10 +17,10 @@
 			<item id="version"><![CDATA[1.0]]></item>
 			<item id="__modules">
 				<item id="0">
-					<item id="name"><![CDATA[vip]]></item>
-					<item id="menu"><![CDATA[]]></item>
+					<item id="name"><![CDATA[user]]></item>
+					<item id="menu"><![CDATA[编辑用户]]></item>
 					<item id="url"><![CDATA[]]></item>
-					<item id="type"><![CDATA[11]]></item>
+					<item id="type"><![CDATA[3]]></item>
 					<item id="adminid"><![CDATA[0]]></item>
 					<item id="displayorder"><![CDATA[0]]></item>
 					<item id="navtitle"><![CDATA[]]></item>
@@ -40,12 +40,36 @@
 					<item id="navsubname"><![CDATA[]]></item>
 					<item id="navsuburl"><![CDATA[]]></item>
 				</item>
+				<item id="2">
+					<item id="name"><![CDATA[vip]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[api]]></item>
+					<item id="menu"><![CDATA[接口设置]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[9]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
 			</item>
 		</item>
 		<item id="version"><![CDATA[X2]]></item>
 		<item id="var">
 			<item id="0">
-				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="displayorder"><![CDATA[10]]></item>
 				<item id="title"><![CDATA[帖内是否以红名方式显示]]></item>
 				<item id="description"><![CDATA[此功能极易与其它美化代码冲突，建议您手动修改.]]></item>
 				<item id="variable"><![CDATA[viewthread_redname]]></item>
@@ -90,25 +114,25 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="5">
-				<item id="displayorder"><![CDATA[6]]></item>
-				<item id="title"><![CDATA[VIP 用户组]]></item>
-				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[vip_group]]></item>
+				<item id="displayorder"><![CDATA[20]]></item>
+				<item id="title"><![CDATA[VIP1 绑定用户组]]></item>
+				<item id="description"><![CDATA[必填，下面绑定的每一项也都是必填]]></item>
+				<item id="variable"><![CDATA[vip_1_group]]></item>
 				<item id="type"><![CDATA[group]]></item>
 				<item id="value"><![CDATA[19]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="6">
-				<item id="displayorder"><![CDATA[5]]></item>
-				<item id="title"><![CDATA[VIP 过期后每天扣除成长值]]></item>
+				<item id="displayorder"><![CDATA[21]]></item>
+				<item id="title"><![CDATA[VIP2 绑定用户组]]></item>
 				<item id="description"><![CDATA[]]></item>
-				<item id="variable"><![CDATA[vip_czzday2]]></item>
-				<item id="type"><![CDATA[number]]></item>
-				<item id="value"><![CDATA[10]]></item>
+				<item id="variable"><![CDATA[vip_2_group]]></item>
+				<item id="type"><![CDATA[group]]></item>
+				<item id="value"><![CDATA[19]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="7">
-				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="displayorder"><![CDATA[6]]></item>
 				<item id="title"><![CDATA[VIP 特权]]></item>
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[vip_intro]]></item>
@@ -124,7 +148,7 @@ VIP帖子高亮
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="8">
-				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="displayorder"><![CDATA[7]]></item>
 				<item id="title"><![CDATA[VIP 去广告]]></item>
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[vip_noad]]></item>
@@ -133,24 +157,60 @@ VIP帖子高亮
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="9">
-				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="displayorder"><![CDATA[8]]></item>
 				<item id="title"><![CDATA[VIP 高亮设置]]></item>
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[highlight_blod]]></item>
 				<item id="type"><![CDATA[select]]></item>
-				<item id="value"><![CDATA[2]]></item>
+				<item id="value"><![CDATA[0]]></item>
 				<item id="extra"><![CDATA[0=关闭此功能
 1=VIP 帖子加粗
 2=VIP 帖子高亮
 3=VIP 帖子高亮加粗]]></item>
 			</item>
 			<item id="10">
-				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="displayorder"><![CDATA[9]]></item>
 				<item id="title"><![CDATA[VIP 高亮颜色]]></item>
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[highlight_color]]></item>
 				<item id="type"><![CDATA[color]]></item>
 				<item id="value"><![CDATA[blue]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[22]]></item>
+				<item id="title"><![CDATA[VIP3 绑定用户组]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[vip_3_group]]></item>
+				<item id="type"><![CDATA[group]]></item>
+				<item id="value"><![CDATA[19]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[23]]></item>
+				<item id="title"><![CDATA[VIP4 绑定用户组]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[vip_4_group]]></item>
+				<item id="type"><![CDATA[group]]></item>
+				<item id="value"><![CDATA[19]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[24]]></item>
+				<item id="title"><![CDATA[VIP5 绑定用户组]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[vip_5_group]]></item>
+				<item id="type"><![CDATA[group]]></item>
+				<item id="value"><![CDATA[19]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[25]]></item>
+				<item id="title"><![CDATA[VIP6 绑定用户组]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[vip_6_group]]></item>
+				<item id="type"><![CDATA[group]]></item>
+				<item id="value"><![CDATA[19]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 		</item>

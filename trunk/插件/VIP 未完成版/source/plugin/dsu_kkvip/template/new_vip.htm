@@ -2,8 +2,8 @@
 <div class="orights vipblock">
 	<h3 class="title">{lang dsu_kkvip:new_vip}</h3>
 	<div class="content">
-		{if !$_G[vip][isvip]}
-		<p>{lang dsu_kkvip:vip_top_htm_1}<a href="vip.php?do=paycenter" class="btn"><span>{lang dsu_kkvip:vip_pay}</span></a></p>
+		{if !$vip->is_vip()}
+			<p>{lang dsu_kkvip:vip_top_htm_1}<a href="vip.php?do=paycenter" class="btn"><span>{lang dsu_kkvip:vip_pay}</span></a></p>
 		{/if}
     	<table class="dt">
     		<tr>
@@ -17,16 +17,17 @@
         		<td><a href="home.php?mod=space&uid={$vipinfo[uid]}"><font color="red"><b>{$vipinfo[username]}</b></font></a></td>
             	<td>{$vipinfo[czz]}</td>
             	<td><img src="source/plugin/dsu_kkvip/images/vip{$vipinfo[level]}.gif"></td>
-            	<td>{$vipinfo[regtime]}</td>
+            	<td>{$vipinfo[jointime]}</td>
         	</tr>
 			{/loop}
     	</table>
+		{if $multipage}<div class="multipage">$multipage</div>{/if}
 	</div>
 </div>
 <div class="orights vipblock">
 	<h3 class="title"><a id="rights">{lang dsu_kkvip:vipcenter_htm_16}</a></h3>
 	<div class="content">
-		{if $_G[vip][isvip]}
+		{if $vip->is_vip()}
 		<p>{lang dsu_kkvip:paycenter_htm_3}<img src="source/plugin/dsu_kkvip/images/vip$_G[vip][level].gif" alt="$_G[vip][level_text]" />{lang dsu_kkvip:mylevel_htm_9}<a href="vip.php?do=paycenter" class="btn"><span>{lang dsu_kkvip:vip_pay2}</span></a></p>
 		{else}
 		<p>{lang dsu_kkvip:vipcenter_htm_19}<a href="vip.php?do=paycenter" class="btn"><span>{lang dsu_kkvip:vip_pay}</span></a></p>

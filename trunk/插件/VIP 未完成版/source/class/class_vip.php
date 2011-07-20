@@ -63,7 +63,7 @@ class vip{
 		loadcache('dsu_vip');
 		$this->vip_cache=$_G['cache']['dsu_vip'];
 	}
-	function query($sql,$extra){
+	function query($sql, $extra=''){
 		$db = & DB::object();
 		$sql = str_ireplace('pre_',$db->tablepre,$sql);
 		return $db->query($sql,$extra);

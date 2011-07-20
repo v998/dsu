@@ -40,7 +40,7 @@ class plugin_dsu_kkvip{
 		}
 		foreach ($postlist as $pid=>$post){
 			if($vip_users[$post['authorid']]){
-				$return[]='<dl class="pil cl vm"><img src="source/plugin/dsu_kkvip/images/vip'.$vip_users[$post['authorid']]['level'].'.gif">&nbsp;<font color="red">³É³¤Öµ: '.$vip_users[$post['authorid']]['czz'].'</font></dl>';
+				$return[]='<dl class="pil cl vm"><img src="source/plugin/dsu_kkvip/images/vip'.$vip_users[$post['authorid']]['level'].'.gif">&nbsp;<font color="red">&#25104;&#38271;&#20540;: '.$vip_users[$post['authorid']]['czz'].'</font></dl>';
 				$postlist[$pid]['verifyvip']=true;
 				if($vip->vars['viewthread_redname']) $postlist[$pid]['author']="<font color=\"red\">{$post[author]}</font>";
 				if($vip_users[$post['authorid']]['year_pay']){
