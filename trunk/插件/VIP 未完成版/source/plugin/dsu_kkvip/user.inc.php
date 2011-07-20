@@ -8,7 +8,6 @@ if (file_exists(DISCUZ_ROOT.'./data/plugindata/dsu_kkvip.lang.php')){
 	loadcache('pluginlanguage_script');
 	$_T=$_G['cache']['pluginlanguage_script']['dsu_kkvip'];
 }
-error_reporting(E_ALL ^ E_NOTICE);
 if(!$_G['gp_username']){
 	showtableheader($_T['edit_user']);
 	showformheader('plugins&operation=config&identifier=dsu_kkvip&pmod=user');
