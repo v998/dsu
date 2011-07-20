@@ -12,7 +12,7 @@ if (file_exists(DISCUZ_ROOT.'./data/plugindata/dsu_kkvip.lang.php')){
 while(false !== ($entry = $extends_dir->read())) {
 	$file = pathinfo($entry);
 	if($file['extension'] == 'php' && $file['basename']) {
-		include DISCUZ_ROOT."./source/plugin/dsu_kkvip/extend/{$file[basename]}";
+		if(!$_G['gp_api']) include DISCUZ_ROOT."./source/plugin/dsu_kkvip/extend/{$file[basename]}";
 		$extends[$ext_name] = $file['basename'];
 	}
 }
