@@ -1,13 +1,8 @@
 <?php
 if(!defined('IN_ADMINCP')) exit('Access Denied');
+require_once DISCUZ_ROOT.'./source/plugin/dsu_kkvip/kk_lang.func.php';
 $extends = array();
-if (file_exists(DISCUZ_ROOT.'./data/plugindata/dsu_kkvip.lang.php')){
-	include DISCUZ_ROOT.'./data/plugindata/dsu_kkvip.lang.php';
-	$_T=$scriptlang['dsu_kkvip'];
-}else{
-	loadcache('pluginlanguage_script');
-	$_T=$_G['cache']['pluginlanguage_script']['dsu_kkvip'];
-}
+
 if($_G['gp_api']){
 	include DISCUZ_ROOT."./source/plugin/dsu_kkvip/extend/{$_G[gp_api]}";
 	dexit();
@@ -20,10 +15,10 @@ while(false !== ($entry = $extends_dir->read())) {
 		$extends[$ext_name] = $file['basename'];
 	}
 }
-if(!$extends) cpmsg($_T['no_extends'], '', 'error');
-showtableheader($_T['extend_list']);
+if(!$extends) cpmsg(klang('no_extends'), '', 'error');
+showtableheader(klang('extend_list'));
 foreach($extends as $name => $file){
-	showtablerow('', array('', 'width="20%"'), array($name, '<a href="?action=plugins&operation=config&identifier=dsu_kkvip&pmod=api&api='.$file.'">'.$_T['extend_config'].'</a>'));
+	showtablerow('', array('', 'width="20%"'), array($name, '<a href="?action=plugins&operation=config&identifier=dsu_kkvip&pmod=api&api='.$file.'">'.klang('extend_config').'</a>'));
 }
 showtablefooter();
 ?>
