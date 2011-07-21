@@ -1,0 +1,50 @@
+{template dsu_kkvip:header}
+<div class="pay">
+	<form method="post" action="vip.php?do=give_vip" onsubmit="$('submit_btn').disabled='disabled';">
+		<input type="hidden" name="formhash" value="{FORMHASH}" />
+		<h3>{lang dsu_kkvip:vip_pay_give}</h3>
+		<div class="tips">
+			<p>{lang dsu_kkvip:cost} <b>$vip->vars[vip_cost] $vip_credit_name {lang dsu_kkvip:discounted}</b></p>
+			<p>{lang dsu_kkvip:paycenter_buy_htm_1} <b>$my_credit $vip_credit_name</b>{lang dsu_kkvip:paycenter_buy_htm_2} <b>$max_month</b> {lang dsu_kkvip:paycenter_buy_htm_3}</p>
+			<p>{lang dsu_kkvip:cost2}</p>
+		</div>
+		<ul>
+			<li>
+				<span>{lang dsu_kkvip:paycenter_buy_htm_5}</span>$_G[member][username]
+			</li>
+			<li>
+				<span>{lang dsu_kkvip:paycenter_buy_htm_6}</span><input type="text" name="username" onblur="ajaxget('vip.php?do=give_vip&getuid=yes&username='+this.value, 'give_uid');" class="px"/>
+			</li>
+			<li>
+				<span>{lang dsu_kkvip:buyto}</span><span id="give_uid" style="text-align: left;"></span><br>				
+			</li>
+			<li>
+				<span>{lang dsu_kkvip:buytime}</span>
+				<input type="text" name="month" onblur="if(isNaN(this.value)||this.value<0)this.value=1" class="px" value="1"/>
+			</li>
+		</ul>
+		<div class="pay_btn">
+			<button class="pn" value="true" id="submit_btn" name="submit_btn" type="submit" onclick="if(!confirm('{lang dsu_kkvip:cost_js}')){return false;}"><span>{lang dsu_kkvip:vip_pay}</span></button>{if $vip->vars[show_buy_btn]}
+			<button class="pn" onclick="showWindow('credit','addfundsform','post');return false;"><span>{lang dsu_kkvip:paycenter_buy_htm_4}</span></button>{/if}
+		</div>
+	</form>{if $vip->vars[show_buy_btn]}
+	<form id="addfundsform" name="addfundsform" method="post" action="home.php?mod=spacecp&ac=credit&op=base&addfundssubmit=yes&handlekey=credit">
+	<input type="hidden" name="formhash" value="{FORMHASH}">
+	<input type="hidden" name="operation" value="addfunds">
+	<input type="hidden" id="addfundamount" name="addfundamount" value="$vip->vars[vip_cost]">
+	<input type="hidden" name="addfundssubmit" value="true">
+	</form>{/if}
+</div>
+<div class="orights vipblock">
+	<h3 class="title">{lang dsu_kkvip:vipcenter_htm_4}</h3>
+	<div class="content">
+		<p>{lang dsu_kkvip:welcome_novip2}</p>
+    	<ul>
+    		$vip_intro
+    	</ul>
+	</div>
+</div>
+</div></div>
+<div class="sd">{template dsu_kkvip:vip_sidebar}</div></div>
+
+{template common/footer}
