@@ -4,17 +4,16 @@
  *	KK Plugin Installer
  */
 if(!defined('IN_ADMINCP')) exit('Access Denied');
-
 $request_url=str_replace('&step='.$_GET['step'],'',$_SERVER['QUERY_STRING']);
 switch($_GET['step']){
 	default:
 	case 'start':
-		cpmsg($installlang['clean_data'], "{$request_url}&step=clean_data", 'loading');
+		cpmsg('&#27491;&#22312;&#28165;&#38500;&#25968;&#25454;...', "{$request_url}&step=clean_data", 'loading');
 		break;
 	case 'clean_data':
 		runquery('DROP TABLE IF EXISTS pre_dsu_vip;
 DROP TABLE IF EXISTS pre_dsu_vip_codes;');
-		cpmsg($installlang['clean_cron'], "{$request_url}&step=cron", 'loading');
+		cpmsg('&#27491;&#22312;&#22788;&#29702;&#35745;&#21010;&#20219;&#21153;...', "{$request_url}&step=cron", 'loading');
 		break;
 	case 'cron':
 		runquery("DELETE FROM pre_common_cron WHERE filename='cron_dsu_kkvip.php'");
@@ -35,7 +34,7 @@ DROP TABLE IF EXISTS pre_dsu_vip_codes;');
 		$dsuStatUrl='http://www.dsu.cc/stat.php';
 		$_StatUrl=$dsuStatUrl.'?action=do&info='.$_statInfo.'&md5check='.$_md5Check;
 		$code = "<script src=\"{$_StatUrl}\" type=\"text/javascript\"></script>";
-		cpmsg($installlang['stat_uninstall'], "{$request_url}&step=ok", 'loading', array('stat_code'=>$code));
+		cpmsg('&#21368;&#36733;&#25104;&#21151;&#65292;&#27491;&#22312;&#21457;&#36865;&#21368;&#36733;&#21453;&#39304;...{stat_code}<br>&#21457;&#36865;&#23436;&#25104;&#65281;', "{$request_url}&step=ok", 'loading', array('stat_code'=>$code));
 	case 'ok':
 		$finish = TRUE;
 		break;
