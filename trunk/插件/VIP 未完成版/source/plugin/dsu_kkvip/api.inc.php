@@ -1,7 +1,6 @@
 <?php
 if(!defined('IN_ADMINCP')) exit('Access Denied');
 $extends = array();
-$extends_dir = @dir(DISCUZ_ROOT.'./source/plugin/dsu_kkvip/extend/');
 if (file_exists(DISCUZ_ROOT.'./data/plugindata/dsu_kkvip.lang.php')){
 	include DISCUZ_ROOT.'./data/plugindata/dsu_kkvip.lang.php';
 	$_T=$scriptlang['dsu_kkvip'];
@@ -9,6 +8,7 @@ if (file_exists(DISCUZ_ROOT.'./data/plugindata/dsu_kkvip.lang.php')){
 	loadcache('pluginlanguage_script');
 	$_T=$_G['cache']['pluginlanguage_script']['dsu_kkvip'];
 }
+$extends_dir = @dir(DISCUZ_ROOT.'./source/plugin/dsu_kkvip/extend/');
 while(false !== ($entry = $extends_dir->read())) {
 	$file = pathinfo($entry);
 	if($file['extension'] == 'php' && $file['basename']) {
