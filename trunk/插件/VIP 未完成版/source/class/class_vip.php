@@ -31,7 +31,7 @@ class vip{
 		if (!$this->is_vip($uid)) return array();
 		return DB::fetch($this->query("SELECT * FROM pre_dsu_vip WHERE uid='{$uid}'"));
 	}
-	function pay_vip($in_uid,$day,$in_oldgroup){
+	function pay_vip($in_uid, $day, $in_oldgroup){
 		global $_G;
 		$uid		= $in_uid		? $in_uid		: $_G['uid'];
 		$oldgroup	= $in_oldgroup	? $in_oldgroup	: $_G['groupid'];
@@ -45,23 +45,19 @@ class vip{
 				'year_pay'=>$year_pay,
 				'level'=>1,
 				'oldgroup'=>$oldgroup,
-			));
+			), false, true);
 			$this->query("UPDATE pre_common_member SET groupid='{$this->vars[vip_1_group]}' WHERE uid='{$uid}' AND adminid<>'1'");
 			$this->vip_cache[] = $uid;
 			require_once libfile('function/cache');
 			updatecache('dsu_kkvip');
 		}else{
-			if(!$year_pay){
-				$this->query("UPDATE pre_dsu_vip SET exptime=exptime+'{$time}'");
-			}else{
-				$this->query("UPDATE pre_dsu_vip SET exptime=exptime+'{$time}' , year_pay=1");
-			}
+			$this->query("UPDATE pre_dsu_vip SET exptime=exptime+'{$time}' , year_pay='{$year_pay}'");
 		}
 	}
 	function _load_cache(){
 		global $_G;
-		loadcache('dsu_vip');
-		$this->vip_cache=$_G['cache']['dsu_vip'];
+		loadcache('dsu_kkvip');
+		$this->vip_cache=$_G['cache']['dsu_kkvip'];
 	}
 	function query($sql, $extra=''){
 		$db = & DB::object();

@@ -29,6 +29,7 @@ if($_G['gp_getuid']){
 	$vip->pay_vip($_G['uid'], $_G['gp_month']*30, $give_user['groupid']);
 	notification_add($give_user['uid'], 'dsu_kkvip', lang('plugin/dsu_kkvip','notification_give'), array('month'=>$_G['gp_month'], 'username'=>$_G['username']), 1);
 	updatemembercount($_G['uid'], array($vip->vars['creditid'] => -$vip->vars['vip_cost']*$_G['gp_month']), false);
+	$vip->pay_vip($give_user['uid'], $_G['gp_month']*30);
 	$trade_succeed	= true;
 	$trade_user		= $give_user['uid'];
 	showmessage('dsu_kkvip:give_succeed', 'vip.php?do=paycenter&action=give', array('month'=>$_G['gp_month'], 'giveto'=>$give_user['username']));

@@ -10,6 +10,7 @@ $discuz->cachelist = $cachelist;
 $discuz->init();
 include_once libfile('class/vip');
 $vip = $vip ? $vip : new vip();
+if(!$vip->on) showmessage('undefined_action');
 $is_vip=$vip->is_vip();
 $_G['vip']=$vip->getvipinfo($_G['uid']);
 $_G['vip']['exptime_text']=dgmdate($_G['vip']['exptime'],'d');
@@ -66,7 +67,7 @@ runhooks();
  * e.g. $vip_menu['action_id'] = 'link name';
  * and please remember to create a shortcut at VIP_DIR/module
  */
-if (!file_exists(DISCUZ_ROOT."./source/plugin/dsu_kkvip/module/{$do}.inc.php")) showmessage('程序设计中……');
+if (!file_exists(DISCUZ_ROOT."./source/plugin/dsu_kkvip/module/{$do}.inc.php")) showmessage('undefined_action');
 include DISCUZ_ROOT."./source/plugin/dsu_kkvip/module/{$do}.inc.php";
 
 ?>

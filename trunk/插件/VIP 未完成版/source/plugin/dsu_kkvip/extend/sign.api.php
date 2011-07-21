@@ -29,7 +29,7 @@ if(defined('IN_ADMINCP') && $_G['gp_api']){
 		$reward_id = $num + 1;
 		if($reward[$reward_id]){
 			list($rewarddays,$growupnum) = explode('|', $reward[$reward_id]);
-			if($rewarddays) pay_vip($_G['uid'],$rewarddays,$_G['groupid']);
+			if($rewarddays) $vip->pay_vip($_G['uid'], $rewarddays);
 			if($growupnum) $vip->query("UPDATE pre_dsu_vip SET czz=czz+'{$growupnum}' WHERE uid='{$_G[uid]}'");
 		}
 	}
