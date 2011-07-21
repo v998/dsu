@@ -148,7 +148,7 @@
               <td width="38%">$data[intro]</td>
               <td>$data[function]</td>
               <td>$data[price]</td>
-              <td width="12%"><!--{if $mod == 'shop'}--><!--{if $data[shopid]}-->{lang dsu_marcothief:shop_5}<!--{else}--><button type="submit" class="pn" value="$data[id]" id="buy" name="buy" tabindex="1"><span>{lang dsu_marcothief:shop_6}</span></button><!--{/if}--><!--{else}--><a href="plugin.php?id=dsu_marcothief&mod=admin_shop&action=edit&shopid=$data[id]">{lang edit}</a><!--{/if}--></td>
+              <td width="12%"><!--{if $mod == 'shop'}--><!--{if $data[shopid] == $data[id]}-->{lang dsu_marcothief:shop_5}<!--{else}--><button type="submit" class="pn" value="$data[id]" id="buy" name="buy" tabindex="1"><span>{lang dsu_marcothief:shop_6}</span></button><!--{/if}--><!--{else}--><a href="plugin.php?id=dsu_marcothief&mod=admin_shop&action=edit&shopid=$data[id]">{lang edit}</a><!--{/if}--></td>
               <!--{if $mod == 'admin_shop'}--><td width="5%"><a href="javascript:;" onclick="showDialog('{lang dsu_marcothief:shop_7}', 'confirm', '[DSU] Thief', function(){window.location.href = 'plugin.php?id=dsu_marcothief&mod=admin_shop&action=delete&shopid=$data[id]'});">{lang delete}</a></td><!--{/if}-->
           </tr>
             <!--{/loop}-->
