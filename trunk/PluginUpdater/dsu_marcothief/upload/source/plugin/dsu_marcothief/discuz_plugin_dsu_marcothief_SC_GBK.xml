@@ -212,7 +212,7 @@
 			<item id="18">
 				<item id="displayorder"><![CDATA[21]]></item>
 				<item id="title"><![CDATA[逃狱相隔时间 (分钟)]]></item>
-				<item id="description"><![CDATA[雨次逃狱的相隔时间，可避免会员不断逃狱]]></item>
+				<item id="description"><![CDATA[两次逃狱的相隔时间，可避免会员不断逃狱]]></item>
 				<item id="variable"><![CDATA[run_mins]]></item>
 				<item id="type"><![CDATA[number]]></item>
 				<item id="value"><![CDATA[60]]></item>
@@ -305,7 +305,7 @@
 				<item id="msg_28"><![CDATA[成功编辑物品]]></item>
 				<item id="msg_29"><![CDATA[物品并不存在]]></item>
 				<item id="msg_30"><![CDATA[成功删除物品]]></item>
-				<item id="msg_31"><![CDATA[打劫 {username} 失败！逃走时被警方发现私藏物品，未收处理]]></item>
+				<item id="msg_31"><![CDATA[打劫 {username} 失败！逃走时被警方发现私藏物品，没收处理]]></item>
 				<item id="msg_32"><![CDATA[成功装备 {name}]]></item>
 				<item id="msg_33"><![CDATA[噢！您被 {username} 的保镖打了一顿。打劫失败！]]></item>
 				<item id="msg_34"><![CDATA[您还在狱中，巿场在城内啊？]]></item>
@@ -320,7 +320,7 @@
 				<item id="log_thief_sucess"><![CDATA[{username} 成功打劫了 {earn}]]></item>
 				<item id="log_thief_fail"><![CDATA[{username} 打劫失败了]]></item>
 				<item id="log_fail_guard"><![CDATA[{username} 被某某保镖打了一顿，打劫失败了]]></item>
-				<item id="log_fail_police"><![CDATA[{username} 打劫失败并被警方未收物品]]></item>
+				<item id="log_fail_police"><![CDATA[{username} 打劫失败并被警方没收物品]]></item>
 				<item id="log_fail_jail"><![CDATA[{username} 打劫失败并即时入狱]]></item>
 				<item id="log_jail_raids"><![CDATA[{username} 成功营救 {raids_user}]]></item>
 				<item id="shop_1"><![CDATA[打劫成功率]]></item>

@@ -92,6 +92,7 @@ if(empty($mod)){
 				DB::query("UPDATE ".DB::table('dsu_marcothief')." SET steal=steal+'1',actions=actions+'1' WHERE uid='$check[uid]'");
 				notification_add($check['uid'], 'system', lang('plugin/dsu_marcothief', 'notice_thief_fail'), array('username' => $_G['username']), 1);
 				if($police == TRUE && $user_db['weapon']){
+					DB::query("DELETE FROM ".DB::table('dsu_marcothief_bag')." WHERE shopid='$user_db[weapon]' AND uid='$_G[uid]'");
 					DB::query("UPDATE ".DB::table('dsu_marcothief')." SET weapon='0' WHERE uid='$_G[uid]'");
 					log_add($_G['username'], 'thief_fail_police');
 					showmessage('dsu_marcothief:msg_31', dreferer(), array('username' => $check['username']));
@@ -120,16 +121,16 @@ if(empty($mod)){
 			$raid_user_info = getuserbyuid($_G['gp_uid']);
 			updatemembercount($_G['uid'], array('extcredits'.$config['raids_credit'] => 'extcredits'.$config['raids_credit']-$config['raids_once']));
 		}
-		if($jail == TRUE){
-			notification_add($_G['gp_uid'], 'system', lang('plugin/dsu_marcothief', 'notice_raids_fail'), array('username' => $_G['username']), 1);
-			DB::query("UPDATE ".DB::table('dsu_marcothief')." SET jail='".($_G['timestamp']+60*$config['raids_mins'])."' WHERE uid='$_G[uid]'");
-			showmessage('dsu_marcothief:msg_12', dreferer(), array('mins' => $config['raids_mins']));
-		}elseif($success == TRUE){
+		if($success == TRUE){
 			notification_add($_G['gp_uid'], 'system', lang('plugin/dsu_marcothief', 'notice_raids'), array('username' => $_G['username']), 1);
 			DB::query("UPDATE ".DB::table('dsu_marcothief')." SET jail='0',run='0',goodluck='0' WHERE uid='$_G[gp_uid]'");
 			DB::query("UPDATE ".DB::table('dsu_marcothief')." SET raids=raids+'1' WHERE uid='$_G[uid]'");
 			log_add($_G['username'], 'jail_raids', array('raids_user' => $raid_user_info['username']));
 			showmessage('dsu_marcothief:msg_13', dreferer());
+		}elseif($jail == TRUE){
+			notification_add($_G['gp_uid'], 'system', lang('plugin/dsu_marcothief', 'notice_raids_fail'), array('username' => $_G['username']), 1);
+			DB::query("UPDATE ".DB::table('dsu_marcothief')." SET jail='".($_G['timestamp']+60*$config['raids_mins'])."' WHERE uid='$_G[uid]'");
+			showmessage('dsu_marcothief:msg_12', dreferer(), array('mins' => $config['raids_mins']));
 		}else{
 			notification_add($_G['gp_uid'], 'system', lang('plugin/dsu_marcothief', 'notice_raids_fail'), array('username' => $_G['username']), 1);
 			showmessage('dsu_marcothief:msg_14', dreferer());
@@ -196,14 +197,14 @@ if(empty($mod)){
 	
 }elseif($mod == 'shop'){
 	if(submitcheck('buy')){
-		if($check_db['protect'] > $_G['timestamp']){
+		if($check_db['jail'] > $_G['timestamp']){
 			showmessage('dsu_marcothief:msg_34', dreferer());
 		}
 		$shop_db = DB::fetch_first("SELECT * FROM ".DB::table('dsu_marcothief_shop')." WHERE id='$_G[gp_buy]'");
 		if($user_db['extcredits'.$config['shop_fee']] < $shop_db['price']){
 			showmessage('dsu_marcothief:msg_25', dreferer(), array('credit' => $_G['setting']['extcredits'][$config['shop_fee']]['title']));
 		}else{
-			DB::query("INSERT INTO ".DB::table('dsu_marcothief_bag')." (uid,shopid) VALUES ('$_G[uid]','$_G[gp_buy]')");
+			DB::query("INSERT INTO ".DB::table('dsu_marcothief_bag')." (uid,shopid) VALUES ('$_G[uid]','$shop_db[id]')");
 			updatemembercount($_G['uid'], array('extcredits'.$config['shop_fee'] => 'extcredits'.$config['shop_fee']-$shop_db['price']));
 			showmessage('dsu_marcothief:msg_26', dreferer());
 		}
@@ -258,7 +259,8 @@ if(empty($mod)){
 			}
 			$list[] = $data;
 		}
-	$protect = ($user_db['protect']>$_G['timestamp']) ? lang('plugin/dsu_marcothief', 'bag_1', array('time' => dgmdate($user_db['protect'], 'dt', $_G['setting']['timeoffset']))) : lang('plugin/dsu_marcothief', 'bag_2');
+		$magic_db = DB::fetch_first("SELECT * FROM ".DB::table('common_magic')." WHERE identifier='dsu_marcothief'");;
+		$protect = ($user_db['protect']>$_G['timestamp']) ? lang('plugin/dsu_marcothief', 'bag_1', array('time' => dgmdate($user_db['protect'], 'dt', $_G['setting']['timeoffset']))) : (($magic_db['available']==1) ? '<a href="home.php?mod=magic&action=shop&operation=buy&mid=dsu_marcothief" onclick="showWindow(\'magics\', this.href);return false;" class="xi2 xw1">'.lang('plugin/dsu_marcothief', 'bag_2').'</a>' : lang('plugin/dsu_marcothief', 'bag_2'));
 	}
 	
 }elseif($mod == 'admin_shop' && !$_G['gp_action']){
