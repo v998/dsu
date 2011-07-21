@@ -8,22 +8,34 @@
 .tips p { color:#666; padding:5px 10px; }
 .tips p b { padding:0 5px; }
 </style>
+<link rel="stylesheet" type="text/css" href="data/cache/style_{STYLEID}_forum_forumdisplay.css?{VERHASH}" />
 <div id="ct" class="ct2 wp cl">
   <div class="mn">
     <div class="bm" style="padding: 0 10px 10px 10px;">
       <ul class="tb cl">
         <li<!--{if empty($mod)}--> class="a"<!--{/if}-->><a href="plugin.php?id=dsu_marcothief">{lang dsu_marcothief:thief}</a></li>
         <li<!--{if $mod == 'jail'}--> class="a"<!--{/if}-->><a href="plugin.php?id=dsu_marcothief&mod=jail">{lang dsu_marcothief:jail}</a></li>
+        <li<!--{if $mod == 'shop'}--> class="a"<!--{/if}--> id="shop" onmouseover="showMenu(this.id)"><a href="plugin.php?id=dsu_marcothief&mod=shop" hidefocus="true" class="dropmenu">{lang dsu_marcothief:shop}</a></li>
         <li<!--{if $mod == 'list' && !$_G[gp_by]}--> class="a"<!--{/if}-->><a href="plugin.php?id=dsu_marcothief&mod=list">{lang dsu_marcothief:list}</a></li>
         <li<!--{if $mod == 'list' && $_G[gp_by] == 'raids'}--> class="a"<!--{/if}-->><a href="plugin.php?id=dsu_marcothief&mod=list&by=raids">{lang dsu_marcothief:list_raids}</a></li>
+        <!--{if $_G[adminid] == '1'}--><li<!--{if $mod == 'admin_shop'}--> class="a"<!--{/if}--> id="admin" onmouseover="showMenu(this.id)"><a href="javascript:void(0);" hidefocus="true" class="dropmenu">{lang dsu_marcothief:admin}</a></li><!--{/if}-->
       </ul>
+      <ul class="p_pop h_pop" id="shop_menu" style="display:none;">
+        <li><a href="plugin.php?id=dsu_marcothief&mod=bag">{lang dsu_marcothief:bag}</a></li>
+      </ul>
+      <!--{if $_G[adminid] == '1'}-->
+      <ul class="p_pop h_pop" id="admin_menu" style="display:none;">
+        <li><a href="plugin.php?id=dsu_marcothief&mod=admin_shop">{lang dsu_marcothief:admin_shop}</a></li>
+        <li><a href="plugin.php?id=dsu_marcothief&mod=admin_shop&action=new">{lang dsu_marcothief:admin_shop_add}</a></li>
+      </ul>
+      <!--{/if}-->
       <!--{if empty($mod)}-->
       <div align="center">
         <h1 class="mt">{lang dsu_marcothief:thief_intro}</h1>
         <img src="source/plugin/dsu_marcothief/images/thief.png" alt="thief" align="right" />
         <div class="tips">
           <!--{if $config[fee_once]}--><p>{lang dsu_marcothief:thief_fee_1}<b>{$_G[setting][extcredits][$config[fee]][title]}{$config[fee_once]}{$_G[setting][extcredits][$config[fee]][unit]}</b>{lang dsu_marcothief:thief_fee_2}</p><!--{/if}-->
-          <p>{lang dsu_marcothief:thief_left_1}<b>{$config[max_thief]-$user_db[action]}</b>{lang dsu_marcothief:thief_left_2}</p>
+          <p>{lang dsu_marcothief:thief_left_1}<b>{$thief_left}</b>{lang dsu_marcothief:thief_left_2}</p>
           <!--{if $user_db[jail]>$_G[timestamp]}--><h1 class="mt" style="color:#FF0000;">{lang dsu_marcothief:injail_1} {$jail_left} {lang dsu_marcothief:injail_2}</h1><!--{/if}-->
         </div>
         <form action="plugin.php?id=dsu_marcothief" method="post">
@@ -38,7 +50,6 @@
         </form>
       </div>
       <!--{elseif $mod == 'jail'}-->
-      <link rel="stylesheet" type="text/css" href="data/cache/style_{STYLEID}_forum_forumdisplay.css?{VERHASH}" />
       <div class="tl bm">
       <img src="source/plugin/dsu_marcothief/images/jail.jpg" alt="jail" />
       <form action="plugin.php?id=dsu_marcothief&mod=jail" method="post">
@@ -71,7 +82,6 @@
         <!--{if !empty($multipage)}--><div class="pages_btns">$multipage</div><br /><br /><!--{/if}-->
       </div>
       <!--{elseif $mod == 'list'}-->
-      <link rel="stylesheet" type="text/css" href="data/cache/style_{STYLEID}_forum_forumdisplay.css?{VERHASH}" />
       <div class="tl bm">
         <table width="100%" border="0" cellspacing="0" cellpadding="0" class="th">
           <tr align="center">
@@ -111,6 +121,168 @@
         </table>
         <!--{if !empty($multipage)}--><div class="pages_btns">$multipage</div><br /><br /><!--{/if}-->
       </div>
+      <!--{elseif $mod == 'shop' || ($mod == 'admin_shop' && !$_G[gp_action])}-->
+      <!--{if $mod == 'shop'}-->
+      <img src="source/plugin/dsu_marcothief/images/shop.png" alt="shop" />
+      <form action="plugin.php?id=dsu_marcothief&mod=shop" method="post">
+      <input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+      <!--{else}-->
+      <h1 class="mt">{lang dsu_marcothief:admin_shop}</h1>
+      <!--{/if}-->
+      <div class="tl bm">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="th">
+          <tr align="center">
+            <td><b>{lang dsu_marcothief:shop_1}</b></td>
+            <td width="38%"><b>{lang dsu_marcothief:shop_2}</b></td>
+            <td><b>{lang dsu_marcothief:shop_3}</b></td>
+            <td><b>{lang dsu_marcothief:shop_4} ($_G[setting][extcredits][$config[shop_fee]][title])</b></td>
+            <td width="12%">&nbsp;</td>
+            <!--{if $mod == 'admin_shop'}--><td width="5%">&nbsp;</td><!--{/if}-->
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <!--{if $list}-->
+            <!--{loop $list $data}-->
+          <tr align="center">
+              <td>$data[name]</td>
+              <td width="38%">$data[intro]</td>
+              <td>$data[function]</td>
+              <td>$data[price]</td>
+              <td width="12%"><!--{if $mod == 'shop'}--><!--{if $data[shopid]}-->{lang dsu_marcothief:shop_5}<!--{else}--><button type="submit" class="pn" value="$data[id]" id="buy" name="buy" tabindex="1"><span>{lang dsu_marcothief:shop_6}</span></button><!--{/if}--><!--{else}--><a href="plugin.php?id=dsu_marcothief&mod=admin_shop&action=edit&shopid=$data[id]">{lang edit}</a><!--{/if}--></td>
+              <!--{if $mod == 'admin_shop'}--><td width="5%"><a href="javascript:;" onclick="showDialog('{lang dsu_marcothief:shop_7}', 'confirm', '[DSU] Thief', function(){window.location.href = 'plugin.php?id=dsu_marcothief&mod=admin_shop&action=delete&shopid=$data[id]'});">{lang delete}</a></td><!--{/if}-->
+          </tr>
+            <!--{/loop}-->
+          <!--{else}-->
+          <tr align="center">
+              <td>{lang dsu_marcothief:shop_8}</td>
+          </tr>
+          <!--{/if}-->
+        </table>
+        <!--{if !empty($multipage)}--><div class="pages_btns">$multipage</div><br /><br /><!--{/if}-->
+      </div>
+      </form>
+      <!--{elseif $mod == 'bag'}-->
+      <h1 class="mt">{lang dsu_marcothief:bag}</h1>
+      <div class="tl bm">
+      <form action="plugin.php?id=dsu_marcothief&mod=bag" method="post">
+      <input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="th">
+          <tr align="center">
+            <td><b>{lang dsu_marcothief:shop_1}</b></td>
+            <td width="38%"><b>{lang dsu_marcothief:shop_2}</b></td>
+            <td><b>{lang dsu_marcothief:shop_3}</b></td>
+            <td width="10%">&nbsp;</td>
+            <td width="10%">&nbsp;</td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <!--{if $list}-->
+            <!--{loop $list $data}-->
+          <tr align="center">
+              <td>$data[name]</td>
+              <td width="38%">$data[intro]</td>
+              <td>$data[function]</td>
+              <td width="10%"><!--{if $data[weapon]==$data[id] || $data[raids_tool]==$data[id] || $data[run_tool]==$data[id]}-->&nbsp;<!--{else}--><button type="submit" class="pn" value="$data[id]" id="pack" name="pack" tabindex="1"><span>{lang dsu_marcothief:bag_3}</span></button><!--{/if}--></td>
+              <td width="10%"><!--{if $data[weapon]==$data[id] || $data[raids_tool]==$data[id] || $data[run_tool]==$data[id]}--><button type="submit" class="pn" value="$data[id]" id="unpack" name="unpack" tabindex="1"><span>{lang dsu_marcothief:bag_4}</span></button><!--{else}-->&nbsp;<!--{/if}--></td>
+          </tr>
+            <!--{/loop}-->
+          <!--{else}-->
+          <tr align="center">
+              <td>{lang dsu_marcothief:bag_1}</td>
+          </tr>
+          <!--{/if}-->
+        </table>
+        </form>
+        <!--{if !empty($multipage)}--><div class="pages_btns">$multipage</div><br /><br /><!--{/if}-->
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="th">
+          <tr align="center">
+            <td><b>{lang dsu_marcothief:bag_2}</b></td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr align="center">
+              <td>$protect</td>
+          </tr>
+        </table>
+      </div>
+      <!--{elseif $mod == 'admin_shop' && $_G[gp_action] == 'new'}-->
+      <form action="plugin.php?id=dsu_marcothief&mod=admin_shop&action=new" method="post">
+      <input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+      <div class="tl bm">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="th">
+          <tr align="center">
+            <td><b>{lang dsu_marcothief:shop_9}</b></td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="20%">&nbsp;{lang dsu_marcothief:shop_1}</td>
+            <td width="80%"><input name="name" type="text" class="px" id="name" tabindex="1" size="80" /></td>
+          </tr>
+          <tr>
+            <td>&nbsp;{lang dsu_marcothief:shop_2}</td>
+            <td><textarea name="intro" cols="80" rows="5" class="pt" id="intro" tabindex="1"></textarea></td>
+          </tr>
+          <tr>
+            <td>&nbsp;{lang dsu_marcothief:shop_3}</td>
+            <td>
+            <select id="type" name="type" width="40">
+              <option value="1">{lang dsu_marcothief:shop_10}</option>
+              <option value="2">{lang dsu_marcothief:shop_11}</option>
+              <option value="3">{lang dsu_marcothief:shop_12}</option>
+            </select>
+            + <input type="text" name="function" id="function" tabindex="1" class="px" /> %</td>
+          </tr>
+          <tr>
+            <td>&nbsp;{lang dsu_marcothief:shop_4}</td>
+            <td><input type="text" name="price" id="price" tabindex="1" class="px" /></td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center"><button type="submit" class="pn" value="true" id="new" name="new" tabindex="1"><span>{lang dsu_marcothief:shop_9}</span></button> <button type="button" class="pn" tabindex="1" onclick="javascript:window.location.href = 'plugin.php?id=dsu_marcothief&mod=admin_shop'"><span>{lang return}</span></button></td>
+            </tr>
+        </table>
+      </div>
+      </form>
+      <!--{elseif $mod == 'admin_shop' && $_G[gp_action] == 'edit' && $_G[gp_shopid]}-->
+      <form action="plugin.php?id=dsu_marcothief&mod=admin_shop&action=edit&shopid=$_G[gp_shopid]" method="post">
+      <input type="hidden" name="formhash" id="formhash" value="{FORMHASH}" />
+      <div class="tl bm">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="th">
+          <tr align="center">
+            <td><b>{lang dsu_marcothief:shop_13}</b></td>
+          </tr>
+        </table>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <!--{loop $list $data}-->
+          <tr>
+            <td width="20%">&nbsp;{lang dsu_marcothief:shop_1}</td>
+            <td width="80%"><input name="name" type="text" class="px" id="name" tabindex="1" value="$data[name]" size="80" /></td>
+          </tr>
+          <tr>
+            <td>&nbsp;{lang dsu_marcothief:shop_2}</td>
+            <td><textarea name="intro" cols="80" rows="5" class="pt" id="intro" tabindex="1">$data[intro]</textarea></td>
+          </tr>
+          <tr>
+            <td>&nbsp;{lang dsu_marcothief:shop_3}</td>
+            <td>
+            <select id="type" name="type" width="40">
+              <option value="1"<!--{if $data[type] == '1'}--> selected="selected"<!--{/if}-->>{lang dsu_marcothief:shop_10}</option>
+              <option value="2"<!--{if $data[type] == '2'}--> selected="selected"<!--{/if}-->>{lang dsu_marcothief:shop_11}</option>
+              <option value="3"<!--{if $data[type] == '3'}--> selected="selected"<!--{/if}-->>{lang dsu_marcothief:shop_12}</option>
+            </select>
+            + <input name="function" type="text" class="px" id="function" tabindex="1" value="$data[function]" /> %</td>
+          </tr>
+          <tr>
+            <td>&nbsp;{lang dsu_marcothief:shop_4}</td>
+            <td><input name="price" type="text" class="px" id="price" tabindex="1" value="$data[price]" /></td>
+          </tr>
+          <!--{/loop}-->
+          <tr>
+            <td colspan="2" align="center"><button type="submit" class="pn" value="true" id="edit" name="edit" tabindex="1"><span>{lang dsu_marcothief:shop_13}</span></button> <button type="button" class="pn" tabindex="1" onclick="javascript:history.back()"><span>{lang return}</span></button></td>
+            </tr>
+        </table>
+      </div>
+      </form>
       <!--{/if}-->
     </div>
   </div>
@@ -124,6 +296,21 @@
           <li><marquee height="150" direction="up" scrolldelay="250" onmouseover="stop();" onmouseout="start();"><!--{if $log}--><!--{loop $log $data}-->($data[time]) $data[log]<br /><br /><!--{/loop}--><!--{else}-->{lang dsu_marcothief:log_no}<!--{/if}--></marquee></li>
         </ul>
       </div>
+      <!--{if $config[sideinfo_open] == '1'}-->
+      <div class="bm_h cl">
+        <h2>{lang dsu_marcothief:side_1}</h2>
+      </div>
+      <div class="bm_c">
+        <ul class="xl">
+          <li>{lang dsu_marcothief:shop_10}: $system_success % <!--{if $success_shop}-->(+$success_shop[1]%)<!--{/if}--></li>
+          <li>{lang dsu_marcothief:side_2}: $system_fail_police %</li>
+          <li>{lang dsu_marcothief:side_3}: $system_fail_jail %</li>
+          <li>{lang dsu_marcothief:shop_11}: $system_raids_sucess % <!--{if $raids_sucess_shop}-->(+$raids_sucess_shop[1]%)<!--{/if}--></li>
+          <li>{lang dsu_marcothief:side_4}: $system_raids_fail_jail %</li>
+          <li>{lang dsu_marcothief:shop_12}: $system_run % <!--{if $run_success_shop}-->(+$run_success_shop[1]%)<!--{/if}--></li>
+        </ul>
+      </div>
+      <!--{/if}-->
       <div class="bm_h cl">
         <h2>{lang dsu_marcothief:name}</h2>
       </div>

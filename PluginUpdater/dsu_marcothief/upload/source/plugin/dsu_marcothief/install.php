@@ -47,7 +47,18 @@ CREATE TABLE IF NOT EXISTS `pre_dsu_marcothief` (
   `jail` int(10) NOT NULL,
   `run` int(10) NOT NULL,
   `goodluck` int(10) NOT NULL,
+  `protect` int(10) NOT NULL,
+  `weapon` int(8) unsigned NOT NULL DEFAULT '0',
+  `raids_tool` int(8) unsigned NOT NULL DEFAULT '0',
+  `run_tool` int(8) unsigned NOT NULL DEFAULT '0',
   PRIMARY KEY (`uid`)
+) ENGINE=MyISAM;
+
+CREATE TABLE IF NOT EXISTS `pre_dsu_marcothief_bag` (
+  `id` int(8) unsigned NOT NULL AUTO_INCREMENT,
+  `uid` int(8) unsigned NOT NULL,
+  `shopid` int(8) unsigned NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM;
 
 CREATE TABLE IF NOT EXISTS `pre_dsu_marcothief_log` (
@@ -57,12 +68,28 @@ CREATE TABLE IF NOT EXISTS `pre_dsu_marcothief_log` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM;
 
+CREATE TABLE IF NOT EXISTS `pre_dsu_marcothief_shop` (
+  `id` int(8) unsigned NOT NULL AUTO_INCREMENT,
+  `type` int(8) unsigned NOT NULL DEFAULT '0',
+  `name` char(80) NOT NULL,
+  `intro` text NOT NULL,
+  `function` text NOT NULL,
+  `price` int(8) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM;
+
+INSERT INTO `pre_dsu_marcothief_shop` (`id`, `type`, `name`, `intro`, `function`, `price`) VALUES
+(1, 1, '$installlang[shop_1]', '$installlang[shop_2]', '5', 100),
+(2, 1, '$installlang[shop_3]', '$installlang[shop_4]', '10', 250),
+(3, 2, '$installlang[shop_5]', '$installlang[shop_6]', '5', 100),
+(4, 2, '$installlang[shop_7]', '$installlang[shop_8]', '10', 250),
+(5, 3, '$installlang[shop_9]', '$installlang[shop_10]', '5', 100),
+(6, 3, '$installlang[shop_11]', '$installlang[shop_12]', '10', 250);
+
 REPLACE INTO `pre_common_cron` (`available`, `type`, `name`, `filename`, `weekday`, `day`, `hour`, `minute`) VALUES
 (1, 'user', '[DSU] Thief Daily Update', 'dsu_marcothief_daily.inc.php', -1, -1, 0, '0');
 EOF;
 
 runquery($sql);
-@copy(DISCUZ_ROOT.'./source/plugin/dsu_marcothief/dsu_marcothief_daily.php',DISCUZ_ROOT.'./source/include/cron/dsu_marcothief_daily.inc.php');
-
 $finish = TRUE;
 ?>

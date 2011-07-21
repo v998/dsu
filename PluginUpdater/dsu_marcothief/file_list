@@ -1,5 +1,8 @@
+source/class/magic/magic_dsu_marcothief.php
+source/include/cron/dsu_marcothief_daily.inc.php
 source/plugin/dsu_marcothief/images/index.htm
 source/plugin/dsu_marcothief/images/jail.jpg
+source/plugin/dsu_marcothief/images/shop.png
 source/plugin/dsu_marcothief/images/thief.png
 source/plugin/dsu_marcothief/template/dsu_marcothief.htm
 source/plugin/dsu_marcothief/template/index.htm
@@ -9,9 +12,9 @@ source/plugin/dsu_marcothief/discuz_plugin_dsu_marcothief_TC_BIG5.xml
 source/plugin/dsu_marcothief/discuz_plugin_dsu_marcothief_TC_UTF8.xml
 source/plugin/dsu_marcothief/dsu_marcothief.func.php
 source/plugin/dsu_marcothief/dsu_marcothief.inc.php
-source/plugin/dsu_marcothief/dsu_marcothief_daily.php
 source/plugin/dsu_marcothief/index.htm
 source/plugin/dsu_marcothief/install.php
 source/plugin/dsu_marcothief/uninstall.php
 source/plugin/dsu_marcothief/upgrade.php
-source/plugin/dsu_marcothief/validator.xml
+static/image/magic/dsu_marcothief.gif
+static/image/magic/dsu_marcothief.small.gif

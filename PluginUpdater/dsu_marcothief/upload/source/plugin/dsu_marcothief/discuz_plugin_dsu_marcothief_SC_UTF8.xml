@@ -10,10 +10,10 @@
 			<item id="name"><![CDATA[【DSU】我是神偷]]></item>
 			<item id="identifier"><![CDATA[dsu_marcothief]]></item>
 			<item id="description"><![CDATA[]]></item>
-			<item id="datatables"><![CDATA[dsu_marcothief,dsu_marcothief_log]]></item>
+			<item id="datatables"><![CDATA[dsu_marcothief,dsu_marcothief_bag,dsu_marcothief_log,dsu_marcothief_shop]]></item>
 			<item id="directory"><![CDATA[dsu_marcothief/]]></item>
 			<item id="copyright"><![CDATA[Marco129 @ DSU Team]]></item>
-			<item id="version"><![CDATA[1.2]]></item>
+			<item id="version"><![CDATA[1.3]]></item>
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[dsu_marcothief]]></item>
@@ -44,7 +44,7 @@
 使用问题/BUG反馈可到[url=http://www.dsu.cc/forum-44-1.html]DSU团队官方站点[/url]提出]]></item>
 		<item id="var">
 			<item id="0">
-				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="displayorder"><![CDATA[2]]></item>
 				<item id="title"><![CDATA[打劫手续费所用积分]]></item>
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[fee]]></item>
@@ -53,7 +53,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="1">
-				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="displayorder"><![CDATA[3]]></item>
 				<item id="title"><![CDATA[打劫手续费]]></item>
 				<item id="description"><![CDATA[每次打劫后将被扣除，填0则不收取手续费]]></item>
 				<item id="variable"><![CDATA[fee_once]]></item>
@@ -62,7 +62,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="2">
-				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="displayorder"><![CDATA[4]]></item>
 				<item id="title"><![CDATA[打劫所得积分]]></item>
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[credit]]></item>
@@ -71,7 +71,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="3">
-				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[5]]></item>
 				<item id="title"><![CDATA[最多可打劫会员积分上限]]></item>
 				<item id="description"><![CDATA[不接受小数]]></item>
 				<item id="variable"><![CDATA[max_thief_limit]]></item>
@@ -80,7 +80,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="4">
-				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="displayorder"><![CDATA[6]]></item>
 				<item id="title"><![CDATA[积分低过多少受到保护]]></item>
 				<item id="description"><![CDATA[积分低于此数会自动受保护]]></item>
 				<item id="variable"><![CDATA[credit_protect]]></item>
@@ -89,7 +89,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="5">
-				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="displayorder"><![CDATA[8]]></item>
 				<item id="title"><![CDATA[打劫成功率]]></item>
 				<item id="description"><![CDATA[范围为0以上，1或以下，接受小数]]></item>
 				<item id="variable"><![CDATA[sucess_percentage]]></item>
@@ -98,7 +98,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="6">
-				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="displayorder"><![CDATA[9]]></item>
 				<item id="title"><![CDATA[每天最多打劫次数]]></item>
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[max_thief]]></item>
@@ -107,7 +107,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="7">
-				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="displayorder"><![CDATA[11]]></item>
 				<item id="title"><![CDATA[打劫失败入狱机率]]></item>
 				<item id="description"><![CDATA[范围为0以上，1或以下，接受小数]]></item>
 				<item id="variable"><![CDATA[jail_percentage]]></item>
@@ -116,7 +116,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="8">
-				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="displayorder"><![CDATA[12]]></item>
 				<item id="title"><![CDATA[入狱时长 (分钟)]]></item>
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[jail_mins]]></item>
@@ -125,7 +125,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="9">
-				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="displayorder"><![CDATA[13]]></item>
 				<item id="title"><![CDATA[每天最多被打劫次数]]></item>
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[max_steal]]></item>
@@ -134,7 +134,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="10">
-				<item id="displayorder"><![CDATA[14]]></item>
+				<item id="displayorder"><![CDATA[16]]></item>
 				<item id="title"><![CDATA[营救成功率]]></item>
 				<item id="description"><![CDATA[范围为0以上，1或以下，接受小数]]></item>
 				<item id="variable"><![CDATA[raids_sucess_percentage]]></item>
@@ -143,7 +143,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="11">
-				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="displayorder"><![CDATA[17]]></item>
 				<item id="title"><![CDATA[营救失败入狱机率]]></item>
 				<item id="description"><![CDATA[范围为0以上，1或以下，接受小数]]></item>
 				<item id="variable"><![CDATA[raids_percentage]]></item>
@@ -152,7 +152,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="12">
-				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="displayorder"><![CDATA[18]]></item>
 				<item id="title"><![CDATA[营救失败入狱时长 (分钟)]]></item>
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[raids_mins]]></item>
@@ -161,7 +161,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="13">
-				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="displayorder"><![CDATA[14]]></item>
 				<item id="title"><![CDATA[营救/贿赂狱长所用积分]]></item>
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[raids_credit]]></item>
@@ -170,7 +170,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="14">
-				<item id="displayorder"><![CDATA[13]]></item>
+				<item id="displayorder"><![CDATA[15]]></item>
 				<item id="title"><![CDATA[营救积分]]></item>
 				<item id="description"><![CDATA[每次营救后将被扣除]]></item>
 				<item id="variable"><![CDATA[raids_once]]></item>
@@ -179,7 +179,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="15">
-				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="displayorder"><![CDATA[7]]></item>
 				<item id="title"><![CDATA[受保护用户组]]></item>
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[protect_groups]]></item>
@@ -192,16 +192,16 @@
 				</item>
 			</item>
 			<item id="16">
-				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="displayorder"><![CDATA[19]]></item>
 				<item id="title"><![CDATA[贿赂狱长积分]]></item>
-				<item id="description"><![CDATA[]]></item>
+				<item id="description"><![CDATA[每次贿赂狱长后将被扣除]]></item>
 				<item id="variable"><![CDATA[bribe_money]]></item>
 				<item id="type"><![CDATA[number]]></item>
 				<item id="value"><![CDATA[2000]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="17">
-				<item id="displayorder"><![CDATA[18]]></item>
+				<item id="displayorder"><![CDATA[20]]></item>
 				<item id="title"><![CDATA[逃狱成功率]]></item>
 				<item id="description"><![CDATA[范围为0以上，1或以下，接受小数]]></item>
 				<item id="variable"><![CDATA[run_percentage]]></item>
@@ -210,7 +210,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="18">
-				<item id="displayorder"><![CDATA[19]]></item>
+				<item id="displayorder"><![CDATA[21]]></item>
 				<item id="title"><![CDATA[逃狱相隔时间 (分钟)]]></item>
 				<item id="description"><![CDATA[雨次逃狱的相隔时间，可避免会员不断逃狱]]></item>
 				<item id="variable"><![CDATA[run_mins]]></item>
@@ -219,12 +219,57 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="19">
-				<item id="displayorder"><![CDATA[20]]></item>
+				<item id="displayorder"><![CDATA[22]]></item>
 				<item id="title"><![CDATA[营救请求相隔时间 (分钟)]]></item>
 				<item id="description"><![CDATA[建议设置相隔时间长些，避免会员滥发营救请求]]></item>
 				<item id="variable"><![CDATA[goodluck_mins]]></item>
 				<item id="type"><![CDATA[number]]></item>
 				<item id="value"><![CDATA[10]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="20">
+				<item id="displayorder"><![CDATA[23]]></item>
+				<item id="title"><![CDATA[物品巿场交易积分]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[shop_fee]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="21">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[打劫失败掉失物品机率]]></item>
+				<item id="description"><![CDATA[范围为0以上，1或以下，接受小数]]></item>
+				<item id="variable"><![CDATA[police_percentage]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0.05]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="22">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[积分高于多少才能打劫]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[thief_allow]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[100]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="23">
+				<item id="displayorder"><![CDATA[24]]></item>
+				<item id="title"><![CDATA[管理员列表]]></item>
+				<item id="description"><![CDATA[输入能进入前台管理中心的用户UID，以“,”分隔]]></item>
+				<item id="variable"><![CDATA[admin_list]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="24">
+				<item id="displayorder"><![CDATA[23]]></item>
+				<item id="title"><![CDATA[是否显示概率规则]]></item>
+				<item id="description"><![CDATA[显示则比较公平，不显示可令游戏更刺激]]></item>
+				<item id="variable"><![CDATA[sideinfo_open]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 		</item>
@@ -253,21 +298,52 @@
 				<item id="msg_21"><![CDATA[没有足够{title}]]></item>
 				<item id="msg_22"><![CDATA[两次发送营救请求的相隔时间不足，{mins} 分钟后再试试吧]]></item>
 				<item id="msg_23"><![CDATA[已发送营救请求]]></item>
+				<item id="msg_24"><![CDATA[您想打劫的用户正在监狱啊]]></item>
+				<item id="msg_25"><![CDATA[没有足够的 {credit} 购买物品]]></item>
+				<item id="msg_26"><![CDATA[成功购买物品]]></item>
+				<item id="msg_27"><![CDATA[成功新增物品]]></item>
+				<item id="msg_28"><![CDATA[成功编辑物品]]></item>
+				<item id="msg_29"><![CDATA[物品并不存在]]></item>
+				<item id="msg_30"><![CDATA[成功删除物品]]></item>
+				<item id="msg_31"><![CDATA[打劫 {username} 失败！逃走时被警方发现私藏物品，未收处理]]></item>
+				<item id="msg_32"><![CDATA[成功装备 {name}]]></item>
+				<item id="msg_33"><![CDATA[噢！您被 {username} 的保镖打了一顿。打劫失败！]]></item>
+				<item id="msg_34"><![CDATA[您还在狱中，巿场在城内啊？]]></item>
+				<item id="msg_35"><![CDATA[已脱下 {name}]]></item>
+				<item id="msg_36"><![CDATA[积分高于 {credit} 才能打劫]]></item>
 				<item id="notice_thief"><![CDATA[您被 {username} 神偷打劫了，失去 {lose}。您也来当神偷吧！<a href="plugin.php?id=dsu_marcothief">抢回您的积分</a>。]]></item>
 				<item id="notice_thief_fail"><![CDATA[{username} 神偷曾经尝试打劫您，但失败了，您幸运地保住了您的积分。<a href="plugin.php?id=dsu_marcothief">您也来当神偷吧！</a>]]></item>
+				<item id="notice_thief_guard"><![CDATA[{username} 神偷曾经尝试打劫您，但您的保镖救了您，保住了您的积分。<a href="plugin.php?id=dsu_marcothief">您也来当神偷吧！</a>]]></item>
 				<item id="notice_raids"><![CDATA[{username} 从监狱营救了您，您重获自由了。快多谢 {username} 吧！]]></item>
 				<item id="notice_raids_fail"><![CDATA[{username} 尝试从监狱营救您，但失败了。]]></item>
 				<item id="notice_goodluck"><![CDATA[助人为快乐之本！{username} 向您发送了营救请求，希望您能从监狱里把他营救出来。<a href="plugin.php?id=dsu_marcothief&mod=jail">立刻营救。</a>]]></item>
 				<item id="log_thief_sucess"><![CDATA[{username} 成功打劫了 {earn}]]></item>
 				<item id="log_thief_fail"><![CDATA[{username} 打劫失败了]]></item>
+				<item id="log_fail_guard"><![CDATA[{username} 被某某保镖打了一顿，打劫失败了]]></item>
+				<item id="log_fail_police"><![CDATA[{username} 打劫失败并被警方未收物品]]></item>
 				<item id="log_fail_jail"><![CDATA[{username} 打劫失败并即时入狱]]></item>
 				<item id="log_jail_raids"><![CDATA[{username} 成功营救 {raids_user}]]></item>
+				<item id="shop_1"><![CDATA[打劫成功率]]></item>
+				<item id="shop_2"><![CDATA[营救成功率]]></item>
+				<item id="shop_3"><![CDATA[逃狱成功率]]></item>
+				<item id="bag_1"><![CDATA[正在受保护直至 {time}]]></item>
+				<item id="bag_2"><![CDATA[没有贴身保镖正保护着你]]></item>
+				<item id="magic_1"><![CDATA[积分保护时间]]></item>
+				<item id="magic_2"><![CDATA[使用成功！贴身保镖正在保护着您。]]></item>
+				<item id="magic_3"><![CDATA[<br />一经使用，{hrs}小时内没人能打劫您的积分<br /><br />]]></item>
+				<item id="magic_4"><![CDATA[对不起，您无权请保镖。]]></item>
 			</item>
 			<item id="templatelang">
 				<item id="name"><![CDATA[我是神偷]]></item>
 				<item id="thief"><![CDATA[打劫会员]]></item>
+				<item id="jail"><![CDATA[监狱]]></item>
+				<item id="shop"><![CDATA[物品巿场]]></item>
+				<item id="bag"><![CDATA[我的背包]]></item>
 				<item id="list"><![CDATA[一般排行榜]]></item>
 				<item id="list_raids"><![CDATA[营救排行榜]]></item>
+				<item id="admin"><![CDATA[管理中心]]></item>
+				<item id="admin_shop"><![CDATA[物品管理]]></item>
+				<item id="admin_shop_add"><![CDATA[新增物品]]></item>
 				<item id="log"><![CDATA[神偷动态]]></item>
 				<item id="log_no"><![CDATA[暂没有任何神偷动态]]></item>
 				<item id="username"><![CDATA[用户名]]></item>
@@ -276,13 +352,12 @@
 				<item id="thief_intro"><![CDATA[在本站不够积分使用？想不想来个快速赚取方法？来打劫吧！抢去其他人的积分]]></item>
 				<item id="thief_fee_1"><![CDATA[打劫前也要做足准备，需收取]]></item>
 				<item id="thief_fee_2"><![CDATA[作为手续费]]></item>
-				<item id="thief_left_1"><![CDATA[每天您还可打劫]]></item>
+				<item id="thief_left_1"><![CDATA[今天您还可打劫]]></item>
 				<item id="thief_left_2"><![CDATA[次]]></item>
 				<item id="thief_1"><![CDATA[我要打劫]]></item>
 				<item id="thief_2"><![CDATA[开始打劫]]></item>
 				<item id="injail_1"><![CDATA[您还在狱中，下次打劫小心些吧，小心被警方看中！<br />离出狱还有]]></item>
 				<item id="injail_2"><![CDATA[分钟]]></item>
-				<item id="jail"><![CDATA[监狱]]></item>
 				<item id="jail_1"><![CDATA[这里有很多狱警，一旦营救失败，您也可能需要入狱。]]></item>
 				<item id="jail_2"><![CDATA[出狱时间]]></item>
 				<item id="jail_3"><![CDATA[营救]]></item>
@@ -300,6 +375,41 @@
 				<item id="goodluck_1"><![CDATA[给UID]]></item>
 				<item id="goodluck_2"><![CDATA[发送营救请求]]></item>
 				<item id="goodluck_3"><![CDATA[传福音给他，等待被营救]]></item>
+				<item id="shop_1"><![CDATA[名称]]></item>
+				<item id="shop_2"><![CDATA[简介]]></item>
+				<item id="shop_3"><![CDATA[作用]]></item>
+				<item id="shop_4"><![CDATA[价格]]></item>
+				<item id="shop_5"><![CDATA[已经购买]]></item>
+				<item id="shop_6"><![CDATA[购买]]></item>
+				<item id="shop_7"><![CDATA[您确定要删除吗？]]></item>
+				<item id="shop_8"><![CDATA[没有物品]]></item>
+				<item id="shop_9"><![CDATA[新增物品]]></item>
+				<item id="shop_10"><![CDATA[打劫成功率]]></item>
+				<item id="shop_11"><![CDATA[营救成功率]]></item>
+				<item id="shop_12"><![CDATA[逃狱成功率]]></item>
+				<item id="shop_13"><![CDATA[编辑物品]]></item>
+				<item id="bag_1"><![CDATA[没有购买物品]]></item>
+				<item id="bag_2"><![CDATA[贴身保镖]]></item>
+				<item id="bag_3"><![CDATA[装备]]></item>
+				<item id="bag_4"><![CDATA[脱下]]></item>
+				<item id="side_1"><![CDATA[概率规则]]></item>
+				<item id="side_2"><![CDATA[打劫失败掉失物品机率]]></item>
+				<item id="side_3"><![CDATA[打劫失败入狱机率]]></item>
+				<item id="side_4"><![CDATA[营救失败入狱机率]]></item>
+			</item>
+			<item id="installlang">
+				<item id="shop_1"><![CDATA[小刀]]></item>
+				<item id="shop_2"><![CDATA[常用的打劫工具，用来吓人]]></item>
+				<item id="shop_3"><![CDATA[手枪]]></item>
+				<item id="shop_4"><![CDATA[较高级的打劫工具，一旦走火便...]]></item>
+				<item id="shop_5"><![CDATA[绳索]]></item>
+				<item id="shop_6"><![CDATA[进入监狱必备工具]]></item>
+				<item id="shop_7"><![CDATA[炸弹]]></item>
+				<item id="shop_8"><![CDATA[轻易炸开监狱入口 呵呵~]]></item>
+				<item id="shop_9"><![CDATA[大铁锤]]></item>
+				<item id="shop_10"><![CDATA[破坏监狱四周的墙]]></item>
+				<item id="shop_11"><![CDATA[滑版]]></item>
+				<item id="shop_12"><![CDATA[把握时间 飞出监狱]]></item>
 			</item>
 		</item>
 		<item id="installfile"><![CDATA[install.php]]></item>

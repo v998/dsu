@@ -33,9 +33,10 @@ $_StatUrl=$dsuStatUrl.'?action=do&info='.$_statInfo.'&md5check='.$_md5Check;
 echo "<script src=\"".$_StatUrl."\" type=\"text/javascript\"></script>";
 
 DB::query("DROP TABLE IF EXISTS ".DB::table('dsu_marcothief')."");
+DB::query("DROP TABLE IF EXISTS ".DB::table('dsu_marcothief_bag')."");
 DB::query("DROP TABLE IF EXISTS ".DB::table('dsu_marcothief_log')."");
+DB::query("DROP TABLE IF EXISTS ".DB::table('dsu_marcothief_shop')."");
 DB::query("DELETE FROM ".DB::table('common_cron')." WHERE filename='dsu_marcothief_daily.inc.php'");
-@unlink(DISCUZ_ROOT.'./source/include/cron/dsu_marcothief_daily.inc.php');
 
 $finish = TRUE;
 ?>
