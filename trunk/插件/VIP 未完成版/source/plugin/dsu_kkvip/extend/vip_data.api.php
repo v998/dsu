@@ -36,6 +36,8 @@ if(defined('IN_ADMINCP') && $_G['gp_api']){
 		foreach ($codes as $line){
 			DB::insert('dsu_vip_codes', $line);
 		}
+		require_once libfile('function/cache');
+		updatecache('dsu_kkvip');
 		cpmsg('&#36824;&#21407;&#25104;&#21151;&#65281;', "action=plugins&operation=config&identifier=dsu_kkvip&pmod=api&api={$_G[gp_api]}", 'succeed');
 		dexit();
 	}

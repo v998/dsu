@@ -53,6 +53,8 @@ switch($_GET['step']){
 		break;
 	case 'sql':
 		runquery($sql);
+		require_once libfile('function/cache');
+		updatecache('dsu_kkvip');
 		cpmsg($installlang['step2_ok'], "{$request_url}&step=stat", 'loading');
 		break;
 	case 'stat':

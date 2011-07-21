@@ -5,6 +5,8 @@ $ext_name = '&#12304;DSU&#12305;&#27599;&#26085;&#31614;&#21040;(&#20316;&#32773
 
 if(defined('IN_ADMINCP') && $_G['gp_api']){
 	if(!$_G['gp_submit']) {
+		@mkdir(DISCUZ_ROOT.'./data/vip_extend', 0777);
+		@touch(DISCUZ_ROOT.'./data/vip_extend/dsu_paulsign.conf');
 		$config = @file_get_contents(DISCUZ_ROOT.'./data/vip_extend/dsu_paulsign.conf');
 		showtableheader('[DSU]&#27599;&#26085;&#31614;&#21040;&#27169;&#22359; For VIP By [DSU]Shy9000');
 		showformheader("plugins&operation=config&identifier=dsu_kkvip&pmod=api&api={$_G[gp_api]}");
@@ -13,13 +15,12 @@ if(defined('IN_ADMINCP') && $_G['gp_api']){
 		showformfooter();
 		showtablefooter();
 	} elseif($_G['gp_submit'] && $_G['adminid']=='1' && $_G['gp_formhash']==FORMHASH) {
-		@mkdir(DISCUZ_ROOT.'./data/vip_extend', 0777);
 		file_put_contents(DISCUZ_ROOT.'./data/vip_extend/dsu_paulsign.conf', $_G['gp_newconf']);
 		cpmsg('&#20445;&#23384;&#25104;&#21151;', "action=plugins&operation=config&identifier=dsu_kkvip&pmod=api&api={$_G[gp_api]}", 'succeed');
 	}else{
 		cpmsg('&#38169;&#35823;&#65306;&#38750;&#27861;&#35843;&#29992;&#25991;&#20214;', "action=plugins&operation=config&identifier=dsu_kkvip&pmod=api&api={$_G[gp_api]}", 'error');
 	}
-}elseif(defined('IN_DISCUZ')){
+}elseif(defined('IN_DISCUZ') && !defined('IN_ADMINCP')){
 	require_once libfile('class/vip');
 	$vip = $vip ? $vip : new vip();
 	if($vip->on){

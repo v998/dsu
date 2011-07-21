@@ -24,7 +24,7 @@ if (submitcheck('month')){
 		if($discount['exptime'] < TIMESTAMP) $discount['money'] = 0;
 	}
 	if ($my_credit < ($vip->vars['vip_cost']*$_G['gp_month']-$discount['money'])) showmessage('dsu_kkvip:buy_nomoney','vip.php?do=paycenter');
-	if($discount['money']) $vip->pay_vip($_G['uid'],$_G['gp_month']*30);
+	if($discount['only_once']) DB::delete('dsu_vip_codes', array('code'=>$discount['code']));
 	DB::delete('dsu_vip_codes', "code='{$discount_code}'");
 	updatemembercount($_G['uid'], array($vip->vars['creditid']=>-($vip->vars['vip_cost']*$_G['gp_month']-$discount['money'])), false);
 	$vip->pay_vip($_G['uid'], $_G['gp_month']*30);

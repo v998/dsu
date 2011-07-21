@@ -11,8 +11,8 @@ $vip = $vip ? $vip : new vip();
 $nowtime = TIMESTAMP;
 
 // 过期处理
-$vip->query("DELETE FROM pre_dsu_vip WHERE exptime<='{$nowtime}'");
 $vip->query("UPDATE pre_dsu_vip v, pre_common_member m SET m.groupid=v.oldgroup WHERE m.uid=v.uid AND v.exptime<='{$nowtime}'");
+$vip->query("DELETE FROM pre_dsu_vip WHERE exptime<='{$nowtime}'");
 
 // 成长值处理
 $vip->query("UPDATE pre_dsu_vip SET czz=czz+'{$vip->vars[vip_czzday]}' WHERE exptime>'{$nowtime}'", 'UNBUFFERED');

@@ -17,7 +17,6 @@ class plugin_dsu_kkvip{
 		}
 		$_G['vip']=$vip->getvipinfo($_G['uid']);
 		$_G['vip']['isvip']=true;
-		$_G['vip']['level_text']="VIP {$_G[vip][level]}";
 		if ($vip->vars['vip_noad']){
 			loadcache('advs');
 			unset($_G['cache']['advs']);
