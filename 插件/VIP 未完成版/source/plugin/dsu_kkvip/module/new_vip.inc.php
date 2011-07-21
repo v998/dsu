@@ -6,7 +6,7 @@ foreach ($vip_intro_array as $text){
 }
 $page = $_G['gp_page'] ? intval($_G['gp_page']) : 1;
 $start = ($page - 1) * 20;
-$query = $vip->query("SELECT m.username,m.uid,v.level,v.czz,v.jointime FROM pre_dsu_vip v, pre_common_member m WHERE m.uid=v.uid ORDER BY v.jointime DESC LIMIT {$start},20");
+$query = $vip->query("SELECT m.username,m.uid,v.level,v.czz,v.jointime,v.year_pay FROM pre_dsu_vip v, pre_common_member m WHERE m.uid=v.uid ORDER BY v.jointime DESC LIMIT {$start},20");
 while($value=DB::fetch($query)){
 	if ($value['jointime']){
 		$value['jointime']=dgmdate($value['jointime'],'u');

@@ -51,7 +51,11 @@ class vip{
 			require_once libfile('function/cache');
 			updatecache('dsu_kkvip');
 		}else{
-			$this->query("UPDATE pre_dsu_vip SET exptime=exptime+'{$time}' , year_pay='{$year_pay}'");
+			if($year_pay){
+				$this->query("UPDATE pre_dsu_vip SET exptime=exptime+'{$time}' , year_pay='1' WHERE uid='{$uid}'");
+			}else{
+				$this->query("UPDATE pre_dsu_vip SET exptime=exptime+'{$time}' WHERE uid='{$uid}'");
+			}
 		}
 	}
 	function _load_cache(){
