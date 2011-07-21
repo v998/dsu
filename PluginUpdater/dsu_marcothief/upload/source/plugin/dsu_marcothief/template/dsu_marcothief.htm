@@ -18,7 +18,7 @@
         <li<!--{if $mod == 'shop'}--> class="a"<!--{/if}--> id="shop" onmouseover="showMenu(this.id)"><a href="plugin.php?id=dsu_marcothief&mod=shop" hidefocus="true" class="dropmenu">{lang dsu_marcothief:shop}</a></li>
         <li<!--{if $mod == 'list' && !$_G[gp_by]}--> class="a"<!--{/if}-->><a href="plugin.php?id=dsu_marcothief&mod=list">{lang dsu_marcothief:list}</a></li>
         <li<!--{if $mod == 'list' && $_G[gp_by] == 'raids'}--> class="a"<!--{/if}-->><a href="plugin.php?id=dsu_marcothief&mod=list&by=raids">{lang dsu_marcothief:list_raids}</a></li>
-        <!--{if $_G[adminid] == '1'}--><li<!--{if $mod == 'admin_shop'}--> class="a"<!--{/if}--> id="admin" onmouseover="showMenu(this.id)"><a href="javascript:void(0);" hidefocus="true" class="dropmenu">{lang dsu_marcothief:admin}</a></li><!--{/if}-->
+        <!--{if is_admin(FALSE) == TRUE}--><li<!--{if $mod == 'admin_shop'}--> class="a"<!--{/if}--> id="admin" onmouseover="showMenu(this.id)"><a href="javascript:void(0);" hidefocus="true" class="dropmenu">{lang dsu_marcothief:admin}</a></li><!--{/if}-->
       </ul>
       <ul class="p_pop h_pop" id="shop_menu" style="display:none;">
         <li><a href="plugin.php?id=dsu_marcothief&mod=bag">{lang dsu_marcothief:bag}</a></li>

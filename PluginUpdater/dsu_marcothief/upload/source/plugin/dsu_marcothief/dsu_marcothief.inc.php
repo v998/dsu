@@ -213,7 +213,7 @@ if(empty($mod)){
 		$page = 10 && $page > 10 ? 1 : $page;
 		$start_limit = ($page - 1) * 10;
 		$multipage = multi($num, 10, $page, "plugin.php?id=dsu_marcothief&mod={$mod}", 10);
-		$sql = "SELECT b.shopid,s.* FROM ".DB::table('dsu_marcothief_shop')." s LEFT JOIN ".DB::table('dsu_marcothief_bag')." b ON s.id=b.shopid ORDER BY s.type LIMIT $start_limit, 10";
+		$sql = "SELECT b.uid,b.shopid,s.* FROM ".DB::table('dsu_marcothief_shop')." s LEFT JOIN ".DB::table('dsu_marcothief_bag')." b ON s.id=b.shopid AND b.uid='$_G[uid]' ORDER BY s.type LIMIT $start_limit, 10";
 		$query = DB::query($sql);
 		$list = array();
 		while($data = DB::fetch($query)){
