@@ -1,6 +1,6 @@
 {template dsu_kkvip:header}
 <div class="pay">
-	<form method="post" action="vip.php?do=paycenter&action=give" onsubmit="$('submit_btn').disabled='disabled';">
+	<form method="post" action="vip.php?do=give_vip" onsubmit="$('submit_btn').disabled='disabled';">
 		<input type="hidden" name="formhash" value="{FORMHASH}" />
 		<h3>{lang dsu_kkvip:vip_pay_give}</h3>
 		<div class="tips">
@@ -13,7 +13,7 @@
 				<span>{lang dsu_kkvip:paycenter_buy_htm_5}</span>$_G[member][username]
 			</li>
 			<li>
-				<span>{lang dsu_kkvip:paycenter_buy_htm_6}</span><input type="text" name="uid" onblur="ajaxget('vip.php?do=give_vip&getuid=yes&username='+this.value, 'give_uid');" class="px"/>
+				<span>{lang dsu_kkvip:paycenter_buy_htm_6}</span><input type="text" name="username" onblur="ajaxget('vip.php?do=give_vip&getuid=yes&username='+this.value, 'give_uid');" class="px"/>
 			</li>
 			<li>
 				<span>{lang dsu_kkvip:buyto}</span><span id="give_uid" style="text-align: left;"></span><br>				
