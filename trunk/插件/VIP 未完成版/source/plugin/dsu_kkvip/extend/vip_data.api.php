@@ -46,10 +46,7 @@ if(defined('IN_ADMINCP') && $_G['gp_api']){
 	showformfooter();
 	showtablefooter();
 	showtableheader('VIP&#25968;&#25454;&#36824;&#21407;');
-	if(!is_dir(DISCUZ_ROOT.'./data/vip_backup/'){
-		@mkdir(DISCUZ_ROOT.'./data/vip_backup/', 0777);
-		@touch(DISCUZ_ROOT.'./data/vip_backup/index.htm');
-	}
+	!is_dir(DISCUZ_ROOT.'./data/vip_backup/') && @mkdir(DISCUZ_ROOT.'./data/vip_backup/', 0777);
 	$backup_dir = @dir(DISCUZ_ROOT.'./data/vip_backup/');
 	$flag = false;
 	while(false !== ($entry = $backup_dir->read())) {
