@@ -66,7 +66,7 @@
 				</item>
 				<item id="4">
 					<item id="name"><![CDATA[api]]></item>
-					<item id="menu"><![CDATA[接口设置]]></item>
+					<item id="menu"><![CDATA[扩展接口]]></item>
 					<item id="url"><![CDATA[]]></item>
 					<item id="type"><![CDATA[3]]></item>
 					<item id="adminid"><![CDATA[0]]></item>
@@ -266,8 +266,8 @@ VIP帖子高亮
 				<item id="discount_menu"><![CDATA[删|折扣码|折扣码有效期至|有效期内可反复使用|折扣码价值]]></item>
 				<item id="edit_user"><![CDATA[编辑指定用户的 VIP 信息]]></item>
 				<item id="exptime"><![CDATA[VIP 服务过期时间]]></item>
-				<item id="extend_config"><![CDATA[接口配置]]></item>
-				<item id="extend_list"><![CDATA[VIP 接口列表]]></item>
+				<item id="extend_config"><![CDATA[配置]]></item>
+				<item id="extend_list"><![CDATA[VIP 扩展接口列表]]></item>
 				<item id="give_succeed"><![CDATA[成功购买了 {month} 个月的 VIP 服务给用户“{giveto}”！]]></item>
 				<item id="help_pay"><![CDATA[该用户尚未开通 VIP，帮他开通？]]></item>
 				<item id="help_pay_btn"><![CDATA[确认开通]]></item>
