@@ -12,4 +12,4 @@ while($value=DB::fetch($query)){
 }
 $amount = count($vip->vip_cache);
 $multipage = multi($amount, 20, $page, 'vip.php?do=vip_top');
-include template('dsu_kkvip:new_vip');
+include template('dsu_kkvip:vip_top');

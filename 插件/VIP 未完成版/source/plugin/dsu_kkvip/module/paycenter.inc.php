@@ -21,12 +21,13 @@ if (submitcheck('month')){
 	if ($_G['gp_discount_code']){
 		$discount=DB::fetch($vip->query("SELECT * FROM pre_dsu_vip_codes WHERE code='{$_G[gp_discount_code]}'"));
 		if($discount['money'] > $vip->vars['vip_cost']*$_G['gp_month']) $discount['money']=$vip->vars['vip_cost']*$_G['gp_month'];
-		if($discount_code['exptime'] >= TIMESTAMP) $discount_code=$_G['gp_discount_code'];
+		if($discount['exptime'] < TIMESTAMP) $discount['money'] = 0;
 	}
 	if ($my_credit < ($vip->vars['vip_cost']*$_G['gp_month']-$discount['money'])) showmessage('dsu_kkvip:buy_nomoney','vip.php?do=paycenter');
 	if($discount['money']) $vip->pay_vip($_G['uid'],$_G['gp_month']*30);
 	DB::delete('dsu_vip_codes', "code='{$discount_code}'");
 	updatemembercount($_G['uid'], array($vip->vars['creditid']=>-($vip->vars['vip_cost']*$_G['gp_month']-$discount['money'])), false);
+	$vip->pay_vip($_G['uid'], $_G['gp_month']*30);
 	$trade_succeed	= true;
 	$trade_user		= $_G['uid'];
 	showmessage('dsu_kkvip:buy_succeed','vip.php?do=paycenter',array('month'=>$_G['gp_month']));
