@@ -379,16 +379,13 @@ VIP帖子高亮
 				<item id="year_slogans"><![CDATA[一樣的價格，更多的特權]]></item>
 			</item>
 			<item id="installlang">
-				<item id="clean_cron"><![CDATA[正在處理計劃任務...]]></item>
-				<item id="clean_data"><![CDATA[正在清除數據...]]></item>
 				<item id="header"><![CDATA[【DSU】VIP 安裝嚮導]]></item>
-				<item id="stat_uninstall"><![CDATA[卸載成功，正在發送卸載反饋...{stat_code}]]></item>
 				<item id="step1"><![CDATA[校驗程序]]></item>
 				<item id="step1_ok"><![CDATA[插件文件完整性檢查通過，正在準備安裝...]]></item>
 				<item id="step2"><![CDATA[升級數據庫]]></item>
 				<item id="step2_ok"><![CDATA[升級數據庫完成，正在完成安裝...]]></item>
 				<item id="step3"><![CDATA[完成安裝]]></item>
-				<item id="step3_ok"><![CDATA[安裝成功，正在發送安裝反饋...{stat_code}]]></item>
+				<item id="step3_ok"><![CDATA[安裝成功，正在發送安裝反饋...{stat_code}<br>發送完成！]]></item>
 				<item id="validator_new"><![CDATA[<h4 class="infotitle2">你即將安裝的插件有新版本 {newver} 可用，是否要繼續安裝？<br /><br /><a href="{link}" target="_blank">點擊這裡查看插件信息</a></h4>]]></item>
 				<item id="validator_error"><![CDATA[<h4 class="infotitle3">你即將安裝的不是原版插件，是否要繼續安裝？<br /><br /><a href="{link}" target="_blank">點擊這裡查看插件信息</a></h4>]]></item>
 			</item>

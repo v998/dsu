@@ -31,10 +31,10 @@ if(defined('IN_ADMINCP') && $_G['gp_api']){
 		DB::query('TRUNCATE TABLE '.DB::table('dsu_vip'));
 		DB::query('TRUNCATE TABLE '.DB::table('dsu_vip_codes'));
 		foreach ($main as $line){
-			DB::insert('pre_dsu_vip', $line);
+			DB::insert('dsu_vip', $line);
 		}
 		foreach ($codes as $line){
-			DB::insert('pre_dsu_vip_codes', $line);
+			DB::insert('dsu_vip_codes', $line);
 		}
 		cpmsg('&#36824;&#21407;&#25104;&#21151;&#65281;', "action=plugins&operation=config&identifier=dsu_kkvip&pmod=api&api={$_G[gp_api]}", 'succeed');
 		dexit();
