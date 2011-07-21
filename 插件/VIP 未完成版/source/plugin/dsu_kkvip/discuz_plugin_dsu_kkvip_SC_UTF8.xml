@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2]]></item>
+	<item id="Time"><![CDATA[2011-07-21 02:02]]></item>
+	<item id="From"><![CDATA[KK's Laboratory (http://127.0.0.1/x2/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[【DSU】VIP]]></item>
+			<item id="identifier"><![CDATA[dsu_kkvip]]></item>
+			<item id="description"><![CDATA[]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[dsu_kkvip/]]></item>
+			<item id="copyright"><![CDATA[kookxiang @ DSU Team.]]></item>
+			<item id="version"><![CDATA[1.0]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[user]]></item>
+					<item id="menu"><![CDATA[编辑用户]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[vip]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[vip]]></item>
+					<item id="menu"><![CDATA[VIP]]></item>
+					<item id="url"><![CDATA[vip.php]]></item>
+					<item id="type"><![CDATA[1]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[discount]]></item>
+					<item id="menu"><![CDATA[折扣码管理]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="4">
+					<item id="name"><![CDATA[api]]></item>
+					<item id="menu"><![CDATA[扩展接口]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[9]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[帖内是否以红名方式显示]]></item>
+				<item id="description"><![CDATA[此功能极易与其它美化代码冲突，建议您手动修改.]]></item>
+				<item id="variable"><![CDATA[viewthread_redname]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[购买使用积分]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[creditid]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[VIP 每天成长值]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[vip_czzday]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[10]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[年费 VIP 额外成长值]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[vip_czz_year]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[单月购买价格]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[vip_cost]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[10]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[20]]></item>
+				<item id="title"><![CDATA[VIP1 绑定用户组]]></item>
+				<item id="description"><![CDATA[必填，下面绑定的每一项也都是必填]]></item>
+				<item id="variable"><![CDATA[vip_1_group]]></item>
+				<item id="type"><![CDATA[group]]></item>
+				<item id="value"><![CDATA[19]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[21]]></item>
+				<item id="title"><![CDATA[VIP2 绑定用户组]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[vip_2_group]]></item>
+				<item id="type"><![CDATA[group]]></item>
+				<item id="value"><![CDATA[19]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[VIP 特权]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[vip_intro]]></item>
+				<item id="type"><![CDATA[textarea]]></item>
+				<item id="value"><![CDATA[屏蔽广告
+免费下载论坛附件
+免费下载收费附件
+帖子不用购买即可查看
+VIP帖子高亮
+帖内红名特效
+发帖免审核
+免费发送短消息]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="title"><![CDATA[VIP 去广告]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[vip_noad]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[8]]></item>
+				<item id="title"><![CDATA[VIP 高亮设置]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[highlight_blod]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[0=关闭此功能
+1=VIP 帖子加粗
+2=VIP 帖子高亮
+3=VIP 帖子高亮加粗]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[VIP 高亮颜色]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[highlight_color]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[blue]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[22]]></item>
+				<item id="title"><![CDATA[VIP3 绑定用户组]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[vip_3_group]]></item>
+				<item id="type"><![CDATA[group]]></item>
+				<item id="value"><![CDATA[19]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[23]]></item>
+				<item id="title"><![CDATA[VIP4 绑定用户组]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[vip_4_group]]></item>
+				<item id="type"><![CDATA[group]]></item>
+				<item id="value"><![CDATA[19]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[24]]></item>
+				<item id="title"><![CDATA[VIP5 绑定用户组]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[vip_5_group]]></item>
+				<item id="type"><![CDATA[group]]></item>
+				<item id="value"><![CDATA[19]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[25]]></item>
+				<item id="title"><![CDATA[VIP6 绑定用户组]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[vip_6_group]]></item>
+				<item id="type"><![CDATA[group]]></item>
+				<item id="value"><![CDATA[19]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[60]]></item>
+				<item id="title"><![CDATA[购买VIP折扣用户组]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[vip_discount_group]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="value"><![CDATA[]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[61]]></item>
+				<item id="title"><![CDATA[购买VIP折扣]]></item>
+				<item id="description"><![CDATA[不打折请设为1，打N折请输入0.N]]></item>
+				<item id="variable"><![CDATA[vip_discount]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0.5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="17">
+				<item id="displayorder"><![CDATA[62]]></item>
+				<item id="title"><![CDATA[VIP 续费折扣]]></item>
+				<item id="description"><![CDATA[不打折请设为1，打N折请输入0.N]]></item>
+				<item id="variable"><![CDATA[vip_discount2]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[0.5]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="allow_repeat"><![CDATA[有效期内可反复使用]]></item>
+				<item id="buy_nomoney"><![CDATA[对不起，您的积分不足！]]></item>
+				<item id="buy_succeed"><![CDATA[成功购买了 {month} 个月的 VIP 服务！]]></item>
+				<item id="code_exp"><![CDATA[折扣码过期时间]]></item>
+				<item id="code_money"><![CDATA[折扣码价值]]></item>
+				<item id="czz"><![CDATA[会员成长值]]></item>
+				<item id="delete_succeed"><![CDATA[成功删除指定的折扣码！]]></item>
+				<item id="discount_manager"><![CDATA[折扣码管理]]></item>
+				<item id="discount_menu"><![CDATA[删|折扣码|折扣码有效期至|有效期内可反复使用|折扣码价值]]></item>
+				<item id="edit_user"><![CDATA[编辑指定用户的 VIP 信息]]></item>
+				<item id="exptime"><![CDATA[VIP 服务过期时间]]></item>
+				<item id="extend_config"><![CDATA[配置]]></item>
+				<item id="extend_list"><![CDATA[VIP 扩展接口列表]]></item>
+				<item id="give_succeed"><![CDATA[成功购买了 {month} 个月的 VIP 服务给用户“{giveto}”！]]></item>
+				<item id="help_pay"><![CDATA[该用户尚未开通 VIP，帮他开通？]]></item>
+				<item id="help_pay_btn"><![CDATA[确认开通]]></item>
+				<item id="import_data"><![CDATA[折扣码数据]]></item>
+				<item id="import_discount_code"><![CDATA[批量导入 VIP 折扣码]]></item>
+				<item id="import_succeed"><![CDATA[成功导入 {count} 个折扣码！]]></item>
+				<item id="import_tips"><![CDATA[单个折扣码最长32位，建议用英文和数字，一行一个折扣码]]></item>
+				<item id="jointime"><![CDATA[VIP 服务开通时间]]></item>
+				<item id="modify_vip_info"><![CDATA[修改 VIP 用户信息]]></item>
+				<item id="new_vip"><![CDATA[会员新兵]]></item>
+				<item id="no_extends"><![CDATA[您没有安装任何 VIP 接口]]></item>
+				<item id="no_time"><![CDATA[管理员手动开通]]></item>
+				<item id="notification_give"><![CDATA[您的朋友 {username} 帮您开通了 {month} 个月的 VIP 服务，还不快感谢他？]]></item>
+				<item id="pay_time"><![CDATA[开通时长 (天)]]></item>
+				<item id="uid_not_exists"><![CDATA[找不到该用户！]]></item>
+				<item id="uid_not_exists_return"><![CDATA[找不到该用户，请返回修改！]]></item>
+				<item id="update_cache"><![CDATA[更新 VIP 系统缓存]]></item>
+				<item id="user_edit_succeed"><![CDATA[用户 VIP 信息编辑成功！]]></item>
+				<item id="user_not_exist"><![CDATA[找不到用户 {username}，请检查输入]]></item>
+				<item id="username"><![CDATA[用户名]]></item>
+				<item id="vip_czz"><![CDATA[成长值]]></item>
+				<item id="vip_index"><![CDATA[会员首页]]></item>
+				<item id="vip_level"><![CDATA[VIP等级]]></item>
+				<item id="vip_mylevel"><![CDATA[我的成长信息]]></item>
+				<item id="vip_pay"><![CDATA[开通会员]]></item>
+				<item id="vip_pay2"><![CDATA[续费会员]]></item>
+				<item id="vip_pay_give"><![CDATA[帮好友开通]]></item>
+				<item id="vip_top"><![CDATA[会员排行]]></item>
+				<item id="year"><![CDATA[年费会员]]></item>
+				<item id="year_vip"><![CDATA[是否为年费会员]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="buytime"><![CDATA[开通时长 (月)：]]></item>
+				<item id="buyto"><![CDATA[要开通账号的 UID：]]></item>
+				<item id="cost"><![CDATA[使用 VIP 会员服务您每月需支付]]></item>
+				<item id="cost2"><![CDATA[一旦您确认开通服务，相应积分将不能返还。请您慎重选择！]]></item>
+				<item id="cost3"><![CDATA[提示：一次性开通12个月以上将成为 年费会员]]></item>
+				<item id="cost_js"><![CDATA[使用 VIP 会员服务您每月需支付论坛积分！\n一旦您确认开通服务，相应积分将不能返还。\n\n您确定要开通？]]></item>
+				<item id="discounted"><![CDATA[(折后价)]]></item>
+				<item id="exptime"><![CDATA[续费时长 (月)：]]></item>
+				<item id="my_info"><![CDATA[我的会员信息]]></item>
+				<item id="my_info_czz"><![CDATA[VIP 成长值：]]></item>
+				<item id="my_info_exptime"><![CDATA[VIP 到期时间：]]></item>
+				<item id="my_info_level"><![CDATA[VIP 当前等级：]]></item>
+				<item id="mylevel_czz"><![CDATA[您的成长值为：]]></item>
+				<item id="mylevel_czz_add"><![CDATA[根据论坛相关规则，您的成长值每天增加：]]></item>
+				<item id="mylevel_htm_9"><![CDATA[。在目前的成长阶段，您享受以下的特权。为了防止您的成长值被清除，请及时续费。]]></item>
+				<item id="mylevel_my_level"><![CDATA[您目前是论坛会员]]></item>
+				<item id="new_vip"><![CDATA[会员新兵]]></item>
+				<item id="new_vip_htm_5"><![CDATA[开通时间]]></item>
+				<item id="paycenter_buy_htm_1"><![CDATA[您当前共有]]></item>
+				<item id="paycenter_buy_htm_2"><![CDATA[，最多可购买]]></item>
+				<item id="paycenter_buy_htm_3"><![CDATA[个月的 VIP 服务。]]></item>
+				<item id="paycenter_buy_htm_4"><![CDATA[积分充值]]></item>
+				<item id="paycenter_buy_htm_5"><![CDATA[付费账号：]]></item>
+				<item id="paycenter_buy_htm_6"><![CDATA[开通账号：]]></item>
+				<item id="paycenter_htm_1"><![CDATA[续费账号：]]></item>
+				<item id="paycenter_htm_2"><![CDATA[抵价券：]]></item>
+				<item id="paycenter_htm_3"><![CDATA[尊贵的会员，您的成长阶段为]]></item>
+				<item id="paycenter_htm_4"><![CDATA[。在目前的成长阶段，您享受以下的特权。]]></item>
+				<item id="paycenter_htm_5"><![CDATA[优惠价格：]]></item>
+				<item id="side_dh"><![CDATA[VIP导航]]></item>
+				<item id="vip_center"><![CDATA[VIP 中心]]></item>
+				<item id="vip_index"><![CDATA[会员首页]]></item>
+				<item id="vip_mylevel"><![CDATA[我的成长信息]]></item>
+				<item id="vip_pay"><![CDATA[开通会员]]></item>
+				<item id="vip_pay2"><![CDATA[续费会员]]></item>
+				<item id="vip_pay_give"><![CDATA[帮好友开通]]></item>
+				<item id="vip_sidebar_htm_1"><![CDATA[欢迎您！]]></item>
+				<item id="vip_sidebar_htm_2"><![CDATA[您还不是会员]]></item>
+				<item id="vip_sidebar_htm_3"><![CDATA[成长速度]]></item>
+				<item id="vip_sidebar_htm_4"><![CDATA[点]]></item>
+				<item id="vip_sidebar_htm_5"><![CDATA[天]]></item>
+				<item id="vip_sidebar_htm_6"><![CDATA[对不起，您还不是会员]]></item>
+				<item id="vip_sidebar_htm_7"><![CDATA[暂时无法享受会员特权。]]></item>
+				<item id="vip_sidebar_htm_8"><![CDATA[个人中心]]></item>
+				<item id="vip_top"><![CDATA[会员排行]]></item>
+				<item id="vip_top_htm_1"><![CDATA[已经有这么多会员加入了，还不赶紧加入？]]></item>
+				<item id="vip_top_htm_2"><![CDATA[会员名]]></item>
+				<item id="vip_top_htm_3"><![CDATA[成长值]]></item>
+				<item id="vip_top_htm_4"><![CDATA[会员等级]]></item>
+				<item id="vipcenter_htm_1"><![CDATA[持续使用会员服务到]]></item>
+				<item id="vipcenter_htm_10"><![CDATA[红名显示]]></item>
+				<item id="vipcenter_htm_12"><![CDATA[名称红色尊贵显示]]></item>
+				<item id="vipcenter_htm_13"><![CDATA[帖子高亮]]></item>
+				<item id="vipcenter_htm_15"><![CDATA[只要发帖就是高亮]]></item>
+				<item id="vipcenter_htm_16"><![CDATA[全部特权]]></item>
+				<item id="vipcenter_htm_17"><![CDATA[尊贵的会员，您现在享受以下特权。为了防止您的成长值被清除，请及时续费。]]></item>
+				<item id="vipcenter_htm_19"><![CDATA[您目前还不是会员，不能享受以下特权。]]></item>
+				<item id="vipcenter_htm_2"><![CDATA[，您将升级至]]></item>
+				<item id="vipcenter_htm_20"><![CDATA[为了防止您的成长值被清除，请及时续费。]]></item>
+				<item id="vipcenter_htm_3"><![CDATA[您还不是会员，加入会员享受]]></item>
+				<item id="vipcenter_htm_4"><![CDATA[尊贵特权]]></item>
+				<item id="vipcenter_htm_5"><![CDATA[。]]></item>
+				<item id="vipcenter_htm_7"><![CDATA[去除广告]]></item>
+				<item id="vipcenter_htm_9"><![CDATA[网站所有广告均可去除]]></item>
+				<item id="welcome_expiretime"><![CDATA[您的会员到期时间：]]></item>
+				<item id="welcome_not_year"><![CDATA[现在开通 <font color="red"><b>VIP 年费会员</b></font>，每天可获得额外成长值]]></item>
+				<item id="welcome_novip"><![CDATA[欢迎来到会员中心! 尊敬的用户 ]]></item>
+				<item id="welcome_novip2"><![CDATA[现在成为会员，您可以享受以下优惠和特权：]]></item>
+				<item id="welcome_vip"><![CDATA[欢迎来到会员中心! 尊敬的会员 ]]></item>
+				<item id="welcome_vip2"><![CDATA[您尊享以下优惠和特权：]]></item>
+				<item id="welcome_year_tips"><![CDATA[您是尊贵的 <font color="red"><b>VIP 年费会员</b></font>，您每天可获得额外成长值]]></item>
+				<item id="year"><![CDATA[年费会员]]></item>
+				<item id="year_buy_now"><![CDATA[现在就去 开通 / 续费 年费会员]]></item>
+				<item id="year_by_doing"><![CDATA[一次性开通12个月，就能立即成为尊贵的年费会员。]]></item>
+				<item id="year_intro_1"><![CDATA[年费会员是指最后一次支付为按年支付的会员（一样的价格），在享受会员诸多特权外，还拥有额外]]></item>
+				<item id="year_intro_2"><![CDATA[点/天VIP成长值，以及更多精彩特权。]]></item>
+				<item id="year_slogans"><![CDATA[一样的价格，更多的特权]]></item>
+			</item>
+			<item id="installlang">
+				<item id="clean_cron"><![CDATA[正在处理计划任务...]]></item>
+				<item id="clean_data"><![CDATA[正在清除数据...]]></item>
+				<item id="header"><![CDATA[【DSU】VIP 安装向导]]></item>
+				<item id="stat_uninstall"><![CDATA[卸载成功，正在发送卸载反馈...{stat_code}]]></item>
+				<item id="step1"><![CDATA[校验程序]]></item>
+				<item id="step1_ok"><![CDATA[插件文件完整性检查通过，正在准备安装...]]></item>
+				<item id="step2"><![CDATA[升级数据库]]></item>
+				<item id="step2_ok"><![CDATA[升级数据库完成，正在完成安装...]]></item>
+				<item id="step3"><![CDATA[完成安装]]></item>
+				<item id="step3_ok"><![CDATA[安装成功，正在发送安装反馈...{stat_code}]]></item>
+				<item id="validator_new"><![CDATA[<h4 class="infotitle2">你即将安装的插件有新版本 {newver} 可用，是否要继续安装？<br /><br /><a href="{link}" target="_blank">点击这里查看插件信息</a></h4>]]></item>
+				<item id="validator_error"><![CDATA[<h4 class="infotitle3">你即将安装的不是原版插件，是否要继续安装？<br /><br /><a href="{link}" target="_blank">点击这里查看插件信息</a></h4>]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+	</item>
+</root>
