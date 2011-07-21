@@ -8,11 +8,17 @@ if(!defined('IN_DISCUZ')) {
 	exit('Access Denied');
 }
 
-function is_admin(){
+function is_admin($showmsg = TRUE){
 	global $_G, $config;
 	$admin_array = explode(',', $config['admin_list']);
 	if(!in_array($_G['uid'], $admin_array)){
-		showmessage('group_nopermission', 'plugin.php?id=dsu_marcothief', array('grouptitle' => $_G['group']['grouptitle']));
+		if($showmsg == TRUE){
+			showmessage('group_nopermission', 'plugin.php?id=dsu_marcothief', array('grouptitle' => $_G['group']['grouptitle']));
+		}else{
+			return FALSE;
+		}
+	}else{
+		return TRUE;
 	}
 }
 
