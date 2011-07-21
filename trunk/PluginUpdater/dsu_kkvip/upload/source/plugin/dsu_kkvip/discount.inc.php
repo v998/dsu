@@ -1,13 +1,7 @@
 <?php
 if(!defined('IN_ADMINCP')) exit('Access Denied');
+require_once DISCUZ_ROOT.'./source/plugin/dsu_kkvip/kk_lang.func.php';
 echo '<script src="static/js/calendar.js" type="text/javascript"></script>';
-if (file_exists(DISCUZ_ROOT.'./data/plugindata/dsu_kkvip.lang.php')){
-	include DISCUZ_ROOT.'./data/plugindata/dsu_kkvip.lang.php';
-	$_T=$scriptlang['dsu_kkvip'];
-}else{
-	loadcache('pluginlanguage_script');
-	$_T=$_G['cache']['pluginlanguage_script']['dsu_kkvip'];
-}
 if (submitcheck('submit')){
 	$del_arr=(array)$_G['gp_delete'];
 	if($del_arr){
@@ -16,7 +10,7 @@ if (submitcheck('submit')){
 		}
 		if($del_ids) DB::delete('dsu_vip_codes', "code IN ({$del_ids})");
 	}
-	cpmsg($_T['delete_succeed'], 'action=plugins&operation=config&identifier=dsu_kkvip&pmod=discount', 'succeed');
+	cpmsg(klang('delete_succeed'), 'action=plugins&operation=config&identifier=dsu_kkvip&pmod=discount', 'succeed');
 }elseif(submitcheck('import')){
 	$data = str_replace(array("\r\n", "\n", "\r"), '|', $_G['gp_import_data']);
 	$code_array = (array)explode('|', $data);
@@ -35,11 +29,11 @@ if (submitcheck('submit')){
 			}
 		}
 	}
-	cpmsg(str_replace('{count}', $count, $_T['import_succeed']), 'action=plugins&operation=config&identifier=dsu_kkvip&pmod=discount', 'succeed');
+	cpmsg(str_replace('{count}', $count, klang('import_succeed')), 'action=plugins&operation=config&identifier=dsu_kkvip&pmod=discount', 'succeed');
 }
 showformheader('plugins&operation=config&identifier=dsu_kkvip&pmod=discount');
-showtableheader($_T['discount_manager']);
-showsubtitle(explode('|', $_T['discount_menu']));
+showtableheader(klang('discount_manager'));
+showsubtitle(explode('|', klang('discount_menu')));
 $page=$_G['gp_page'] ? intval($_G['gp_page']) : 1;
 $start=($page-1)*10;
 $nowtime=TIMESTAMP;
@@ -58,12 +52,12 @@ showtablefooter();
 showformfooter();
 
 
-showtableheader($_T['import_discount_code']);
+showtableheader(klang('import_discount_code'));
 showformheader('plugins&operation=config&identifier=dsu_kkvip&pmod=discount');
-showsetting($_T['code_money'], 'money', 10, 'number');
-showsetting($_T['code_exp'], 'code_exp', dgmdate(TIMESTAMP+86400, 'd'), 'calendar');
-showsetting($_T['allow_repeat'], 'allow_repeat', false, 'radio');
-showsetting($_T['import_data'], 'import_data', '', 'textarea', '', '', $_T['import_tips']);
+showsetting(klang('code_money'), 'money', 10, 'number');
+showsetting(klang('code_exp'), 'code_exp', dgmdate(TIMESTAMP+86400, 'd'), 'calendar');
+showsetting(klang('allow_repeat'), 'allow_repeat', false, 'radio');
+showsetting(klang('import_data'), 'import_data', '', 'textarea', '', '', klang('import_tips'));
 showsubmit('import', 'import');
 showformfooter();
 showtablefooter();

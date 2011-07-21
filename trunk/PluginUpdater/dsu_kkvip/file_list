@@ -10,6 +10,7 @@ source/plugin/dsu_kkvip/discuz_plugin_dsu_kkvip_SC_UTF8.xml
 source/plugin/dsu_kkvip/discuz_plugin_dsu_kkvip_TC_BIG5.xml
 source/plugin/dsu_kkvip/discuz_plugin_dsu_kkvip_TC_UTF8.xml
 source/plugin/dsu_kkvip/install.php
+source/plugin/dsu_kkvip/kk_lang.func.php
 source/plugin/dsu_kkvip/uninstall.php
 source/plugin/dsu_kkvip/user.inc.php
 source/plugin/dsu_kkvip/validator.xml
@@ -21,6 +22,7 @@ source/plugin/dsu_kkvip/images/novip.jpg
 source/plugin/dsu_kkvip/images/novip.png
 source/plugin/dsu_kkvip/images/no_year_vip.jpg
 source/plugin/dsu_kkvip/images/rights.png
+source/plugin/dsu_kkvip/images/Thumbs.db
 source/plugin/dsu_kkvip/images/vip.gif
 source/plugin/dsu_kkvip/images/vip.jpg
 source/plugin/dsu_kkvip/images/vip1.gif

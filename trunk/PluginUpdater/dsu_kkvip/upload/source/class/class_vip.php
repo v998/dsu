@@ -46,7 +46,7 @@ class vip{
 				'level'=>1,
 				'oldgroup'=>$oldgroup,
 			), false, true);
-			$this->query("UPDATE pre_common_member SET groupid='{$this->vars[vip_1_group]}' WHERE uid='{$uid}' AND adminid<>'1'");
+			$this->query("UPDATE pre_common_member SET groupid='{$this->vars[vip_1_group]}' WHERE uid='{$uid}' AND adminid=0");
 			$this->vip_cache[] = $uid;
 			require_once libfile('function/cache');
 			updatecache('dsu_kkvip');
