@@ -8,6 +8,10 @@ if (file_exists(DISCUZ_ROOT.'./data/plugindata/dsu_kkvip.lang.php')){
 	loadcache('pluginlanguage_script');
 	$_T=$_G['cache']['pluginlanguage_script']['dsu_kkvip'];
 }
+if($_G['gp_api']){
+	include DISCUZ_ROOT."./source/plugin/dsu_kkvip/extend/{$_G[gp_api]}";
+	dexit();
+}
 $extends_dir = @dir(DISCUZ_ROOT.'./source/plugin/dsu_kkvip/extend/');
 while(false !== ($entry = $extends_dir->read())) {
 	$file = pathinfo($entry);
@@ -15,10 +19,6 @@ while(false !== ($entry = $extends_dir->read())) {
 		if(!$_G['gp_api']) include DISCUZ_ROOT."./source/plugin/dsu_kkvip/extend/{$file[basename]}";
 		$extends[$ext_name] = $file['basename'];
 	}
-}
-if($_G['gp_api'] && in_array($_G['gp_api'], $extends)){
-	include DISCUZ_ROOT."./source/plugin/dsu_kkvip/extend/{$_G[gp_api]}";
-	dexit();
 }
 if(!$extends) cpmsg($_T['no_extends'], '', 'error');
 showtableheader($_T['extend_list']);
