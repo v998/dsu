@@ -36,6 +36,10 @@ function log_add($username, $type, $extra = array()){
 		$action = lang('plugin/dsu_marcothief', 'log_fail_jail', array('username' => $username));
 	}elseif($type == 'jail_raids'){
 		$action = lang('plugin/dsu_marcothief', 'log_jail_raids', array('username' => $username, 'raids_user' => $extra['raids_user']));
+	}elseif($type == 'jail_raids_fail_police'){
+		$action = lang('plugin/dsu_marcothief', 'log_jail_raids_fail_police', array('username' => $username, 'raids_user' => $extra['raids_user']));
+	}elseif($type == 'run_fail_police'){
+		$action = lang('plugin/dsu_marcothief', 'log_run_fail_police', array('username' => $username));
 	}else{
 		$action = '';
 	}
@@ -55,7 +59,7 @@ function use_shop($uid, $type){
 		if(!$shop_db){
 			return FALSE;
 		}else{
-			return array($shop_db['function']/100, $shop_db['function']);
+			return $shop_db['function'];
 		}
 	}else{
 		return FALSE;

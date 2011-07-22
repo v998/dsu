@@ -9,23 +9,20 @@ if(!defined('IN_DISCUZ')) {
 }
 
 @require_once './source/plugin/dsu_marcothief/dsu_marcothief.func.php';
+$config = $_G['cache']['plugin']['dsu_marcothief'];
 if(!$_G['uid']) {
 	showmessage('not_loggedin', NULL, array(), array('login' => 1));
+}elseif(!in_array($_G['groupid'], unserialize($config['groups_allow']))){
+	showmessage('group_nopermission', 'index.php', array('grouptitle' => $_G['group']['grouptitle']));
 }else{
-	$config = $_G['cache']['plugin']['dsu_marcothief'];
 	$user_db = DB::fetch_first("SELECT * FROM ".DB::table('dsu_marcothief')." t,".DB::table('common_member_count')." c WHERE t.uid=c.uid AND t.uid='$_G[uid]'");
 	if(!$user_db){
 		DB::query("INSERT INTO ".DB::table('dsu_marcothief')." (uid) VALUES ('$_G[uid]')");
 	}
-	$system_success = $config['sucess_percentage']*100;
-	$system_fail_police = $config['police_percentage']*100;
-	$system_fail_jail = $config['jail_percentage']*100;
-	$system_raids_sucess = $config['raids_sucess_percentage']*100;
-	$system_raids_fail_jail = $config['raids_percentage']*100;
-	$system_run = $config['run_percentage']*100;
 	$success_shop = use_shop($_G['uid'], 1);
 	$raids_sucess_shop = use_shop($_G['uid'], 2);
 	$run_success_shop = use_shop($_G['uid'], 3);
+	$police = (mt_rand(0, 100) <= $config['police_percentage']) ? TRUE : FALSE;
 	$query = DB::query("SELECT * FROM ".DB::table('dsu_marcothief_log')." ORDER BY id DESC LIMIT 30");
 	$log = array();
 	while($data = DB::fetch($query)){
@@ -40,8 +37,13 @@ if(empty($mod)){
 	if(submitcheck('robbery')){
 		$check = DB::fetch_first("SELECT * FROM ".DB::table('common_member')." m,".DB::table('common_member_count')." c WHERE m.uid=c.uid AND ".($_G['gp_method'] ? "m.username='$_G[gp_user]'" : "m.uid='$_G[gp_user]'")."");
 		$check_db = DB::fetch_first("SELECT * FROM ".DB::table('dsu_marcothief')." t,".DB::table('common_member_count')." c WHERE t.uid=c.uid AND t.uid='$check[uid]'");
-		if($config['thief_allow'] > $user_db['extcredits'.$config['fee']]){
-			showmessage('dsu_marcothief:msg_36', dreferer(), array('credit' => $config['thief_allow']));
+		if($config['thiefonline_open'] == 1){
+			$online_check = DB::fetch_first("SELECT * FROM ".DB::table('common_session')." WHERE uid='$check[uid]' AND invisible='0'");
+			if(!$online_check){
+				showmessage('dsu_marcothief:msg_37', dreferer());
+			}
+		}elseif($config['thief_allow'] > $user_db['extcredits'.$config['fee']]){
+			showmessage('dsu_marcothief:msg_36', dreferer(), array('credit_name' => $_G['setting']['extcredits'][$config['fee']]['title'] ,'credit' => $config['thief_allow']));
 		}elseif($user_db['jail'] > $_G['timestamp']){
 			showmessage('dsu_marcothief:msg_9', dreferer());
 		}elseif($user_db['action'] >= $config['max_thief']){
@@ -61,10 +63,9 @@ if(empty($mod)){
 		}elseif($check['uid'] == $_G['uid']){
 			showmessage('dsu_marcothief:msg_3', dreferer());
 		}else{
-			$sucess_percentage = (($success_shop[0]+$config['sucess_percentage'])>1) ? 1 : ($success_shop[0]+$config['sucess_percentage']);
-			$success = (round((mt_rand(0, 100))/100, 1) <= $sucess_percentage) ? TRUE : FALSE;
-			$police = (round((mt_rand(0, 100))/100, 1) <= $config['police_percentage']) ? TRUE : FALSE;
-			$jail = (round((mt_rand(0, 100))/100, 1) <= $config['jail_percentage']) ? TRUE : FALSE;
+			$sucess_percentage = (($success_shop+$config['sucess_percentage'])>100) ? 100 : ($success_shop+$config['sucess_percentage']);
+			$success = (mt_rand(0, 100) <= $sucess_percentage) ? TRUE : FALSE;
+			$jail = (mt_rand(0, 100) <= $config['jail_percentage']) ? TRUE : FALSE;
 			$rand = mt_rand(0, intval($config['max_thief_limit']));
 			updatemembercount($_G['uid'], array('extcredits'.$config['fee'] => 'extcredits'.$config['fee']-$config['fee_once']));
 			if($rand > $check['extcredits'.$config['credit']]){
@@ -115,9 +116,9 @@ if(empty($mod)){
 		}elseif($user_db['extcredits'.$config['raids_credit']] < $config['raids_once']){
 			showmessage('dsu_marcothief:msg_21', dreferer(), array('title' => $_G['setting']['extcredits'][$config['raids_credit']]['title']));
 		}else{
-			$raids_sucess_percentage = (($raids_sucess_shop[0]+$config['raids_sucess_percentage'])>1) ? 1 : ($raids_sucess_shop[0]+$config['raids_sucess_percentage']);
-			$jail = (round((mt_rand(0, 100))/100, 1) <= $config['raids_percentage']) ? TRUE : FALSE;
-			$success = (round((mt_rand(0, 100))/100, 1) <= $raids_sucess_percentage) ? TRUE : FALSE;
+			$raids_sucess_percentage = (($raids_sucess_shop+$config['raids_sucess_percentage'])>1) ? 1 : ($raids_sucess_shop+$config['raids_sucess_percentage']);
+			$jail = (mt_rand(0, 100) <= $config['raids_percentage']) ? TRUE : FALSE;
+			$success = (mt_rand(0, 100) <= $raids_sucess_percentage) ? TRUE : FALSE;
 			$raid_user_info = getuserbyuid($_G['gp_uid']);
 			updatemembercount($_G['uid'], array('extcredits'.$config['raids_credit'] => 'extcredits'.$config['raids_credit']-$config['raids_once']));
 		}
@@ -127,6 +128,11 @@ if(empty($mod)){
 			DB::query("UPDATE ".DB::table('dsu_marcothief')." SET raids=raids+'1' WHERE uid='$_G[uid]'");
 			log_add($_G['username'], 'jail_raids', array('raids_user' => $raid_user_info['username']));
 			showmessage('dsu_marcothief:msg_13', dreferer());
+		}elseif($police == TRUE && $user_db['raids_tool']){
+			DB::query("DELETE FROM ".DB::table('dsu_marcothief_bag')." WHERE shopid='$user_db[raids_tool]' AND uid='$_G[uid]'");
+			DB::query("UPDATE ".DB::table('dsu_marcothief')." SET raids_tool='0' WHERE uid='$_G[uid]'");
+			log_add($_G['username'], 'jail_raids_fail_police', array('raids_user' => $raid_user_info['username']));
+			showmessage('dsu_marcothief:msg_38', dreferer());
 		}elseif($jail == TRUE){
 			notification_add($_G['gp_uid'], 'system', lang('plugin/dsu_marcothief', 'notice_raids_fail'), array('username' => $_G['username']), 1);
 			DB::query("UPDATE ".DB::table('dsu_marcothief')." SET jail='".($_G['timestamp']+60*$config['raids_mins'])."' WHERE uid='$_G[uid]'");
@@ -139,11 +145,16 @@ if(empty($mod)){
 		if($user_db['run'] > $_G['timestamp']){
 			showmessage('dsu_marcothief:msg_15', dreferer(), array('mins' => round(($user_db['run']-$_G['timestamp'])/60, 0)));
 		}
-		$run_percentage = (($run_success_shop[0]+$config['run_percentage'])>1) ? 1 : ($run_success_shop[0]+$config['run_percentage']);
-		$success = (round((mt_rand(0, 100))/100, 1) <= $run_percentage) ? TRUE : FALSE;
+		$run_percentage = (($run_success_shop+$config['run_percentage'])>1) ? 1 : ($run_success_shop+$config['run_percentage']);
+		$success = (mt_rand(0, 100) <= $run_percentage) ? TRUE : FALSE;
 		if($success == TRUE){
 			DB::query("UPDATE ".DB::table('dsu_marcothief')." SET jail='0',run='0',goodluck='0' WHERE uid='$_G[uid]'");
 			showmessage('dsu_marcothief:msg_17', dreferer());
+		}elseif($police == TRUE && $user_db['run_tool']){
+			DB::query("DELETE FROM ".DB::table('dsu_marcothief_bag')." WHERE shopid='$user_db[run_tool]' AND uid='$_G[uid]'");
+			DB::query("UPDATE ".DB::table('dsu_marcothief')." SET run_tool='0' WHERE uid='$_G[uid]'");
+			log_add($_G['username'], 'run_fail_police');
+			showmessage('dsu_marcothief:msg_39', dreferer());
 		}else{
 			DB::query("UPDATE ".DB::table('dsu_marcothief')." SET run='".($_G['timestamp']+60*$config['run_mins'])."' WHERE uid='$_G[uid]'");
 			showmessage('dsu_marcothief:msg_18', dreferer());
@@ -241,7 +252,7 @@ if(empty($mod)){
 		DB::query("UPDATE ".DB::table('dsu_marcothief')." SET {$type}='0' WHERE uid='$_G[uid]'");
 		showmessage('dsu_marcothief:msg_35', dreferer(), array('name' => $shop_db['name']));
 	}else{
-		$num = DB::result_first("SELECT COUNT(*) FROM ".DB::table('dsu_marcothief_bag')."");
+		$num = DB::result_first("SELECT COUNT(*) FROM ".DB::table('dsu_marcothief_bag')." WHERE uid='$_G[uid]'");
 		$page = intval($_G['page']);
 		$page = 10 && $page > 10 ? 1 : $page;
 		$start_limit = ($page - 1) * 10;

@@ -302,12 +302,12 @@
       </div>
       <div class="bm_c">
         <ul class="xl">
-          <li>{lang dsu_marcothief:shop_10}: $system_success % <!--{if $success_shop}-->(+$success_shop[1]%)<!--{/if}--></li>
-          <li>{lang dsu_marcothief:side_2}: $system_fail_police %</li>
-          <li>{lang dsu_marcothief:side_3}: $system_fail_jail %</li>
-          <li>{lang dsu_marcothief:shop_11}: $system_raids_sucess % <!--{if $raids_sucess_shop}-->(+$raids_sucess_shop[1]%)<!--{/if}--></li>
-          <li>{lang dsu_marcothief:side_4}: $system_raids_fail_jail %</li>
-          <li>{lang dsu_marcothief:shop_12}: $system_run % <!--{if $run_success_shop}-->(+$run_success_shop[1]%)<!--{/if}--></li>
+          <li>{lang dsu_marcothief:shop_10}: $config[sucess_percentage] % <!--{if $success_shop}-->(+$success_shop%)<!--{/if}--></li>
+          <li>{lang dsu_marcothief:side_3}: $config[jail_percentage] %</li>
+          <li>{lang dsu_marcothief:shop_11}: $config[raids_sucess_percentage] % <!--{if $raids_sucess_shop}-->(+$raids_sucess_shop%)<!--{/if}--></li>
+          <li>{lang dsu_marcothief:side_4}: $config[raids_percentage] %</li>
+          <li>{lang dsu_marcothief:shop_12}: $config[run_percentage] % <!--{if $run_success_shop}-->(+$run_success_shop%)<!--{/if}--></li>
+          <li>{lang dsu_marcothief:side_2}: $config[police_percentage] %</li>
         </ul>
       </div>
       <!--{/if}-->
