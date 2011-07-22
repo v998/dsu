@@ -13,7 +13,7 @@
 			<item id="datatables"><![CDATA[dsu_marcothief,dsu_marcothief_bag,dsu_marcothief_log,dsu_marcothief_shop]]></item>
 			<item id="directory"><![CDATA[dsu_marcothief/]]></item>
 			<item id="copyright"><![CDATA[Marco129 @ DSU Team]]></item>
-			<item id="version"><![CDATA[1.3]]></item>
+			<item id="version"><![CDATA[1.3.1]]></item>
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[dsu_marcothief]]></item>
@@ -44,7 +44,7 @@
 使用問題/BUG反饋可到[url=http://www.dsu.cc/forum-44-1.html]DSU團隊官方站點[/url]提出]]></item>
 		<item id="var">
 			<item id="0">
-				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="displayorder"><![CDATA[3]]></item>
 				<item id="title"><![CDATA[打劫手續費所用積分]]></item>
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[fee]]></item>
@@ -53,7 +53,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="1">
-				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="displayorder"><![CDATA[4]]></item>
 				<item id="title"><![CDATA[打劫手續費]]></item>
 				<item id="description"><![CDATA[每次打劫後將被扣除，填0則不收取手續費]]></item>
 				<item id="variable"><![CDATA[fee_once]]></item>
@@ -62,7 +62,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="2">
-				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="displayorder"><![CDATA[5]]></item>
 				<item id="title"><![CDATA[打劫所得積分]]></item>
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[credit]]></item>
@@ -71,7 +71,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="3">
-				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="displayorder"><![CDATA[6]]></item>
 				<item id="title"><![CDATA[最多可打劫會員積分上限]]></item>
 				<item id="description"><![CDATA[不接受小數]]></item>
 				<item id="variable"><![CDATA[max_thief_limit]]></item>
@@ -80,7 +80,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="4">
-				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="displayorder"><![CDATA[7]]></item>
 				<item id="title"><![CDATA[積分低過多少受到保護]]></item>
 				<item id="description"><![CDATA[積分低於此數會自動受保護]]></item>
 				<item id="variable"><![CDATA[credit_protect]]></item>
@@ -89,16 +89,16 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="5">
-				<item id="displayorder"><![CDATA[8]]></item>
-				<item id="title"><![CDATA[打劫成功率]]></item>
-				<item id="description"><![CDATA[範圍為0以上，1或以下，接受小數]]></item>
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[打劫成功率 (%)]]></item>
+				<item id="description"><![CDATA[範圍為0以上，100或以下，只接受整數]]></item>
 				<item id="variable"><![CDATA[sucess_percentage]]></item>
 				<item id="type"><![CDATA[number]]></item>
-				<item id="value"><![CDATA[0.35]]></item>
+				<item id="value"><![CDATA[35]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="6">
-				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="displayorder"><![CDATA[10]]></item>
 				<item id="title"><![CDATA[每天最多打劫次數]]></item>
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[max_thief]]></item>
@@ -108,11 +108,11 @@
 			</item>
 			<item id="7">
 				<item id="displayorder"><![CDATA[11]]></item>
-				<item id="title"><![CDATA[打劫失敗入獄機率]]></item>
-				<item id="description"><![CDATA[範圍為0以上，1或以下，接受小數]]></item>
+				<item id="title"><![CDATA[打劫失敗入獄機率 (%)]]></item>
+				<item id="description"><![CDATA[範圍為0以上，100或以下，只接受整數]]></item>
 				<item id="variable"><![CDATA[jail_percentage]]></item>
 				<item id="type"><![CDATA[number]]></item>
-				<item id="value"><![CDATA[0.05]]></item>
+				<item id="value"><![CDATA[5]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="8">
@@ -135,20 +135,20 @@
 			</item>
 			<item id="10">
 				<item id="displayorder"><![CDATA[16]]></item>
-				<item id="title"><![CDATA[營救成功率]]></item>
-				<item id="description"><![CDATA[範圍為0以上，1或以下，接受小數]]></item>
+				<item id="title"><![CDATA[營救成功率 (%)]]></item>
+				<item id="description"><![CDATA[範圍為0以上，100或以下，只接受整數]]></item>
 				<item id="variable"><![CDATA[raids_sucess_percentage]]></item>
 				<item id="type"><![CDATA[number]]></item>
-				<item id="value"><![CDATA[0.01]]></item>
+				<item id="value"><![CDATA[8]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="11">
 				<item id="displayorder"><![CDATA[17]]></item>
-				<item id="title"><![CDATA[營救失敗入獄機率]]></item>
-				<item id="description"><![CDATA[範圍為0以上，1或以下，接受小數]]></item>
+				<item id="title"><![CDATA[營救失敗入獄機率 (%)]]></item>
+				<item id="description"><![CDATA[範圍為0以上，100或以下，只接受整數]]></item>
 				<item id="variable"><![CDATA[raids_percentage]]></item>
 				<item id="type"><![CDATA[number]]></item>
-				<item id="value"><![CDATA[0.2]]></item>
+				<item id="value"><![CDATA[2]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="12">
@@ -179,7 +179,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="15">
-				<item id="displayorder"><![CDATA[7]]></item>
+				<item id="displayorder"><![CDATA[8]]></item>
 				<item id="title"><![CDATA[受保護用戶組]]></item>
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[protect_groups]]></item>
@@ -202,11 +202,11 @@
 			</item>
 			<item id="17">
 				<item id="displayorder"><![CDATA[20]]></item>
-				<item id="title"><![CDATA[逃獄成功率]]></item>
-				<item id="description"><![CDATA[範圍為0以上，1或以下，接受小數]]></item>
+				<item id="title"><![CDATA[逃獄成功率 (%)]]></item>
+				<item id="description"><![CDATA[範圍為0以上，100或以下，只接受整數]]></item>
 				<item id="variable"><![CDATA[run_percentage]]></item>
 				<item id="type"><![CDATA[number]]></item>
-				<item id="value"><![CDATA[0.1]]></item>
+				<item id="value"><![CDATA[10]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="18">
@@ -237,16 +237,16 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="21">
-				<item id="displayorder"><![CDATA[10]]></item>
-				<item id="title"><![CDATA[打劫失敗掉失物品機率]]></item>
-				<item id="description"><![CDATA[範圍為0以上，1或以下，接受小數]]></item>
+				<item id="displayorder"><![CDATA[24]]></item>
+				<item id="title"><![CDATA[掉失物品機率 (%)]]></item>
+				<item id="description"><![CDATA[範圍為0以上，100或以下，只接受整數]]></item>
 				<item id="variable"><![CDATA[police_percentage]]></item>
 				<item id="type"><![CDATA[number]]></item>
-				<item id="value"><![CDATA[0.05]]></item>
+				<item id="value"><![CDATA[5]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="22">
-				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="displayorder"><![CDATA[2]]></item>
 				<item id="title"><![CDATA[積分高於多少才能打劫]]></item>
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[thief_allow]]></item>
@@ -255,7 +255,7 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="23">
-				<item id="displayorder"><![CDATA[24]]></item>
+				<item id="displayorder"><![CDATA[26]]></item>
 				<item id="title"><![CDATA[管理員列表]]></item>
 				<item id="description"><![CDATA[輸入能進入前台管理中心的用戶UID，以「,」分隔]]></item>
 				<item id="variable"><![CDATA[admin_list]]></item>
@@ -264,12 +264,44 @@
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="24">
-				<item id="displayorder"><![CDATA[23]]></item>
+				<item id="displayorder"><![CDATA[25]]></item>
 				<item id="title"><![CDATA[是否顯示概率規則]]></item>
 				<item id="description"><![CDATA[顯示則比較公平，不顯示可令遊戲更刺激]]></item>
 				<item id="variable"><![CDATA[sideinfo_open]]></item>
 				<item id="type"><![CDATA[radio]]></item>
 				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="25">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[允許使用本插件的用戶組]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[groups_allow]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[10]]></item>
+					<item id="1"><![CDATA[11]]></item>
+					<item id="2"><![CDATA[12]]></item>
+					<item id="3"><![CDATA[13]]></item>
+					<item id="4"><![CDATA[14]]></item>
+					<item id="5"><![CDATA[15]]></item>
+					<item id="6"><![CDATA[16]]></item>
+					<item id="7"><![CDATA[17]]></item>
+					<item id="8"><![CDATA[18]]></item>
+					<item id="9"><![CDATA[19]]></item>
+					<item id="10"><![CDATA[1]]></item>
+					<item id="11"><![CDATA[2]]></item>
+					<item id="12"><![CDATA[3]]></item>
+				</item>
+			</item>
+			<item id="26">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[是否只允許打劫在線會員]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[thiefonline_open]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 		</item>
@@ -310,7 +342,10 @@
 				<item id="msg_33"><![CDATA[噢！您被 {username} 的保鏢打了一頓。打劫失敗！]]></item>
 				<item id="msg_34"><![CDATA[您還在獄中，巿場在城內啊？]]></item>
 				<item id="msg_35"><![CDATA[已脫下 {name}]]></item>
-				<item id="msg_36"><![CDATA[積分高於 {credit} 才能打劫]]></item>
+				<item id="msg_36"><![CDATA[{credit_name} 高於 {credit} 才能打劫]]></item>
+				<item id="msg_37"><![CDATA[此用戶不在線上，無法打劫]]></item>
+				<item id="msg_38"><![CDATA[營救失敗了！逃走時害怕得掉下物品了]]></item>
+				<item id="msg_39"><![CDATA[逃獄失敗，物品也被獄警沒收了，繼續在監獄度過生活吧]]></item>
 				<item id="notice_thief"><![CDATA[您被 {username} 神偷打劫了，失去 {lose}。您也來當神偷吧！<a href="plugin.php?id=dsu_marcothief">搶回您的積分</a>。]]></item>
 				<item id="notice_thief_fail"><![CDATA[{username} 神偷曾經嘗試打劫您，但失敗了，您幸運地保住了您的積分。<a href="plugin.php?id=dsu_marcothief">您也來當神偷吧！</a>]]></item>
 				<item id="notice_thief_guard"><![CDATA[{username} 神偷曾經嘗試打劫您，但您的保鏢救了您，保住了您的積分。<a href="plugin.php?id=dsu_marcothief">您也來當神偷吧！</a>]]></item>
@@ -323,6 +358,8 @@
 				<item id="log_fail_police"><![CDATA[{username} 打劫失敗並被警方沒收物品]]></item>
 				<item id="log_fail_jail"><![CDATA[{username} 打劫失敗並即時入獄]]></item>
 				<item id="log_jail_raids"><![CDATA[{username} 成&#21151;營救 {raids_user}]]></item>
+				<item id="log_jail_raids_fail_police"><![CDATA[{username} 營救 {raids_user} 失敗了。逃走時也掉下物品。]]></item>
+				<item id="log_run_fail_police"><![CDATA[{username} 逃獄失敗，物品被獄警沒收了]]></item>
 				<item id="shop_1"><![CDATA[打劫成功率]]></item>
 				<item id="shop_2"><![CDATA[營救成功率]]></item>
 				<item id="shop_3"><![CDATA[逃獄成功率]]></item>
@@ -393,7 +430,7 @@
 				<item id="bag_3"><![CDATA[裝備]]></item>
 				<item id="bag_4"><![CDATA[脫下]]></item>
 				<item id="side_1"><![CDATA[概率規則]]></item>
-				<item id="side_2"><![CDATA[打劫失敗掉失物品機率]]></item>
+				<item id="side_2"><![CDATA[掉失物品機率]]></item>
 				<item id="side_3"><![CDATA[打劫失敗入獄機率]]></item>
 				<item id="side_4"><![CDATA[營救失敗入獄機率]]></item>
 			</item>
@@ -410,6 +447,18 @@
 				<item id="shop_10"><![CDATA[破壞監獄四周的牆]]></item>
 				<item id="shop_11"><![CDATA[滑版]]></item>
 				<item id="shop_12"><![CDATA[把握時間 飛出監獄]]></item>
+				<item id="auto_1"><![CDATA[【DSU】我是神偷 安裝程序]]></item>
+				<item id="auto_2"><![CDATA[【DSU】我是神偷 升級程序]]></item>
+				<item id="auto_3"><![CDATA[【DSU】我是神偷 卸載程序]]></item>
+				<item id="auto_4"><![CDATA[開始]]></item>
+				<item id="auto_5"><![CDATA[數據庫處理]]></item>
+				<item id="auto_6"><![CDATA[數據轉換]]></item>
+				<item id="auto_7"><![CDATA[發送統計]]></item>
+				<item id="auto_8"><![CDATA[結束]]></item>
+				<item id="auto_9"><![CDATA[程序即將開始自動執行]]></item>
+				<item id="auto_10"><![CDATA[數據庫處理完成，正進入下一步]]></item>
+				<item id="auto_11"><![CDATA[數據轉換完成，正進入下一步]]></item>
+				<item id="auto_12"><![CDATA[發送統計完成，程序即將結束]]></item>
 			</item>
 		</item>
 		<item id="installfile"><![CDATA[install.php]]></item>
