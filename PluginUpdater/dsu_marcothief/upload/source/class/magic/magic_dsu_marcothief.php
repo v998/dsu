@@ -52,7 +52,7 @@ class magic_dsu_marcothief {
 		DB::query("UPDATE ".DB::table('dsu_marcothief')." SET protect='$time' WHERE uid='$_G[uid]'");
 		usemagic($this->magic['magicid'], $this->magic['num']);
 		updatemagiclog($this->magic['magicid'], '2', '1', '0', '0', 'uid', $_G['uid']);
-		showmessage('dsu_marcothief:magic_2', '', array(), array('showdialog' => 1));
+		showmessage('dsu_marcothief:magic_2', 'plugin.php?id=dsu_marcothief&mod=bag', array(), array('locationtime' => true, 'showdialog' => 1));
 	}
 
 	function show() {
