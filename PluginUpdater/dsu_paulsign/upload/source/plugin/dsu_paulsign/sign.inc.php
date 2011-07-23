@@ -1,6 +1,6 @@
 <?php
 /*
-	dsu_paulsign Main By shy9000[DSU.CC] 2011-07-12
+	dsu_paulsign Main By shy9000[DSU.CC] 2011-07-23
 */
 !defined('IN_DISCUZ') && exit('Access Denied');
 define('IN_dsu_paulsign', '1');
@@ -154,47 +154,56 @@ if($_G['gp_operation'] == 'zong' || $_G['gp_operation'] == 'month' || $_G['gp_op
 	$qdxqs=array('kx','ym','ng','wl','nu','ch','fd','shuai','yl');
 	if(!in_array($_G['gp_qdxq'],$qdxqs)) sign_msg($lang['ts_xqnr']);
 	if(!$_G['gp_qdxq']) sign_msg($lang['ts_noxq']);
-	if($_G['gp_qdmode']=='1'){
-		$todaysay = dhtmlspecialchars($_G['gp_todaysay']);
-		if($todaysay=='') sign_msg($lang['ts_nots']);
-		if(strlen($todaysay) > 100) sign_msg($lang['ts_ovts']);
-		if(strlen($todaysay) < 6) sign_msg($lang['ts_syts']);
-		if (!preg_match("/[^A-Za-z0-9.,]/",$todaysay)) sign_msg($lang['ts_saywater']);
-		$illegaltest = censormod($todaysay);
-		if($illegaltest) {
-			sign_msg($lang['ts_illegaltext']);
+	if(!$var['sayclose']){
+		if($_G['gp_qdmode']=='1'){
+			$todaysay = dhtmlspecialchars($_G['gp_todaysay']);
+			if($todaysay=='') sign_msg($lang['ts_nots']);
+			if(strlen($todaysay) > 100) sign_msg($lang['ts_ovts']);
+			if(strlen($todaysay) < 6) sign_msg($lang['ts_syts']);
+			if (!preg_match("/[^A-Za-z0-9.,]/",$todaysay)) sign_msg($lang['ts_saywater']);
+			$illegaltest = censormod($todaysay);
+			if($illegaltest) {
+				sign_msg($lang['ts_illegaltext']);
+			}
+		} elseif ($_G['gp_qdmode']=='2') {
+			switch ($_G['gp_fastreply']){
+				case 1:
+					$todaysay = "{$var['fastreply1']}";
+				break;
+				case 2:
+					$todaysay = "{$var['fastreply2']}";
+				break;
+				case 3:
+					$todaysay = "{$var['fastreply3']}";
+				break;
+				case 4:
+					$todaysay = "{$var['fastreply4']}";
+				break;
+				case 5:
+					$todaysay = "{$var['fastreply5']}";
+				break;
+				case 6:
+					$todaysay = "{$var['fastreply6']}";
+				break;
+				case 7:
+					$todaysay = "{$var['fastreply7']}";
+				break;
+				case 8:
+					$todaysay = "{$var['fastreply8']}";
+				break;
+				default:
+					$todaysay = "{$var['fastreply1']}";
+			}
+		} elseif ($_G['gp_qdmode']=='3') {
+			$todaysay = "{$lang['wttodaysay']}";
 		}
-	} elseif ($_G['gp_qdmode']=='2') {
-		switch ($_G['gp_fastreply']){
-			case 1:
-				$todaysay = "{$var['fastreply1']}";
-			break;
-			case 2:
-				$todaysay = "{$var['fastreply2']}";
-			break;
-			case 3:
-				$todaysay = "{$var['fastreply3']}";
-			break;
-			case 4:
-				$todaysay = "{$var['fastreply4']}";
-			break;
-			case 5:
-				$todaysay = "{$var['fastreply5']}";
-			break;
-			case 6:
-				$todaysay = "{$var['fastreply6']}";
-			break;
-			case 7:
-				$todaysay = "{$var['fastreply7']}";
-			break;
-			case 8:
-				$todaysay = "{$var['fastreply8']}";
-			break;
-			default:
-				$todaysay = "{$var['fastreply1']}";
-		}
-	} elseif ($_G['gp_qdmode']=='3') {
+	}else{
 		$todaysay = "{$lang['wttodaysay']}";
+	}
+	if($var['lockopen']){
+		while(discuz_process::islocked('dsu_paulsign', 5)){
+			usleep(100000);
+		}
 	}
 	if(in_array($_G['groupid'], $jlxgroups) && $var['jlx'] != '0') {
 		$credit = $credit * $var['jlx'];
@@ -205,10 +214,11 @@ if($_G['gp_operation'] == 'zong' || $_G['gp_operation'] == 'month' || $_G['gp_op
 	}
 	DB::query("UPDATE ".DB::table('dsu_paulsign')." SET days=days+1,mdays=mdays+1,time='$_G[timestamp]',qdxq='$_G[gp_qdxq]',todaysay='$todaysay',reward=reward+{$credit},lastreward='$credit' WHERE uid='$_G[uid]'");
 	updatemembercount($_G['uid'], array($var['nrcredit'] => $credit));
-	if(file_exists(DISCUZ_ROOT.'./source/plugin/dsu_kkvip/vip.func.php')){
-		include_once DISCUZ_ROOT.'./source/plugin/dsu_kkvip/vip.func.php';
-		$jlnum = $num + 1;
-		sign_vip($jlnum);
+	$another_vip = '';
+	if(@include_once DISCUZ_ROOT.'./source/plugin/dsu_kkvip/extend/sign.api.php'){
+		$rewarddays = intval($rewarddays);
+		$growupnum = intval($growupnum);
+		if($rewarddays || $growupnum) $another_vip=lang('plugin/dsu_paulsign', 'another_vip', array('rewarddays' => $rewarddays, 'growupnum' => $growupnum));
 	}
 	if($var['sync_say'] && $_G['gp_qdmode']=='1') {
 		$setarr = array(
@@ -279,9 +289,9 @@ if($_G['gp_operation'] == 'zong' || $_G['gp_operation'] == 'month' || $_G['gp_op
 			$thread = DB::fetch_first("SELECT * FROM ".DB::table('forum_thread')." WHERE tid='$var[tidnumber]'");
 			$hft = dgmdate($_G['timestamp'], 'Y-m-d H:i',$var['tos']);
 			if($num >=0 && $num <=9 && $exacr && $exacz) {
-				$message = "[quote][size=2][color=gray][color=teal] [/color][color=gray]{$lang[tsn_01]}[/color] [color=darkorange]{$hft}[/color] {$lang[tsn_02]}[color=red]{$lang[tsn_03]}[/color][color=darkorange]{$lang[tsn_04]}{$psc}{$lang[tsn_05]}[/color]{$lang[tsn_06]} [/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][title]} [/color][color=darkorange]{$credit}[/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][unit]}[/color][color=gray]{$lang[tsn_17]}[/color] [color=gray]{$_G[setting][extcredits][$exacr][title]} [/color][color=darkorange]{$exacz}[/color][color=gray]{$_G[setting][extcredits][$exacr][unit]}[/color][/color][/size][/quote][size=3][color=dimgray]{$lang[tsn_07]}[color=red]{$todaysay}[/color]{$lang[tsn_08]}[/color][/size]";
+				$message = "[quote][size=2][color=gray][color=teal] [/color][color=gray]{$lang[tsn_01]}[/color] [color=darkorange]{$hft}[/color] {$lang[tsn_02]}[color=red]{$lang[tsn_03]}[/color][color=darkorange]{$lang[tsn_04]}{$psc}{$lang[tsn_05]}[/color]{$lang[tsn_06]} [/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][title]} [/color][color=darkorange]{$credit}[/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][unit]}[/color][color=gray]{$lang[tsn_17]}[/color] [color=gray]{$_G[setting][extcredits][$exacr][title]} [/color][color=darkorange]{$exacz}[/color][color=gray]{$_G[setting][extcredits][$exacr][unit]}.{$another_vip}[/color][/color][/size][/quote][size=3][color=dimgray]{$lang[tsn_07]}[color=red]{$todaysay}[/color]{$lang[tsn_08]}[/color][/size]";
 			} else {
-				$message = "[quote][size=2][color=gray][color=teal] [/color][color=gray]{$lang[tsn_01]}[/color] [color=darkorange]{$hft}[/color] {$lang[tsn_09]}{$lang[tsn_06]} [/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][title]} [/color][color=darkorange]{$credit} [/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][unit]}[/color][/size][/quote][size=3][color=dimgray]{$lang[tsn_07]}[color=red]{$todaysay}[/color]{$lang[tsn_08]}[/color][/size]";
+				$message = "[quote][size=2][color=gray][color=teal] [/color][color=gray]{$lang[tsn_01]}[/color] [color=darkorange]{$hft}[/color] {$lang[tsn_09]}{$lang[tsn_06]} [/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][title]} [/color][color=darkorange]{$credit} [/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][unit]}.{$another_vip}[/color][/size][/quote][size=3][color=dimgray]{$lang[tsn_07]}[color=red]{$todaysay}[/color]{$lang[tsn_08]}[/color][/size]";
 			}
 			require_once libfile('function/post');
 			require_once libfile('function/forum');
@@ -296,9 +306,9 @@ if($_G['gp_operation'] == 'zong' || $_G['gp_operation'] == 'month' || $_G['gp_op
 				$subject=str_replace(array('{m}','{d}','{y}','{bbname}','{author}'),array(dgmdate($_G['timestamp'], 'm',$var['tos']),dgmdate($_G['timestamp'], ' d',$var['tos']),dgmdate($_G['timestamp'], 'Y',$var['tos']),$_G['setting']['bbname'],$_G['username']),$var['title_thread']);
 				$hft = dgmdate($_G['timestamp'], 'Y-m-d H:i',$var['tos']);
 				if($exacr && $exacz) {
-					$message = "[quote][size=2][color=dimgray]{$lang[tsn_10]}[/color][url={$_G[siteurl]}plugin.php?id=dsu_paulsign:sign][color=darkorange]{$lang[tsn_11]}[/color][/url][color=dimgray]{$lang[tsn_12]}[/color][/size][/quote][quote][size=2][color=gray][color=teal] [/color][color=gray]{$lang[tsn_01]}[/color] [color=darkorange]{$hft}[/color] {$lang[tsn_02]}[color=red]{$lang[tsn_03]}[/color][color=darkorange]{$lang[tsn_04]}{$lang[tsn_13]}{$lang[tsn_05]}[/color]{$lang[tsn_06]} [/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][title]} [/color][color=darkorange]{$credit}[/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][unit]}[/color][color=gray]{$lang[tsn_17]}[/color] [color=gray]{$_G[setting][extcredits][$exacr][title]} [/color][color=darkorange]{$exacz}[/color][color=gray]{$_G[setting][extcredits][$exacr][unit]}[/color][/color][/size][/quote][size=3][color=dimgray]{$lang[tsn_07]}[color=red]{$todaysay}[/color]{$lang[tsn_08]}[/color][/size]";
+					$message = "[quote][size=2][color=dimgray]{$lang[tsn_10]}[/color][url={$_G[siteurl]}plugin.php?id=dsu_paulsign:sign][color=darkorange]{$lang[tsn_11]}[/color][/url][color=dimgray]{$lang[tsn_12]}[/color][/size][/quote][quote][size=2][color=gray][color=teal] [/color][color=gray]{$lang[tsn_01]}[/color] [color=darkorange]{$hft}[/color] {$lang[tsn_02]}[color=red]{$lang[tsn_03]}[/color][color=darkorange]{$lang[tsn_04]}{$lang[tsn_13]}{$lang[tsn_05]}[/color]{$lang[tsn_06]} [/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][title]} [/color][color=darkorange]{$credit}[/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][unit]}[/color][color=gray]{$lang[tsn_17]}[/color] [color=gray]{$_G[setting][extcredits][$exacr][title]} [/color][color=darkorange]{$exacz}[/color][color=gray]{$_G[setting][extcredits][$exacr][unit]}.{$another_vip}[/color][/color][/size][/quote][size=3][color=dimgray]{$lang[tsn_07]}[color=red]{$todaysay}[/color]{$lang[tsn_08]}[/color][/size]";
 				} else {
-					$message = "[quote][size=2][color=dimgray]{$lang[tsn_10]}[/color][url={$_G[siteurl]}plugin.php?id=dsu_paulsign:sign][color=darkorange]{$lang[tsn_11]}[/color][/url][color=dimgray]{$lang[tsn_12]}[/color][/size][/quote][quote][size=2][color=gray][color=teal] [/color][color=gray]{$lang[tsn_01]}[/color] [color=darkorange]{$hft}[/color] {$lang[tsn_02]}[color=red]{$lang[tsn_03]}[/color][color=darkorange]{$lang[tsn_04]}{$lang[tsn_13]}{$lang[tsn_05]}[/color]{$lang[tsn_06]} [/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][title]} [/color][color=darkorange]{$credit}[/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][unit]}.[/color][/color][/size][/quote][size=3][color=dimgray]{$lang[tsn_07]}[color=red]{$todaysay}[/color]{$lang[tsn_08]}[/color][/size]";
+					$message = "[quote][size=2][color=dimgray]{$lang[tsn_10]}[/color][url={$_G[siteurl]}plugin.php?id=dsu_paulsign:sign][color=darkorange]{$lang[tsn_11]}[/color][/url][color=dimgray]{$lang[tsn_12]}[/color][/size][/quote][quote][size=2][color=gray][color=teal] [/color][color=gray]{$lang[tsn_01]}[/color] [color=darkorange]{$hft}[/color] {$lang[tsn_02]}[color=red]{$lang[tsn_03]}[/color][color=darkorange]{$lang[tsn_04]}{$lang[tsn_13]}{$lang[tsn_05]}[/color]{$lang[tsn_06]} [/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][title]} [/color][color=darkorange]{$credit}[/color][color=gray]{$_G[setting][extcredits][$var[nrcredit]][unit]}.{$another_vip}[/color][/color][/size][/quote][size=3][color=dimgray]{$lang[tsn_07]}[color=red]{$todaysay}[/color]{$lang[tsn_08]}[/color][/size]";
 				}
 				DB::query("INSERT INTO ".DB::table('forum_thread')." (fid, posttableid, readperm, price, typeid, sortid, author, authorid, subject, dateline, lastpost, lastposter, displayorder, digest, special, attachment, moderated, highlight, closed, status, isgroup) VALUES ('$var[fidnumber]', '0', '0', '0', '$var[qdtypeid]', '0', '$_G[username]', '$_G[uid]', '$subject', '$_G[timestamp]', '$_G[timestamp]', '$_G[username]', '0', '0', '0', '0', '1', '1', '1', '0', '0')");
 				$tid = DB::insert_id();
@@ -338,17 +348,18 @@ if($_G['gp_operation'] == 'zong' || $_G['gp_operation'] == 'month' || $_G['gp_op
 	} else {
 		DB::query("UPDATE ".DB::table('dsu_paulsignset')." SET todayq=todayq+1 WHERE id='1'");
 	}
+	if($var['lockopen']) discuz_process::unlock('dsu_paulsign');
 	if($var['tzopen']) {
 		if($exacr && $exacz) {
-			sign_msg("{$lang[tsn_14]}{$lang[tsn_03]}{$lang[tsn_04]}{$psc}{$lang[tsn_15]}{$lang[tsn_06]} {$_G[setting][extcredits][$var[nrcredit]][title]} {$credit} {$_G[setting][extcredits][$var[nrcredit]][unit]} {$lang[tsn_16]} {$_G[setting][extcredits][$exacr][title]} {$exacz} {$_G[setting][extcredits][$exacr][unit]}","forum.php?mod=redirect&tid={$tidnumber}&goto=lastpost#lastpost");
+			sign_msg("{$lang[tsn_14]}{$lang[tsn_03]}{$lang[tsn_04]}{$psc}{$lang[tsn_15]}{$lang[tsn_06]} {$_G[setting][extcredits][$var[nrcredit]][title]} {$credit} {$_G[setting][extcredits][$var[nrcredit]][unit]} {$lang[tsn_16]} {$_G[setting][extcredits][$exacr][title]} {$exacz} {$_G[setting][extcredits][$exacr][unit]}.".$another_vip,"forum.php?mod=redirect&tid={$tidnumber}&goto=lastpost#lastpost");
 		} else {
-			sign_msg("{$lang[tsn_18]} {$_G[setting][extcredits][$var[nrcredit]][title]} {$credit} {$_G[setting][extcredits][$var[nrcredit]][unit]}","forum.php?mod=redirect&tid={$tidnumber}&goto=lastpost#lastpost");
+			sign_msg("{$lang[tsn_18]} {$_G[setting][extcredits][$var[nrcredit]][title]} {$credit} {$_G[setting][extcredits][$var[nrcredit]][unit]}.".$another_vip,"forum.php?mod=redirect&tid={$tidnumber}&goto=lastpost#lastpost");
 		}
 	} else {
 		if($exacr && $exacz) {
-			sign_msg("{$lang[tsn_14]}{$lang[tsn_03]}{$lang[tsn_04]}{$psc}{$lang[tsn_15]}{$lang[tsn_06]} {$_G[setting][extcredits][$var[nrcredit]][title]} {$credit} {$_G[setting][extcredits][$var[nrcredit]][unit]} {$lang[tsn_16]} {$_G[setting][extcredits][$exacr][title]} {$exacz} {$_G[setting][extcredits][$exacr][unit]}","plugin.php?id=dsu_paulsign:sign");
+			sign_msg("{$lang[tsn_14]}{$lang[tsn_03]}{$lang[tsn_04]}{$psc}{$lang[tsn_15]}{$lang[tsn_06]} {$_G[setting][extcredits][$var[nrcredit]][title]} {$credit} {$_G[setting][extcredits][$var[nrcredit]][unit]} {$lang[tsn_16]} {$_G[setting][extcredits][$exacr][title]} {$exacz} {$_G[setting][extcredits][$exacr][unit]}.".$another_vip,"plugin.php?id=dsu_paulsign:sign");
 		} else {
-			sign_msg("{$lang[tsn_18]} {$_G[setting][extcredits][$var[nrcredit]][title]} {$credit} {$_G[setting][extcredits][$var[nrcredit]][unit]}","plugin.php?id=dsu_paulsign:sign");
+			sign_msg("{$lang[tsn_18]} {$_G[setting][extcredits][$var[nrcredit]][title]} {$credit} {$_G[setting][extcredits][$var[nrcredit]][unit]}.".$another_vip,"plugin.php?id=dsu_paulsign:sign");
 		}
 	}
 }
@@ -389,7 +400,7 @@ $q['if']= $qiandaodb['time']<$tdtime ? "<span class=gray>".$lang['tdno']."</span
 $qtime = dgmdate($qiandaodb['time'], 'Y-m-d H:i');
 $navigation = $lang['name'];
 $navtitle = "$navigation";
-$signBuild = 'Ver 3.8 For X2!<br>DSU Team 1ST Anniversary<br>&copy; <a href="http://loger.me/">Shy9000</a><br>';
+$signBuild = 'Ver 4.0 For X2!<br>DSU Team 1ST Anniversary<br>&copy; <a href="http://loger.me/">Shy9000</a><br>';
 $signadd = 'http://www.dsu.cc/thread-44760-1-1.html';
 if($_G['inajax']){
 	include template('dsu_paulsign:ajaxsign');

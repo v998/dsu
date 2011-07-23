@@ -294,20 +294,20 @@ class plugin_dsu_paulsign_forum extends plugin_dsu_paulsign {
 			if($days[$postlist[$key][authorid]][days]) {
 					if($firstcycle == '1'){
 						if($open == '2')$echoonce = '<style>
-.qdsmile {padding:3px; margin-left:10px; margin-right:10px; list-style:none;}
+.qdsmile {padding:3px; margin-left:7px; margin-right:7px; list-style:none;}
 .qdsmile li{padding:5px .4em;background:#F7FAFF;border:2px dashed #D1D8D8;}
 .qdsmile li img{margin-bottom:5px;}
 </style>
-<div class="qdsmile"><li><center>'.lang('plugin/dsu_paulsign','ta_mind').'</center><table><tr><th><img src=source/plugin/dsu_paulsign/img/'.$days[$postlist[$key][authorid]][qdxq].'.gif><th><font size=5>'.$days[$postlist[$key][authorid]][qdxqzw].'</font><br>'.$days[$postlist[$key][authorid]][time].'</tr></table></li></div>';
+<div class="qdsmile"><li><center>'.lang('plugin/dsu_paulsign','ta_mind').'</center><table><tr><th><img src=source/plugin/dsu_paulsign/img/'.$days[$postlist[$key][authorid]][qdxq].'.gif><th><font size="5px">'.$days[$postlist[$key][authorid]][qdxqzw].'</font><br>'.$days[$postlist[$key][authorid]][time].'</tr></table></li></div>';
 						$echoonce .= '<p>'.lang('plugin/dsu_paulsign','classn_01').': '.$days[$postlist[$key][authorid]][days].' '.lang('plugin/dsu_paulsign','classn_02').'</p><p>'.$days[$postlist[$key][authorid]][level].'</p>';
 					}else{
-						if($open == '2')$echoonce = '<div class="qdsmile"><li><center>'.lang('plugin/dsu_paulsign','ta_mind').'</center><table><tr><th><img src=source/plugin/dsu_paulsign/img/'.$days[$postlist[$key][authorid]][qdxq].'.gif><th><font size=5>'.$days[$postlist[$key][authorid]][qdxqzw].'</font><br>'.$days[$postlist[$key][authorid]][time].'</tr></table></li></div>';
+						if($open == '2')$echoonce = '<div class="qdsmile"><li><center>'.lang('plugin/dsu_paulsign','ta_mind').'</center><table><tr><th><img src=source/plugin/dsu_paulsign/img/'.$days[$postlist[$key][authorid]][qdxq].'.gif><th><font size="5px">'.$days[$postlist[$key][authorid]][qdxqzw].'</font><br>'.$days[$postlist[$key][authorid]][time].'</tr></table></li></div>';
 						$echoonce .= '<p>'.lang('plugin/dsu_paulsign','classn_01').': '.$days[$postlist[$key][authorid]][days].' '.lang('plugin/dsu_paulsign','classn_02').'</p><p>'.$days[$postlist[$key][authorid]][level].'</p>';
 					}
 			} else {
 				if($firstcycle == '1'){
 					if($open == '2')$echoonce = '<style>
-.qdsmile {padding:3px; margin-left:10px; margin-right:10px; list-style:none;}
+.qdsmile {padding:3px; margin-left:7px; margin-right:7px; list-style:none;}
 .qdsmile li{padding:5px .4em;background:#F7FAFF;border:2px dashed #D1D8D8;}
 .qdsmile li img{margin-bottom:5px;}
 </style>';

@@ -8,5 +8,5 @@ while($mrc = DB::fetch($query)) {
 	if(!$mrc['exist']) DB::delete('dsu_paulsign',"uid = '$mrc[uid]'");
 	$mrcs[] = $mrc;
 }
-cpmsg("Data has been Cleaned!", '');
+cpmsg("Data has been Cleaned!", '', 'succeed');
 ?>
