@@ -69,7 +69,7 @@
           <tr align="center">
             <td align="left"><cite>&nbsp;<img src="{$_G[setting][ucenterurl]}/avatar.php?uid={$data[uid]}&size=small" align="absmiddle" />&nbsp;<a href="home.php?mod=space&uid=$data[uid]" c="1">$data[username] (UID: $data[uid])</a></cite></td>
             <td>$data[jail]</td>
-            <td><button type="submit" class="pn" value="$data[uid]" id="uid" name="uid" tabindex="1"><span>{lang dsu_marcothief:jail_3}</span></button></td>
+            <td><input type="submit" style="padding: 0 10px;" class="pn" value="{lang dsu_marcothief:jail_3} UID$data[uid]" id="uid" name="uid" /><span></span></td>
           </tr>
           <!--{/loop}-->
         <!--{else}-->
@@ -136,7 +136,7 @@
             <td width="38%"><b>{lang dsu_marcothief:shop_2}</b></td>
             <td><b>{lang dsu_marcothief:shop_3}</b></td>
             <td><b>{lang dsu_marcothief:shop_4} ($_G[setting][extcredits][$config[shop_fee]][title])</b></td>
-            <td width="12%">&nbsp;</td>
+            <td width="15%">&nbsp;</td>
             <!--{if $mod == 'admin_shop'}--><td width="5%">&nbsp;</td><!--{/if}-->
           </tr>
         </table>
@@ -148,7 +148,7 @@
               <td width="38%">$data[intro]</td>
               <td>$data[function]</td>
               <td>$data[price]</td>
-              <td width="12%"><!--{if $mod == 'shop'}--><!--{if $data[shopid] == $data[id]}-->{lang dsu_marcothief:shop_5}<!--{else}--><button type="submit" class="pn" value="$data[id]" id="buy" name="buy" tabindex="1"><span>{lang dsu_marcothief:shop_6}</span></button><!--{/if}--><!--{else}--><a href="plugin.php?id=dsu_marcothief&mod=admin_shop&action=edit&shopid=$data[id]">{lang edit}</a><!--{/if}--></td>
+              <td width="15%"><!--{if $mod == 'shop'}--><!--{if $data[shopid] == $data[id]}-->{lang dsu_marcothief:shop_5}<!--{else}--><input type="submit" style="padding: 0 10px;" class="pn" value="{lang dsu_marcothief:shop_6} $data[name]" id="buy" name="buy" /><!--{/if}--><!--{else}--><a href="plugin.php?id=dsu_marcothief&mod=admin_shop&action=edit&shopid=$data[id]">{lang edit}</a><!--{/if}--></td>
               <!--{if $mod == 'admin_shop'}--><td width="5%"><a href="javascript:;" onclick="showDialog('{lang dsu_marcothief:shop_7}', 'confirm', '[DSU] Thief', function(){window.location.href = 'plugin.php?id=dsu_marcothief&mod=admin_shop&action=delete&shopid=$data[id]'});">{lang delete}</a></td><!--{/if}-->
           </tr>
             <!--{/loop}-->
@@ -171,8 +171,8 @@
             <td><b>{lang dsu_marcothief:shop_1}</b></td>
             <td width="38%"><b>{lang dsu_marcothief:shop_2}</b></td>
             <td><b>{lang dsu_marcothief:shop_3}</b></td>
-            <td width="10%">&nbsp;</td>
-            <td width="10%">&nbsp;</td>
+            <td width="12%">&nbsp;</td>
+            <td width="12%">&nbsp;</td>
           </tr>
         </table>
         <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -182,8 +182,8 @@
               <td>$data[name]</td>
               <td width="38%">$data[intro]</td>
               <td>$data[function]</td>
-              <td width="10%"><!--{if $data[weapon]==$data[id] || $data[raids_tool]==$data[id] || $data[run_tool]==$data[id]}-->&nbsp;<!--{else}--><button type="submit" class="pn" value="$data[id]" id="pack" name="pack" tabindex="1"><span>{lang dsu_marcothief:bag_3}</span></button><!--{/if}--></td>
-              <td width="10%"><!--{if $data[weapon]==$data[id] || $data[raids_tool]==$data[id] || $data[run_tool]==$data[id]}--><button type="submit" class="pn" value="$data[id]" id="unpack" name="unpack" tabindex="1"><span>{lang dsu_marcothief:bag_4}</span></button><!--{else}-->&nbsp;<!--{/if}--></td>
+              <td width="12%"><!--{if $data[weapon]==$data[id] || $data[raids_tool]==$data[id] || $data[run_tool]==$data[id]}-->&nbsp;<!--{else}--><input type="submit" style="padding: 0 10px;" class="pn" value="{lang dsu_marcothief:bag_3} $data[name]" id="pack" name="pack"  /><!--{/if}--></td>
+              <td width="12%"><!--{if $data[weapon]==$data[id] || $data[raids_tool]==$data[id] || $data[run_tool]==$data[id]}--><input type="submit" style="padding: 0 10px;" class="pn" value="{lang dsu_marcothief:bag_4} $data[name]" id="unpack" name="unpack" /><!--{else}-->&nbsp;<!--{/if}--></td>
           </tr>
             <!--{/loop}-->
           <!--{else}-->
@@ -302,12 +302,12 @@
       </div>
       <div class="bm_c">
         <ul class="xl">
-          <li>{lang dsu_marcothief:shop_10}: $config[sucess_percentage] % <!--{if $success_shop}-->(+$success_shop%)<!--{/if}--></li>
-          <li>{lang dsu_marcothief:side_3}: $config[jail_percentage] %</li>
-          <li>{lang dsu_marcothief:shop_11}: $config[raids_sucess_percentage] % <!--{if $raids_sucess_shop}-->(+$raids_sucess_shop%)<!--{/if}--></li>
-          <li>{lang dsu_marcothief:side_4}: $config[raids_percentage] %</li>
-          <li>{lang dsu_marcothief:shop_12}: $config[run_percentage] % <!--{if $run_success_shop}-->(+$run_success_shop%)<!--{/if}--></li>
-          <li>{lang dsu_marcothief:side_2}: $config[police_percentage] %</li>
+          <li>{lang dsu_marcothief:shop_10}: $config[sucess_percentage]% <!--{if $success_shop}-->(+$success_shop%)<!--{/if}--></li>
+          <li>{lang dsu_marcothief:side_3}: $config[jail_percentage]%</li>
+          <li>{lang dsu_marcothief:shop_11}: $config[raids_sucess_percentage]% <!--{if $raids_sucess_shop}-->(+$raids_sucess_shop%)<!--{/if}--></li>
+          <li>{lang dsu_marcothief:side_4}: $config[raids_percentage]%</li>
+          <li>{lang dsu_marcothief:shop_12}: $config[run_percentage]% <!--{if $run_success_shop}-->(+$run_success_shop%)<!--{/if}--></li>
+          <li>{lang dsu_marcothief:side_2}: $config[police_percentage]%</li>
         </ul>
       </div>
       <!--{/if}-->

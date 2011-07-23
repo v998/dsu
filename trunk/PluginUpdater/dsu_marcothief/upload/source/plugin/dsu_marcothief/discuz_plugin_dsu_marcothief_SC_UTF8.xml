@@ -13,7 +13,7 @@
 			<item id="datatables"><![CDATA[dsu_marcothief,dsu_marcothief_bag,dsu_marcothief_log,dsu_marcothief_shop]]></item>
 			<item id="directory"><![CDATA[dsu_marcothief/]]></item>
 			<item id="copyright"><![CDATA[Marco129 @ DSU Team]]></item>
-			<item id="version"><![CDATA[1.3.1]]></item>
+			<item id="version"><![CDATA[1.3.2]]></item>
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[dsu_marcothief]]></item>
@@ -365,10 +365,15 @@
 				<item id="shop_3"><![CDATA[逃狱成功率]]></item>
 				<item id="bag_1"><![CDATA[正在受保护直至 {time}]]></item>
 				<item id="bag_2"><![CDATA[没有贴身保镖正保护着你]]></item>
+				<item id="bag_3"><![CDATA[按此购买]]></item>
 				<item id="magic_1"><![CDATA[积分保护时间]]></item>
 				<item id="magic_2"><![CDATA[使用成功！贴身保镖正在保护着您。]]></item>
 				<item id="magic_3"><![CDATA[<br />一经使用，{hrs}小时内没人能打劫您的积分<br /><br />]]></item>
 				<item id="magic_4"><![CDATA[对不起，您无权请保镖。]]></item>
+				<item id="replace_1"><![CDATA[营救 UID]]></item>
+				<item id="replace_2"><![CDATA[购买 ]]></item>
+				<item id="replace_3"><![CDATA[装备 ]]></item>
+				<item id="replace_4"><![CDATA[脱下 ]]></item>
 			</item>
 			<item id="templatelang">
 				<item id="name"><![CDATA[我是神偷]]></item>

@@ -111,12 +111,13 @@ if(empty($mod)){
 	
 }elseif($mod == 'jail'){
 	if(submitcheck('uid')){
+		$_G['gp_uid'] = intval(str_replace(lang('plugin/dsu_marcothief', 'replace_1'), '', $_G['gp_uid']));
 		if(($_G['gp_uid'] == $_G['uid']) || ($user_db['jail'] > $_G['timestamp'])){
 			showmessage('dsu_marcothief:msg_11', dreferer());
 		}elseif($user_db['extcredits'.$config['raids_credit']] < $config['raids_once']){
 			showmessage('dsu_marcothief:msg_21', dreferer(), array('title' => $_G['setting']['extcredits'][$config['raids_credit']]['title']));
 		}else{
-			$raids_sucess_percentage = (($raids_sucess_shop+$config['raids_sucess_percentage'])>1) ? 1 : ($raids_sucess_shop+$config['raids_sucess_percentage']);
+			$raids_sucess_percentage = (($raids_sucess_shop+$config['raids_sucess_percentage'])>100) ? 100 : ($raids_sucess_shop+$config['raids_sucess_percentage']);
 			$jail = (mt_rand(0, 100) <= $config['raids_percentage']) ? TRUE : FALSE;
 			$success = (mt_rand(0, 100) <= $raids_sucess_percentage) ? TRUE : FALSE;
 			$raid_user_info = getuserbyuid($_G['gp_uid']);
@@ -145,7 +146,7 @@ if(empty($mod)){
 		if($user_db['run'] > $_G['timestamp']){
 			showmessage('dsu_marcothief:msg_15', dreferer(), array('mins' => round(($user_db['run']-$_G['timestamp'])/60, 0)));
 		}
-		$run_percentage = (($run_success_shop+$config['run_percentage'])>1) ? 1 : ($run_success_shop+$config['run_percentage']);
+		$run_percentage = (($run_success_shop+$config['run_percentage'])>100) ? 100 : ($run_success_shop+$config['run_percentage']);
 		$success = (mt_rand(0, 100) <= $run_percentage) ? TRUE : FALSE;
 		if($success == TRUE){
 			DB::query("UPDATE ".DB::table('dsu_marcothief')." SET jail='0',run='0',goodluck='0' WHERE uid='$_G[uid]'");
@@ -211,7 +212,8 @@ if(empty($mod)){
 		if($check_db['jail'] > $_G['timestamp']){
 			showmessage('dsu_marcothief:msg_34', dreferer());
 		}
-		$shop_db = DB::fetch_first("SELECT * FROM ".DB::table('dsu_marcothief_shop')." WHERE id='$_G[gp_buy]'");
+		$_G['gp_buy'] = str_replace(lang('plugin/dsu_marcothief', 'replace_2'), '', $_G['gp_buy']);
+		$shop_db = DB::fetch_first("SELECT * FROM ".DB::table('dsu_marcothief_shop')." WHERE name='$_G[gp_buy]'");
 		if($user_db['extcredits'.$config['shop_fee']] < $shop_db['price']){
 			showmessage('dsu_marcothief:msg_25', dreferer(), array('credit' => $_G['setting']['extcredits'][$config['shop_fee']]['title']));
 		}else{
@@ -242,12 +244,14 @@ if(empty($mod)){
 	
 }elseif($mod == 'bag'){
 	if(submitcheck('pack')){
-		$shop_db = DB::fetch_first("SELECT * FROM ".DB::table('dsu_marcothief_shop')." WHERE id='$_G[gp_pack]'");
+		$_G['gp_pack'] = str_replace(lang('plugin/dsu_marcothief', 'replace_3'), '', $_G['gp_pack']);
+		$shop_db = DB::fetch_first("SELECT * FROM ".DB::table('dsu_marcothief_shop')." WHERE name='$_G[gp_pack]'");
 		$type = ($shop_db['type']==1) ? 'weapon' : (($shop_db['type']==2) ? 'raids_tool' : 'run_tool');
-		DB::query("UPDATE ".DB::table('dsu_marcothief')." SET {$type}='$_G[gp_pack]' WHERE uid='$_G[uid]'");
+		DB::query("UPDATE ".DB::table('dsu_marcothief')." SET {$type}='$shop_db[id]' WHERE uid='$_G[uid]'");
 		showmessage('dsu_marcothief:msg_32', dreferer(), array('name' => $shop_db['name']));
 	}elseif(submitcheck('unpack')){
-		$shop_db = DB::fetch_first("SELECT * FROM ".DB::table('dsu_marcothief_shop')." WHERE id='$_G[gp_unpack]'");
+		$_G['gp_unpack'] = str_replace(lang('plugin/dsu_marcothief', 'replace_4'), '', $_G['gp_unpack']);
+		$shop_db = DB::fetch_first("SELECT * FROM ".DB::table('dsu_marcothief_shop')." WHERE name='$_G[gp_unpack]'");
 		$type = ($shop_db['type']==1) ? 'weapon' : (($shop_db['type']==2) ? 'raids_tool' : 'run_tool');
 		DB::query("UPDATE ".DB::table('dsu_marcothief')." SET {$type}='0' WHERE uid='$_G[uid]'");
 		showmessage('dsu_marcothief:msg_35', dreferer(), array('name' => $shop_db['name']));
@@ -271,7 +275,7 @@ if(empty($mod)){
 			$list[] = $data;
 		}
 		$magic_db = DB::fetch_first("SELECT * FROM ".DB::table('common_magic')." WHERE identifier='dsu_marcothief'");;
-		$protect = ($user_db['protect']>$_G['timestamp']) ? lang('plugin/dsu_marcothief', 'bag_1', array('time' => dgmdate($user_db['protect'], 'dt', $_G['setting']['timeoffset']))) : (($magic_db['available']==1) ? '<a href="home.php?mod=magic&action=shop&operation=buy&mid=dsu_marcothief" onclick="showWindow(\'magics\', this.href);return false;" class="xi2 xw1">'.lang('plugin/dsu_marcothief', 'bag_2').'</a>' : lang('plugin/dsu_marcothief', 'bag_2'));
+		$protect = ($user_db['protect']>$_G['timestamp']) ? lang('plugin/dsu_marcothief', 'bag_1', array('time' => dgmdate($user_db['protect'], 'dt', $_G['setting']['timeoffset']))) : (($magic_db['available']==1) ? '<a href="home.php?mod=magic&action=shop&operation=buy&mid=dsu_marcothief" style="font-size:15px;" onclick="showWindow(\'magics\', this.href);return false;" class="xi2 xw1">'.lang('plugin/dsu_marcothief', 'bag_2')."&#65292;".lang('plugin/dsu_marcothief', 'bag_3').'</a>' : lang('plugin/dsu_marcothief', 'bag_2'));
 	}
 	
 }elseif($mod == 'admin_shop' && !$_G['gp_action']){
