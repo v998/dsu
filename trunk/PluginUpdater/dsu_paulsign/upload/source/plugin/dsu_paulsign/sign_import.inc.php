@@ -81,7 +81,7 @@ if($_G['gp_imchoice'] == '3'){
 		}
 }
 	file_put_contents(DISCUZ_ROOT.'./data/dsu_paulsign_import.lock', '1');
-	cpmsg("{$lang[import_06]}", '');
+	cpmsg("{$lang[import_06]}", '', 'succeed');
 }else{
 	cpmsg("{$lang[import_15]}", '');
 }

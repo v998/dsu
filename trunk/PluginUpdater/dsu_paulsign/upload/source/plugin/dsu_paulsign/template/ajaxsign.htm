@@ -4,10 +4,10 @@
 		<div class="f_c" style="width:690px;margin:10px;">
 <!--{if $qiandaodb['time'] < $tdtime}-->
 <style>
-.qdsmile{padding:3px;margin:auto;float:left;list-style:none;float:left}
-.qdsmile li{float: left;padding:5px .4em;border:2px #fff solid;}
-.qdsmile li img{margin-bottom:5px;}
-.qdsmile li:hover{cursor:pointer;}
+.qdsmilea{padding:3px;margin:auto;float:left;list-style:none;float:left}
+.qdsmilea li{float: left;padding:5px .4em;border:2px #fff solid;}
+.qdsmilea li img{margin-bottom:5px;}
+.qdsmilea li:hover{cursor:pointer;}
 </style>
 	<h3>{lang dsu_paulsign:mb_xz}<!--{if $var['ftopen']}--><br><font color="red">[{lang dsu_paulsign:mb_xz1}]</font><!--{/if}--></h3>
 		  <input type="hidden" name="formhash" value="{FORMHASH}">
@@ -28,7 +28,7 @@
           <table width="100%" cellpadding="0" cellspacing="0" align="center">
             <tr>
               <td>
-                <ul class="qdsmile">
+                <ul class="qdsmilea">
                   <input id="kx_s" type="radio" name="qdxq" value="kx" style="display:none"><li id="kx" onclick="Icon_selected(this.id)"><center><img src="source/plugin/dsu_paulsign/img/kx.gif"><br>{lang dsu_paulsign:mb_qb1}<br></center></li>
                   <input id="ng_s" type="radio" name="qdxq" value="ng" style="display:none"><li id="ng" onclick="Icon_selected(this.id)"><center><img src="source/plugin/dsu_paulsign/img/ng.gif"><br>{lang dsu_paulsign:mb_qb2}<br></center></li>
                   <input id="ym_s" type="radio" name="qdxq" value="ym" style="display:none"><li id="ym" onclick="Icon_selected(this.id)"><center><img src="source/plugin/dsu_paulsign/img/ym.gif"><br>{lang dsu_paulsign:mb_qb3}<br></center></li>
@@ -41,6 +41,7 @@
                 </ul>
               </td>
             </tr>
+<!--{if !$var['sayclose']}-->
 <table summary="Qd" cellspacing="0" cellpadding="0" class="tfm">
 <tr{if !$var['ksopen'] && !$var['todaysayxt']} style="display:none;"{/if}>
 <th>{lang dsu_paulsign:mb_mode1}</th>
@@ -71,6 +72,7 @@
 </td>
 </tr>
 </table>
+<!--{/if}-->
           </table>
 <!--{else}-->
 <h1 class="mt">{lang dsu_paulsign:mb_jryqe}</h1>

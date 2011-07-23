@@ -7,7 +7,7 @@
 if($_G['adminid']!=='1') exit('Access Denied');
 $query1 = DB::query("SHOW TABLES LIKE '".DB::table('dsu_paulsign')."'");
 $query2 = DB::query("SHOW TABLES LIKE '".DB::table('dsu_paulsignset')."'");
-if(DB::num_rows($query1) > 0 && DB::num_rows($query2) > 0)cpmsg("Tables are Normal!", '');
+if(DB::num_rows($query1) > 0 && DB::num_rows($query2) > 0)cpmsg("Tables are Normal!", '', 'succeed');
 if(DB::num_rows($query1) <= 0){
 	$sql = <<<EOF
 CREATE TABLE IF NOT EXISTS `cdb_dsu_paulsign` (
@@ -39,5 +39,5 @@ INSERT INTO `cdb_dsu_paulsignset` (id, todayq, yesterdayq, highestq, qdtidnumber
 EOF;
 runquery($sql);
 }
-cpmsg("Tables Fix Successfully!", '');
+cpmsg("Tables Fix Successfully!", '', 'succeed');
 ?>

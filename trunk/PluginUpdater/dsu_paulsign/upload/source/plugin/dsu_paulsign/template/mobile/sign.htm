@@ -22,6 +22,7 @@
 <option value="yl">{lang dsu_paulsign:mb_qb8}</option>
 <option value="shuai">{lang dsu_paulsign:mb_qb9}</option>
 </select><br>
+<!--{if !$var['sayclose']}-->
 <label for="mode"><strong>{lang dsu_paulsign:mb_mode1}</strong></label>
 <label><input type="radio" name="qdmode" value="1" checked="checked" onclick="if(checked == true){document.getElementById('mode1').style.display='';document.getElementById('mode2').style.display='none';}">&nbsp;{lang dsu_paulsign:mb_mode2}</label>&nbsp;&nbsp;
 <!--{if $var['ksopen']}--><label><input type="radio" name="qdmode" value="2" onclick="if(checked == true){document.getElementById('mode1').style.display='none';document.getElementById('mode2').style.display='';}">&nbsp;{lang dsu_paulsign:mb_mode3}</label>&nbsp;&nbsp;<!--{/if}-->
@@ -44,6 +45,7 @@
 <option value="8" style="color:orange">{$var['fastreply8']}</option>
 </select>
 </div>
+<!--{/if}-->
 <div class="inbox"><input type="submit" value="{lang dsu_paulsign:encore_02}"></div>
 </form>
         </div>

@@ -73,6 +73,7 @@ function Icon_selected(sId) {
 <div id="fd_menu" class="tip tip_4" style="display:none;width:50px;margin:0px 0px 0px 30px;"><div class="tip_horn"></div><div class="tip_c"><center>{lang dsu_paulsign:mb_qb7}</center></div></div>
 <div id="yl_menu" class="tip tip_4" style="display:none;width:50px;margin:0px 0px 0px 30px;"><div class="tip_horn"></div><div class="tip_c"><center>{lang dsu_paulsign:mb_qb8}</center></div></div>
 <div id="shuai_menu" class="tip tip_4" style="display:none;width:50px;margin:0px 0px 0px 30px;"><div class="tip_horn"></div><div class="tip_c"><center>{lang dsu_paulsign:mb_qb9}</center></div></div>
+<!--{if !$var['sayclose']}-->
 <table summary="Qd" cellspacing="0" cellpadding="0" class="tfm">
 <tr{if !$var['ksopen'] && !$var['todaysayxt']} style="display:none;"{/if}>
 <th>{lang dsu_paulsign:mb_mode1}</th>
@@ -103,6 +104,7 @@ function Icon_selected(sId) {
 </td>
 </tr>
 </table>
+<!--{/if}-->
           </table></form>
         </div>
 <!--{else}-->
@@ -160,7 +162,7 @@ function Icon_selected(sId) {
 		<td>$mrc['lastreward'] {$_G['setting']['extcredits'][$var[nrcredit]]['unit']}</td>
 		<td>$mrc['if']</td>
 	</tr>
-	<tr class="colplural"><td align="left" colspan="9">{lang dsu_paulsign:mb_zxs}: <img src="source/plugin/dsu_paulsign/img/$mrc[qdxq].gif" /> $mrc[todaysay] <!--{if $_G['uid'] && $_G['adminid'] == 1}--><a href="plugin.php?id=dsu_paulsign:sign&operation=ban&banuid=$mrc[uid]&formhash={FORMHASH}"  title="{lang dsu_paulsign:ban_04}"><font color=red>[{lang dsu_paulsign:ban_05}]</font></a><!--{/if}--></td></tr>
+	<!--{if !$_G['cache']['plugin']['dsu_paulsign']['sayclose']}--><tr class="colplural"><td align="left" colspan="9">{lang dsu_paulsign:mb_zxs}: <img src="source/plugin/dsu_paulsign/img/$mrc[qdxq].gif" /> $mrc[todaysay] <!--{if $_G['uid'] && $_G['adminid'] == 1}--><a href="plugin.php?id=dsu_paulsign:sign&operation=ban&banuid=$mrc[uid]&formhash={FORMHASH}"  title="{lang dsu_paulsign:ban_04}"><font color=red>[{lang dsu_paulsign:ban_05}]</font></a><!--{/if}--></td></tr><!--{/if}-->
 	<!--{/loop}-->
 	<!--{if !empty($multipage)}--><tr><td colspan="8"><div class="pages_btns">$multipage</div></td></tr><!--{/if}-->
 <!--{else}-->

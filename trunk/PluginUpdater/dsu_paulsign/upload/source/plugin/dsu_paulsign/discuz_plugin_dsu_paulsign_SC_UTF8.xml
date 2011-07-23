@@ -14,7 +14,7 @@
 			<item id="datatables"><![CDATA[]]></item>
 			<item id="directory"><![CDATA[dsu_paulsign/]]></item>
 			<item id="copyright"><![CDATA[Shy9000 @ DSU Team]]></item>
-			<item id="version"><![CDATA[3.8]]></item>
+			<item id="version"><![CDATA[4.0]]></item>
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[sign]]></item>
@@ -566,7 +566,25 @@
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[sync_sign]]></item>
 				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="44">
+				<item id="displayorder"><![CDATA[48]]></item>
+				<item id="title"><![CDATA[签到进程锁]]></item>
+				<item id="description"><![CDATA[可有效防止重复开贴现象发生,PHP4的WIN下的用户必须关闭,否则会出现签到错误.]]></item>
+				<item id="variable"><![CDATA[lockopen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="45">
+				<item id="displayorder"><![CDATA[49]]></item>
+				<item id="title"><![CDATA[是否关闭每日最想说]]></item>
+				<item id="description"><![CDATA[通过此项目可彻底关闭每日最想说.]]></item>
+				<item id="variable"><![CDATA[sayclose]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 		</item>
@@ -678,6 +696,7 @@
 				<item id="import_16"><![CDATA[已经导入过一次,切勿重复导入,如果您想重复导入,请删除data/dsu_paulsign_import.lock]]></item>
 				<item id="ts_illegaltext"><![CDATA[每日最想说中包含敏感词,请修改后重新提交]]></item>
 				<item id="fromsign"><![CDATA[<span class="xg1"><font size="1px"><a href="plugin.php?id=dsu_paulsign:sign"><img src="source/plugin/dsu_paulsign/img/paulsign.png" alt="(来自每日签到)"></a></font></span>]]></item>
+				<item id="another_vip"><![CDATA[外加额外的 {rewarddays} 天VIP体验权和 {growupnum} 点成长值!]]></item>
 			</item>
 			<item id="installlang">
 					<item id="header"><![CDATA[【DSU】插件安装向导]]></item>

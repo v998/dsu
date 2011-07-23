@@ -14,7 +14,7 @@
 			<item id="datatables"><![CDATA[]]></item>
 			<item id="directory"><![CDATA[dsu_paulsign/]]></item>
 			<item id="copyright"><![CDATA[Shy9000 @ DSU Team]]></item>
-			<item id="version"><![CDATA[3.8]]></item>
+			<item id="version"><![CDATA[4.0]]></item>
 			<item id="__modules">
 				<item id="0">
 					<item id="name"><![CDATA[sign]]></item>
@@ -566,7 +566,25 @@
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[sync_sign]]></item>
 				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[]]></item>
+				<item id="value"><![CDATA[0]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="44">
+				<item id="displayorder"><![CDATA[48]]></item>
+				<item id="title"><![CDATA[簽到進程鎖]]></item>
+				<item id="description"><![CDATA[可有效防止重複開貼現象發生,PHP4的WIN下的用戶必須關閉,否則會出現簽到錯誤.]]></item>
+				<item id="variable"><![CDATA[lockopen]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="45">
+				<item id="displayorder"><![CDATA[49]]></item>
+				<item id="title"><![CDATA[是否關閉每日最想說]]></item>
+				<item id="description"><![CDATA[通過此項目可徹底關閉每日最想說.]]></item>
+				<item id="variable"><![CDATA[sayclose]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 		</item>
@@ -678,6 +696,7 @@
 				<item id="import_16"><![CDATA[已經導入過一次,切勿重複導入,如果您想重複導入,請刪除data/dsu_paulsign_import.lock]]></item>
 				<item id="ts_illegaltext"><![CDATA[每日最想說中包含敏感詞,請修改後重新提交]]></item>
 				<item id="fromsign"><![CDATA[<span class="xg1"><font size="1px"><a href="plugin.php?id=dsu_paulsign:sign"><img src="source/plugin/dsu_paulsign/img/paulsign.png" alt="(來自每日簽到)"></a></font></span>]]></item>
+				<item id="another_vip"><![CDATA[外加額外的 {rewarddays} 天VIP體驗權和 {growupnum} 點成長值!]]></item>
 			</item>
 			<item id="installlang">
 					<item id="header"><![CDATA[【DSU】插件安裝嚮導]]></item>
