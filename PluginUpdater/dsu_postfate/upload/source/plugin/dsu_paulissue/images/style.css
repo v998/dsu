@@ -1,0 +1,6 @@
+.fast_mini { background:url("task_mini.gif") no-repeat scroll 0 0 transparent; color:#000; float:left; right:0; position:fixed !important; _position:absolute; top:132px; _top:expression(eval(document.compatMode &&document.compatMode=='CSS1Compat') ?documentElement.scrollTop+131 : document.body.scrollTop +131); z-index:301; }
+	.fast_mini div { background:url("task_mini.gif") no-repeat scroll -80px 100% transparent; margin-top:8px; padding-bottom:8px; }
+	.fast_mini h2 { margin:7px 0; font-weight:400; }
+	.fast_mini span { background:url("btn.gif") no-repeat scroll 10% 0 transparent; display:block; padding:0 5px; margin:2px 0; width:70px; }
+	.fast_mini select { width:70px; margin:2px 0; overflow:hidden; }
+	.fast_mini a { line-height:19px; }
