@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X2]]></item>
+	<item id="Time"><![CDATA[2010-09-10 17:53]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://localhost/1.5/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[【DSU】悬浮问题解决]]></item>
+			<item id="identifier"><![CDATA[dsu_paulissue]]></item>
+			<item id="description"><![CDATA[仿DZ官方右侧问题解决悬浮按钮,DSU出品.]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[dsu_paulissue/]]></item>
+			<item id="copyright"><![CDATA[Shy9000 @ DSU Team]]></item>
+			<item id="version"><![CDATA[1.5]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[dsu_paulissue]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[admin]]></item>
+					<item id="menu"><![CDATA[绑定typeid设置]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X2]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[0]]></item>
+				<item id="title"><![CDATA[开启板块]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[ofid]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[39]]></item>
+				</item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[是否设置解决后自动关闭]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[autoclose]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="language">
+			<item id="scriptlang">
+				<item id="wjj"><![CDATA[未解决]]></item>
+				<item id="jjz"><![CDATA[解决中]]></item>
+				<item id="yjj"><![CDATA[已解决]]></item>
+				<item id="xszt"><![CDATA[显示状态]]></item>
+				<item id="yczt"><![CDATA[隐藏状态]]></item>
+				<item id="glcz"><![CDATA[管理组操作]]></item>
+				<item id="twcz"><![CDATA[提问人操作]]></item>
+				<item id="wtyjj"><![CDATA[问题已解决]]></item>
+				<item id="wtjjz"><![CDATA[问题解决中]]></item>
+				<item id="ts_1"><![CDATA[非法操作,请返回.]]></item>
+				<item id="ts_2"><![CDATA[主题不存在,请返回.]]></item>
+				<item id="ts_3"><![CDATA[该问题已解决,请返回.]]></item>
+				<item id="ts_4"><![CDATA[抱歉,您没有权限处理本帖的提问解决状态,请返回.]]></item>
+				<item id="ts_5"><![CDATA[该问题已被设为解决中状态,请返回.]]></item>
+				<item id="ts_6"><![CDATA[提问状态已被成功更改.]]></item>
+				<item id="ht_1"><![CDATA[处理完成!]]></item>
+				<item id="ht_2"><![CDATA[版块名]]></item>
+				<item id="ht_3"><![CDATA[解决中typeid]]></item>
+				<item id="ht_4"><![CDATA[已解决typeid]]></item>
+			</item>
+			<item id="templatelang">
+				<item id="ts_01"><![CDATA[提示信息]]></item>
+				<item id="ts_02"><![CDATA[关闭]]></item>
+			</item>
+		</item>
+<item id="installfile"><![CDATA[install.php]]></item>
+<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+<item id="intro"><![CDATA[
+仿DZ官方右侧问题解决悬浮按钮,DSU出品.
+]]></item>
+<item id="license"><![CDATA[[list]
+[*]本插件版权归属插件作者,及其下属Discuz! Student Union团队所有.
+[*]未经插件作者许可,任何人不得以任何形式在任何地方发布/转发原版以及其衍生的修改版.
+[*][b]插件作者:[/b]shy9000
+[*][b]作品简介:[/b]仿DZ官方右侧问题解决悬浮按钮,DSU出品.
+[*][b]发布地址:[/b][url]http://www.dsu.cc/thread-27764-1-1.html[/url]
+[*]如有任何关于使用上的疑问,请至[url]http://www.dsu.cc/forum-44-1.html[/url]提出.
+[*][color=Red]如果您愿意资助我们,请至[url]http://www.dsu.cc/donate.php[/url]对我们进行赞助.[/color]
+[*]最后,感谢您使用我们的插件,也希望您能够给我们DSU团队提供更好的意见([url=http://www.dsu.cc/]请点击这里进入DSU团队官方站点[/url]).
+[/list]]]></item>
+</item>
+</root> 

@@ -1,0 +1,22 @@
+{subtemplate common/header}
+<!--{if !empty($treferer)}-->
+<script type="text/javascript" reload="1">
+setTimeout("window.location.href='{$treferer}'", 3000);
+</script>
+<!--{else}-->
+<script type="text/javascript" reload="1">
+setTimeout("hideWindow('dsu_paulissue')", 3000);
+</script>
+<!--{/if}-->
+<div class="f_c">
+	<h3 class="flb">
+		<em id="return_win">{lang dsu_paulissue:ts_01}</em>
+		<span>
+			<a href="javascript:;" class="flbc" onclick="hideWindow('dsu_paulissue')" title="{lang dsu_paulissue:ts_02}">{lang dsu_paulissue:ts_02}</a>
+		</span>
+	</h3>
+	<div class="c">
+		$msg
+	</div>
+</div>
+{subtemplate common/footer}
