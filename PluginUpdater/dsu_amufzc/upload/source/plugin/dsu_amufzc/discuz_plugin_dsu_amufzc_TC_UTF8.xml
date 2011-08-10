@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <root>
 	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
-	<item id="Version"><![CDATA[X2 RC]]></item>
-	<item id="Time"><![CDATA[2011-05-21 18:59]]></item>
+	<item id="Version"><![CDATA[X2]]></item>
+	<item id="Time"><![CDATA[2011-06-03 21:35]]></item>
 	<item id="From"><![CDATA[Discuz! Board (http://127.0.0.1/dx/)]]></item>
 	<item id="Data">
 		<item id="plugin">
@@ -17,8 +17,8 @@
 			<item id="version"><![CDATA[1.56]]></item>
 			<item id="__modules">
 				<item id="0">
-					<item id="name"><![CDATA[updater]]></item>
-					<item id="menu"><![CDATA[升級管理]]></item>
+					<item id="name"><![CDATA[admin]]></item>
+					<item id="menu"><![CDATA[數據處理]]></item>
 					<item id="url"><![CDATA[]]></item>
 					<item id="type"><![CDATA[3]]></item>
 					<item id="adminid"><![CDATA[0]]></item>
@@ -40,29 +40,17 @@
 					<item id="navsubname"><![CDATA[]]></item>
 					<item id="navsuburl"><![CDATA[]]></item>
 				</item>
-				<item id="2">
-					<item id="name"><![CDATA[admin]]></item>
-					<item id="menu"><![CDATA[數據處理]]></item>
-					<item id="url"><![CDATA[]]></item>
-					<item id="type"><![CDATA[3]]></item>
-					<item id="adminid"><![CDATA[0]]></item>
-					<item id="displayorder"><![CDATA[0]]></item>
-					<item id="navtitle"><![CDATA[]]></item>
-					<item id="navicon"><![CDATA[]]></item>
-					<item id="navsubname"><![CDATA[]]></item>
-					<item id="navsuburl"><![CDATA[]]></item>
-				</item>
 			</item>
 		</item>
 		<item id="version"><![CDATA[X2 RC]]></item>
 		<item id="var">
 			<item id="0">
 				<item id="displayorder"><![CDATA[0]]></item>
-				<item id="title"><![CDATA[開啟郵箱驗證]]></item>
-				<item id="description"><![CDATA[將註冊地址發送到郵箱中，而不是直接顯示。]]></item>
-				<item id="variable"><![CDATA[email]]></item>
-				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[生成間期]]></item>
+				<item id="description"><![CDATA[單位：秒（在設置的時間內，相同的email不可以再次生成註冊碼）]]></item>
+				<item id="variable"><![CDATA[maxtime]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[5]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="1">
@@ -71,16 +59,16 @@
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[onlyone]]></item>
 				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[0]]></item>
+				<item id="value"><![CDATA[1]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="2">
 				<item id="displayorder"><![CDATA[0]]></item>
-				<item id="title"><![CDATA[生成間期]]></item>
-				<item id="description"><![CDATA[單位：秒（在設置的時間內，相同的email不可以再次生成註冊碼）]]></item>
-				<item id="variable"><![CDATA[maxtime]]></item>
-				<item id="type"><![CDATA[number]]></item>
-				<item id="value"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[開啟郵箱驗證]]></item>
+				<item id="description"><![CDATA[將註冊地址發送到郵箱中，而不是直接顯示。]]></item>
+				<item id="variable"><![CDATA[email]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 		</item>
@@ -108,7 +96,7 @@
 				<item id="email_subject"><![CDATA[Email 地址驗證]]></item>
 				<item id="email_message"><![CDATA[
 <p>您好，這封信是由 {bbname}發送的。</p>
-<p>您的註冊碼為：<strong>{code}</strong>（激活的話請自行複製註冊碼！），如果您是新註冊也可以直接點擊鏈接：<a href="{url}" target="_blank">{url}</a></p>
+<p>您的註冊碼為：<strong>{code}</strong>，或者直接點擊鏈接：<a href="{url}" target="_blank">{url}</a></p>
 <p>如果你並沒有訪問過我們的論壇，或沒有進行上述操作，請忽略這封郵件。你不需要退訂或進行其他進一步的操作。</p>
 <br />
 <p>
@@ -123,6 +111,7 @@
 				<item id="a6"><![CDATA[恭喜您，清理完畢（刪除{del}條/剩餘{sy}條）！]]></item>
 				<item id="a7"><![CDATA[沒有符合條件的記錄！]]></item>
 				<item id="a8"><![CDATA[數據表不存在 / 您填寫的時間太小或者不正確！]]></item>
+				<item id="a9"><![CDATA[是否同時刪除已經使用過的註冊碼（建議定期刪除，已減輕數據庫負擔）]]></item>
 				<item id="discuz_message"><![CDATA[DSU! 提示]]></item>
 				<item id="message_redirect"><![CDATA[如果你的瀏覽器沒有自動跳轉，請點擊這裡]]></item>
 				<item id="xml_file_name"><![CDATA[discuz_plugin_dsu_amufzc_SC_GBK.xml]]></item>

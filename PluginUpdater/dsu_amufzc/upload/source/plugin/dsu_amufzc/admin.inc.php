@@ -5,7 +5,6 @@
 */
 !defined('IN_DISCUZ') && exit('Access Denied');
 !defined('IN_ADMINCP') && exit('Access Denied');
-DEFINE('OFFSET_DELIMETER', "\t");
 
 
 if(!$_G['gp_submit']){
@@ -13,6 +12,7 @@ if(!$_G['gp_submit']){
 	showformheader("plugins&operation=config&identifier=dsu_amufzc&pmod=admin&submit=1", "");
 	shownav('plugin', lang('plugin/dsu_amufzc','a1'), lang('plugin/dsu_amufzc','a2'));
 	showsetting(lang('plugin/dsu_amufzc','a3'), 'time', '1', 'text', '',0, lang('plugin/dsu_amufzc','a4'));
+	showsetting(lang('plugin/dsu_amufzc','a9'), 'del', '1', 'radio');
 	echo '<input type="hidden" name="formhash" value="'.FORMHASH.'">';
 	showsubmit('submit', lang('plugin/dsu_amufzc','a5'));
 	showformfooter();
@@ -29,7 +29,7 @@ if(!$_G['gp_submit']){
 	}
 	if($sql_exist && $times){
 		$times = TIMESTAMP - $times;
-		$wheres = " yes = '0' AND time <= ".$times;
+		if($_G['gp_del']){$wheres = " time <= ".$times;}else{$wheres = " yes = '0' AND time <= ".$times;}
 		$num = DB::result_first("SELECT COUNT(*) FROM ".$tablename." WHERE ".$wheres);
 		$sql="SELECT * FROM ".$tablename." WHERE ".$wheres." LIMIT 0 ,".$num;
 		$querygg=DB::query($sql);
@@ -38,7 +38,6 @@ if(!$_G['gp_submit']){
 		while ($value=DB::fetch($querygg)){
 			$rid[] = $value['rid'];
 		}
-		array2php($rid,'qs.php','$arrayname');
 		$rids = "'".implode("','", array_unique($rid))."'";
 		DB::query("DELETE FROM ".DB::table("plugin_dsuamfzc")." WHERE rid IN ({$rids})");
 		if($num){
@@ -52,16 +51,6 @@ if(!$_G['gp_submit']){
 		cpmsg('dsu_amufzc:a8', 'action=plugins&operation=config&identifier=dsu_amufzc&pmod=admin','succeed');
 	}
 
-}
-
-function array2php($array,$file,$arrayname)  {
-	$of = fopen($file,'w');
-	if($of){
-		$txt = array2txt($array);
-		$text = "<?php\n\$".$arrayname." = array( \n".$txt.");\n?>";
-		fwrite($of,$text);
-	}
-    return '';
 }
 function array2txt($array, $offset = OFFSET_DELIMETER)  {
     $text = "";
