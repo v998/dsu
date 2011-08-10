@@ -91,7 +91,7 @@ function randStr($i){
 }
 
 function getEmail($str) { 
-	$pattern = "/[a-z0-9]([a-z0-9]*[-_\.]?[a-z0-9]+)*@([a-z0-9]*[-_]?[a-z0-9]+)+[\.][a-z]{2,3}([\.][a-z]{2})?/i";//为了适合qq的数字邮箱,正则开头作了修改 
+	$pattern = "/[a-z0-9]([a-z0-9]*[-_\.]?[a-z0-9]+)*@([a-z0-9]*[-_]?[a-z0-9]+)+[\.][a-z]{2,3}([\.][a-z]{2,3})?/i";//为了适合qq的数字邮箱,正则开头作了修改 
 	preg_match_all($pattern,$str,$emailArr);
 	if($emailArr[0][0]){$return = $emailArr[0][0];}else{$return = '';}
 	return $return; 

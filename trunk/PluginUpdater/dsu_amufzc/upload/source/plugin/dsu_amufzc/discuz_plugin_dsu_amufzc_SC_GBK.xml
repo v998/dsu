@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <root>
 	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
-	<item id="Version"><![CDATA[X2 RC]]></item>
-	<item id="Time"><![CDATA[2011-05-21 18:59]]></item>
+	<item id="Version"><![CDATA[X2]]></item>
+	<item id="Time"><![CDATA[2011-06-03 21:35]]></item>
 	<item id="From"><![CDATA[Discuz! Board (http://127.0.0.1/dx/)]]></item>
 	<item id="Data">
 		<item id="plugin">
@@ -17,8 +17,8 @@
 			<item id="version"><![CDATA[1.56]]></item>
 			<item id="__modules">
 				<item id="0">
-					<item id="name"><![CDATA[updater]]></item>
-					<item id="menu"><![CDATA[Éý¼¶¹ÜÀí]]></item>
+					<item id="name"><![CDATA[admin]]></item>
+					<item id="menu"><![CDATA[Êý¾Ý´¦Àí]]></item>
 					<item id="url"><![CDATA[]]></item>
 					<item id="type"><![CDATA[3]]></item>
 					<item id="adminid"><![CDATA[0]]></item>
@@ -40,29 +40,17 @@
 					<item id="navsubname"><![CDATA[]]></item>
 					<item id="navsuburl"><![CDATA[]]></item>
 				</item>
-				<item id="2">
-					<item id="name"><![CDATA[admin]]></item>
-					<item id="menu"><![CDATA[Êý¾Ý´¦Àí]]></item>
-					<item id="url"><![CDATA[]]></item>
-					<item id="type"><![CDATA[3]]></item>
-					<item id="adminid"><![CDATA[0]]></item>
-					<item id="displayorder"><![CDATA[0]]></item>
-					<item id="navtitle"><![CDATA[]]></item>
-					<item id="navicon"><![CDATA[]]></item>
-					<item id="navsubname"><![CDATA[]]></item>
-					<item id="navsuburl"><![CDATA[]]></item>
-				</item>
 			</item>
 		</item>
 		<item id="version"><![CDATA[X2 RC]]></item>
 		<item id="var">
 			<item id="0">
 				<item id="displayorder"><![CDATA[0]]></item>
-				<item id="title"><![CDATA[¿ªÆôÓÊÏäÑéÖ¤]]></item>
-				<item id="description"><![CDATA[½«×¢²áµØÖ··¢ËÍµ½ÓÊÏäÖÐ£¬¶ø²»ÊÇÖ±½ÓÏÔÊ¾¡£]]></item>
-				<item id="variable"><![CDATA[email]]></item>
-				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[Éú³É¼äÆÚ]]></item>
+				<item id="description"><![CDATA[µ¥Î»£ºÃë£¨ÔÚÉèÖÃµÄÊ±¼äÄÚ£¬ÏàÍ¬µÄemail²»¿ÉÒÔÔÙ´ÎÉú³É×¢²áÂë£©]]></item>
+				<item id="variable"><![CDATA[maxtime]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[5]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="1">
@@ -71,16 +59,16 @@
 				<item id="description"><![CDATA[]]></item>
 				<item id="variable"><![CDATA[onlyone]]></item>
 				<item id="type"><![CDATA[radio]]></item>
-				<item id="value"><![CDATA[0]]></item>
+				<item id="value"><![CDATA[1]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 			<item id="2">
 				<item id="displayorder"><![CDATA[0]]></item>
-				<item id="title"><![CDATA[Éú³É¼äÆÚ]]></item>
-				<item id="description"><![CDATA[µ¥Î»£ºÃë£¨ÔÚÉèÖÃµÄÊ±¼äÄÚ£¬ÏàÍ¬µÄemail²»¿ÉÒÔÔÙ´ÎÉú³É×¢²áÂë£©]]></item>
-				<item id="variable"><![CDATA[maxtime]]></item>
-				<item id="type"><![CDATA[number]]></item>
-				<item id="value"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[¿ªÆôÓÊÏäÑéÖ¤]]></item>
+				<item id="description"><![CDATA[½«×¢²áµØÖ··¢ËÍµ½ÓÊÏäÖÐ£¬¶ø²»ÊÇÖ±½ÓÏÔÊ¾¡£]]></item>
+				<item id="variable"><![CDATA[email]]></item>
+				<item id="type"><![CDATA[radio]]></item>
+				<item id="value"><![CDATA[0]]></item>
 				<item id="extra"><![CDATA[]]></item>
 			</item>
 		</item>
@@ -108,7 +96,7 @@
 				<item id="email_subject"><![CDATA[Email µØÖ·ÑéÖ¤]]></item>
 				<item id="email_message"><![CDATA[
 <p>ÄúºÃ£¬Õâ·âÐÅÊÇÓÉ {bbname}·¢ËÍµÄ¡£</p>
-<p>ÄúµÄ×¢²áÂëÎª£º<strong>{code}</strong>£¨¼¤»îµÄ»°Çë×ÔÐÐ¸´ÖÆ×¢²áÂë£¡£©£¬Èç¹ûÄúÊÇÐÂ×¢²áÒ²¿ÉÒÔÖ±½Óµã»÷Á´½Ó£º<a href="{url}" target="_blank">{url}</a></p>
+<p>ÄúµÄ×¢²áÂëÎª£º<strong>{code}</strong>£¬»òÕßÖ±½Óµã»÷Á´½Ó£º<a href="{url}" target="_blank">{url}</a></p>
 <p>Èç¹ûÄã²¢Ã»ÓÐ·ÃÎÊ¹ýÎÒÃÇµÄÂÛÌ³£¬»òÃ»ÓÐ½øÐÐÉÏÊö²Ù×÷£¬ÇëºöÂÔÕâ·âÓÊ¼þ¡£Äã²»ÐèÒªÍË¶©»ò½øÐÐÆäËû½øÒ»²½µÄ²Ù×÷¡£</p>
 <br />
 <p>
@@ -123,6 +111,7 @@
 				<item id="a6"><![CDATA[¹§Ï²Äú£¬ÇåÀíÍê±Ï£¨É¾³ý{del}Ìõ/Ê£Óà{sy}Ìõ£©£¡]]></item>
 				<item id="a7"><![CDATA[Ã»ÓÐ·ûºÏÌõ¼þµÄ¼ÇÂ¼£¡]]></item>
 				<item id="a8"><![CDATA[Êý¾Ý±í²»´æÔÚ / ÄúÌîÐ´µÄÊ±¼äÌ«Ð¡»òÕß²»ÕýÈ·£¡]]></item>
+				<item id="a9"><![CDATA[ÊÇ·ñÍ¬Ê±É¾³ýÒÑ¾­Ê¹ÓÃ¹ýµÄ×¢²áÂë£¨½¨Òé¶¨ÆÚÉ¾³ý£¬ÒÑ¼õÇáÊý¾Ý¿â¸ºµ££©]]></item>
 				<item id="discuz_message"><![CDATA[DSU! ÌáÊ¾]]></item>
 				<item id="message_redirect"><![CDATA[Èç¹ûÄãµÄä¯ÀÀÆ÷Ã»ÓÐ×Ô¶¯Ìø×ª£¬Çëµã»÷ÕâÀï]]></item>
 				<item id="xml_file_name"><![CDATA[discuz_plugin_dsu_amufzc_SC_GBK.xml]]></item>
