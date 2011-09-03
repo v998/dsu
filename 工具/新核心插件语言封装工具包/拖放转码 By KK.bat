@@ -22,5 +22,4 @@ echo 正在转换(GBK-^>UTF8)……
 _convertz\ConvertZ /i:GBK /o:UTF8 "%~d1%~p1%~n1.xml" "%~d1%~p1%~n1_SC_UTF8.xml"
 echo 正在转换(UTF8-^>BIG5)……
 _convertz\ConvertZ /i:BIG5 /o:UTF8 "%~d1%~p1%~n1_TC_BIG5.xml" "%~d1%~p1%~n1_TC_UTF8.xml"
-echo 转换完成！按任意键退出
-pause > nul
+echo 转换完成！
